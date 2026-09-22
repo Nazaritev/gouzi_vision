@@ -1,0 +1,17 @@
+[Unit]
+Description=Obstacle Race ROS 2 Stack
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gouzi
+WorkingDirectory=/home/gouzi/obstacle_race_src
+ExecStart=/home/gouzi/obstacle_race_src/scripts/start_obstacle_race_stack.sh
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target

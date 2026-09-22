@@ -1,0 +1,27 @@
+[INFO] [1783998430.885805329] [stairs_manager]: obstacle_manager inactive on startup: start_waypoint_index=0, stop_after_waypoint_index=0
+[INFO] [1783998446.569706230] [stairs_manager]: [1;35m发布模式: 1 (下坡)[0m
+[INFO] [1783998446.570136967] [stairs_manager]: [1;35m发布上坡步长滤波: False[0m
+[INFO] [1783998446.570551025] [stairs_manager]: [1;35m发布路径修正profile: 1 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783998446.571038425] [stairs_manager]: obstacle_manager activated: reason=external_topic, start_waypoint_index=0, stop_after_waypoint_index=0, inherit_previous_waypoint_segment_state=False
+[INFO] [1783998446.666936741] [stairs_manager]: 解析机身相对 waypoint[0]=small_ramp_entry: source=(0.006,-0.279,0.4deg), anchor=(0.006,-0.279,current_pose), body_offset=(forward=1.580, left=0.000), yaw_mode=delta, yaw_delta=0.0deg, ref_yaw_source=current, ref_yaw=0.4deg, target=(-0.004,1.301,0.4deg), frame=camera_init
+[INFO] [1783998446.667527666] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783998446.668095423] [stairs_manager]: [1;36m发送直驱覆盖点[1/18](attempt=1): small_ramp_entry -> x=-0.004, y=1.301, yaw=0.4° (body_relative forward=1.580, left=0.000, yaw_mode=delta, yaw_delta=0.0°, source=(0.006,-0.279,0.4°), anchor=(0.006,-0.279,current_pose), ref_yaw_source=current, ref_yaw=0.4°), frame=camera_init, path_reference=/serial_path_reference, override=[1,0.800,0.800], 到点后锁存模式=0, note=下坡结束点：这一段固定发送 mode=1,left=0.8,right=0.8 下楼梯；到点后立即切回正常行走，不再额外停顿。[0m
+[INFO] [1783998446.766959374] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=1.583m, min_dist=1.577m, yaw_err=0.2deg, pose=(0.006,-0.283), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=-0.003/1.580m (-0%), line_remaining=1.583m, line_lateral=-0.000m, override=[1,0.800,0.800][0m
+[INFO] [1783998447.866926259] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=1.338m, min_dist=1.334m, yaw_err=3.5deg, pose=(-0.004,-0.038), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.242/1.580m (15%), line_remaining=1.338m, line_lateral=-0.008m, override=[1,0.800,0.800][0m
+[INFO] [1783998448.866992770] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=1.241m, min_dist=1.241m, yaw_err=2.6deg, pose=(0.008,0.060), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.339/1.580m (21%), line_remaining=1.241m, line_lateral=0.004m, override=[1,0.800,0.800][0m
+[INFO] [1783998449.866976284] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=1.018m, min_dist=0.946m, yaw_err=1.6deg, pose=(-0.047,0.283), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.563/1.580m (36%), line_remaining=1.017m, line_lateral=-0.049m, override=[1,0.800,0.800][0m
+[INFO] [1783998450.966889735] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=0.942m, min_dist=0.934m, yaw_err=3.0deg, pose=(-0.040,0.359), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.639/1.580m (40%), line_remaining=0.941m, line_lateral=-0.041m, override=[1,0.800,0.800][0m
+[INFO] [1783998451.966909071] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=0.706m, min_dist=0.635m, yaw_err=3.5deg, pose=(-0.054,0.596), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.876/1.580m (55%), line_remaining=0.704m, line_lateral=-0.054m, override=[1,0.800,0.800][0m
+[INFO] [1783998452.967047549] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=0.612m, min_dist=0.612m, yaw_err=1.3deg, pose=(-0.043,0.690), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=0.970/1.580m (61%), line_remaining=0.610m, line_lateral=-0.043m, override=[1,0.800,0.800][0m
+[INFO] [1783998454.066970391] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=0.428m, min_dist=0.378m, yaw_err=0.6deg, pose=(-0.020,0.873), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=1.152/1.580m (73%), line_remaining=0.428m, line_lateral=-0.018m, override=[1,0.800,0.800][0m
+[INFO] [1783998455.166959763] [stairs_manager]: [0;94mwaypoint=1/18 small_ramp_entry dist=0.279m, min_dist=0.277m, yaw_err=0.7deg, pose=(-0.054,1.026), goal=(-0.004,1.301), pose_frame=camera_init, goal_frame=camera_init, line_progress=1.305/1.580m (83%), line_remaining=0.275m, line_lateral=-0.051m, override=[1,0.800,0.800][0m
+[INFO] [1783998455.857784010] [stairs_manager]: [1;32m到点成功: waypoint[0]=small_ramp_entry, dist=0.198, min_dist=0.198, yaw_err=1.6deg, reason=distance_tolerance[0m
+[INFO] [1783998455.858487143] [stairs_manager]: [1;35m发布模式: 0 (正常行走)[0m
+[INFO] [1783998455.859621174] [stairs_manager]: [1;35m发布上坡步长滤波: True[0m
+[INFO] [1783998455.860234373] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783998455.860665310] [stairs_manager]: [1;32m已到达 waypoint[0]=small_ramp_entry，切换模式为 0 (正常行走)，上坡滤波=True，路径修正profile=0，并锁存到下一个 waypoint。[0m
+[INFO] [1783998455.863607766] [stairs_manager]: [1;35m发布模式: 0 (正常行走)[0m
+[INFO] [1783998455.863977890] [stairs_manager]: [1;35m发布上坡步长滤波: False[0m
+[INFO] [1783998455.864298452] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783998455.864633556] [stairs_manager]: [1;32m全部 waypoint 已完成，恢复为 mode=0，流程结束。[0m
+[INFO] [1783998455.919548418] [stairs_manager]: obstacle_manager deactivated: reason=external_topic

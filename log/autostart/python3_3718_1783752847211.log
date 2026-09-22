@@ -1,0 +1,18 @@
+[INFO] [1783752847.912182890] [stairs_manager]: obstacle_manager inactive on startup: start_waypoint_index=0, stop_after_waypoint_index=0
+[INFO] [1783752856.512047105] [stairs_manager]: [1;35m发布模式: 1 (下坡)[0m
+[INFO] [1783752856.512933966] [stairs_manager]: [1;35m发布上坡步长滤波: False[0m
+[INFO] [1783752856.514675491] [stairs_manager]: [1;35m发布路径修正profile: 1 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783752856.516936795] [stairs_manager]: obstacle_manager activated: reason=external_topic, start_waypoint_index=0, stop_after_waypoint_index=0, inherit_previous_waypoint_segment_state=False
+[INFO] [1783752856.567943885] [stairs_manager]: 解析机身相对 waypoint[0]=small_ramp_entry: source=(-0.044,-0.094,179.5deg), anchor=(-0.044,-0.094,current_pose), body_offset=(forward=0.100, left=0.000), yaw_mode=delta, yaw_delta=0.0deg, ref_yaw_source=current, ref_yaw=179.5deg, target=(-0.044,-0.194,179.5deg), frame=camera_init
+[INFO] [1783752856.568586925] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783752856.569089361] [stairs_manager]: [1;36m发送直驱覆盖点[1/18](attempt=1): small_ramp_entry -> x=-0.044, y=-0.194, yaw=179.5° (body_relative forward=0.100, left=0.000, yaw_mode=delta, yaw_delta=0.0°, source=(-0.044,-0.094,179.5°), anchor=(-0.044,-0.094,current_pose), ref_yaw_source=current, ref_yaw=179.5°), frame=camera_init, path_reference=/serial_path_reference, override=[1,0.800,0.800], 到点后锁存模式=0, note=下坡结束点：这一段固定发送 mode=1,left=0.8,right=0.8 下楼梯；到点后立即切回正常行走，不再额外停顿。[0m
+[INFO] [1783752856.590352165] [stairs_manager]: [1;32m到点成功: waypoint[0]=small_ramp_entry, dist=0.099, min_dist=0.099, yaw_err=0.0deg, reason=distance_tolerance[0m
+[INFO] [1783752856.590849896] [stairs_manager]: [1;35m发布模式: 0 (正常行走)[0m
+[INFO] [1783752856.591318494] [stairs_manager]: [1;35m发布上坡步长滤波: True[0m
+[INFO] [1783752856.591750464] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783752856.592304410] [stairs_manager]: [1;32m已到达 waypoint[0]=small_ramp_entry，切换模式为 0 (正常行走)，上坡滤波=True，路径修正profile=0，并锁存到下一个 waypoint。[0m
+[INFO] [1783752856.593719638] [stairs_manager]: [1;35m发布模式: 0 (正常行走)[0m
+[INFO] [1783752856.594151160] [stairs_manager]: [1;35m发布上坡步长滤波: False[0m
+[INFO] [1783752856.594601480] [stairs_manager]: [1;35m发布路径修正profile: 0 (0=关闭, 1=普通, 2=上坡强修正, 3=强修正符号验证)[0m
+[INFO] [1783752856.594998450] [stairs_manager]: [1;32m全部 waypoint 已完成，恢复为 mode=0，流程结束。[0m
+[INFO] [1783752856.645717941] [stairs_manager]: obstacle_manager deactivated: reason=external_topic

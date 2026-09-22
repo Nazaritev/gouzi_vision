@@ -1,0 +1,387 @@
+[INFO] [1784153877.744520485] [camera.camera]: RealSense ROS v4.51.1
+[INFO] [1784153877.744660205] [camera.camera]: Built with LibRealSense v2.56.5
+[INFO] [1784153877.744677432] [camera.camera]: Running with LibRealSense v2.56.5
+[INFO] [1784153878.062350812] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153878.062442706] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153878.062454465] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153878.062657501] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153878.062676873] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153878.229643542] [camera.camera]: getParameters...
+[WARN] [1784153878.287505131] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153878.428817813] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153878.586964657] [camera.camera]: JSON file is not provided
+[INFO] [1784153878.587106259] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153878.587122525] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153878.587132738] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153878.587146865] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153878.587157798] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153878.587168245] [camera.camera]: Sync Mode: On
+[WARN] [1784153879.603541441] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153879.605312698] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153879.607948165] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153879.975344490] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153879.975619361] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153879.981539765] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153885.316600041] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153886.524730716] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153886.554830420] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153886.555830654] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153886.575843861] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153886.576094862] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153886.576112893] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153886.576545172] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153886.576589455] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153886.933834376] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153886.936729306] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153886.937650944] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153887.291858648] [camera.camera]: The device has been disconnected!
+[ERROR] [1784153887.589883892] [camera.camera]: Error starting device: null pointer passed for argument "dev"
+[WARN] [1784153887.693438059] [camera.camera]: No RealSense devices were found!
+[INFO] [1784153888.128412606] [camera.camera]: Checking new devices...
+[INFO] [1784153888.141768421] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153888.141859130] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4 was found.
+[INFO] [1784153888.141898836] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153888.143016711] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153888.143095375] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153888.190123945] [camera.camera]: getParameters...
+[WARN] [1784153888.191148173] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153888.224442746] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153888.298328443] [camera.camera]: JSON file is not provided
+[INFO] [1784153888.300071100] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153888.301687234] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153888.302914142] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4
+[INFO] [1784153888.303922185] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153888.306361385] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153888.307468065] [camera.camera]: Sync Mode: On
+[WARN] [1784153888.532463220] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153888.533937488] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153888.543411600] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153888.642303400] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153888.645889741] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153888.649796154] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153888.666207870] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153888.703461526] [camera.camera]: Starting Sensor: Stereo Module
+[INFO] [1784153888.706841926] [camera.camera]: Open profile: stream_type: Depth(0), Format: Z16, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153888.707364118] [camera.camera]: Stopping Sensor: RGB Camera
+[INFO] [1784153888.787430825] [camera.camera]: Starting Sensor: RGB Camera
+[INFO] [1784153888.796998901] [camera.camera]: Open profile: stream_type: Color(0), Format: RGB8, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153888.818540758] [camera.camera]: RealSense Node Is Up!
+[WARN] [1784153888.892092588] [camera.camera]: 
+[ERROR] [1784153889.464564602] [camera.camera]: The device has been disconnected!
+[INFO] [1784153889.470716657] [camera.camera]: Stop Sensor: Stereo Module
+[INFO] [1784153889.471455505] [camera.camera]: Close Sensor. 
+[INFO] [1784153889.480511113] [camera.camera]: Close Sensor - Done. 
+[INFO] [1784153889.480681185] [camera.camera]: Stop Sensor: RGB Camera
+[INFO] [1784153889.480780156] [camera.camera]: Close Sensor. 
+[INFO] [1784153889.487829381] [camera.camera]: Close Sensor - Done. 
+[INFO] [1784153890.264516335] [camera.camera]: Checking new devices...
+[INFO] [1784153890.291998368] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153890.292068202] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153890.292082143] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153890.292275583] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153890.292297592] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153890.299701811] [camera.camera]: getParameters...
+[WARN] [1784153890.334760842] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153890.375203178] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153890.463044075] [camera.camera]: JSON file is not provided
+[INFO] [1784153890.464609164] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153890.464681817] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153890.464692991] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153890.464703089] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153890.464750885] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153890.464760154] [camera.camera]: Sync Mode: On
+[WARN] [1784153890.727835273] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153890.744833213] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153890.757395060] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153890.832161060] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153890.833586133] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153890.835702663] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153890.862334851] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153890.890797681] [camera.camera]: Starting Sensor: Stereo Module
+[INFO] [1784153890.900111804] [camera.camera]: Open profile: stream_type: Depth(0), Format: Z16, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153890.900655815] [camera.camera]: Stopping Sensor: RGB Camera
+[INFO] [1784153890.952561946] [camera.camera]: Starting Sensor: RGB Camera
+[INFO] [1784153890.954151239] [camera.camera]: Open profile: stream_type: Color(0), Format: RGB8, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153890.978312764] [camera.camera]: RealSense Node Is Up!
+[ERROR] [1784153891.889176506] [camera.camera]: The device has been disconnected!
+[INFO] [1784153891.897364942] [camera.camera]: Stop Sensor: Stereo Module
+[INFO] [1784153891.897626678] [camera.camera]: Close Sensor. 
+[INFO] [1784153891.897692824] [camera.camera]: Close Sensor - Done. 
+[INFO] [1784153891.899215192] [camera.camera]: Stop Sensor: RGB Camera
+[INFO] [1784153891.899294861] [camera.camera]: Close Sensor. 
+[INFO] [1784153891.945127134] [camera.camera]: Close Sensor - Done. 
+[INFO] [1784153893.055767777] [camera.camera]: Checking new devices...
+[INFO] [1784153893.113833696] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153893.113901427] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4 was found.
+[INFO] [1784153893.113912719] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153893.114113190] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153893.114136465] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153893.187079486] [camera.camera]: getParameters...
+[WARN] [1784153893.253503511] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153893.296672476] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153893.318714625] [camera.camera]: JSON file is not provided
+[INFO] [1784153893.319362664] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153893.319951140] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153893.320080854] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4
+[INFO] [1784153893.320223807] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153893.320248791] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153893.320263485] [camera.camera]: Sync Mode: On
+[WARN] [1784153893.716831711] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153893.717814240] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153893.719299141] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153893.747728082] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153893.748092066] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153893.749246752] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153893.912545409] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153893.967647679] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153893.968233037] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153893.969144135] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153894.020544050] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153894.024102811] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153894.024166575] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153895.486228409] [camera.camera]: Checking new devices...
+[INFO] [1784153895.545285876] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153895.545355672] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153895.545367839] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153895.545557543] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153895.545580279] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153895.975948777] [camera.camera]: getParameters...
+[WARN] [1784153895.978525349] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153895.981717657] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153895.991310845] [camera.camera]: JSON file is not provided
+[INFO] [1784153895.991379696] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153895.991391789] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153895.991400642] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153895.991411767] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153895.991421058] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153895.991429903] [camera.camera]: Sync Mode: On
+[WARN] [1784153896.073800097] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153896.079880455] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153896.086309366] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153896.106576045] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153896.107411117] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153896.109078227] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153896.169186490] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153896.242617012] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153896.245873216] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153896.246544947] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153896.291162271] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153896.292124904] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153896.292199346] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153897.750958637] [camera.camera]: Checking new devices...
+[INFO] [1784153897.753504098] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153897.753616521] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4 was found.
+[INFO] [1784153897.753634439] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153897.753791903] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153897.753820913] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153898.259437555] [camera.camera]: getParameters...
+[WARN] [1784153898.265736764] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153898.270699847] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153898.276231586] [camera.camera]: JSON file is not provided
+[INFO] [1784153898.276297301] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153898.276312358] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153898.276324513] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4
+[INFO] [1784153898.276337180] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153898.276348385] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153898.276359299] [camera.camera]: Sync Mode: On
+[WARN] [1784153898.340744492] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153898.343305974] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153898.349439122] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153898.387991172] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153898.389406596] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153898.391480419] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153898.531360856] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153898.622604780] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153898.631258542] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153898.631862397] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153898.712000070] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153898.728225889] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153898.729258503] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153900.157218087] [camera.camera]: Checking new devices...
+[INFO] [1784153900.161454962] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153900.161565973] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153900.161578457] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153900.161811846] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153900.161838621] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153900.665926892] [camera.camera]: getParameters...
+[WARN] [1784153900.670423966] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153900.703596417] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153900.725476093] [camera.camera]: JSON file is not provided
+[INFO] [1784153900.725570447] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153900.725584622] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153900.725592741] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153900.725603710] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153900.725611014] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153900.725618006] [camera.camera]: Sync Mode: On
+[WARN] [1784153900.841394587] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153900.849514536] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153900.854474433] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153900.917863998] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153900.918812895] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153900.920759889] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153900.965996685] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153900.984159420] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153900.984640693] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153900.984821190] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153901.023578796] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153901.026540169] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153901.026634091] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153902.475087813] [camera.camera]: Checking new devices...
+[INFO] [1784153902.477993831] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153902.478065505] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153902.478076138] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153902.478263465] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153902.478278881] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153902.988349907] [camera.camera]: getParameters...
+[WARN] [1784153902.990325457] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153902.996606214] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153903.005711927] [camera.camera]: JSON file is not provided
+[INFO] [1784153903.005804849] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153903.005817433] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153903.005828152] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153903.005840826] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153903.005851021] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153903.005861159] [camera.camera]: Sync Mode: On
+[WARN] [1784153903.050935550] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153903.051649801] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153903.052852115] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153903.074084217] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153903.074818449] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153903.077281974] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153903.145012306] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153903.155803734] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153903.157574402] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153903.157666488] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153903.158570273] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153903.182548099] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153903.184192399] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153904.722631410] [camera.camera]: Checking new devices...
+[INFO] [1784153904.729499609] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153904.729571345] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4 was found.
+[INFO] [1784153904.729659065] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153904.729835776] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153904.729853216] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153905.171328248] [camera.camera]: getParameters...
+[WARN] [1784153905.192417650] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153905.208561644] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153905.231017325] [camera.camera]: JSON file is not provided
+[INFO] [1784153905.231092426] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153905.231105887] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153905.231115330] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4
+[INFO] [1784153905.231127653] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153905.231138069] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153905.231148018] [camera.camera]: Sync Mode: On
+[WARN] [1784153905.397698780] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153905.405075961] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153905.409363062] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153905.449799500] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153905.450492275] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153905.453415851] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153905.504236573] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153905.517632505] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153905.518939321] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153905.519337157] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153905.569032534] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153905.577772787] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153905.578219123] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153907.022925619] [camera.camera]: Checking new devices...
+[INFO] [1784153907.028316063] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153907.028437992] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153907.028456168] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153907.028652276] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153907.028673844] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153907.525517403] [camera.camera]: getParameters...
+[WARN] [1784153907.536623116] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153907.550884444] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153907.582238281] [camera.camera]: JSON file is not provided
+[INFO] [1784153907.583191786] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153907.583208471] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153907.583219793] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153907.583234036] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153907.583246998] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153907.583258917] [camera.camera]: Sync Mode: On
+[WARN] [1784153907.708590283] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153907.714938275] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153907.722521517] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153907.868119461] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153907.872480123] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153907.876746614] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153908.014267898] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153908.047947790] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153908.048588055] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153908.050933629] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153908.097544352] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153908.100890064] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153908.100954657] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153909.570244963] [camera.camera]: Checking new devices...
+[INFO] [1784153909.582039138] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153909.582728148] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1784153909.582781642] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153909.585516517] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153909.585614399] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153910.080489796] [camera.camera]: getParameters...
+[WARN] [1784153910.108769893] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153910.118699723] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153910.138768314] [camera.camera]: JSON file is not provided
+[INFO] [1784153910.138853077] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153910.138866918] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153910.138877545] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1784153910.138888112] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153910.138897775] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153910.138906458] [camera.camera]: Sync Mode: On
+[WARN] [1784153910.386538902] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153910.389158232] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153910.398445041] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153910.466787933] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153910.473402880] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153910.483805466] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153910.608258862] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153910.693161321] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153910.702212710] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153910.702479351] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153910.736000907] [camera.camera]: Starting Sensor: Stereo Module
+[ERROR] [1784153910.737049302] [camera.camera]: /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera/src/rs_node_setup.cpp:344:An exception has been thrown: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[ERROR] [1784153910.737158613] [camera.camera]: Error updating the sensors: xioctl(VIDIOC_S_FMT) failed, errno=16 Last Error: Device or resource busy
+[INFO] [1784153912.254254099] [camera.camera]: Checking new devices...
+[INFO] [1784153912.262691890] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1784153912.262768657] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4 was found.
+[INFO] [1784153912.262781545] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1784153912.264065027] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1784153912.264160142] [camera.camera]: Device USB type: 3.2
+[INFO] [1784153912.705155635] [camera.camera]: getParameters...
+[WARN] [1784153912.711398758] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1784153912.714628790] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1784153912.730380390] [camera.camera]: JSON file is not provided
+[INFO] [1784153912.730466158] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1784153912.730477728] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1784153912.730488368] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video4
+[INFO] [1784153912.730500137] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1784153912.730509621] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1784153912.730520728] [camera.camera]: Sync Mode: On
+[WARN] [1784153912.819091299] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153912.820946820] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153912.823174874] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153912.864623589] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153912.869322082] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1784153912.872101077] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1784153912.913884824] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1784153912.927442909] [camera.camera]: Starting Sensor: Stereo Module
+[INFO] [1784153912.929882784] [camera.camera]: Open profile: stream_type: Depth(0), Format: Z16, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153912.931043618] [camera.camera]: Stopping Sensor: RGB Camera
+[INFO] [1784153912.952706597] [camera.camera]: Starting Sensor: RGB Camera
+[INFO] [1784153912.954437927] [camera.camera]: Open profile: stream_type: Color(0), Format: RGB8, Width: 424, Height: 240, FPS: 15
+[INFO] [1784153912.963833788] [camera.camera]: RealSense Node Is Up!
+[INFO] [1784153935.469444060] [rclcpp]: signal_handler(SIGINT/SIGTERM)

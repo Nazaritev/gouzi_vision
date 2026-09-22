@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/build/pcd_map_viewer/ament_cmake_environment_hooks/local_setup.sh

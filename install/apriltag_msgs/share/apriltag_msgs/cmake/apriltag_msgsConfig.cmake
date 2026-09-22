@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/build/apriltag_msgs/ament_cmake_core/apriltag_msgsConfig.cmake

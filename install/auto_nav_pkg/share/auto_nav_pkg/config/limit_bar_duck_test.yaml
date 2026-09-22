@@ -1,0 +1,135 @@
+# 2026-05-05
+# Purpose: non-YOLO limit-bar traversal test.
+# Behavior:
+# 1) startup continuously sends [0,1,1]
+# 2) detect blue-white horizontal limit bar within 0.30m
+# 3) single-shot [2,0,0]
+# 4) continuously send [2,1,1] while crouch-walking
+# 5) once Odometry travel distance reaches 0.90m, single-shot [0,0,0]
+# 6) wait 1s, then continuously send [0,1,1]
+
+limit_bar_duck_test:
+  ros__parameters:
+    color_topic: "/camera/color/image_raw"
+    depth_topic: "/camera/aligned_depth_to_color/image_raw"
+    camera_info_topic: "/camera/color/camera_info"
+    pose_topic: "/Odometry"
+
+    nearest_topic: "/limit_bar_duck_test/nearest"
+    trigger_topic: "/limit_bar_duck_test/trigger"
+    feedback_topic: "/limit_bar_duck_test/feedback_log"
+    state_topic: "/limit_bar_duck_test/state"
+    debug_image_topic: "/limit_bar_duck_test/debug_image"
+
+    serial_device: "/dev/ttyUSB0"
+    baud_rate: 115200
+    output_precision: 3
+    message_prefix: "["
+    field_separator: ","
+    message_suffix: "]\n"
+
+    blue_hsv_lower: [95, 100, 60]
+    blue_hsv_upper: [125, 255, 255]
+    white_hsv_lower: [0, 0, 120]
+    white_hsv_upper: [180, 90, 255]
+    # 2026-05-16: 黄橘色横栏近距离占据下半屏时，背景海报/门窗高光会在蓝白
+    # mask 中形成水平线，误触发限高杆；检测到大橘色前景时抑制限高杆候选。
+    # rollback: 设为 false 即恢复原蓝白检测。
+    orange_suppress_enabled: true
+    orange_suppress_hsv_lower: [0, 50, 50]
+    orange_suppress_hsv_upper: [45, 255, 255]
+    orange_suppress_min_area_ratio: 0.08
+    orange_suppress_min_width_ratio: 0.35
+    orange_suppress_min_height_ratio: 0.18
+    orange_suppress_min_bottom_y_ratio: 0.75
+    # 绕杆是桔黄色竖杆；当前误触场景里前方是绕杆但限高杆 detector 仍把顶部
+    # 蓝白/高光横线当候选。看到足够大的橘色竖向前景时，直接抑制限高杆。
+    orange_suppress_vertical_enabled: true
+    orange_suppress_vertical_min_area_ratio: 0.015
+    orange_suppress_vertical_min_height_ratio: 0.45
+    orange_suppress_vertical_max_width_ratio: 0.35
+    orange_suppress_vertical_min_bottom_y_ratio: 0.65
+    orange_suppress_vertical_min_aspect_ratio: 2.0
+    morph_kernel_px: 5
+    canny_low_threshold: 40
+    canny_high_threshold: 120
+    hough_threshold: 35
+    min_line_length_px: 140
+    max_line_gap_px: 24
+    horizontal_angle_tolerance_deg: 12.0
+    line_band_half_height_px: 12
+    line_band_horizontal_pad_px: 12
+    min_blue_pixels: 40
+    min_white_pixels: 40
+    component_close_kernel_width_px: 41
+    component_close_kernel_height_px: 11
+    # 2026-06-09: 240 高图像下旧值只看底部 50px；现场日志显示限高杆候选常在
+    # pixel_y≈125 附近，组件路径长期 search_blue_px=0，只能偶发退到 line 路径。
+    # 上移 ROI 到下半屏，让组件路径能更早稳定看到蓝白横杆。
+    # rollback: 改回 190。
+    component_search_y_min_px: 120
+    # 2026-05-14: 下楼梯后固定入口确认阶段，限高杆常出现在画面更靠下的位置；
+    # 原 360px 上界会把近距离横杆下半部分裁掉，导致 supervisor 先被 slope 背景抢走。
+    # rollback: 改回 360，即恢复旧的更高 ROI。
+    component_search_y_max_px: 460
+    component_expand_x_px: 80
+    component_expand_y_px: 18
+    min_component_area_px: 1800.0
+    min_component_width_px: 180
+    min_component_height_px: 18
+    # 2026-05-14: 近距离时横杆在图像里会更高，放宽上限避免被“太高”误拒。
+    # rollback: 改回 90。
+    max_component_height_px: 180
+    min_component_aspect_ratio: 4.0
+    min_component_blue_pixels: 200
+    min_component_white_pixels: 180
+
+    depth_units_divisor: 1000.0
+    min_depth_m: 0.15
+    max_depth_m: 2.00
+    min_valid_depth_pixels: 12
+    depth_percentile: 25.0
+    distance_bias_m: 0.0
+    # Supervisor waits for a stable trigger and then holds [2,0,0] before
+    # moving, so the bar must be detected while there is still enough runway.
+    # 2026-05-24: 全程状态机日志里限高杆在 1.0~1.2m 已能稳定出 nearest，
+    # 但 0.65m 触发太晚，进入 SEARCH 后容易先被橘色/杆误检抢到 pole 分支。
+    # 提前触发，让 supervisor 先进入趴下准备。rollback: 改回 0.65。
+    trigger_distance_m: 0.80
+    # 背景蓝白海报/门框会偶发形成很近但深度支撑很弱的假横线；
+    # 触发前至少要有一批有效深度点，避免靠零星近处像素误判。
+    trigger_min_valid_depth_pixels: 120
+    # line 路径比 component 更容易把顶部蓝白/高光横线当成限高杆；
+    # 这次绕杆误触的线候选 depth_px=90，应过滤。历史真 line 触发多在数百到数千。
+    trigger_line_min_valid_depth_pixels: 240
+    # 真限高杆一定有明显蓝条；白底里只掺一点蓝的背景条纹不允许直接触发。
+    trigger_min_blue_ratio: 0.10
+    depth_stale_timeout_sec: 0.50
+    camera_info_stale_timeout_sec: 5.0
+    publish_debug_image: true
+    log_interval_sec: 1.0
+
+    walk_publish_hz: 10.0
+    resume_delay_sec: 1.0
+    retrigger_enabled: false
+
+    travel_distance_m: 1.00
+    travel_delta_x_m: 0.0      # 兼容旧参数；travel_distance_m <= 0 时才用 delta 向量长度
+    travel_delta_y_m: 1.00
+    travel_max_x_error_m: 0.35 # 兼容旧参数；当前实际距离判断不再使用横向误差门限
+
+    walk_mode: 0
+    walk_left_norm: 0.5
+    walk_right_norm: 0.5
+
+    duck_prepare_mode: 2
+    duck_prepare_left_norm: 0.0
+    duck_prepare_right_norm: 0.0
+
+    duck_walk_mode: 2
+    duck_walk_left_norm: 1.0
+    duck_walk_right_norm: 1.0
+
+    stand_mode: 0
+    stand_left_norm: 0.0
+    stand_right_norm: 0.0

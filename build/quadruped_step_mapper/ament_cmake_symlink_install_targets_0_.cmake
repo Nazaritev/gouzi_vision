@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/gouzi/obstacle_race_src/build/quadruped_step_mapper/cmd_vel_to_step_length_node" "/home/gouzi/obstacle_race_src/build/quadruped_step_mapper/cmd_vel_to_serial_node" "TARGETS" "cmd_vel_to_step_length_node" "cmd_vel_to_serial_node" "DESTINATION" "lib/quadruped_step_mapper")

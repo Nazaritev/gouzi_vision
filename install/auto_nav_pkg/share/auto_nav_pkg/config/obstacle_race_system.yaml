@@ -1,0 +1,349 @@
+# 障碍赛系统级接口配置
+# 当前版本已将到点判定收回 obstacle_manager，自行基于 pose_topic 做监控与推进。
+# 这样可以减少 nav_agent 这一层的事件依赖，更适合当前关键点 + 模式锁存架构。
+
+obstacle_manager:
+  ros__parameters:
+    goal_topic: "/goal_pose"
+    mode_topic: "/dog_mode_current"
+    arrival_topic: "/agent/arrival_status"
+    state_topic: "/race_manager/state"
+    feedback_topic: "/race_manager/feedback_log"
+    current_waypoint_topic: "/race_manager/current_waypoint"
+    monitor_state_topic: "/agent/nav_state"
+    monitor_feedback_topic: "/agent/feedback_log"
+    step_override_topic: "/serial_step_override"
+    path_reference_start_topic: "/serial_path_reference_start"
+    path_reference_topic: "/serial_path_reference"
+    uphill_step_floor_state_topic: "/race_manager/uphill_step_floor_enabled"
+    path_correction_profile_topic: "/race_manager/path_correction_profile"
+
+    pose_topic: "/Odometry"
+    pose_topic_type: "odometry"
+    allow_frame_mismatch: false
+    default_frame_id: "camera_init"
+
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: false
+    yaw_tolerance_deg: 20.0
+    allow_goal_pass_through: true
+    pass_through_lateral_tolerance: 0.25
+    goal_timeout_sec: 60.0
+    pose_stale_timeout_sec: 5.0
+    monitor_rate_hz: 10.0
+    progress_log_interval_sec: 2.0
+    arrival_check_on_pose_update: true
+    use_min_dist_for_yaw_waypoint: true
+
+    idle_mode: 1
+    # 起步保持 mode=1 兼容下坡直驱，流程结束强制恢复正常行走。
+    finish_mode: 0
+    startup_delay_sec: 0.0
+    settle_after_arrival_sec: 0.20
+    retry_delay_sec: 1.00
+    max_goal_retries: 2
+    skip_waypoint_on_failure: false
+    latch_mode_until_next_waypoint: true
+    mode_transition_delay_sec: 0.15
+
+nav_executor:
+  ros__parameters:
+    goal_topic: "/goal_pose"
+    # cmd_vel_topic: "/cmd_vel"
+    cmd_vel_topic: "/race_cmd_vel"
+    arrival_status_topic: "/agent/arrival_status"
+    executor_state_topic: "/nav_executor/state"
+    feedback_topic: "/nav_executor/feedback_log"
+    # pose_controller: 当前工程默认模式，直接把 goal + pose 转成 /cmd_vel
+    # external:        仅保留 /goal_pose 接口，等待外部导航系统控制
+    # nav2:            直接使用 nav2_simple_commander 调用 Nav2
+    backend: "pose_controller"
+    pose_topic: "/Odometry"
+    pose_topic_type: "odometry"
+    pose_stale_timeout_sec: 1.2
+    control_rate_hz: 15.0
+    # max_linear_speed_mps: 0.35
+    max_linear_speed_mps: 0.55
+    # min_linear_speed_mps: 0.05
+    min_linear_speed_mps: 0.08
+    max_angular_speed_rps: 0.80
+    min_angular_speed_rps: 0.12
+    linear_kp: 0.60
+    angular_kp: 1.50
+    final_yaw_kp: 1.00
+    # pose_yaw_offset_deg: 0.0
+    pose_yaw_offset_deg: 90.0
+    # heading_align_threshold_deg: 20.0
+    heading_align_threshold_deg: 35.0
+    # 2026-05-04 13:40 CST: temporary route-flow test mode. Disable the
+    # close-goal arc-approach relaxation so nav_executor goes back to plain
+    # point tracking and does not try to blend extra heading correction near
+    # short HSV turn segments.
+    close_goal_relaxed_heading_enabled: false
+    close_goal_relaxed_heading_distance_m: 0.45
+    close_goal_relaxed_heading_max_error_deg: 110.0
+    close_goal_relaxed_heading_min_heading_scale: 0.20
+    close_goal_relaxed_heading_linear_speed_cap_mps: 0.18
+    slow_down_distance_m: 0.60
+    # 2026-05-03 11:28 CST: HSV pole route owns arrival and turn-yaw checks.
+    # Let ordinary /goal_pose approach points remain position-driven; otherwise
+    # pose_controller can stop translating near a point and spin for goal yaw,
+    # while orange_pole_relative_nav is still waiting on position arrival.
+    # Rollback: set true if using nav_executor alone for final pose alignment.
+    use_final_yaw_control: false
+    final_yaw_distance_m: 0.12
+    final_yaw_tolerance_deg: 8.0
+    # Point-LIO 这套 Nav2 配置没有 amcl 之类的独立 localization lifecycle node。
+    # 因此这里禁用 localizer 等待，只保留 navigator 名称。
+    localizer_name: ""
+    navigator_name: "bt_navigator"
+    wait_for_nav2_active: false
+    cancel_previous_goal: true
+    # goal:           直接使用 waypoint 里的 yaw
+    # path_heading:   发送给 Nav2 时改成“当前位置指向目标点”的朝向，适合四足过渡段
+    # current_heading:发送给 Nav2 时保持当前机身朝向
+    nav2_goal_orientation_mode: "path_heading"
+    # 当目标距离已经很近时，改用 goal yaw，便于“到点后原地转向”。
+    nav2_goal_orientation_switch_distance_m: 0.35
+    # nav2_action_server_timeout_sec: 2.0
+    # 2026-05-01: Nav2 can now be started by obstacle_race_bringup itself.
+    # Give lifecycle nodes enough time to activate before falling back to pose_controller.
+    nav2_action_server_timeout_sec: 20.0
+    nav2_cmd_vel_bridge_enabled: true
+    nav2_cmd_vel_source_topic: "/cmd_vel"
+    # 2026-05-02 rollback point: true 会在自旋后近距离过渡点重复触发 mode=6 local spin，
+    # 和 obstacle_manager 的到点/平滑切点竞争。第5点已经用直驱覆盖完成自旋，这里关闭二次自旋。
+    # nav2_local_spin_enabled: true
+    nav2_local_spin_enabled: false
+    nav2_local_spin_distance_m: 0.22
+    nav2_local_spin_min_yaw_error_deg: 15.0
+    nav2_local_spin_stop_yaw_tolerance_deg: 3.0
+    nav2_local_spin_angular_kp: 2.2
+    nav2_local_spin_max_angular_speed_rps: 1.20
+    nav2_local_spin_min_angular_speed_rps: 0.35
+    step_override_topic: "/serial_step_override"
+    nav2_local_spin_use_step_override: true
+    nav2_local_spin_override_mode: 6
+    nav2_local_spin_override_left_norm: -0.20
+    nav2_local_spin_override_right_norm: 0.65
+    # 2026-05-02: Nav2 偶发对远距离目标直接返回 SUCCEEDED，导致 /cmd_vel 归零而 obstacle_manager 仍未到点。
+    # 这里用实时 pose 做二次校验，超过阈值先由 nav_executor 内部快速重发同一目标，
+    # 重发仍失败后才发布 FAILED，让 obstacle_manager 进入慢速重试。
+    nav2_success_pose_check_enabled: true
+    nav2_success_pose_tolerance_m: 0.45
+    status_check_period_sec: 0.20
+    feedback_log_interval_sec: 2.0
+    nav2_success_pose_mismatch_retry_enabled: true
+    nav2_success_pose_mismatch_retry_limit: 2
+    nav2_success_pose_mismatch_retry_delay_sec: 0.05
+
+yolo_relative_nav:
+  ros__parameters:
+    yolo_topic: "/yolo/detections_3d"
+    goal_topic: "/goal_pose"
+    arrival_status_topic: "/agent/arrival_status"
+    step_override_topic: "/serial_step_override"
+    mode_topic: "/dog_mode_current"
+    fixed_step_override_state_topic: "/motion_bridge/fixed_step_override_enabled"
+    state_topic: "/yolo_relative_nav/state"
+    feedback_topic: "/yolo_relative_nav/feedback_log"
+
+    pose_topic: "/Odometry"
+    pose_topic_type: "odometry"
+    default_frame_id: "camera_init"
+    pose_stale_timeout_sec: 1.2
+
+    # 需要距离信息时必须订阅 3D YOLO 话题。2026-05-03 实机 echo 确认：
+    # /yolo/detections_3d 的 bbox3d.frame_id=camera_link，前向距离在 position.x。
+    # 回退点：如果后续 yolo target_frame 改成光学坐标系，再把 trigger_forward_axis 改成 "z"。
+    target_class_name: "montant"
+    min_score: 0.25
+    min_same_class_count: 1
+    # 2026-05-03 00:12 CST: YOLO 3D 实测只有约 1.1-1.4Hz，且 0.75m 左右会丢杆。
+    # 提前到 1.25m 触发，避免 [0,1,1] 直驱在两帧之间冲过 1.0m 触发窗口。
+    # 回退点：如果后续 YOLO 帧率稳定到 >8Hz，可恢复 1.0。
+    trigger_distance_m: 1.25
+    trigger_forward_axis: "x"
+    trigger_lateral_axis: "y"
+    trigger_distance_mode: "forward_axis"
+    max_lateral_abs_m: 0.0
+
+    # 触发前固定发 startup override，并在 1.0s 内由 [0,0,0] 线性爬升到
+    # [0,1,1]，避免起步瞬间直接满幅前冲。设为 0 可回退到旧行为。
+    startup_step_override_enabled: true
+    startup_step_override_mode: 0
+    startup_left_norm: 1.0
+    startup_right_norm: 1.0
+    startup_ramp_duration_sec: 1.0
+    startup_override_rate_hz: 10.0
+    # 2026-05-04: 触发路线后不要立刻撤掉 startup override，而是等
+    # /race_cmd_vel 收到第一帧非零速度，或最多保留 0.25s 再释放，
+    # 避免固定步态退掉与 pose_controller 第一帧输出之间出现 [0,0,0] 空窗。
+    # 回退点：设 startup_route_handoff_enabled=false，或把 max_hold_sec 设成 0。
+    startup_route_handoff_enabled: true
+    startup_route_handoff_cmd_vel_topic: "/race_cmd_vel"
+    startup_route_handoff_max_hold_sec: 0.25
+    startup_route_handoff_min_linear_speed_mps: 0.02
+    startup_route_handoff_min_angular_speed_rps: 0.05
+    startup_route_handoff_republish_goal_on_timeout: true
+    startup_route_handoff_max_republish_attempts: 2
+    publish_mode_at_start: true
+    route_mode: 6
+    route_mode_refresh_rate_hz: 5.0
+    disable_fixed_step_override_during_route: true
+    finish_mode: 0
+
+    # 6 个目标点均按“收到上一个到点后的当前 Odometry”做全局 x/y 增量。
+    waypoint_offsets_xy: [0.7, 1.0, -1.4, 1.0, 0.0, 1.0, 0.7, 1.0, -0.7, 1.0, -0.7, 1.0]
+    goal_yaw_mode: "current"
+    arrival_tolerance: 0.25
+    goal_timeout_sec: 45.0
+    next_goal_delay_sec: 0.20
+    monitor_rate_hz: 10.0
+    progress_log_interval_sec: 1.0
+    # 2026-05-03 00:31 CST: 周期发布诊断心跳，便于启动后再 echo
+    # /yolo_relative_nav/feedback_log 时确认节点是否在收 YOLO、是否过滤了目标。
+    # 回退点：如果比赛时嫌日志太多，改成 0.0 即可关闭。
+    status_heartbeat_sec: 2.0
+
+orange_pole_relative_nav:
+  ros__parameters:
+    # 2026-05-03 01:40 CST: HSV+depth route trigger mirrors the existing YOLO
+    # six-goal route, but takes its trigger from orange_pole_detector. This
+    # keeps the CPU-light pole path independent from the YOLO path.
+    # 回退点：不要启动 orange_pole_relative_nav_node，继续使用 yolo_relative_nav_node。
+    nearest_topic: "/orange_pole_detector/nearest"
+    trigger_topic: "/orange_pole_detector/trigger"
+    goal_topic: "/goal_pose"
+    arrival_status_topic: "/agent/arrival_status"
+    step_override_topic: "/serial_step_override"
+    mode_topic: "/dog_mode_current"
+    fixed_step_override_state_topic: "/motion_bridge/fixed_step_override_enabled"
+    state_topic: "/orange_pole_relative_nav/state"
+    feedback_topic: "/orange_pole_relative_nav/feedback_log"
+
+    pose_topic: "/Odometry"
+    pose_topic_type: "odometry"
+    default_frame_id: "camera_init"
+    pose_stale_timeout_sec: 1.2
+
+    use_trigger_topic: true
+    trigger_from_nearest_topic: true
+    # 2026-05-03 03:24 CST: field log showed the first stable pole frame at
+    # about 1.42m, then the next frame jumped near 1.09m because HSV/depth is
+    # low-rate. Trigger slightly earlier so the route anchor is closer to the
+    # measured point 1 baseline. 回退点：如果启动太早，改回 1.35。
+    trigger_distance_m: 1.45
+    nearest_stale_timeout_sec: 1.0
+    # 和 supervisor 的绕杆过滤保持一致，避免偏侧橘色目标进入 stable 触发窗口。
+    # 当前误触日志里 nearest lateral≈0.40m，应被过滤。
+    max_lateral_abs_m: 0.25
+    min_valid_depth_pixels: 1
+
+    # 触发前固定发 startup override，并在 1.0s 内由 [0,0,0] 线性爬升到
+    # [0,1,1]，避免起步瞬间直接满幅前冲。设为 0 可回退到旧行为。
+    startup_step_override_enabled: true
+    startup_step_override_mode: 0
+    startup_left_norm: 1.0
+    startup_right_norm: 1.0
+    startup_ramp_duration_sec: 1.0
+    startup_override_rate_hz: 10.0
+    # 2026-05-04: 触发路线后不要立刻撤掉 startup override，而是等
+    # /race_cmd_vel 收到第一帧非零速度，或最多保留 0.25s 再释放，
+    # 避免固定步态退掉与 pose_controller 第一帧输出之间出现 [0,0,0] 空窗。
+    # 回退点：设 startup_route_handoff_enabled=false，或把 max_hold_sec 设成 0。
+    startup_route_handoff_enabled: true
+    startup_route_handoff_cmd_vel_topic: "/race_cmd_vel"
+    startup_route_handoff_max_hold_sec: 0.25
+    startup_route_handoff_min_linear_speed_mps: 0.02
+    startup_route_handoff_min_angular_speed_rps: 0.05
+    startup_route_handoff_republish_goal_on_timeout: true
+    startup_route_handoff_max_republish_attempts: 2
+    publish_mode_at_start: true
+    route_mode: 6
+    route_mode_refresh_rate_hz: 5.0
+    disable_fixed_step_override_during_route: true
+    finish_mode: 0
+
+    # 2026-05-03 12:13 CST: 点位按当前 src/点位.txt 回算后，
+    # 将每个目标点沿该点机身当前前向补偿 0.07m。Odometry yaw=0
+    # 时机身前向对应全局 +Y，因此分解方向使用 yaw+90deg。
+    # 第 1 点是启动点；相邻偏移为 1->2 ... 14->15。
+    # 相机触发后先锁定触发瞬间 Odometry 为 route anchor，再按 1->2 ...
+    # 14->15 的相邻差值累计成每个目标点，避免每一段都继承上一个到点误差。
+    # 回退点：恢复 2026-05-03 11:54 changelog 中的上一组补偿后偏移数组。
+    waypoint_offsets_xy: [0.00, 1.08, 0.168, 0.139, 0.676, 0.593, -0.157, 0.200, -1.494, 0.762, 0.298, 0.154, 0.536, 0.707, 0.255, -0.215, 0.594, -1.358, 0.260, 0.114, 1.080, 1.409, 0.278, -0.182, 0.398, -0.687, 0.209, 0.048]
+    route_reference_mode: "route_anchor"
+    waypoint_yaws_deg: [4.6, -50.2, -48.4, 61.9, 62.4, -37.5, -37.9, -157.4, -156.5, -41.0, -36.6, -149.4, -153.2, -82.7]
+    # 点 3/5/7/9/11/13/15 是短距离大角度转向点，使用 mode=6 直驱覆盖。
+    # 2026-05-03 03:24 CST: 普通前进点只看位置；只有 direct override
+    # 转向点检查 yaw，避免 /goal_pose 点附近因 yaw 误差原地踏步。
+    waypoint_use_yaw_tolerance: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+    yaw_tolerance_deg: 15.0
+    # 2026-05-03 04:10 CST: 不再靠放大容差补偿 7cm；
+    # 容差保持较紧，7cm 已写入上面的目标点前向偏移。
+    waypoint_arrival_tolerances: [0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22, 0.22]
+    # 2026-05-04 13:40 CST: temporary route-flow test mode. Disable
+    # pass-through so every forward waypoint must really be reached before the
+    # next in-place turn starts; this avoids cutting the first point early and
+    # immediately sweeping into the pole.
+    forward_waypoint_pass_through_enabled: false
+    forward_waypoint_pass_through_lateral_tolerance_m: 0.12
+    forward_waypoint_pass_through_longitudinal_tolerance_m: 0.24
+    require_fresh_pole_for_route_start: true
+    waypoint_use_direct_step_override: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+    # 2026-06-28 09:06 CST
+    # Reason: field log 1782608179~1782608188 showed the pole pre-run waypoint
+    # entered pose_controller, then cmd_vel_to_serial reported wz=0.8 and the
+    # robot never got inside the waypoint 1/14 arrival radius.
+    # Purpose: keep the first pre-run point measurable by Odometry, but drive it
+    # as a straight fixed gait so it faces the pole route instead of arcing.
+    # Effect: expected logs show FORWARD_STEP_NAVIGATING and
+    # forward_override=[0,0.700,0.700]; rollback by setting the first bool false.
+    waypoint_use_forward_step_override: [true, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    waypoint_forward_step_left_norms: [0.70, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    waypoint_forward_step_right_norms: [0.70, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    # 2026-05-04 11:01 CST: direct override 转向段不再先发 `/goal_pose` 接近，
+    # 而是直接进入单向 turn primitive。这样转向方向由 override 明确给定，
+    # 不再让 pose_controller 自己选“最短角”，避免长时间反向自旋。
+    # Rollback: set turn_waypoint_use_motion_primitive=false.
+    turn_waypoint_use_motion_primitive: true
+    # 2026-05-04 13:40 CST: temporary route-flow test mode. Turn waypoints no
+    # longer arc or exit-forward; they now rotate in place at the current
+    # point, then the next forward waypoint resumes normal point tracking.
+    turn_waypoint_simple_in_place_enabled: true
+    turn_waypoint_arc_inner_norm: 0.20
+    turn_waypoint_arc_outer_norm: 0.42
+    turn_waypoint_min_duration_sec: 0.35
+    # 2026-05-05: turn primitives used to finish as soon as the
+    # accumulated turn angle approached the target, which still left about
+    # 9-14 deg residual yaw error in field logs. Completion now requires both
+    # turn progress and final yaw error to be inside these tolerances.
+    # Rollback: increase these values, or restore the old logic in
+    # orange_pole_relative_nav.py.
+    turn_waypoint_completion_yaw_tolerance_deg: 6.0
+    turn_waypoint_completion_progress_tolerance_deg: 3.0
+    turn_waypoint_longitudinal_tolerance_m: 0.08
+    turn_waypoint_lateral_tolerance_m: 0.18
+    turn_waypoint_exit_forward_norm: 0.24
+    turn_waypoint_exit_forward_min_duration_sec: 0.12
+    turn_waypoint_exit_forward_timeout_sec: 1.5
+    turn_waypoint_timeout_sec: 6.0
+    # left=-0.2/right=0.65 为逆时针，left=0.65/right=-0.2 为顺时针。
+    waypoint_direct_step_left_norms: [0.0, 0.65, 0.0, -0.2, 0.0, 0.65, 0.0, 0.65, 0.0, -0.2, 0.0, 0.65, 0.0, -0.2]
+    waypoint_direct_step_right_norms: [0.0, -0.2, 0.0, 0.65, 0.0, -0.2, 0.0, -0.2, 0.0, 0.65, 0.0, -0.2, 0.0, 0.65]
+    # 2026-05-03 13:54 CST: field logs showed turn points 2/4/6 reach
+    # about 0.34-0.36m from target with large heading error; if direct override
+    # waits until 0.24m, pose_controller rotates in place first. These values
+    # are now only used by the fallback "goal approach + near-goal direct step"
+    # path when turn_waypoint_use_motion_primitive=false.
+    # 回退点：把 direct_step_start_distance_m 调大到 99.0 可恢复旧的立即直驱转向。
+    direct_step_start_distance_m: 0.36
+    direct_step_recover_distance_m: 0.55
+    goal_yaw_mode: "waypoint"
+    arrival_tolerance: 0.25
+    goal_timeout_sec: 45.0
+    next_goal_delay_sec: 0.20
+    monitor_rate_hz: 10.0
+    progress_log_interval_sec: 1.0
+    status_heartbeat_sec: 2.0

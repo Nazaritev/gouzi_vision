@@ -1,0 +1,40 @@
+[INFO] [1784153876.003486071] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1784153876.038114175] [controller_server]: Creating controller server
+[INFO] [1784153878.731363123] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1784153878.734206628] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1784153883.554148433] [controller_server]: Configuring controller interface
+[INFO] [1784153883.554529591] [controller_server]: getting goal checker plugins..
+[INFO] [1784153883.554603786] [controller_server]: Controller frequency set to 10.0000Hz
+[INFO] [1784153883.554637070] [local_costmap.local_costmap]: Configuring
+[INFO] [1784153884.179819637] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1784153884.555985923] [local_costmap.local_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1784153884.812333480] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1784153884.812391213] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1784153884.914475739] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1784153886.297734445] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1784153886.299362120] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1784153886.300130858] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[INFO] [1784153886.301255210] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[INFO] [1784153886.424792123] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[INFO] [1784153886.426169766] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[INFO] [1784153886.426212215] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[INFO] [1784153886.426592008] [controller_server]: ObstaclesCritic instantiated with 1 power and 8.000000 / 1.200000 weights. Critic will collision check based on footprint cost.
+[INFO] [1784153886.426607168] [controller_server]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1784153886.426761532] [controller_server]: GoalCritic instantiated with 1 power and 8.000000 weight.
+[INFO] [1784153886.426773863] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1784153886.426927723] [controller_server]: GoalAngleCritic instantiated with 1 power, 5.000000 weight, and 0.100000 angular threshold.
+[INFO] [1784153886.426940232] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[INFO] [1784153886.545167590] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 4.000000 weight
+[INFO] [1784153886.545214926] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[INFO] [1784153886.545516150] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1784153886.546399766] [controller_server]: PreferForwardCritic instantiated with 1 power and 0.300000 weight.
+[INFO] [1784153886.546441269] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[INFO] [1784153886.569203406] [controller_server]: Optimizer reset
+[INFO] [1784153886.724287997] [MPPIController]: Configured MPPI Controller: FollowPath
+[INFO] [1784153886.724321199] [controller_server]: Controller Server has FollowPath  controllers available.

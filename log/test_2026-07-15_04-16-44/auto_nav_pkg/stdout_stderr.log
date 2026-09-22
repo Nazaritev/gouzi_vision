@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/.pytest_cache
+rootdir: /home/gouzi/obstacle_race_src/src/auto_nav_pkg
+plugins: ament-copyright-0.12.15, ament-pep257-0.12.15, launch-testing-ros-0.19.13, ament-xmllint-0.12.15, launch-testing-1.0.14, ament-flake8-0.12.15, ament-lint-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 129 items
+
+test/test_downstream_route_yaw_reference.py ....                         [  3%]
+test/test_lateral_s_curve.py ....                                        [  6%]
+test/test_obstacle_manager_apriltag_compensation.py ..........           [ 13%]
+test/test_obstacle_race_supervisor_config.py ..FF                        [ 17%]
+test/test_obstacle_race_supervisor_hurdle.py .........                   [ 24%]
+test/test_obstacle_race_supervisor_limit_bar.py ........................ [ 42%]
+......................                                                   [ 59%]
+test/test_obstacle_race_supervisor_s_curve_control.py .................. [ 73%]
+......                                                                   [ 78%]
+test/test_obstacle_race_supervisor_slope_retry.py .............          [ 88%]
+test/test_orange_pole_pre_align_stability.py ...........                 [ 96%]
+test/test_yaw_rate_estimator.py ....                                     [100%]
+
+=================================== FAILURES ===================================
+___ test_phase_two_actual_control_enables_hurdle_and_upstairs_with_rollback ____
+test/test_obstacle_race_supervisor_config.py:71: in test_phase_two_actual_control_enables_hurdle_and_upstairs_with_rollback
+    assert params['limit_bar_lateral_shift_target_distance_m'] == 0.45
+E   assert 0.42 == 0.45
+_____ test_post_stairs_initial_yaw_alignment_is_disabled_for_direct_search _____
+test/test_obstacle_race_supervisor_config.py:146: in test_post_stairs_initial_yaw_alignment_is_disabled_for_direct_search
+    assert params['slope_align_enabled'] is False
+E   assert True is False
+- generated xml file: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/pytest.xml -
+=========================== short test summary info ============================
+FAILED test/test_obstacle_race_supervisor_config.py::test_phase_two_actual_control_enables_hurdle_and_upstairs_with_rollback
+FAILED test/test_obstacle_race_supervisor_config.py::test_post_stairs_initial_yaw_alignment_is_disabled_for_direct_search
+======================== 2 failed, 127 passed in 1.10s =========================

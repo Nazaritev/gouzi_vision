@@ -1,0 +1,26 @@
+[INFO] [1783998428.049185572] [lifecycle_manager_navigation]: Creating
+[INFO] [1783998428.056722824] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [1783998428.141455364] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[INFO] [1783998428.141493159] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[INFO] [1783998428.179050312] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[INFO] [1783998428.189603310] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[INFO] [1783998428.219461861] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[INFO] [1783998428.240293050] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[INFO] [1783998428.294900014] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[INFO] [1783998428.303178504] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[INFO] [1783998428.305349743] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[INFO] [1783998429.031554165] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[INFO] [1783998429.031618986] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[INFO] [1783998429.150792630] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[INFO] [1783998429.150845986] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[INFO] [1783998429.773512292] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[INFO] [1783998429.773582963] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[INFO] [1783998429.909816382] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[INFO] [1783998429.909872998] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[INFO] [1783998430.937732611] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[INFO] [1783998430.937792714] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[INFO] [1783998431.047092734] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[INFO] [1783998431.047155347] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[INFO] [1783998431.160558406] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[INFO] [1783998431.160614032] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[INFO] [1783998431.160625062] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m

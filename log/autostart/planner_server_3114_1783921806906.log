@@ -1,0 +1,259 @@
+[INFO] [1783921806.960829171] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783921806.963638351] [planner_server]: Creating
+[INFO] [1783921806.984678101] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783921806.985258147] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1783921807.052373608] [planner_server]: Configuring
+[INFO] [1783921807.052413831] [global_costmap.global_costmap]: Configuring
+[INFO] [1783921807.061394285] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[INFO] [1783921807.065881869] [global_costmap.global_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1783921807.068369956] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1783921807.068416315] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1783921807.069032152] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1783921807.086688238] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlanner2D
+[INFO] [1783921807.086753679] [planner_server]: Configuring GridBased of type SmacPlanner2D
+[INFO] [1783921807.088932266] [planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.15, maximum iterations 1000000, max on approach iterations 1000, and allowing unknown traversal.
+[INFO] [1783921807.088986946] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1783921808.523988852] [planner_server]: Activating
+[INFO] [1783921808.524072119] [global_costmap.global_costmap]: Activating
+[INFO] [1783921808.524087185] [global_costmap.global_costmap]: Checking transform
+[INFO] [1783921808.524211015] [global_costmap.global_costmap]: start
+[INFO] [1783921809.077959823] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[INFO] [1783921809.079026765] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[WARN] [1783922211.524565341] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-20.45, -0.35) to (-0.48, 19.62). The costmap cannot raytrace for it.
+[WARN] [1783922212.024558954] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-21.05, -0.25) to (-1.08, 19.72). The costmap cannot raytrace for it.
+[WARN] [1783922212.524562700] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-21.65, 0.05) to (-1.68, 20.02). The costmap cannot raytrace for it.
+[WARN] [1783922213.024560517] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-22.10, 0.35) to (-2.13, 20.32). The costmap cannot raytrace for it.
+[WARN] [1783922213.524566466] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-22.65, 0.60) to (-2.68, 20.57). The costmap cannot raytrace for it.
+[WARN] [1783922214.024561734] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.00, 0.80) to (-3.03, 20.77). The costmap cannot raytrace for it.
+[WARN] [1783922214.524590723] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.30, 0.70) to (-3.33, 20.67). The costmap cannot raytrace for it.
+[WARN] [1783922215.024566238] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.30, 0.70) to (-3.33, 20.67). The costmap cannot raytrace for it.
+[WARN] [1783922215.524585462] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.40, 0.90) to (-3.43, 20.87). The costmap cannot raytrace for it.
+[WARN] [1783922216.024591225] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.30, 1.00) to (-3.33, 20.97). The costmap cannot raytrace for it.
+[WARN] [1783922216.524586782] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.20, 1.00) to (-3.23, 20.97). The costmap cannot raytrace for it.
+[WARN] [1783922217.024566518] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.10, 1.05) to (-3.13, 21.02). The costmap cannot raytrace for it.
+[WARN] [1783922217.524580614] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.35, 1.20) to (-3.38, 21.17). The costmap cannot raytrace for it.
+[WARN] [1783922218.024561246] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.85, 1.50) to (-3.88, 21.47). The costmap cannot raytrace for it.
+[WARN] [1783922218.524583453] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-24.30, 1.95) to (-4.33, 21.92). The costmap cannot raytrace for it.
+[WARN] [1783922219.024584607] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-24.75, 2.20) to (-4.78, 22.17). The costmap cannot raytrace for it.
+[WARN] [1783922219.524589704] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.20, 2.80) to (-5.23, 22.77). The costmap cannot raytrace for it.
+[WARN] [1783922220.024536387] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.40, 3.55) to (-5.43, 23.52). The costmap cannot raytrace for it.
+[WARN] [1783922220.524579773] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.75, 4.05) to (-5.78, 24.02). The costmap cannot raytrace for it.
+[WARN] [1783922221.024582461] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.85, 4.55) to (-5.88, 24.52). The costmap cannot raytrace for it.
+[WARN] [1783922221.524561039] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.85, 5.30) to (-5.88, 25.27). The costmap cannot raytrace for it.
+[WARN] [1783922222.024559399] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.95, 6.00) to (-5.98, 25.97). The costmap cannot raytrace for it.
+[WARN] [1783922222.524581166] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.00, 6.80) to (-6.03, 26.77). The costmap cannot raytrace for it.
+[WARN] [1783922223.024576235] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.00, 7.55) to (-6.03, 27.52). The costmap cannot raytrace for it.
+[WARN] [1783922223.524580431] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.05, 8.10) to (-6.08, 28.07). The costmap cannot raytrace for it.
+[WARN] [1783922224.024559621] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.15, 8.80) to (-6.18, 28.77). The costmap cannot raytrace for it.
+[WARN] [1783922224.524567055] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.25, 9.35) to (-6.28, 29.32). The costmap cannot raytrace for it.
+[WARN] [1783922225.024588502] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-26.10, 9.75) to (-6.13, 29.72). The costmap cannot raytrace for it.
+[WARN] [1783922225.524582642] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.65, 9.90) to (-5.68, 29.87). The costmap cannot raytrace for it.
+[WARN] [1783922226.024585271] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-24.95, 9.95) to (-4.98, 29.92). The costmap cannot raytrace for it.
+[WARN] [1783922226.524568752] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-24.40, 9.95) to (-4.43, 29.92). The costmap cannot raytrace for it.
+[WARN] [1783922227.024565313] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.80, 9.95) to (-3.83, 29.92). The costmap cannot raytrace for it.
+[WARN] [1783922227.524595157] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-23.25, 9.95) to (-3.28, 29.92). The costmap cannot raytrace for it.
+[WARN] [1783922228.024584640] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-22.65, 9.90) to (-2.68, 29.87). The costmap cannot raytrace for it.
+[WARN] [1783922228.525155331] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-21.80, 9.80) to (-1.83, 29.77). The costmap cannot raytrace for it.
+[WARN] [1783922229.024578163] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-20.85, 9.70) to (-0.88, 29.67). The costmap cannot raytrace for it.
+[WARN] [1783922229.524581937] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-20.05, 9.50) to (-0.08, 29.47). The costmap cannot raytrace for it.
+[WARN] [1783922230.024560212] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-19.35, 9.50) to (0.62, 29.47). The costmap cannot raytrace for it.
+[WARN] [1783922230.524781307] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-18.60, 9.35) to (1.37, 29.32). The costmap cannot raytrace for it.
+[WARN] [1783922231.024523381] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-17.85, 9.25) to (2.12, 29.22). The costmap cannot raytrace for it.
+[WARN] [1783922231.524613519] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-17.00, 9.20) to (2.97, 29.17). The costmap cannot raytrace for it.
+[WARN] [1783922232.024581282] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-16.25, 9.15) to (3.72, 29.12). The costmap cannot raytrace for it.
+[WARN] [1783922232.524667062] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-15.65, 9.15) to (4.32, 29.12). The costmap cannot raytrace for it.
+[WARN] [1783922233.024513828] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-15.20, 9.10) to (4.77, 29.07). The costmap cannot raytrace for it.
+[WARN] [1783922233.524634970] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-14.35, 9.10) to (5.62, 29.07). The costmap cannot raytrace for it.
+[WARN] [1783922234.024563407] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-13.60, 9.05) to (6.37, 29.02). The costmap cannot raytrace for it.
+[WARN] [1783922234.527181540] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-12.75, 9.05) to (7.22, 29.02). The costmap cannot raytrace for it.
+[WARN] [1783922235.024557888] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-12.10, 9.00) to (7.87, 28.97). The costmap cannot raytrace for it.
+[WARN] [1783922235.524639873] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-11.25, 8.90) to (8.72, 28.87). The costmap cannot raytrace for it.
+[WARN] [1783922236.024563045] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-10.50, 8.80) to (9.47, 28.77). The costmap cannot raytrace for it.
+[WARN] [1783922236.524729096] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-9.85, 8.75) to (10.12, 28.72). The costmap cannot raytrace for it.
+[WARN] [1783922237.024580603] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-9.15, 8.55) to (10.82, 28.52). The costmap cannot raytrace for it.
+[WARN] [1783922237.524597868] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-8.45, 8.35) to (11.52, 28.32). The costmap cannot raytrace for it.
+[WARN] [1783922238.024581674] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-7.65, 8.05) to (12.32, 28.02). The costmap cannot raytrace for it.
+[WARN] [1783922238.524574178] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-6.85, 7.85) to (13.12, 27.82). The costmap cannot raytrace for it.
+[WARN] [1783922239.024564576] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-6.30, 7.70) to (13.67, 27.67). The costmap cannot raytrace for it.
+[WARN] [1783922239.524572875] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-5.75, 7.60) to (14.22, 27.57). The costmap cannot raytrace for it.
+[WARN] [1783922240.024560790] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-5.15, 7.50) to (14.82, 27.47). The costmap cannot raytrace for it.
+[WARN] [1783922240.524563866] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-4.60, 7.50) to (15.37, 27.47). The costmap cannot raytrace for it.
+[WARN] [1783922241.024562938] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-4.15, 7.45) to (15.82, 27.42). The costmap cannot raytrace for it.
+[WARN] [1783922241.524582122] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-3.70, 7.45) to (16.27, 27.42). The costmap cannot raytrace for it.
+[WARN] [1783922242.024564516] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-3.35, 7.45) to (16.62, 27.42). The costmap cannot raytrace for it.
+[WARN] [1783922242.524563565] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.90, 7.45) to (17.07, 27.42). The costmap cannot raytrace for it.
+[WARN] [1783922243.024564200] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.75, 7.45) to (17.22, 27.42). The costmap cannot raytrace for it.
+[WARN] [1783922243.524561261] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.75, 7.60) to (17.22, 27.57). The costmap cannot raytrace for it.
+[WARN] [1783922244.024559800] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.75, 7.70) to (17.22, 27.67). The costmap cannot raytrace for it.
+[WARN] [1783922244.524584852] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.50, 7.85) to (17.47, 27.82). The costmap cannot raytrace for it.
+[WARN] [1783922245.024564184] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-2.10, 7.95) to (17.87, 27.92). The costmap cannot raytrace for it.
+[WARN] [1783922245.524561968] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-1.85, 8.00) to (18.12, 27.97). The costmap cannot raytrace for it.
+[WARN] [1783922246.024536002] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-1.50, 8.10) to (18.47, 28.07). The costmap cannot raytrace for it.
+[WARN] [1783922246.524562650] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-1.00, 8.25) to (18.97, 28.22). The costmap cannot raytrace for it.
+[WARN] [1783922247.024577215] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-0.70, 8.70) to (19.27, 28.67). The costmap cannot raytrace for it.
+[WARN] [1783922247.524559236] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-0.30, 9.35) to (19.67, 29.32). The costmap cannot raytrace for it.
+[WARN] [1783922248.024560939] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (0.15, 10.00) to (20.12, 29.97). The costmap cannot raytrace for it.
+[WARN] [1783922248.524562820] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (0.65, 10.50) to (20.62, 30.47). The costmap cannot raytrace for it.
+[WARN] [1783922249.024562933] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (1.25, 10.80) to (21.22, 30.77). The costmap cannot raytrace for it.
+[WARN] [1783922249.524563709] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (1.80, 11.10) to (21.77, 31.07). The costmap cannot raytrace for it.
+[WARN] [1783922250.024563777] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (2.50, 11.25) to (22.47, 31.22). The costmap cannot raytrace for it.
+[WARN] [1783922250.524567380] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (3.25, 11.25) to (23.22, 31.22). The costmap cannot raytrace for it.
+[WARN] [1783922251.024563597] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (3.75, 11.30) to (23.72, 31.27). The costmap cannot raytrace for it.
+[WARN] [1783922251.524564090] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.30, 11.30) to (24.27, 31.27). The costmap cannot raytrace for it.
+[WARN] [1783922252.024577864] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.60, 11.70) to (24.57, 31.67). The costmap cannot raytrace for it.
+[WARN] [1783922252.524586487] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.90, 12.35) to (24.87, 32.32). The costmap cannot raytrace for it.
+[WARN] [1783922253.024560645] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.85, 13.10) to (24.82, 33.07). The costmap cannot raytrace for it.
+[WARN] [1783922253.524555237] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.55, 13.55) to (24.52, 33.52). The costmap cannot raytrace for it.
+[WARN] [1783922254.024564636] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.30, 13.90) to (24.27, 33.87). The costmap cannot raytrace for it.
+[WARN] [1783922254.524561195] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.15, 14.30) to (24.12, 34.27). The costmap cannot raytrace for it.
+[WARN] [1783922255.024569247] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.10, 14.40) to (24.07, 34.37). The costmap cannot raytrace for it.
+[WARN] [1783922255.524562931] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.10, 14.45) to (24.07, 34.42). The costmap cannot raytrace for it.
+[WARN] [1783922256.024565152] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.05, 14.45) to (24.02, 34.42). The costmap cannot raytrace for it.
+[WARN] [1783922256.524562868] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.05, 14.45) to (24.02, 34.42). The costmap cannot raytrace for it.
+[WARN] [1783922257.024563293] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922257.524562103] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922258.024559932] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922258.524559839] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922259.024543400] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922259.524530385] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922260.024559130] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922260.524569236] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922261.024552622] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922261.524553402] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922262.024570462] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922262.524558078] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922263.024564532] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922263.524562589] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922264.024569660] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922264.524566670] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922265.024541563] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922265.524564800] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922266.024562780] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922266.524563066] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922267.024566646] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922267.524575244] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922268.024556265] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922268.524561985] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922269.024563873] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922269.524560192] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922270.024518642] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922270.524576800] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922271.024572884] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922271.524560839] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922272.024572162] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922272.524554118] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922273.024582407] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922273.524563816] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922274.024558835] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922274.524562887] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922275.024629957] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922275.524564539] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922276.025202492] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922276.524569549] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922277.024715131] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922277.524568892] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922278.024666570] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922278.524584278] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922279.025505615] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.55) to (23.97, 34.52). The costmap cannot raytrace for it.
+[WARN] [1783922279.524567941] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922280.024809121] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922280.524567380] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922281.024700834] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922281.524551135] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922282.024910414] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922282.524556155] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922283.024613506] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922283.524586091] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922284.024566022] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922284.524567018] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922285.024604731] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922285.524563115] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922286.024582208] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922286.524581782] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922287.024576518] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922287.524578097] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922288.024562711] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922288.524582006] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922289.024565328] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922289.524564160] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922290.024570620] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922290.524579400] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922291.024581266] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922291.524563435] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922292.024581445] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922292.524561628] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922293.024593408] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922293.524562567] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922294.024569647] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922294.524562356] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922295.024562470] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922295.524563646] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922296.024583009] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922296.524587980] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922297.024562146] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922297.524584354] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922298.024578023] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922298.524561804] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922299.024582503] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922299.524550662] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922300.024593555] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922300.524558924] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922301.024586284] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922301.524565933] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922302.024578828] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922302.524562332] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922303.024560533] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922303.524561902] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922304.024574761] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922304.524619148] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.00, 14.50) to (23.97, 34.47). The costmap cannot raytrace for it.
+[WARN] [1783922305.024684389] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (3.95, 14.90) to (23.92, 34.87). The costmap cannot raytrace for it.
+[WARN] [1783922305.524548521] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (7.40, 8.25) to (27.37, 28.22). The costmap cannot raytrace for it.
+[WARN] [1783922306.024546481] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (9.95, 0.90) to (29.92, 20.87). The costmap cannot raytrace for it.
+[WARN] [1783922306.524539588] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (11.15, -7.35) to (31.12, 12.62). The costmap cannot raytrace for it.
+[WARN] [1783922307.024655664] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (11.60, -16.10) to (31.57, 3.87). The costmap cannot raytrace for it.
+[WARN] [1783922307.524571163] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (11.95, -25.35) to (31.92, -5.38). The costmap cannot raytrace for it.
+[WARN] [1783922308.024541112] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (12.00, -35.25) to (31.97, -15.28). The costmap cannot raytrace for it.
+[WARN] [1783922308.524542121] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (10.85, -46.05) to (30.82, -26.08). The costmap cannot raytrace for it.
+[WARN] [1783922309.024548428] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (8.45, -58.00) to (28.42, -38.03). The costmap cannot raytrace for it.
+[WARN] [1783922309.524537312] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (4.65, -70.20) to (24.62, -50.23). The costmap cannot raytrace for it.
+[WARN] [1783922310.024551695] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-1.15, -82.90) to (18.82, -62.93). The costmap cannot raytrace for it.
+[WARN] [1783922310.524527972] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-9.10, -96.25) to (10.87, -76.28). The costmap cannot raytrace for it.
+[WARN] [1783922311.024547779] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-19.60, -110.45) to (0.37, -90.48). The costmap cannot raytrace for it.
+[WARN] [1783922311.524547530] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922312.024560672] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922312.524550411] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922313.024561982] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922313.524566506] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922314.024556282] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922314.524563513] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922315.024563308] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922315.524563380] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922316.024563283] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922316.524568598] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922317.024580199] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922317.524579162] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922318.024561989] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922318.524594068] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922319.024550030] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922319.524570013] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922320.024549966] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922320.524576798] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922321.024564735] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922321.524598055] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922322.024559232] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922322.524606581] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922323.024582997] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922323.525460479] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922324.024579908] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922324.524663729] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922325.024563147] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922325.524639973] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922326.024566266] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+[WARN] [1783922326.524647569] [global_costmap.global_costmap]: Sensor origin at (0.00, 0.00) is out of map bounds (-25.50, -117.05) to (-5.53, -97.08). The costmap cannot raytrace for it.
+                                                                                                                                                                                                                                                                                                                                            

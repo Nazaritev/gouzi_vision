@@ -1,0 +1,8 @@
+{
+  "package_name": "apriltag_msgs",
+  "non_idl_tuples": [
+    "/home/gouzi/obstacle_race_src/src/apriltag_msgs:msg/Point.msg",
+    "/home/gouzi/obstacle_race_src/src/apriltag_msgs:msg/AprilTagDetection.msg",
+    "/home/gouzi/obstacle_race_src/src/apriltag_msgs:msg/AprilTagDetectionArray.msg"
+  ]
+}

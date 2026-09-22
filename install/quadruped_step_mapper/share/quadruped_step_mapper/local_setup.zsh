@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/build/quadruped_step_mapper/ament_cmake_environment_hooks/local_setup.zsh

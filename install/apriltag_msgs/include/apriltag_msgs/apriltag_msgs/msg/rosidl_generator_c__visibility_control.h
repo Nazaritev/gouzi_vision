@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/build/apriltag_msgs/rosidl_generator_c/apriltag_msgs/msg/rosidl_generator_c__visibility_control.h

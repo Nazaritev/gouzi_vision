@@ -1,0 +1,254 @@
+[0.007s] Invoking command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/apriltag_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/apriltag_msgs
+[0.078s] -- The C compiler identification is GNU 11.4.0
+[0.146s] -- The CXX compiler identification is GNU 11.4.0
+[0.153s] -- Detecting C compiler ABI info
+[0.208s] -- Detecting C compiler ABI info - done
+[0.213s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.213s] -- Detecting C compile features
+[0.214s] -- Detecting C compile features - done
+[0.219s] -- Detecting CXX compiler ABI info
+[0.283s] -- Detecting CXX compiler ABI info - done
+[0.290s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.290s] -- Detecting CXX compile features
+[0.290s] -- Detecting CXX compile features - done
+[0.292s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.423s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.478s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.507s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.508s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.513s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.542s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.568s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[0.830s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.024s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.276s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.293s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.294s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.328s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.328s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.328s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.328s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.354s] -- Found PythonExtra: .so  
+[1.403s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.419s] -- Added test 'lint_cmake' to check CMake code style
+[1.422s] -- Added test 'xmllint' to check XML markup files
+[1.424s] -- Configuring done
+[1.450s] -- Generating done
+[1.462s] -- Build files have been written to: /home/gouzi/obstacle_race_src/build/apriltag_msgs
+[1.467s] Invoked command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/apriltag_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/apriltag_msgs
+[1.469s] Invoking command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/apriltag_msgs -- -j8 -l8
+[1.502s] [  2%] Generating C code for ROS interfaces
+[1.511s] [  4%] Generating C++ code for ROS interfaces
+[1.516s] [  4%] Built target ament_cmake_python_symlink_apriltag_msgs
+[1.768s] running egg_info
+[1.769s] creating apriltag_msgs.egg-info
+[1.770s] writing apriltag_msgs.egg-info/PKG-INFO
+[1.770s] writing dependency_links to apriltag_msgs.egg-info/dependency_links.txt
+[1.770s] writing top-level names to apriltag_msgs.egg-info/top_level.txt
+[1.770s] writing manifest file 'apriltag_msgs.egg-info/SOURCES.txt'
+[1.771s] reading manifest file 'apriltag_msgs.egg-info/SOURCES.txt'
+[1.771s] writing manifest file 'apriltag_msgs.egg-info/SOURCES.txt'
+[1.806s] [  4%] Built target ament_cmake_python_build_apriltag_msgs_egg
+[1.966s] [  4%] Built target apriltag_msgs__cpp
+[1.993s] [  6%] Generating C++ introspection for ROS interfaces
+[1.995s] [  8%] Generating C++ type support dispatch for ROS interfaces
+[1.999s] [ 10%] Generating C++ type support for eProsima Fast-RTPS
+[2.022s] [ 12%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection__functions.c.o
+[2.022s] [ 14%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection_array__functions.c.o
+[2.022s] [ 17%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/point__functions.c.o
+[2.107s] [ 19%] Linking C shared library libapriltag_msgs__rosidl_generator_c.so
+[2.148s] [ 19%] Built target apriltag_msgs__rosidl_generator_c
+[2.160s] [ 21%] Generating C type support for eProsima Fast-RTPS
+[2.161s] [ 23%] Generating C type support dispatch for ROS interfaces
+[2.165s] [ 25%] Generating C introspection for ROS interfaces
+[2.481s] [ 27%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/point__type_support.cpp.o
+[2.481s] [ 29%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/april_tag_detection_array__type_support.cpp.o
+[2.481s] [ 31%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/april_tag_detection__type_support.cpp.o
+[2.569s] [ 34%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/point__type_support.cpp.o
+[2.602s] [ 36%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/point__type_support.cpp.o
+[2.716s] [ 38%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/point__type_support.cpp.o
+[2.723s] [ 40%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/point__type_support.c.o
+[2.733s] [ 42%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/point__type_support_c.cpp.o
+[2.765s] [ 44%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/april_tag_detection__type_support.cpp.o
+[2.787s] [ 46%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/april_tag_detection__type_support.c.o
+[2.803s] [ 48%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/april_tag_detection_array__type_support.cpp.o
+[2.847s] [ 51%] Linking CXX shared library libapriltag_msgs__rosidl_typesupport_c.so
+[2.856s] [ 53%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.c.o
+[2.906s] [ 55%] Linking C shared library libapriltag_msgs__rosidl_typesupport_introspection_c.so
+[2.945s] [ 57%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/april_tag_detection__type_support.cpp.o
+[2.951s] [ 59%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/april_tag_detection__type_support.cpp.o
+[2.957s] [ 59%] Built target apriltag_msgs__rosidl_typesupport_introspection_c
+[2.962s] [ 59%] Built target apriltag_msgs__rosidl_typesupport_c
+[2.969s] [ 61%] Linking CXX shared library libapriltag_msgs__rosidl_typesupport_cpp.so
+[2.975s] [ 63%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/april_tag_detection__type_support_c.cpp.o
+[2.977s] [ 65%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.cpp.o
+[3.046s] [ 65%] Built target apriltag_msgs__rosidl_typesupport_cpp
+[3.058s] [ 68%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/april_tag_detection_array__type_support.cpp.o
+[3.179s] [ 70%] Building CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/april_tag_detection_array__type_support_c.cpp.o
+[3.572s] [ 72%] Linking CXX shared library libapriltag_msgs__rosidl_typesupport_introspection_cpp.so
+[3.587s] [ 74%] Linking CXX shared library libapriltag_msgs__rosidl_typesupport_fastrtps_c.so
+[3.608s] [ 76%] Linking CXX shared library libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so
+[3.679s] [ 76%] Built target apriltag_msgs__rosidl_typesupport_introspection_cpp
+[3.698s] [ 76%] Built target apriltag_msgs__rosidl_typesupport_fastrtps_c
+[3.707s] [ 76%] Built target apriltag_msgs__rosidl_typesupport_fastrtps_cpp
+[3.725s] [ 76%] Built target apriltag_msgs
+[3.741s] [ 78%] Generating Python code for ROS interfaces
+[4.270s] [ 78%] Built target apriltag_msgs__py
+[4.285s] [ 80%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_april_tag_detection_s.c.o
+[4.285s] [ 82%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_april_tag_detection_array_s.c.o
+[4.286s] [ 85%] Building C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_point_s.c.o
+[4.423s] [ 87%] Linking C shared library rosidl_generator_py/apriltag_msgs/libapriltag_msgs__rosidl_generator_py.so
+[4.455s] [ 87%] Built target apriltag_msgs__rosidl_generator_py
+[4.473s] [ 91%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_c.c.o
+[4.473s] [ 91%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[4.473s] [ 93%] Building C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[4.559s] [ 95%] Linking C shared library rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.560s] [ 97%] Linking C shared library rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.572s] [100%] Linking C shared library rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.591s] [100%] Built target apriltag_msgs__rosidl_typesupport_c__pyext
+[4.596s] [100%] Built target apriltag_msgs__rosidl_typesupport_introspection_c__pyext
+[4.606s] [100%] Built target apriltag_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.615s] Invoked command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/apriltag_msgs -- -j8 -l8
+[4.624s] Invoking command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/apriltag_msgs
+[4.631s] -- Install configuration: ""
+[4.631s] -- Execute custom install script
+[4.631s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/ament_index/resource_index/rosidl_interfaces/apriltag_msgs
+[4.639s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection.h
+[4.645s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection_array.h
+[4.652s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__functions.h
+[4.658s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__struct.h
+[4.667s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__type_support.h
+[4.674s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__functions.h
+[4.681s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__struct.h
+[4.690s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.h
+[4.697s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__functions.h
+[4.706s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__struct.h
+[4.713s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__type_support.h
+[4.720s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/point.h
+[4.726s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.733s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/library_path.sh
+[4.742s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/library_path.dsv
+[4.749s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_fastrtps_c.h
+[4.755s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_fastrtps_c.h
+[4.762s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_fastrtps_c.h
+[4.768s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.775s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_introspection_c.h
+[4.783s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_introspection_c.h
+[4.791s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h
+[4.798s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.806s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection.hpp
+[4.812s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection_array.hpp
+[4.820s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__builder.hpp
+[4.826s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__struct.hpp
+[4.833s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__traits.hpp
+[4.839s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__type_support.hpp
+[4.846s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__builder.hpp
+[4.853s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__struct.hpp
+[4.859s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__traits.hpp
+[4.867s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.hpp
+[4.874s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__builder.hpp
+[4.880s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__struct.hpp
+[4.887s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__traits.hpp
+[4.893s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__type_support.hpp
+[4.899s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/point.hpp
+[4.906s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.913s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[4.920s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_fastrtps_cpp.hpp
+[4.926s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_fastrtps_cpp.hpp
+[4.933s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.939s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_introspection_cpp.hpp
+[4.945s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_introspection_cpp.hpp
+[4.952s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_introspection_cpp.hpp
+[4.959s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/pythonpath.sh
+[4.965s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/pythonpath.dsv
+[4.972s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs-2.0.1-py3.10.egg-info/PKG-INFO
+[4.979s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs-2.0.1-py3.10.egg-info/SOURCES.txt
+[4.989s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs-2.0.1-py3.10.egg-info/dependency_links.txt
+[4.995s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs-2.0.1-py3.10.egg-info/top_level.txt
+[5.003s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/__init__.py
+[5.011s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_c.c
+[5.018s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.024s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.035s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.041s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.048s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.054s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/libapriltag_msgs__rosidl_generator_py.so
+[5.063s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/__init__.py
+[5.071s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection.py
+[5.078s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection_array.py
+[5.085s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection_array_s.c
+[5.094s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection_s.c
+[5.101s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_point.py
+[5.108s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_point_s.c
+[5.114s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.114s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.114s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.114s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/Point.idl
+[5.122s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetection.idl
+[5.128s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetectionArray.idl
+[5.138s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/Point.msg
+[5.144s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetection.msg
+[5.151s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetectionArray.msg
+[5.160s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/ament_index/resource_index/package_run_dependencies/apriltag_msgs
+[5.167s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/ament_index/resource_index/parent_prefix_path/apriltag_msgs
+[5.174s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/ament_prefix_path.sh
+[5.180s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/ament_prefix_path.dsv
+[5.190s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/path.sh
+[5.198s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/environment/path.dsv
+[5.205s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/local_setup.bash
+[5.212s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/local_setup.sh
+[5.220s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/local_setup.zsh
+[5.229s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/local_setup.dsv
+[5.236s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/package.dsv
+[5.243s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/ament_index/resource_index/packages/apriltag_msgs
+[5.249s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake-extras.cmake
+[5.256s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.262s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.272s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.279s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.285s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.292s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.298s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgsConfig.cmake
+[5.307s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgsConfig-version.cmake
+[5.315s] -- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/package.xml
+[5.322s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_c.so
+[5.322s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_c.so" to ""
+[5.322s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_c.so
+[5.323s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.323s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_c.so
+[5.323s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.323s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_c.so
+[5.323s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_c.so" to ""
+[5.323s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.323s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.323s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_cpp.so
+[5.324s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.324s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_cpp.so
+[5.324s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_cpp.so" to ""
+[5.355s] Listing '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs'...
+[5.355s] Compiling '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/__init__.py'...
+[5.355s] Listing '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg'...
+[5.355s] Compiling '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/__init__.py'...
+[5.356s] Compiling '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection.py'...
+[5.356s] Compiling '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_april_tag_detection_array.py'...
+[5.356s] Compiling '/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages/apriltag_msgs/msg/_point.py'...
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_py.so
+[5.360s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_py.so" to ""
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cExport.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cExport.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.360s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cppExport.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cppExport.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_pyExport.cmake
+[5.361s] -- Installing: /home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.363s] Invoked command in '/home/gouzi/obstacle_race_src/build/apriltag_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/apriltag_msgs

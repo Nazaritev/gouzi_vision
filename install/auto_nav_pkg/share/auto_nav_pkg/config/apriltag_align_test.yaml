@@ -1,0 +1,89 @@
+apriltag_align_test:
+  ros__parameters:
+    tf_topic: "/tf"
+    detections_topic: "/apriltag/detections"
+    cmd_vel_topic: "/race_cmd_vel"
+    mode_topic: "/dog_mode_current"
+    feedback_topic: "/apriltag_align_test/feedback_log"
+    state_topic: "/apriltag_align_test/state"
+    debug_topic: "/apriltag_align_test/debug"
+
+    # tags_36h11.yaml maps id 14 to child_frame_id "object" with 112 mm size.
+    target_frame_id: "camera_color_optical_frame"
+    target_child_frame_id: "object"
+    target_tag_id: 14
+
+    # center_x: align tag center with camera optical axis using atan2(x, z).
+    # pose_roll / pose_pitch / pose_yaw: use the pose from AprilTag TF.
+    alignment_mode: "center_x"
+
+    # Keep motion disabled by default for bench testing. Pass
+    # enable_control:=true in the launch command to publish motion commands.
+    enable_control: false
+    # hybrid: forward uses [mode,left_norm,right_norm] for the pole-route
+    # high-speed gait, while turning falls back to /race_cmd_vel angular.z.
+    # step_override: use direct gait templates for both forward and turning.
+    # cmd_vel: use /race_cmd_vel speed control for both forward and turning.
+    control_output_mode: "hybrid"
+    control_mode: 0
+    control_rate_hz: 15.0
+
+    # If the robot turns away from the tag center, flip center_control_sign.
+    control_sign: 1.0
+    center_control_sign: -1.0
+    pose_control_sign: 1.0
+
+    target_center_angle_deg: 0.0
+    target_pose_roll_deg: 0.0
+    target_pose_pitch_deg: 0.0
+    target_pose_yaw_deg: 0.0
+
+    yaw_deadband_deg: 1.5
+    yaw_kp: 0.90
+    min_abs_angular_z: 0.05
+    max_abs_angular_z: 0.25
+
+    # Optional second stage: after yaw alignment, walk toward the tag until
+    # approach_distance_axis reaches target_distance_m. Keep disabled unless
+    # the serial bridge is enabled and the robot has clear space ahead.
+    enable_forward_approach: false
+    target_distance_m: 0.45
+    distance_deadband_m: 0.03
+    forward_kp: 0.35
+    min_forward_speed_mps: 0.03
+    max_forward_speed_mps: 0.12
+    forward_max_yaw_error_deg: 3.0
+    approach_distance_axis: "z"
+
+    max_abs_error_deg: 45.0
+    min_distance_m: 0.15
+    max_distance_m: 3.00
+    stale_timeout_sec: 0.30
+    aligned_hold_sec: 0.30
+    finish_after_aligned_hold: false
+    publish_zero_when_idle: true
+    publish_mode_when_control_enabled: true
+    mode_publish_interval_sec: 1.0
+
+    # Match orange_pole_body_relative_test_v3.yaml:
+    # waypoint 1 forward override -> [0, 0.70, 0.70]
+    # mode-6 turn templates -> cw [6, 0.60, -0.30], ccw [6, -0.35, 0.60]
+    # The mode-6 templates are only used when control_output_mode=step_override.
+    step_override_topic: "/serial_step_override"
+    step_override_forward_mode: 0
+    step_override_forward_left_norm: 0.70
+    step_override_forward_right_norm: 0.70
+    # Use the high-speed direct step while far away, then fall back to cmd_vel
+    # near the target so the bridge can produce smaller approach steps.
+    near_approach_use_cmd_vel: true
+    near_approach_distance_error_m: 0.18
+    step_override_turn_mode: 6
+    step_override_turn_cw_left_norm: 0.60
+    step_override_turn_cw_right_norm: -0.30
+    step_override_turn_ccw_left_norm: -0.35
+    step_override_turn_ccw_right_norm: 0.60
+    step_override_clear_mode: -1
+
+    # Short interval so the launch terminal is useful while tuning.
+    log_interval_sec: 0.25
+    warn_interval_sec: 1.0

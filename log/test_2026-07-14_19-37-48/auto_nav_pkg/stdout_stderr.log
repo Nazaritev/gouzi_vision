@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/.pytest_cache
+rootdir: /home/gouzi/obstacle_race_src/src/auto_nav_pkg
+plugins: ament-copyright-0.12.15, ament-pep257-0.12.15, launch-testing-ros-0.19.13, ament-xmllint-0.12.15, launch-testing-1.0.14, ament-flake8-0.12.15, ament-lint-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 85 items
+
+test/test_downstream_route_yaw_reference.py ...                          [  3%]
+test/test_lateral_s_curve.py ....                                        [  8%]
+test/test_obstacle_manager_apriltag_compensation.py ..........           [ 20%]
+test/test_obstacle_race_supervisor_config.py ..                          [ 22%]
+test/test_obstacle_race_supervisor_hurdle.py .......                     [ 30%]
+test/test_obstacle_race_supervisor_limit_bar.py ........................ [ 58%]
+.......                                                                  [ 67%]
+test/test_obstacle_race_supervisor_slope_retry.py .............          [ 82%]
+test/test_orange_pole_pre_align_stability.py ...........                 [ 95%]
+test/test_yaw_rate_estimator.py ....                                     [100%]
+
+- generated xml file: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/pytest.xml -
+============================== 85 passed in 0.60s ==============================

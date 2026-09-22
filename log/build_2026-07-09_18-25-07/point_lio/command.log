@@ -1,0 +1,6 @@
+Invoking command in '/home/gouzi/obstacle_race_src/build/point_lio': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/point_lio_ros2 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/point_lio
+Invoked command in '/home/gouzi/obstacle_race_src/build/point_lio' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/point_lio_ros2 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/point_lio
+Invoking command in '/home/gouzi/obstacle_race_src/build/point_lio': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/point_lio -- -j8 -l8
+Invoked command in '/home/gouzi/obstacle_race_src/build/point_lio' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/point_lio -- -j8 -l8
+Invoking command in '/home/gouzi/obstacle_race_src/build/point_lio': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/point_lio
+Invoked command in '/home/gouzi/obstacle_race_src/build/point_lio' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/point_lio

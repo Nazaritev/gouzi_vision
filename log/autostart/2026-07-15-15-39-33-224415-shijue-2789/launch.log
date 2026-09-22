@@ -1,0 +1,16 @@
+1784101173.2255077 [INFO] [launch]: All log files can be found below /home/gouzi/obstacle_race_src/log/autostart/2026-07-15-15-39-33-224415-shijue-2789
+1784101173.2256167 [INFO] [launch]: Default logging verbosity is set to INFO
+1784101173.4005640 [INFO] [static_transform_publisher-1]: process started with pid [2802]
+1784101173.4007978 [INFO] [controller_server-2]: process started with pid [2804]
+1784101173.4008930 [INFO] [smoother_server-3]: process started with pid [2806]
+1784101173.4009759 [INFO] [planner_server-4]: process started with pid [2808]
+1784101173.4010665 [INFO] [behavior_server-5]: process started with pid [2810]
+1784101173.4011407 [INFO] [bt_navigator-6]: process started with pid [2812]
+1784101173.4012063 [INFO] [waypoint_follower-7]: process started with pid [2814]
+1784101173.4012744 [INFO] [velocity_smoother-8]: process started with pid [2816]
+1784101173.4013429 [INFO] [lifecycle_manager-9]: process started with pid [2818]
+1784101173.4014082 [INFO] [pointlio_mapping-10]: process started with pid [2820]
+1784101173.4214346 [static_transform_publisher-1] [INFO] [1784101173.420619273] [static_transform_publisher_bEK6j6QRARzyLeiQ]: Spinning until stopped - publishing transform
+1784101173.4216268 [static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+1784101173.4216981 [static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.707107', '0.707107')
+1784101173.4217415 [static_transform_publisher-1] from 'body' to 'base_link'

@@ -1,0 +1,33 @@
+[INFO] [1783921808.739849379] [camera.camera]: RealSense ROS v4.51.1
+[INFO] [1783921808.740220528] [camera.camera]: Built with LibRealSense v2.56.5
+[INFO] [1783921808.740251043] [camera.camera]: Running with LibRealSense v2.56.5
+[INFO] [1783921808.762993157] [camera.camera]: Device with serial number 138422070907 was found.
+
+[INFO] [1783921808.763111092] [camera.camera]: Device with physical ID /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0 was found.
+[INFO] [1783921808.763125901] [camera.camera]: Device with name Intel RealSense D435 was found.
+[INFO] [1783921808.763368202] [camera.camera]: Device with port number 4-3 was found.
+[INFO] [1783921808.763679412] [camera.camera]: Device USB type: 3.2
+[INFO] [1783921808.781771062] [camera.camera]: getParameters...
+[WARN] [1783921808.783099940] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[WARN] [1783921808.783784011] [camera.camera]: Publishing dynamic camera transforms (/tf) at 30 Hz
+[INFO] [1783921808.799073482] [camera.camera]: JSON file is not provided
+[INFO] [1783921808.799135652] [camera.camera]: Device Name: Intel RealSense D435
+[INFO] [1783921808.799167717] [camera.camera]: Device Serial No: 138422070907
+[INFO] [1783921808.799183226] [camera.camera]: Device physical port: /sys/devices/pci0000:00/0000:00:14.0/usb4/4-3/4-3:1.0/video4linux/video0
+[INFO] [1783921808.799198878] [camera.camera]: Device FW version: 5.17.0.10
+[INFO] [1783921808.799212840] [camera.camera]: Device Product ID: 0x0B07
+[INFO] [1783921808.799226628] [camera.camera]: Sync Mode: On
+[WARN] [1783921808.843062187] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1783921808.849876462] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1783921808.850600955] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1783921808.880278955] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1783921808.880802735] [camera.camera]: re-enable the stream for the change to take effect.
+[WARN] [1783921808.883606655] [camera.camera]: re-enable the stream for the change to take effect.
+[INFO] [1783921808.901519339] [camera.camera]: Stopping Sensor: Stereo Module
+[INFO] [1783921808.917296909] [camera.camera]: Starting Sensor: Stereo Module
+[INFO] [1783921808.919564184] [camera.camera]: Open profile: stream_type: Depth(0), Format: Z16, Width: 424, Height: 240, FPS: 15
+[INFO] [1783921808.920011216] [camera.camera]: Stopping Sensor: RGB Camera
+[INFO] [1783921808.952866377] [camera.camera]: Starting Sensor: RGB Camera
+[INFO] [1783921808.956208614] [camera.camera]: Open profile: stream_type: Color(0), Format: RGB8, Width: 424, Height: 240, FPS: 15
+[INFO] [1783921808.959346171] [camera.camera]: RealSense Node Is Up!
+[WARN] [1783921809.103987164] [camera.camera]: 

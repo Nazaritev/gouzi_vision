@@ -1,0 +1,187 @@
+[INFO] [1784182853.270812527] [cmd_vel_to_serial]: Fixed step overrides enabled: [mode=1, left_norm=1, right_norm=1] [mode=6, left_norm=-0.35, right_norm=0.6]
+[INFO] [1784182853.304457467] [cmd_vel_to_serial]: serial start signal RX enabled. token=[start] topic=/motion_bridge/start_signal case_sensitive=false
+[INFO] [1784182853.304497815] [cmd_vel_to_serial]: serial finish signal RX enabled. token=[finish] topic=/motion_bridge/finish_signal case_sensitive=false
+[INFO] [1784182853.304504998] [cmd_vel_to_serial]: serial action ack RX enabled. jumping_token=[jumping] topic=/motion_bridge/action_ack
+[INFO] [1784182853.304512432] [cmd_vel_to_serial]: [1;36mcmd_vel->serial bridge started. device=/dev/ttyUSB0 baud=115200 step_frequency=27.000 Hz default_mode=0 mode_topic=/dog_mode_current mode_echo_topic=/dog_mode_feedback/current odom_y_correction=disabled path_lateral_correction=enabled path_yaw_correction=enabled crouch_yaw_correction=disabled pose_yaw_offset=90.0deg[0m
+[INFO] [1784182853.304532975] [cmd_vel_to_serial]: path lateral step correction enabled. odom_topic=/Odometry goal_topic=/goal_pose path_reference_topic=/serial_path_reference modes=3 deadband=0.050 m gain=0.800 norm/m max=0.180 sign=-1 stale_timeout=0.50 s
+[INFO] [1784182853.304546187] [cmd_vel_to_serial]: path reference explicit start enabled. topic=/serial_path_reference_start timeout=0.50 s
+[INFO] [1784182853.304553294] [cmd_vel_to_serial]: uphill path lateral correction override enabled. deadband=0.030 m gain=1.200 norm/m max=0.240 sign=-1 max_wz=1.200 rad/s
+[INFO] [1784182853.304563364] [cmd_vel_to_serial]: path yaw correction enabled. odom_topic=/Odometry goal_topic=/goal_pose path_reference_topic=/serial_path_reference modes=1 deadband=5.00 deg gain=1.000 norm/rad max=0.200 stale_timeout=0.50 s profile_topic=/race_manager/path_correction_profile default_profile=0 new_goal_delay=0.10 s
+[INFO] [1784182853.304575519] [cmd_vel_to_serial]: uphill path yaw correction override enabled. modes=1 deadband=3.00 deg gain=1.500 norm/rad max=0.300 max_wz=1.200 rad/s
+[INFO] [1784182853.304584560] [cmd_vel_to_serial]: same-direction turn enabled. modes=3 min_wz=0.150 rad/s min_norm=0.040
+[INFO] [1784182853.304594705] [cmd_vel_to_serial]: step override small opposite-sign shaping enabled. modes=1 small_norm=0.150 large_norm=0.200
+[INFO] [1784182853.304602397] [cmd_vel_to_serial]: cmd_vel small opposite-sign shaping enabled. modes=1 small_norm=0.180 large_norm=0.200
+[INFO] [1784182853.304609985] [cmd_vel_to_serial]: minimum output step norm enabled. modes=1 min_norm=0.100 override_modes=2
+[INFO] [1784182853.304617141] [cmd_vel_to_serial]: uphill segment step floor enabled. modes=2 min_norm=0.800 goal_distance_min=0.60 m max_wz=1.200 forward_only=true state_topic=/race_manager/uphill_step_floor_enabled
+[INFO] [1784182853.304625943] [cmd_vel_to_serial]: uphill roll step floor enabled. modes=2 min_roll=2.00 deg use_abs_roll=true min_norm=0.700 max_wz=1.200 require_segment=true state_topic=/race_manager/uphill_step_floor_enabled
+[INFO] [1784182853.304634948] [cmd_vel_to_serial]: fixed step override runtime state topic=/motion_bridge/fixed_step_override_enabled initial=true
+[INFO] [1784182853.304641327] [cmd_vel_to_serial]: direct step override enabled. topic=/serial_step_override timeout=1.00 s one_shot_topic=/serial_step_once
+[INFO] [1784182854.270179609] [cmd_vel_to_serial]: Opened serial device /dev/ttyUSB0
+[INFO] [1784182854.270320336] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182854.270336156] [cmd_vel_to_serial]: [1;33mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.004 odom_roll=0.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=true serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182856.304555668] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182857.304561575] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.003 odom_roll=0.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182858.341642313] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182860.304553843] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.004 odom_roll=0.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182860.378656134] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182862.415716355] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182863.304580224] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.005 odom_roll=0.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182864.416005389] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182866.341626610] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.003 odom_roll=0.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182866.452743379] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182868.489744423] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182868.711965412] [cmd_vel_to_serial]: Received serial start token [start], published /motion_bridge/start_signal=true
+[INFO] [1784182868.723074179] [cmd_vel_to_serial]: [1;35mUpdated serial mode to 1[0m
+[INFO] [1784182868.723174438] [cmd_vel_to_serial]: [1;35mUpdated path correction profile to 1 (0=off, 1=normal, 2=uphill_strong, 3=uphill_strong_sign_test)[0m
+[INFO] [1784182868.749056895] [cmd_vel_to_serial]: [0;96mserial tx: [1,0.000,0.000]
+[0m
+[INFO] [1784182868.749111695] [cmd_vel_to_serial]: [1;33mstep_debug mode=1 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=-0.003 odom_roll=0.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=1 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=true serial=[1,0.000,0.000]
+[0m
+[INFO] [1784182868.778849428] [cmd_vel_to_serial]: [1;35mUpdated path correction profile to 0 (0=off, 1=normal, 2=uphill_strong, 3=uphill_strong_sign_test)[0m
+[INFO] [1784182868.786040197] [cmd_vel_to_serial]: [0;96mserial tx: [1,0.800,0.800]
+[0m
+[INFO] [1784182868.786101480] [cmd_vel_to_serial]: [1;35mstep_debug mode=1 vx=0.000 wz=0.000 left_m=0.0296 right_m=0.0296 fwd_m=0.0296 step_yaw=0.0000 left_norm=0.800 right_norm=0.800 odom_y=-0.009 odom_roll=0.7deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[1,0.800,0.800]
+[0m
+[INFO] [1784182870.822378806] [cmd_vel_to_serial]: [0;96mserial tx: [1,0.800,0.800]
+[0m
+[INFO] [1784182871.822119243] [cmd_vel_to_serial]: [1;35mstep_debug mode=1 vx=0.000 wz=0.000 left_m=0.0296 right_m=0.0296 fwd_m=0.0296 step_yaw=0.0000 left_norm=0.800 right_norm=0.800 odom_y=0.585 odom_roll=1.5deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[1,0.800,0.800]
+[0m
+[INFO] [1784182872.859175084] [cmd_vel_to_serial]: [0;96mserial tx: [1,0.800,0.800]
+[0m
+[INFO] [1784182874.822116083] [cmd_vel_to_serial]: [1;35mstep_debug mode=1 vx=0.000 wz=0.000 left_m=0.0296 right_m=0.0296 fwd_m=0.0296 step_yaw=0.0000 left_norm=0.800 right_norm=0.800 odom_y=1.150 odom_roll=-13.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[1,0.800,0.800]
+[0m
+[INFO] [1784182874.859182126] [cmd_vel_to_serial]: [0;96mserial tx: [1,0.800,0.800]
+[0m
+[INFO] [1784182876.879396935] [cmd_vel_to_serial]: [1;35mUpdated serial mode to 0[0m
+[INFO] [1784182876.879803125] [cmd_vel_to_serial]: [1;35mUpdated uphill step floor segment state to true[0m
+[INFO] [1784182876.882377296] [cmd_vel_to_serial]: [1;35mUpdated uphill step floor segment state to false[0m
+[INFO] [1784182876.896192460] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182876.896231306] [cmd_vel_to_serial]: [1;33mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=1.384 odom_roll=2.0deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=true serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182877.155479652] [cmd_vel_to_serial]: [0;96mserial tx: [6,-0.050,0.100]
+[0m
+[INFO] [1784182877.155531171] [cmd_vel_to_serial]: [1;35mstep_debug mode=6 vx=0.000 wz=0.000 left_m=-0.0019 right_m=0.0037 fwd_m=0.0009 step_yaw=0.0154 left_norm=-0.050 right_norm=0.100 odom_y=1.417 odom_roll=2.2deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[6,-0.050,0.100]
+[0m
+[INFO] [1784182877.489908363] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182877.489958432] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=1.393 odom_roll=8.4deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182877.599908411] [cmd_vel_to_serial]: [0;96mserial tx: [6,-0.050,0.100]
+[0m
+[INFO] [1784182877.599946736] [cmd_vel_to_serial]: [1;35mstep_debug mode=6 vx=0.000 wz=0.000 left_m=-0.0019 right_m=0.0037 fwd_m=0.0009 step_yaw=0.0154 left_norm=-0.050 right_norm=0.100 odom_y=1.429 odom_roll=4.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[6,-0.050,0.100]
+[0m
+[INFO] [1784182877.859168288] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182877.859230536] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=1.430 odom_roll=4.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182878.451741142] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.500,0.500]
+[0m
+[INFO] [1784182878.451787115] [cmd_vel_to_serial]: [1;35mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0185 right_m=0.0185 fwd_m=0.0185 step_yaw=0.0000 left_norm=0.500 right_norm=0.500 odom_y=1.439 odom_roll=1.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[0,0.500,0.500]
+[0m
+[INFO] [1784182880.007322487] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.000,0.000]
+[0m
+[INFO] [1784182880.007364543] [cmd_vel_to_serial]: [1;33mstep_debug mode=0 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=1.888 odom_roll=13.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=true serial=[0,0.000,0.000]
+[0m
+[INFO] [1784182880.542843302] [cmd_vel_to_serial]: [1;35mUpdated serial mode to 7[0m
+[INFO] [1784182880.543212521] [cmd_vel_to_serial]: [1;35mUpdated uphill step floor segment state to true[0m
+[INFO] [1784182880.562864676] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.000,0.000]
+[0m
+[INFO] [1784182880.562904311] [cmd_vel_to_serial]: [1;33mstep_debug mode=7 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=1.897 odom_roll=16.3deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=true serial=[7,0.000,0.000]
+[0m
+[INFO] [1784182880.673994892] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.700,0.743]
+[0m
+[INFO] [1784182880.674045410] [cmd_vel_to_serial]: [1;32mstep_debug mode=7 vx=0.550 wz=0.120 left_m=0.0259 right_m=0.0275 fwd_m=0.0267 step_yaw=0.0044 left_norm=0.700 right_norm=0.743 odom_y=1.888 odom_roll=15.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=true min_step_floor=true override=false timeout=false serial=[7,0.700,0.743]
+[0m
+[INFO] [1784182882.674401820] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.700,0.743]
+[0m
+[INFO] [1784182883.712089342] [cmd_vel_to_serial]: [1;32mstep_debug mode=7 vx=0.510 wz=0.120 left_m=0.0259 right_m=0.0275 fwd_m=0.0267 step_yaw=0.0044 left_norm=0.700 right_norm=0.743 odom_y=2.812 odom_roll=5.6deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=true min_step_floor=true override=false timeout=false serial=[7,0.700,0.743]
+[0m
+[INFO] [1784182884.081383961] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.800,0.843]
+[0m
+[INFO] [1784182884.155455769] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.700,0.743]
+[0m
+[INFO] [1784182884.229527619] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.316,0.359]
+[0m
+[INFO] [1784182884.229568528] [cmd_vel_to_serial]: [0;94mstep_debug mode=7 vx=0.337 wz=0.120 left_m=0.0117 right_m=0.0133 fwd_m=0.0125 step_yaw=0.0044 left_norm=0.316 right_norm=0.359 odom_y=3.072 odom_roll=0.0deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=false serial=[7,0.316,0.359]
+[0m
+[INFO] [1784182884.414691301] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.230,0.276]
+[0m
+[INFO] [1784182884.822117802] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.700,0.753]
+[0m
+[INFO] [1784182884.822156145] [cmd_vel_to_serial]: [1;32mstep_debug mode=7 vx=0.201 wz=0.148 left_m=0.0259 right_m=0.0279 fwd_m=0.0269 step_yaw=0.0055 left_norm=0.700 right_norm=0.753 odom_y=3.185 odom_roll=2.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=true min_step_floor=true override=false timeout=false serial=[7,0.700,0.753]
+[0m
+[INFO] [1784182884.933252967] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.156,0.235]
+[0m
+[INFO] [1784182884.933293297] [cmd_vel_to_serial]: [0;94mstep_debug mode=7 vx=0.196 wz=0.220 left_m=0.0058 right_m=0.0087 fwd_m=0.0072 step_yaw=0.0081 left_norm=0.156 right_norm=0.235 odom_y=3.196 odom_roll=1.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=false serial=[7,0.156,0.235]
+[0m
+[INFO] [1784182885.044411039] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.700,0.780]
+[0m
+[INFO] [1784182885.044484361] [cmd_vel_to_serial]: [1;32mstep_debug mode=7 vx=0.191 wz=0.222 left_m=0.0259 right_m=0.0289 fwd_m=0.0274 step_yaw=0.0082 left_norm=0.700 right_norm=0.780 odom_y=3.209 odom_roll=4.5deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=true min_step_floor=true override=false timeout=false serial=[7,0.700,0.780]
+[0m
+[INFO] [1784182885.118415326] [cmd_vel_to_serial]: [0;96mserial tx: [7,0.121,0.201]
+[0m
+[INFO] [1784182885.118457718] [cmd_vel_to_serial]: [0;94mstep_debug mode=7 vx=0.161 wz=0.223 left_m=0.0045 right_m=0.0074 fwd_m=0.0060 step_yaw=0.0083 left_norm=0.121 right_norm=0.201 odom_y=3.245 odom_roll=1.6deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=true uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=false serial=[7,0.121,0.201]
+[0m
+[INFO] [1784182885.123580294] [cmd_vel_to_serial]: [1;35mUpdated serial mode to 0[0m
+[INFO] [1784182885.124058690] [cmd_vel_to_serial]: [1;35mUpdated uphill step floor segment state to false[0m
+[INFO] [1784182885.155448388] [cmd_vel_to_serial]: [0;96mserial tx: [0,0.200,0.200]
+[0m
+[INFO] [1784182885.155488458] [cmd_vel_to_serial]: [1;32mstep_debug mode=0 vx=0.139 wz=0.240 left_m=0.0074 right_m=0.0074 fwd_m=0.0074 step_yaw=0.0000 left_norm=0.200 right_norm=0.200 odom_y=3.276 odom_roll=1.2deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=true override=false timeout=false serial=[0,0.200,0.200]
+[0m
+[INFO] [1784182885.451807813] [cmd_vel_to_serial]: [0;96mserial tx: [6,0.500,-0.400]
+[0m
+[INFO] [1784182885.451865813] [cmd_vel_to_serial]: [1;35mstep_debug mode=6 vx=0.000 wz=0.000 left_m=0.0185 right_m=-0.0148 fwd_m=0.0019 step_yaw=-0.0926 left_norm=0.500 right_norm=-0.400 odom_y=3.343 odom_roll=1.2deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[6,0.500,-0.400]
+[0m
+[INFO] [1784182886.763223085] [cmd_vel_to_serial]: [1;35mUpdated serial mode to 2[0m
+[INFO] [1784182886.785115996] [cmd_vel_to_serial]: [0;96mserial tx: [2,0.000,0.000]
+[0m
+[INFO] [1784182886.785165979] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=3.289 odom_roll=1.9deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,0.000,0.000]
+[0m
+[INFO] [1784182887.785089556] [cmd_vel_to_serial]: [0;96mserial tx: [2,-0.200,0.650]
+[0m
+[INFO] [1784182887.785147455] [cmd_vel_to_serial]: [0;94mstep_debug mode=2 vx=0.000 wz=0.800 left_m=-0.0074 right_m=0.0241 fwd_m=0.0083 step_yaw=0.0875 left_norm=-0.200 right_norm=0.650 odom_y=3.267 odom_roll=-5.7deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=true uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=false timeout=false serial=[2,-0.200,0.650]
+[0m
+[INFO] [1784182888.081324344] [cmd_vel_to_serial]: [0;96mserial tx: [2,0.000,0.000]
+[0m
+[INFO] [1784182888.081360001] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=0.0000 right_m=0.0000 fwd_m=0.0000 step_yaw=0.0000 left_norm=0.000 right_norm=0.000 odom_y=3.262 odom_roll=-2.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,0.000,0.000]
+[0m
+[INFO] [1784182888.748043092] [cmd_vel_to_serial]: [0;96mserial tx: [2,1.000,1.000]
+[0m
+[INFO] [1784182888.748081304] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=0.0370 right_m=0.0370 fwd_m=0.0370 step_yaw=0.0000 left_norm=1.000 right_norm=1.000 odom_y=3.263 odom_roll=0.6deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,1.000,1.000]
+[0m
+[INFO] [1784182890.785121931] [cmd_vel_to_serial]: [0;96mserial tx: [2,1.000,1.000]
+[0m
+[INFO] [1784182890.822170443] [cmd_vel_to_serial]: [0;96mserial tx: [2,-0.200,0.650]
+[0m
+[INFO] [1784182890.822222190] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=-0.0074 right_m=0.0241 fwd_m=0.0083 step_yaw=0.0875 left_norm=-0.200 right_norm=0.650 odom_y=3.263 odom_roll=2.6deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=true uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=true override=true timeout=false serial=[2,-0.200,0.650]
+[0m
+[INFO] [1784182891.525890825] [cmd_vel_to_serial]: [0;96mserial tx: [2,1.000,1.000]
+[0m
+[INFO] [1784182891.525954599] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=0.0370 right_m=0.0370 fwd_m=0.0370 step_yaw=0.0000 left_norm=1.000 right_norm=1.000 odom_y=3.262 odom_roll=1.5deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,1.000,1.000]
+[0m
+[INFO] [1784182893.044334848] [cmd_vel_to_serial]: [0;96mserial tx: [2,-0.200,0.650]
+[0m
+[INFO] [1784182893.044387376] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=-0.0074 right_m=0.0241 fwd_m=0.0083 step_yaw=0.0875 left_norm=-0.200 right_norm=0.650 odom_y=3.247 odom_roll=2.0deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=true uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,-0.200,0.650]
+[0m
+[INFO] [1784182895.081372575] [cmd_vel_to_serial]: [0;96mserial tx: [2,-0.200,0.650]
+[0m
+[INFO] [1784182895.118437907] [cmd_vel_to_serial]: [0;96mserial tx: [2,1.000,1.000]
+[0m
+[INFO] [1784182895.118505781] [cmd_vel_to_serial]: [1;35mstep_debug mode=2 vx=0.000 wz=0.000 left_m=0.0370 right_m=0.0370 fwd_m=0.0370 step_yaw=0.0000 left_norm=1.000 right_norm=1.000 odom_y=3.249 odom_roll=1.8deg goal_y_err=0.000 odom_corr=0.000 odom_corr_applied=false path_lat_err=0.000 path_corr=0.000 path_corr_applied=false path_yaw_err=0.0deg path_yaw_corr=0.000 path_yaw_applied=false path_profile=0 crouch_yaw_err=0.0deg crouch_yaw_corr=0.000 crouch_yaw_applied=false crouch_fwd_bias=0.000 crouch_fwd_applied=false same_dir_turn=false opp_turn_shape=false uphill_segment=false uphill_seg_floor=false uphill_roll_floor=false min_step_floor=false override=true timeout=false serial=[2,1.000,1.000]
+[0m
+[INFO] [1784182897.118508629] [cmd_vel_to_serial]: [0;96mserial tx: [2,1.000,1.000]
+[0m

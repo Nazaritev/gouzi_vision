@@ -1,0 +1,439 @@
+orange_pole_relative_nav:
+  ros__parameters:
+    # 2026-07-16: direct motion-stage LiDAR slalom. P4 and the robot heading
+    # create a fresh obstacle frame on every activation; no fixed camera_init
+    # position is consumed. Set only lidar_slalom_enabled=false to return to
+    # the unchanged AprilTag pre-align + 14-point controller.
+    lidar_slalom_enabled: true
+    lidar_slalom_topic: /livox/lidar
+    lidar_slalom_cloud_window_frames: 7
+    lidar_slalom_max_planar_range_m: 3.2
+    lidar_slalom_lidar_to_body_translation_m: [-0.011, -0.02329, 0.04412]
+    lidar_slalom_lock_timeout_sec: 1.50
+    # Require three independent new cloud frames. The monitor timer must not
+    # count the same rolling window twice after a transient bad P4 cluster.
+    lidar_slalom_lock_samples: 3
+    lidar_slalom_lock_consistency_m: 0.06
+    lidar_slalom_fallback_to_legacy_before_motion: true
+    lidar_slalom_pole_spacing_m: 1.0
+    lidar_slalom_entry_forward_min_m: 0.45
+    lidar_slalom_entry_forward_max_m: 1.30
+    lidar_slalom_entry_lateral_max_m: 0.35
+    lidar_slalom_vertical_z_min_m: -0.42
+    lidar_slalom_vertical_z_max_m: 0.42
+    lidar_slalom_vertical_cell_size_m: 0.04
+    lidar_slalom_vertical_min_points: 5
+    lidar_slalom_vertical_min_z_span_m: 0.18
+    lidar_slalom_expected_search_radius_m: 0.20
+    lidar_slalom_pose_cloud_max_skew_sec: 0.12
+    lidar_slalom_cloud_stale_timeout_sec: 0.40
+    # P4 must be locked before motion. Once RUNNING, the saved local path and
+    # Odometry are sufficient, so transient raw-cloud loss must not stop it.
+    lidar_slalom_runtime_cloud_stale_stop_enabled: false
+    lidar_slalom_sample_spacing_m: 0.03
+    lidar_slalom_lookahead_m: 0.20
+    lidar_slalom_mode: 0
+    lidar_slalom_cruise_norm: 0.42
+    lidar_slalom_minimum_norm: 0.18
+    lidar_slalom_heading_gain_norm_per_rad: 0.70
+    lidar_slalom_max_delta_norm: 0.28
+    lidar_slalom_slowdown_heading_deg: 35.0
+    # Corrected measured footprint: 0.66m long x 0.46m wide. Runtime safety
+    # uses the oriented rectangle-to-pole-surface distance, not center distance.
+    lidar_slalom_robot_length_m: 0.66
+    lidar_slalom_robot_width_m: 0.46
+    lidar_slalom_pole_radius_m: 0.025
+    # Field priority is route completion. Keep reporting clearance/cross-track
+    # violations, but never switch to FAILED or command zero because of them.
+    lidar_slalom_runtime_geometry_stop_enabled: false
+    lidar_slalom_min_body_clearance_m: 0.04
+    lidar_slalom_min_planned_body_clearance_m: 0.08
+    lidar_slalom_max_cross_track_m: 0.28
+    # Rule-book mandatory circles are 0.35m diameter; drive the body center
+    # within 0.14m of each run-local zone center before allowing progress.
+    lidar_slalom_mandatory_zone_tolerance_m: 0.14
+    lidar_slalom_finish_distance_m: 0.16
+    # Three field runs needed about 35s to approach the exit. Leave enough
+    # watchdog time for the slow run and the terminal pose curve.
+    lidar_slalom_route_timeout_sec: 50.0
+    # The third mandatory-zone center is both the position endpoint and the
+    # absolute-yaw endpoint. Replace the old tail from the last safe P1-side
+    # control point with a cubic pose curve; there is no path after zone 3.
+    lidar_slalom_final_absolute_yaw_enabled: true
+    lidar_slalom_final_absolute_yaw_deg: 0.0
+    lidar_slalom_final_absolute_yaw_tolerance_deg: 8.0
+    lidar_slalom_final_curve_anchor_rl: [2.10, -0.45]
+    lidar_slalom_final_curve_start_handle_m: 0.60
+    lidar_slalom_final_curve_end_handle_m: 0.10
+    lidar_slalom_final_curve_sample_spacing_m: 0.005
+    lidar_slalom_final_curve_min_lookahead_m: 0.04
+    lidar_slalom_final_curve_minimum_norm: 0.10
+    lidar_slalom_final_curve_max_delta_norm: 0.38
+    lidar_slalom_final_curve_yaw_blend_start: 0.80
+    # Legacy rollback: set this true and final_absolute_yaw_enabled false.
+    lidar_slalom_final_turn_enabled: false
+    lidar_slalom_final_turn_delta_deg: 90.0
+    # Parameters below are retained only for that legacy mode-6 rollback.
+    lidar_slalom_final_turn_mode: 6
+    lidar_slalom_final_turn_ccw_left_norm: -0.20
+    lidar_slalom_final_turn_ccw_right_norm: 0.65
+    lidar_slalom_final_turn_cw_left_norm: 0.65
+    lidar_slalom_final_turn_cw_right_norm: -0.20
+    lidar_slalom_final_turn_fine_error_deg: 12.0
+    lidar_slalom_final_turn_fine_left_norm: -0.10
+    lidar_slalom_final_turn_fine_right_norm: 0.35
+    lidar_slalom_final_turn_tolerance_deg: 3.0
+    # Finish on the first 90deg target crossing (or tolerance entry). Do not
+    # wait for low yaw rate/hold, which caused mode-6 correction oscillation.
+    lidar_slalom_final_turn_finish_immediately: true
+    lidar_slalom_final_turn_max_yaw_rate_deg_s: 6.0
+    lidar_slalom_final_turn_hold_sec: 0.20
+    lidar_slalom_final_turn_timeout_sec: 12.0
+    lidar_slalom_progress_log_interval_sec: 1.0
+    # [row, leg] in the run-local frame: P3=(0,0), P4=(0,1), P2=(1,0),
+    # P1=(2,0). The three explicit rule-zone centers are (0.4,1.4),
+    # (-0.3,-0.3), and (2.4,0.4).
+    lidar_slalom_template_points_rl:
+      [0.40, 1.40, 0.45, 1.00, 0.34, 0.62, -0.22, 0.38,
+       -0.42, 0.08, -0.30, -0.30, 0.10, -0.45, 0.42, -0.35,
+       0.49, -0.15, 0.50, 0.12, 0.58, 0.35, 0.80, 0.45,
+       1.12, 0.45, 1.45, 0.20, 1.50, 0.00,
+       1.75, -0.35, 2.10, -0.45, 2.42, -0.18, 2.43, 0.12, 2.40, 0.40,
+       2.70, 0.42]
+
+    # 2026-06-30 CST
+    # Reason: create a fourth-version pole-route tuning file after the v3
+    # AprilTag/locked-route-frame tests exposed remaining late-route risk.
+    # Purpose: keep orange_pole_body_relative_test_v3.yaml as the last tested
+    # baseline while tuning v4 point/parameter changes independently.
+    # Effect: launch this file through body_relative_nav_config to test/tune v4;
+    # rollback by launching orange_pole_body_relative_test_v3.yaml.
+    #
+    # 2026-05-04 14:11 CST: body-relative hybrid test route.
+    # Waypoints 1/14 and 2/14 still use the base HSV absolute route from
+    # obstacle_race_system.yaml. Waypoints listed below switch to
+    # "arrive -> turn using the selected turn_waypoint_yaw_mode -> move
+    # relative to the current body heading" behavior. Positive left means
+    # robot-left in the current body frame; body-forward still follows the
+    # existing convention where Odometry yaw=0 corresponds to global +Y.
+    #
+    # This file intentionally leaves the post-waypoint-2 offsets as zero
+    # placeholders so the operator can fill them from field tests.
+    #
+    # For clarity, the original yaw / direct-turn route settings are copied
+    # here explicitly even though launch also loads obstacle_race_system.yaml
+    # first. Field tuning should mainly need body_relative_waypoint_offsets_fl.
+    # Set turn_waypoint_yaw_mode back to "global_waypoint" to restore the
+    # original absolute-yaw turn behavior.
+    goal_yaw_mode: "waypoint"
+    first_forward_goal_yaw_mode: "current"
+    # Body-relative test flow:                                                                                                                         
+    # - waypoint 1/14 keeps normal walking in mode 0
+    # - every later forward segment and every turn use mode 6
+    first_forward_route_mode: 0
+    forward_route_mode: 6
+    turn_route_mode: 6
+    # 2026-06-29: AprilTag 只负责入口触发/首段对正。对齐完成后锁定
+    # 当前 Odometry 为局部绕杆坐标系，后续按固定模板执行，避免每段
+    # body_relative 继续继承上一段 yaw/位置误差。
+    route_reference_mode: "locked_route_frame"
+    forward_tracking_enabled: true
+    forward_tracking_base_left_norm: 0.50
+    forward_tracking_base_right_norm: 0.50
+    # 2026-06-29: the route now completes, but the original waypoint template
+    # was tuned with natural drift. Strong lateral correction pulls the robot
+    # back onto those imperfect lines and can bring it too close to obstacles
+    # near 11/14. Keep locked-frame distance/yaw reference, but make forward
+    # tracking a light heading hold instead of a hard center-line tracker.
+    forward_tracking_lateral_gain: 0.04
+    # 2026-07-04: V4 logs show turn translation leaves large cross-track error
+    # near 7/14 (~0.32m) and 13/14 (~0.20m). Keep global correction disabled,
+    # but add small local gains on these risk segments. Rollback: set both
+    # per-waypoint arrays back to [].
+    forward_tracking_lateral_gain_waypoint_indices: [7, 13]
+    forward_tracking_lateral_gain_waypoint_values: [0.20, 0.28]
+    forward_tracking_yaw_gain: 0.45
+    forward_tracking_deadband_m: 0.02
+    forward_tracking_max_delta_norm: 0.15
+    forward_tracking_lateral_fail_m: 0.0
+    forward_tracking_arrival_lateral_tolerance_waypoint_indices: [7, 13]
+    forward_tracking_arrival_lateral_tolerance_waypoint_values: [0.0, 0.0]
+    forward_tracking_yaw_fail_deg: 28.0
+    forward_tracking_timeout_sec_per_m: 8.0
+    forward_tracking_timeout_extra_sec: 3.0
+    turn_settle_sec: 0.12
+    turn_settle_yaw_tolerance_deg: 15.0
+    turn_settle_yaw_unstable_fail_enabled: false
+    progress_log_interval_sec: 2.0
+    status_heartbeat_sec: 5.0
+    # AprilTag ID 14 only triggers the already tuned pole route.
+    trigger_source: "apriltag"
+    use_trigger_topic: false
+    trigger_from_nearest_topic: false
+    stable_trigger_enabled: false
+    apriltag_tf_topic: "/tf"
+    apriltag_detections_topic: "/apriltag/detections"
+    apriltag_target_frame_id: "camera_color_optical_frame"
+    apriltag_target_child_frame_id: "role"
+    apriltag_target_tag_id: 14
+    apriltag_stale_timeout_sec: 1.00
+    apriltag_trigger_require_tf: true
+    # 2026-07-07: AprilTag 14 triggers a near-field pre-align before
+    # the tuned 14-point pole route. Disable pole_pre_align_enabled to restore
+    # the previous direct route start behavior.
+    pole_pre_align_enabled: true
+    pole_pre_align_mode: 6
+    # Match the high-wall/upstairs fixed-absolute-yaw strategy: Odometry owns
+    # heading, while AprilTag ID14 supplies only lateral offset and distance.
+    pole_pre_align_angle_metric: "fixed_absolute_yaw"
+    # 收到斜坡桥前人工重锁的赛道 0deg 后，入口目标为 route_zero-90deg；
+    # 关闭本开关或未收到基准时，完全回退原 camera_init 绝对 -90deg。
+    runtime_route_yaw_reference_enabled: true
+    route_yaw_reference_topic: "/slope_route_yaw_reference"
+    route_yaw_reference_timeout_sec: 0.0
+    pole_pre_align_fixed_yaw_deg: -90.0
+    pole_pre_align_target_pitch_deg: 0.0
+    pole_pre_align_angle_tolerance_deg: 2.5
+    # Enter the aligned state at 2deg, but do not leave it for a single
+    # filtered fluctuation until the error exceeds 3.5deg.
+    pole_pre_align_angle_exit_tolerance_deg: 3.5
+    pole_pre_align_angle_hold_sec: 0.20
+    # Median-filter AprilTag pose_pitch over five distinct TF samples. Wait
+    # for three samples before issuing the first turn command.
+    pole_pre_align_pose_filter_window_size: 5
+    pole_pre_align_pose_filter_min_samples: 2
+    # Insert a zero-step pause before accepting an opposite turn direction.
+    pole_pre_align_reverse_cooldown_sec: 0.25
+    pole_pre_align_pose_control_sign: -1.0
+    pole_pre_align_timeout_sec: 20.0
+    pole_pre_align_total_timeout_sec: 70.0
+    pole_pre_align_lateral_tolerance_m: 0.095
+    pole_pre_align_camera_left_offset_m: 0.005
+    pole_pre_align_lateral_control_sign: 1.0
+    pole_pre_align_shift_yaw_deg: 90.0
+    # 横向补偿按 Tag 计算距离的 65% 执行；仍受下方绝对上限约束。
+    pole_pre_align_shift_distance_scale: 0.65
+    pole_pre_align_shift_max_m: 0.20
+    pole_pre_align_shift_deadband_m: 0.02
+    pole_pre_align_shift_rebase_use_turn_drift: false
+    pole_pre_align_reuse_existing_turn_steps: false
+    pole_pre_align_reuse_existing_small_move_steps: false
+    pole_pre_align_turn_mode: 6
+    # 2026-07-13: damp only AprilTag pose-angle convergence to reduce
+    # threshold oscillation. The 90deg lateral turn-out/turn-back phases keep
+    # the unscaled turn controller so lateral correction is not slowed down.
+    pole_pre_align_pose_turn_scale: 0.70
+    pole_pre_align_ccw_left_norm: -0.10
+    pole_pre_align_ccw_right_norm: 0.25
+    pole_pre_align_cw_left_norm: 0.25
+    pole_pre_align_cw_right_norm: -0.10
+    pole_pre_align_turn_scale_enabled: true
+    pole_pre_align_turn_min_scale: 0.35
+    # 2026-07-15: 保持已验证的 0.18 最大角速度请求不变，只提高中等角度的比例响应。
+    # rollback: 恢复为 0.65。
+    pole_pre_align_turn_yaw_gain_per_rad: 0.80
+    pole_pre_align_turn_min_abs_angular_z: 0.035
+    pole_pre_align_turn_max_abs_angular_z: 0.18
+    # 第一阶段只优化入口预对齐和两次 90deg 横移转向；14 点 route frame 与点位不变。
+    # 大角度提高约 35% 指令，近目标按实测 yaw 速度提前刹停，低角速度后才计入 hold。
+    # 回退：pole_pre_align_precision_turn_enabled=false。
+    pole_pre_align_precision_turn_enabled: true
+    # 将现有 1.35 倍大角度提速从 35deg 扩展到 25deg；峰值指令不变。
+    # rollback: 恢复为 35.0。
+    pole_pre_align_turn_far_error_deg: 25.0
+    pole_pre_align_turn_far_scale: 1.35
+    pole_pre_align_turn_yaw_damping_sec: 0.18
+    pole_pre_align_turn_brake_yaw_rate_deg_s: 12.0
+    pole_pre_align_turn_complete_yaw_rate_deg_s: 6.0
+    pole_pre_align_turn_yaw_rate_filter_alpha: 1.0
+    pole_pre_align_turn_yaw_rate_window_sec: 0.30
+    pole_pre_align_turn_yaw_rate_min_span_sec: 0.18
+    pole_pre_align_turn_yaw_rate_max_abs_deg_s: 90.0
+    # 2026-07-15: 不再在 8deg 提前切入小步精调；普通转向一直工作到最终
+    # 2deg 容差边缘。精调仅用于角度已很小但角速度尚未   满足完成门槛的情况。
+    # rollback: 恢复为 8.0。
+    pole_pre_align_fine_angle_threshold_deg: 2.0
+    # 最终 2deg 边缘保留原小步长，避免普通转向高速进入容差后继续过零。
+    pole_pre_align_fine_ccw_left_norm: -0.025
+    pole_pre_align_fine_ccw_right_norm: 0.050
+    pole_pre_align_fine_cw_left_norm: 0.050
+    pole_pre_align_fine_cw_right_norm: -0.025
+    pole_pre_align_walk_mode: 0
+    pole_pre_align_walk_left_norm: 0.30
+    pole_pre_align_walk_right_norm: 0.30
+    pole_pre_align_walk_yaw_correction_enabled: true
+    pole_pre_align_walk_yaw_deadband_deg: 2.5
+    pole_pre_align_walk_yaw_gain_norm_per_rad: 0.90
+    pole_pre_align_walk_yaw_max_delta_norm: 0.18
+    pole_pre_align_stop_hold_sec: 0.10
+    pole_pre_align_backup_enabled: false
+    pole_pre_align_backup_mode: 0
+    pole_pre_align_backup_left_norm: -0.25
+    pole_pre_align_backup_right_norm: -0.25
+    pole_pre_align_backup_distance_m: 0.08
+    pole_pre_align_backup_max_retries: 1
+    pole_pre_align_min_tag_z_m: 0.00
+    # Keep the original route's first "gate" deterministic: after pose/lateral
+    # pre-align, walk forward until tag_z is near this value, then lock the
+    # route anchor and let waypoint 2/14 begin its tuned turn.
+    pole_pre_align_entry_tag_z_m: 0.55
+    pole_pre_align_entry_tag_z_tolerance_m: 0.04
+    pole_pre_align_entry_forward_enabled: true
+    pole_pre_align_entry_forward_mode: 0
+    pole_pre_align_entry_forward_left_norm: 0.30
+    pole_pre_align_entry_forward_right_norm: 0.30
+    pole_pre_align_entry_forward_max_m: 0.40
+    pole_pre_align_verify_require_tag: true
+    pole_pre_align_verify_timeout_sec: 1.5
+    turn_waypoint_yaw_mode: "body_relative_delta"
+    waypoint_yaws_deg: [4.6, -50.2, -48.4, 61.9, 62.4, -37.5, -37.9, -157.4, -156.5, -41.0, -36.6, -149.4, -153.2, -82.7]
+    # Body-relative turn deltas:
+    # - waypoint 2/14 keeps the earlier must-hit turn target
+    # - waypoints 4/6/8/10/12 follow the new right-angle wrap sequence
+    #   cw45, ccw90, cw90, ccw90, cw90
+    # - waypoint 14/14 keeps the earlier final target
+    body_relative_turn_waypoint_indices: [2, 4, 6, 8, 10, 12, 14]
+    # 角度符号约定：正数=逆时针(CCW)转，负数=顺时针(CW)转。
+    # 2026-06-30: 10/14 从 -110deg 改到 -123deg 后，后续 locked-route
+    # 局部坐标系顺时针多转约 13deg。12/14 用 118deg 抵消这 13deg，
+    # 让 13/14 之后的路线方向回到旧 V4 模板附近。
+    body_relative_turn_deltas_deg: [40.0, -101.0, 93.0, 118.0, -121.0, 95.5, -42.0]
+    waypoint_use_yaw_tolerance: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+    waypoint_use_direct_step_override: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+    waypoint_arrival_tolerances: [0.32, 0.32, 0.20, 0.12, 0.20, 0.12, 0.20, 0.12, 0.20, 0.12, 0.20, 0.12, 0.20, 0.12]
+    # 2026-06-28 11:18 CST
+    # Reason: field logs showed turn points can miss the narrow yaw completion
+    # window after progress already passed the target, then continue spinning in
+    # the same direction.
+    # Purpose: keep this stabilization local to v3 pole-route tests: slow down
+    # near the target and accept a small overrun instead of self-spinning.
+    # Effect: expected turn logs show slow_turn=True near the last 15deg and
+    # overshoot_guard=True if progress exceeds target+5deg with yaw_err<=12deg.
+    # Rollback: set both enabled values false.
+    turn_waypoint_overshoot_guard_enabled: true
+    turn_waypoint_overshoot_tolerance_deg: 5.0
+    turn_waypoint_overshoot_accept_yaw_tolerance_deg: 12.0
+    turn_waypoint_slowdown_enabled: true
+    turn_waypoint_slowdown_remaining_deg: 15.0
+    turn_waypoint_slowdown_cw_left_norm: 0.35
+    turn_waypoint_slowdown_cw_right_norm: -0.10
+    turn_waypoint_slowdown_ccw_left_norm: -0.10
+    turn_waypoint_slowdown_ccw_right_norm: 0.35
+    waypoint_use_forward_step_override: [true, false, false, false, false, false, false, false, false, false, false, false, false, false]
+    waypoint_forward_step_left_norms: [0.50, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    waypoint_forward_step_right_norms: [0.50, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    # 2/14: depth-gated turn start disabled for now; waypoint 2 uses the
+    # original turn flow directly because the nearest-depth signal was not
+    # stable enough in field runs.
+    turn_waypoint_pole_distance_gate_indices: []
+    turn_waypoint_pole_distance_gate_thresholds_m: []
+    turn_waypoint_simple_in_place_enabled: true
+    forward_waypoint_pass_through_enabled: false
+    body_relative_waypoint_indices: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    # Pairs are [forward_m, left_m] for each waypoint index above.
+    # Waypoint 14 stays on the base absolute route as the final must-hit point.
+    # If a waypoint is only used to turn in place, keep that pair as [0.0, 0.0].
+    #
+    # Route meaning:
+    #   1/14 绝对起始前进点
+    #   2/14 绝对必达转向点
+    #   3/14 相对机身前进段
+    #   4/14 相对机身转向点
+    #   5/14 相对机身前进段
+    #   6/14 相对机身转向点
+    #   7/14 相对机身前进段
+    #   8/14 相对机身转向点
+    #   9/14 相对机身前进段
+    #   10/14 相对机身转向点
+    #   11/14 相对机身前进段
+    #   12/14 相对机身转向点
+    #   13/14 相对机身前进段
+    #   14/14 绝对最终必达点
+    body_relative_waypoint_offsets_fl:
+      [
+        # 2026-06-28 16:05 CST
+        # 1/14: 不再前进，只作为 AprilTag z≈0.20m + 居中门控；满足后直接进入 2/14 转向。
+        # Old: 0.60, 0.0,
+        0.0, 0.0,
+        # 2026-06-29 09:30 CST
+        # 3/14: 当前 AprilTag 触发后的第一个旋转点比旧旋转点向机器人右侧约 0.10m。
+        # 为了让 3/14 绝对落点接近旧效果，把 2/14 转角从 35deg 修到约 40deg，
+        # 并把前进距离按 hypot(0.87*cos35, 0.87*sin35+0.10) 修到约 0.93m。
+        0.88, 0.0,
+        # 4/14: 转向点；通常保持 [0.0, 0.0]，只做原地转角
+        0.0, 0.0,
+        # 5/14: 第四点转完后，沿当前机身朝向走的位移
+        1.25, 0.0,
+        # 6/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 7/14: 第六点转完后，沿当前机身朝向走的位移
+        1.12, 0.0,
+        # 8/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 2026-06-30: V4 field log showed 10/14 rotates to the requested
+        # -110deg, but the turn starts too close to the pole and the mode-6
+        # "in-place" clockwise turn translates about 0.4m. Start this turn
+        # about 15cm earlier for clearance.
+        # Old: 1.35, 0.0,
+        1.38, 0.0,
+        # 10/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 2026-06-29: field log reached 12/14 but the in-place turn stalled
+        # near the pole (nearest≈0.405m, progress stuck around 42/98deg).
+        # Shorten 11/14 so the 12/14 turn starts earlier with more clearance.
+        # 2026-06-30: with 10/14 changed from -110deg to -123deg, rotate the
+        # previous [forward=1.13m,left=0.14m] displacement into the new local
+        # frame so the 12/14 world start stays close to the old V4 template.
+        # Old for -123deg before compensation: 1.13, 0.14,
+        1.44, 0.39,
+        # 12/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 13/14: 第十二点转完后，沿当前机身朝向走的位移
+        0.69, 0.0
+      ]
+    pole_bypass:
+      # Disable retry-failure pole bypass only for the V4 route. Normal pole
+      # retry/search behavior and all other bypass branches remain unchanged.
+      enabled: false
+      # 2026-06-28 09:37 CST
+      # Reason: field log showed waypoint 1/14 now reaches correctly, but
+      # force_on_detection immediately switched supervisor into pole_bypass,
+      # causing an extra ~95deg clockwise turn and long straight walk instead
+      # of continuing the 14-waypoint pole route.
+      # Purpose: let the normal 14-waypoint route continue after the first
+      # pre-run point; keep pole_bypass available for retry/failure fallback.
+      # Effect: expected logs should continue from 1/14 to 2/14 rather than
+      # state=SANDPIT_BYPASS after waypoint 1. Rollback: set this true again.
+      force_on_detection: false
+      pre_bypass_waypoints: 1
+      complete_once: true
+      search_rearm_delay_sec: 0.8
+      progress_log_interval_sec: 2.0
+      sequence:
+        # 绕杆连续两次重试失败后走 5 段绕行：转 -> 直 -> 转 -> 直 -> 转。
+        # 下面是占位初值，现场调参优先改这两个数组。
+        turn_sequence_deg: [-85.0, 85.0, -85.0]
+        straight_distances_m: [1.75, 0.80]
+      turn:
+        mode: 6
+        cw_left_norm: 0.60
+        cw_right_norm: -0.30
+        ccw_left_norm: -0.35
+        ccw_right_norm: 0.60
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 3.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.10
+        timeout_sec: 2.0
+      walk:
+        mode: 0
+        left_norm: 0.70
+        right_norm: 0.70
+        timeout_sec_per_m: 8.0
+        timeout_extra_sec: 3.0
+        yaw_correction_enabled: false
+        yaw_tolerance_deg: 3.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20

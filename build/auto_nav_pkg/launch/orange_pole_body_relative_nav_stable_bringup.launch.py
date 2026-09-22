@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/src/auto_nav_pkg/launch/orange_pole_body_relative_nav_stable_bringup.launch.py

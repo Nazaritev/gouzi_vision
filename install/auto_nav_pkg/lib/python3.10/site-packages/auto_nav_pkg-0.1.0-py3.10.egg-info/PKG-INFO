@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: auto-nav-pkg
+Version: 0.1.0
+Summary: Obstacle-race task manager and monitoring nodes for a quadruped robot.
+Home-page: UNKNOWN
+Maintainer: OpenAI
+Maintainer-email: openai@example.com
+License: MIT
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+

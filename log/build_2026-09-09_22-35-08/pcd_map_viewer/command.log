@@ -1,0 +1,6 @@
+Invoking command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/pcd_map_viewer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/pcd_map_viewer
+Invoked command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/pcd_map_viewer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/pcd_map_viewer
+Invoking command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/pcd_map_viewer -- -j8 -l8
+Invoked command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/pcd_map_viewer -- -j8 -l8
+Invoking command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/pcd_map_viewer
+Invoked command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/pcd_map_viewer

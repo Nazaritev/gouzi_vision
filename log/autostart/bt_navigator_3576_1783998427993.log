@@ -1,0 +1,23 @@
+[INFO] [1783998428.056962639] [bt_navigator]: 
+	bt_navigator lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783998428.057107142] [bt_navigator]: Creating
+[INFO] [1783998428.240502988] [bt_navigator]: Configuring
+[INFO] [1783998429.910157994] [bt_navigator]: Activating
+[INFO] [1783998430.820694661] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[INFO] [1783998459.741056662] [bt_navigator]: Begin navigating from current location (-0.09, 1.53) to (-0.05, 3.30)
+[INFO] [1783998630.241188035] [bt_navigator]: Received goal preemption request
+[INFO] [1783998630.241390438] [bt_navigator]: Begin navigating from current location (-1.47, -8.92) to (-0.85, -8.48)
+[INFO] [1783998633.941202586] [bt_navigator]: Received goal preemption request
+[INFO] [1783998633.941327504] [bt_navigator]: Begin navigating from current location (-0.45, -8.57) to (-0.21, -9.56)
+[INFO] [1783998637.541211500] [bt_navigator]: Received goal preemption request
+[INFO] [1783998637.541377725] [bt_navigator]: Begin navigating from current location (0.43, -9.32) to (0.72, -8.93)
+[INFO] [1783998641.041200893] [bt_navigator]: Received goal preemption request
+[INFO] [1783998641.041352647] [bt_navigator]: Begin navigating from current location (0.61, -8.57) to (-0.46, -8.22)
+[INFO] [1783998645.541216699] [bt_navigator]: Received goal preemption request
+[INFO] [1783998645.541328288] [bt_navigator]: Begin navigating from current location (-0.22, -7.55) to (0.50, -7.16)
+[INFO] [1783998649.241417592] [bt_navigator]: Received goal preemption request
+[INFO] [1783998649.241513688] [bt_navigator]: Begin navigating from current location (0.47, -6.72) to (0.03, -6.65)
+[WARN] [1783998712.491193019] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1783998712.491298661] [bt_navigator]: Goal failed

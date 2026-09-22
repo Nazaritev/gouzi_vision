@@ -1,0 +1,396 @@
+[INFO] [1784090646.669054701] [obstacle_race_supervisor]: state=WAIT_START
+[INFO] [1784090646.669394978] [obstacle_race_supervisor]: 初始化完成，等待电控串口 [start] 信号后开始下楼梯流程。
+[INFO] [1784090651.957947509] [obstacle_race_supervisor]: state=STAIRS_ACTIVE
+[INFO] [1784090651.958241236] [obstacle_race_supervisor]: 收到电控串口 [start]，开始固定下楼梯分支。
+[INFO] [1784090660.903544928] [obstacle_race_supervisor]: state=SLOPE_ALIGN
+[INFO] [1784090660.903872076] [obstacle_race_supervisor]: 进入斜坡前 yaw 对齐: reason=stairs_finished, target=0.0deg, tolerance=1.5deg, hold=0.50s。
+[INFO] [1784090660.937154649] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.02s, last_tf_children=[none], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090660.937742731] [obstacle_race_supervisor]: 斜坡前 yaw 对齐中: yaw_err=2.2deg, direction=ccw_fine, override=[6,-0.050,0.100]。
+[INFO] [1784090661.470477131] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.01s, last_tf_children=[none], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090661.471071009] [obstacle_race_supervisor]: 斜坡前 yaw 对齐保持中: yaw_err=1.3deg, stable=0.20/0.50s。
+[INFO] [1784090661.770639760] [obstacle_race_supervisor]: 斜坡前 yaw 对齐完成: yaw_err=0.8deg, stable=0.50s。
+[INFO] [1784090661.771181786] [obstacle_race_supervisor]: 锁存斜坡对齐参考: target_yaw=0.0deg, pose_yaw=-0.8deg, pose=(-0.067,1.460), align_duration=0.87s, frame=camera_init。
+[INFO] [1784090661.771636293] [obstacle_race_supervisor]: 发布斜坡路线 0deg 基准: yaw=0.0deg, pose=(-0.067,1.460), frame=camera_init。
+[INFO] [1784090661.771971744] [obstacle_race_supervisor]: state=POST_STAIRS_SLOPE_APPROACH
+[INFO] [1784090661.772386464] [obstacle_race_supervisor]: 进入固定斜坡入口前进: distance=0.00m, override=[0,0.500,0.500], yaw_target=0.0deg, yaw_correction=True。
+[INFO] [1784090661.804389728] [obstacle_race_supervisor]: 固定斜坡入口前进起点=(-0.059,1.459)。
+[INFO] [1784090661.805086699] [obstacle_race_supervisor]: 固定斜坡入口前进完成: travel=0.000m >= 0.000m, yaw_err=0.8deg, target=0.0deg。
+[INFO] [1784090661.805611347] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090661.806021005] [obstacle_race_supervisor]: 进入搜索模式: reason=post_stairs_entry_done, walk=[0,0.500,0.500]。
+[INFO] [1784090661.837234000] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090661.837787647] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/3, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784090661.838177119] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090662.003798812] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.01s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090662.004129648] [obstacle_race_supervisor]: 斜坡 roll 候选(首帧已锁存): current_roll=8.1deg, hold=0.00/0.50s。
+[INFO] [1784090662.270641414] [obstacle_race_supervisor]: 斜坡 roll 候选(首帧已锁存): current_roll=7.2deg, hold=0.27/0.50s。
+[INFO] [1784090662.370391880] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/3, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784090662.370901217] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090662.537351206] [obstacle_race_supervisor]: 斜坡 roll 触发: first_sample>=8.0deg, current_roll=5.6deg, hold=0.53s。
+[INFO] [1784090662.537863152] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.01s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090662.538664536] [obstacle_race_supervisor]: state=SLOPE_ALIGN
+[INFO] [1784090662.539078817] [obstacle_race_supervisor]: 进入斜坡前 yaw 对齐: reason=slope_roll_detected, target=0.0deg, tolerance=1.5deg, hold=0.50s。
+[INFO] [1784090662.570794874] [obstacle_race_supervisor]: 斜坡前 yaw 对齐保持中: yaw_err=0.2deg, stable=0.00/0.50s。
+[INFO] [1784090663.070612702] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.01s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090663.104166903] [obstacle_race_supervisor]: 斜坡前 yaw 对齐完成: yaw_err=-0.0deg, stable=0.53s。
+[INFO] [1784090663.104859596] [obstacle_race_supervisor]: 锁存斜坡对齐参考: target_yaw=0.0deg, pose_yaw=0.0deg, pose=(-0.076,1.707), align_duration=0.57s, frame=camera_init。
+[INFO] [1784090663.105482019] [obstacle_race_supervisor]: 发布斜坡路线 0deg 基准: yaw=0.0deg, pose=(-0.076,1.707), frame=camera_init。
+[INFO] [1784090663.105928434] [obstacle_race_supervisor]: state=SLOPE_ACTIVE
+[INFO] [1784090663.106359531] [obstacle_race_supervisor]: 按 Odometry roll 进入斜坡木桥分支: roll=5.6deg, threshold=8.0deg。
+[INFO] [1784090732.816728017] [obstacle_race_supervisor]: 发布入桥重试方向基准: yaw=178.2deg, pose=(-4.191,2.015), frame=camera_init。
+[INFO] [1784090732.817471190] [obstacle_race_supervisor]: 收到电控 [start] 桥区第 1 次重试信号: 当前 slope waypoint=bridge_exit，锁存桥方向基准=178.2deg，从 turn_180_yaw_settle 重新启动。
+[INFO] [1784090753.803647693] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090753.804106548] [obstacle_race_supervisor]: 进入搜索模式: reason=slope_done, walk=[0,0.500,0.500]。
+[INFO] [1784090753.837136623] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090754.137279345] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_link->camera_color_frame,camera_color_frame->camera_color_optical_frame], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090754.137705896] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/3, latest_tf_age=none, det_age=9.82s, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784090754.138042228] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090754.470421203] [obstacle_race_supervisor]: 限高杆 AprilTag 保护斜坡抢占: samples=1, tag_x=0.597m, tag_z=1.545m, trigger=1.400m, guard=1.850m, center_x=0.137m，继续搜索等待触发线，不进入斜坡 yaw 对齐。
+[INFO] [1784090754.637032649] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_link->camera_color_frame,camera_color_frame->camera_color_optical_frame], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090754.637489592] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=1/3, latest_tf_age=0.17s, det_age=0.17s, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784090754.638020213] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090754.837012246] [obstacle_race_supervisor]: 搜索中 yaw_err=-16.3deg, override=[0,0.600,0.400]。
+[INFO] [1784090755.003956254] [obstacle_race_supervisor]: 限高杆 AprilTag 保护斜坡抢占: samples=3, tag_x=0.638m, tag_z=1.475m, trigger=1.400m, guard=1.850m, center_x=0.178m，继续搜索等待触发线，不进入斜坡 yaw 对齐。
+[INFO] [1784090755.137389946] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_link->camera_color_frame,camera_color_frame->camera_color_optical_frame], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090755.137930994] [obstacle_race_supervisor]: 限高杆 AprilTag 已锁定但距离未到触发线: reason=distance_not_reached, samples=3, tag_x=0.638m, tag_z=1.475m > trigger=1.400m, over_by=0.075m, center_x=0.178m, tag_to_center=-0.460m, target_id=12。
+[INFO] [1784090755.138497915] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090755.503737040] [obstacle_race_supervisor]: 限高杆 AprilTag 分支触发条件满足: reason=odom_handoff_after_tag_lost, source=search_fresh, latched_tag_x=0.638m, latched_tag_z=1.475m, odom_forward=0.076m, est_tag_z=1.398m, trigger_distance=1.400m, inside_by=0.002m, center_x=0.178m, tag_to_center=-0.460m, lock_roll=-6.3deg, lock_pitch=7.5deg。
+[INFO] [1784090755.504405631] [obstacle_race_supervisor]: 限高杆几何初始锁定: source=odom_handoff, samples=1, tag_x=0.638m, tag_z=1.398m, center_x=0.178m, odom_yaw=-162.7deg，后续仅按 yaw 坐标补偿，不再使用完成阶段最新单帧 Tag。
+[INFO] [1784090755.504851594] [obstacle_race_supervisor]: 限高杆 AprilTag 对中锁存: reason=odom_handoff_after_tag_lost, source=search_fresh, latched_tag_x=0.638m, latched_tag_z=1.475m, odom_forward=0.076m, est_tag_z=1.398m, center_x=0.178m, lateral_yaw_offset=-7.2deg, yaw_offset=-17.3deg, yaw_source=fixed_absolute=180.0deg, target_yaw=180.0deg, lock_roll=-6.3deg, lock_pitch=7.5deg。
+[INFO] [1784090755.505439072] [obstacle_race_supervisor]: state=LIMIT_BAR_ALIGN
+[INFO] [1784090755.505779032] [obstacle_race_supervisor]: 进入限高杆分支: reason=limit_bar_detected, dist=1.398m，锁存趴走 yaw 基准=180.0deg(limit_tag_odom_handoff source=search_fresh,latched_tag_x=0.638m,latched_tag_z=1.475m,odom_forward=0.076m,est_tag_z=1.398m,center_x=0.178m,yaw_source=fixed_absolute=180.0deg,offset=-17.3deg)，先按锁定的全局/赛道 yaw 预对齐，Tag 仅用于距离和横向中心线。
+[INFO] [1784090755.537115620] [obstacle_race_supervisor]: 限高杆 AprilTag 姿态预对齐目标锁定: metric=fixed_absolute_yaw, tag_x=0.638m, tag_z=1.398m, measured=-163.0deg, target=180.0deg, raw_err=17.0deg, control_delta=-17.0deg, rpy=(-172.0,10.8,-3.2)deg, lock_source=limit_bar_trigger_lock:odom_handoff, lock_samples=1, lock_metric=10.8deg, latest_pose_pitch=10.8deg, odom_yaw0=-163.0deg, target_yaw=-180.0deg。
+[INFO] [1784090755.537757127] [obstacle_race_supervisor]: 限高杆 AprilTag 姿态预对齐中: metric=fixed_absolute_yaw, measured=-163.0deg, target=180.0deg, visual_err=17.0deg, yaw_err=-17.0deg, feedback=odom, direction=cw, hold=0.00/0.15s, override=[6,0.220,-0.120]。
+[INFO] [1784090756.070670526] [obstacle_race_supervisor]: 限高杆 AprilTag 姿态预对齐继续 odom 对齐: reason=tag_lost_after_target_lock, target_yaw=-180.0deg, yaw_err=-9.1deg, direction=cw, override=[6,0.125,-0.068]。
+[INFO] [1784090756.604531286] [obstacle_race_supervisor]: 限高杆 AprilTag 姿态预对齐完成: metric=fixed_absolute_yaw, current_measured=-178.7deg, current_raw_err=1.3deg, forward_yaw=-180.0deg, initial_ref_yaw=180.0deg, base_yaw=-180.0deg, tag_x=0.192m, tag_z=1.525m, shift_source=limit_bar_trigger_lock_yaw_compensated, shift_tag_x=0.192m, shift_tag_z=1.525m, center_x=-0.268m, yaw_delta=-17.3deg, locked_tag_xz=(0.638,1.398)m。
+[INFO] [1784090756.605397142] [obstacle_race_supervisor]: 第二阶段 S 曲线候选计划: branch=limit_bar, forward=1.105m, lateral=+0.268m, path_length=1.150m, peak_heading=+24.4deg, max_curvature=1.20/m, legacy_linear=1.373m, feasible=True(ok), control=actual_pending。
+[INFO] [1784090756.605719175] [obstacle_race_supervisor]: state=LIMIT_BAR_LATERAL_SHIFT
+[INFO] [1784090756.605985827] [obstacle_race_supervisor]: 限高杆横向补偿计划锁定: center_x=-0.268m, center_z=1.525m, base_yaw=-180.0deg, side_delta=+90.0deg, side_yaw=-90.0deg, shift=0.268m(raw=0.268m, requested=0.268m, clipped=False), trigger_deadband=0.060m, arrival_tolerance=0.025m, skip_lateral=False, forward_component=0.000m, final_forward=1.105m, target_dist=0.420m。
+[INFO] [1784090756.606239741] [obstacle_race_supervisor]: 第二阶段 S 曲线实际控制启用: branch=limit_bar, route=1.105m/+0.268m, cruise=[0.320,0.320], slow=[0.200,0.200], slowdown=0.180m；关闭 limit_bar_lateral_s_curve_control_enabled 可立即回退旧 90deg 流程。
+[INFO] [1784090756.637939155] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=-0.006/1.105m, lateral=-0.003/+0.000m, cross_err=+0.003m, remaining=1.111m, est_tag_dist=1.531m, target_heading=+9.3deg, yaw_err=+8.2deg, yaw_corr=0.128, override=[0,0.192,0.448]。
+[INFO] [1784090756.671399436] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=1/1, raw_dist=2.847m, stable_dist=2.847m, lateral=0.034m, rpy=(-161.2,-1.9,-0.7)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090756.903949193] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=-0.003/1.105m, lateral=+0.003/+0.000m, cross_err=-0.003m, remaining=1.108m, est_tag_dist=1.528m, target_heading=+8.8deg, yaw_err=+6.6deg, yaw_corr=0.103, override=[0,0.217,0.423]。
+[INFO] [1784090757.170368999] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.072/1.105m, lateral=+0.004/+0.001m, cross_err=-0.003m, remaining=1.033m, est_tag_dist=1.453m, target_heading=+13.8deg, yaw_err=+10.2deg, yaw_corr=0.160, override=[0,0.160,0.480]。
+[INFO] [1784090757.436983320] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.152/1.105m, lateral=-0.003/+0.006m, cross_err=+0.008m, remaining=0.953m, est_tag_dist=1.373m, target_heading=+19.6deg, yaw_err=+13.2deg, yaw_corr=0.180, override=[0,0.140,0.500]。
+[INFO] [1784090757.704216364] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.224/1.105m, lateral=+0.019/+0.016m, cross_err=-0.003m, remaining=0.881m, est_tag_dist=1.301m, target_heading=+21.9deg, yaw_err=+12.6deg, yaw_corr=0.180, override=[0,0.140,0.500]。
+[INFO] [1784090757.805864379] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=1/1, raw_dist=2.710m, stable_dist=2.710m, lateral=0.479m, rpy=(179.4,10.0,-0.9)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090757.970556237] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.318/1.105m, lateral=+0.056/+0.040m, cross_err=-0.017m, remaining=0.787m, est_tag_dist=1.207m, target_heading=+22.8deg, yaw_err=+10.4deg, yaw_corr=0.163, override=[0,0.157,0.483]。
+[INFO] [1784090758.237249419] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.385/1.105m, lateral=+0.073/+0.062m, cross_err=-0.011m, remaining=0.720m, est_tag_dist=1.140m, target_heading=+23.3deg, yaw_err=+7.5deg, yaw_corr=0.118, override=[0,0.202,0.438]。
+[INFO] [1784090758.340257062] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=2/1, raw_dist=2.291m, stable_dist=2.500m, lateral=0.602m, rpy=(158.5,18.2,-1.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090758.503634487] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.458/1.105m, lateral=+0.104/+0.092m, cross_err=-0.012m, remaining=0.647m, est_tag_dist=1.067m, target_heading=+21.8deg, yaw_err=+3.5deg, yaw_corr=0.056, override=[0,0.264,0.376]。
+[INFO] [1784090758.770359797] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.544/1.105m, lateral=+0.138/+0.130m, cross_err=-0.008m, remaining=0.561m, est_tag_dist=0.981m, target_heading=+18.7deg, yaw_err=-1.4deg, yaw_corr=0.022, override=[0,0.342,0.298]。
+[INFO] [1784090759.037065206] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.608/1.105m, lateral=+0.163/+0.159m, cross_err=-0.005m, remaining=0.497m, est_tag_dist=0.917m, target_heading=+15.3deg, yaw_err=-4.3deg, yaw_corr=0.068, override=[0,0.388,0.252]。
+[INFO] [1784090759.075336389] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=2/1, raw_dist=2.069m, stable_dist=2.180m, lateral=0.822m, rpy=(158.5,21.0,-1.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090759.304632929] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.691/1.105m, lateral=+0.193/+0.194m, cross_err=+0.001m, remaining=0.414m, est_tag_dist=0.834m, target_heading=+10.2deg, yaw_err=-8.4deg, yaw_corr=0.132, override=[0,0.452,0.188]。
+[INFO] [1784090759.570446923] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.783/1.105m, lateral=+0.193/+0.227m, cross_err=+0.034m, remaining=0.322m, est_tag_dist=0.742m, target_heading=+7.0deg, yaw_err=-9.8deg, yaw_corr=0.154, override=[0,0.474,0.166]。
+[INFO] [1784090759.741998753] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=5/1, raw_dist=1.910m, stable_dist=1.993m, lateral=0.864m, rpy=(159.8,18.3,-0.2)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090759.837297747] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=cruise, forward=0.844/1.105m, lateral=+0.227/+0.244m, cross_err=+0.017m, remaining=0.261m, est_tag_dist=0.681m, target_heading=+2.6deg, yaw_err=-12.1deg, yaw_corr=0.180, override=[0,0.500,0.140]。
+[INFO] [1784090760.104605727] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=slow, forward=0.939/1.105m, lateral=+0.250/+0.261m, cross_err=+0.010m, remaining=0.166m, est_tag_dist=0.586m, target_heading=+0.9deg, yaw_err=-10.8deg, yaw_corr=0.169, override=[0,0.369,0.031]。
+[INFO] [1784090760.370468648] [obstacle_race_supervisor]: 限高杆 S 曲线控制中: phase=slow, forward=1.016/1.105m, lateral=+0.252/+0.267m, cross_err=+0.015m, remaining=0.089m, est_tag_dist=0.509m, target_heading=+1.3deg, yaw_err=-8.4deg, yaw_corr=0.131, override=[0,0.331,0.069]。
+[INFO] [1784090760.637243188] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=arrival_settle, forward=1.088/1.105m, lateral=+0.271/+0.268m, cross_err=-0.003m, arrival_cross_err=-0.003m, lateral_drift=0.000m, yaw_err=-8.9deg, est_tag_dist=0.437m, arrival_settle=0.00/0.20s, hold=0.00/0.30s。
+[INFO] [1784090760.878287907] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=1/1, raw_dist=1.790m, stable_dist=1.790m, lateral=0.520m, rpy=(177.3,16.5,-1.4)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090760.903965495] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=final_align_zero_forward, forward=1.131/1.105m, lateral=+0.275/+0.268m, cross_err=-0.007m, arrival_cross_err=-0.003m, lateral_drift=0.004m, yaw_err=-7.9deg, est_tag_dist=0.394m, arrival_settle=0.27/0.20s, hold=0.00/0.30s。
+[INFO] [1784090761.170369815] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=final_align_zero_forward, forward=1.102/1.105m, lateral=+0.274/+0.268m, cross_err=-0.007m, arrival_cross_err=-0.003m, lateral_drift=0.004m, yaw_err=-5.8deg, est_tag_dist=0.423m, arrival_settle=0.53/0.20s, hold=0.00/0.30s。
+[INFO] [1784090761.437145064] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=final_yaw_settle, forward=1.080/1.105m, lateral=+0.249/+0.268m, cross_err=+0.019m, arrival_cross_err=-0.003m, lateral_drift=0.022m, yaw_err=-1.9deg, est_tag_dist=0.445m, arrival_settle=0.80/0.20s, hold=0.00/0.30s。
+[INFO] [1784090761.704041176] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=final_yaw_settle, forward=1.061/1.105m, lateral=+0.272/+0.268m, cross_err=-0.004m, arrival_cross_err=-0.003m, lateral_drift=0.001m, yaw_err=+0.9deg, est_tag_dist=0.464m, arrival_settle=1.07/0.20s, hold=0.00/0.30s。
+[INFO] [1784090761.970537082] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=completion_hold, forward=1.077/1.105m, lateral=+0.264/+0.268m, cross_err=+0.004m, arrival_cross_err=-0.003m, lateral_drift=0.007m, yaw_err=+0.7deg, est_tag_dist=0.448m, arrival_settle=1.33/0.20s, hold=0.03/0.30s。
+[INFO] [1784090762.014438702] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=1/1, raw_dist=1.799m, stable_dist=1.799m, lateral=0.216m, rpy=(162.4,0.8,-0.0)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090762.237018212] [obstacle_race_supervisor]: 限高杆 S 曲线收尾中: phase=completion_hold, forward=1.068/1.105m, lateral=+0.275/+0.268m, cross_err=-0.007m, arrival_cross_err=-0.003m, lateral_drift=0.004m, yaw_err=+0.5deg, est_tag_dist=0.457m, arrival_settle=1.60/0.20s, hold=0.30/0.30s。
+[INFO] [1784090762.270680409] [obstacle_race_supervisor]: 第二阶段 S 曲线实际结果: branch=limit_bar, route=1.105m/+0.268m, actual=1.073m/+0.262m, cross_err=+0.006m, yaw_err=+0.5deg, est_tag_dist=0.452m, elapsed=5.67s, completion=odometry, control=actual_s_curve。
+[INFO] [1784090762.271194446] [obstacle_race_supervisor]: 限高杆 S 曲线横向补偿完成: forward=1.073/1.105m, lateral=+0.262/+0.268m, est_tag_dist=0.452m，保持站立并开始趴下前 yaw 对齐 -180.0deg, source=base_yaw。
+[INFO] [1784090762.437120210] [obstacle_race_supervisor]: 限高杆最终前进后 yaw 对齐完成: target_yaw=-180.0deg, source=base_yaw, yaw_err=0.4deg, stable=0.13s，进入趴下流程。
+[INFO] [1784090762.437666946] [obstacle_race_supervisor]: state=LIMIT_BAR_PREPARE
+[INFO] [1784090762.437942493] [obstacle_race_supervisor]: 进入限高杆分支: reason=limit_bar_detected, dist=0.277m，锁存趴走 yaw 基准=-180.0deg(limit_bar_pre_duck_base_yaw)，持续 [2,0.000,0.000] 趴下等待 0.0s，再持续 [2,0.900,0.900] 通过。
+[INFO] [1784090762.470416207] [obstacle_race_supervisor]: state=LIMIT_BAR_DUCK
+[INFO] [1784090762.470961804] [obstacle_race_supervisor]: 限高杆趴下等待完成，开始按锁存 yaw 方向投影距离 1.12m 通过，起点=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw)。
+[INFO] [1784090762.503681732] [obstacle_race_supervisor]: 限高杆趴走中: along=-0.000/1.120m, pose=(-4.009,-5.336), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=0.0deg, yaw_corr=0.000, override=[2,0.900,0.900], timeout_left=14.0s。
+[INFO] [1784090762.548803740] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=2/1, raw_dist=1.798m, stable_dist=1.799m, lateral=0.220m, rpy=(160.3,1.2,-0.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090763.081661993] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=8/1, raw_dist=1.794m, stable_dist=1.793m, lateral=0.238m, rpy=(157.5,3.7,-0.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090763.503960864] [obstacle_race_supervisor]: 限高杆趴走中: along=-0.014/1.120m, pose=(-4.002,-5.322), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=0.0deg, yaw_corr=0.000, override=[2,0.900,0.900], timeout_left=13.0s。
+[INFO] [1784090763.615592830] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=7/1, raw_dist=1.785m, stable_dist=1.794m, lateral=0.238m, rpy=(172.1,-0.0,-0.6)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090764.149960751] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=10/1, raw_dist=1.615m, stable_dist=1.729m, lateral=0.220m, rpy=(165.4,-0.3,-0.8)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090764.537132359] [obstacle_race_supervisor]: 限高杆趴走中: along=0.204/1.120m, pose=(-4.010,-5.541), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=0.6deg, yaw_corr=0.012, override=[2,0.888,0.912], timeout_left=11.9s。
+[INFO] [1784090764.570309178] [obstacle_race_supervisor]: 沙坑前预修正叠加已禁用: source=limit_bar_duck, tag_dist=1.597m, tag_x=+0.216m, target=+0.000m, x_err=+0.216m；横向修正统一交给独立折线预修正。
+[INFO] [1784090764.681306521] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=1.565m, stable_dist=1.580m, lateral=0.216m, rpy=(163.7,-0.2,-0.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090765.215164914] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=11/1, raw_dist=1.571m, stable_dist=1.570m, lateral=0.217m, rpy=(164.3,-1.3,-0.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090765.537274821] [obstacle_race_supervisor]: 限高杆趴走中: along=0.294/1.120m, pose=(-4.015,-5.631), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=0.9deg, yaw_corr=0.019, override=[2,0.881,0.919], timeout_left=10.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=1.569m, tag_x=+0.200m。
+[INFO] [1784090765.752578405] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=11/1, raw_dist=1.506m, stable_dist=1.560m, lateral=0.194m, rpy=(162.8,-0.8,-0.2)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090766.283110662] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=1.433m, stable_dist=1.477m, lateral=0.197m, rpy=(164.8,0.2,-1.6)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090766.570424192] [obstacle_race_supervisor]: 限高杆趴走中: along=0.428/1.120m, pose=(-4.037,-5.765), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=2.1deg, yaw_corr=0.044, override=[2,0.856,0.944], timeout_left=9.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=1.440m, tag_x=+0.188m。
+[INFO] [1784090766.816669692] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=13/1, raw_dist=1.343m, stable_dist=1.414m, lateral=0.187m, rpy=(163.6,-0.3,-1.2)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090767.353214941] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=11/1, raw_dist=1.268m, stable_dist=1.337m, lateral=0.176m, rpy=(165.1,-0.7,-1.4)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090767.570711894] [obstacle_race_supervisor]: 限高杆趴走中: along=0.559/1.120m, pose=(-4.030,-5.895), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=2.9deg, yaw_corr=0.061, override=[2,0.839,0.961], timeout_left=8.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=1.303m, tag_x=+0.168m。
+[INFO] [1784090767.885044156] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=13/1, raw_dist=1.227m, stable_dist=1.268m, lateral=0.160m, rpy=(159.7,-0.5,-1.5)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090768.420169431] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=13/1, raw_dist=1.126m, stable_dist=1.177m, lateral=0.151m, rpy=(161.4,-1.9,-1.1)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090768.603984267] [obstacle_race_supervisor]: 限高杆趴走中: along=0.710/1.120m, pose=(-4.048,-6.047), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=2.5deg, yaw_corr=0.053, override=[2,0.847,0.953], timeout_left=7.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=1.159m, tag_x=+0.152m。
+[INFO] [1784090768.952304964] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=1.065m, stable_dist=1.106m, lateral=0.146m, rpy=(169.0,-2.4,-1.3)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090769.493786921] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.971m, stable_dist=1.022m, lateral=0.138m, rpy=(161.2,-2.2,-0.7)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090769.603778836] [obstacle_race_supervisor]: 限高杆趴走中: along=0.853/1.120m, pose=(-4.054,-6.190), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=4.3deg, yaw_corr=0.091, override=[2,0.809,0.991], timeout_left=6.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=1.013m, tag_x=+0.135m。
+[INFO] [1784090770.023980889] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.893m, stable_dist=0.945m, lateral=0.123m, rpy=(163.5,-2.5,-2.1)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090770.556298652] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.805m, stable_dist=0.867m, lateral=0.113m, rpy=(163.2,-3.8,-1.6)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090770.603923274] [obstacle_race_supervisor]: 限高杆趴走中: along=0.991/1.120m, pose=(-4.084,-6.328), start=(-4.005,-5.337), yaw_ref=-180.0deg(limit_bar_pre_duck_base_yaw), yaw_err=4.4deg, yaw_corr=0.092, override=[2,0.808,0.992], timeout_left=5.9s, sandpit_overlay_disabled=limit_bar_duck: tag_dist=0.854m, tag_x=+0.111m。
+[INFO] [1784090771.091203893] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.735m, stable_dist=0.783m, lateral=0.109m, rpy=(162.2,-1.2,-1.9)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090771.437232283] [obstacle_race_supervisor]: state=LIMIT_BAR_WAIT_RESUME
+[INFO] [1784090771.437531184] [obstacle_race_supervisor]: 限高杆通过距离满足: along=1.121m >= 1.120m，持续站起停止并等待 1.0s。
+[INFO] [1784090771.626622382] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.653m, stable_dist=0.704m, lateral=0.110m, rpy=(161.2,-4.1,-0.7)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090772.160601048] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.635m, stable_dist=0.640m, lateral=0.127m, rpy=(162.5,-2.6,-1.2)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090772.437186619] [obstacle_race_supervisor]: state=LIMIT_BAR_POST_RESUME_ALIGN
+[INFO] [1784090772.437649811] [obstacle_race_supervisor]: 限高杆站起后 yaw 复对齐开始: target=-180.0deg(limit_bar_pre_duck_base_yaw), pose_yaw=176.6deg, tolerance=1.0deg。
+[INFO] [1784090772.470374643] [obstacle_race_supervisor]: 限高杆站起后 yaw 复对齐中: yaw_err=3.6deg, direction=ccw, target=-180.0deg(limit_bar_pre_duck_base_yaw), override=[6,-0.060,0.110], timeout_left=1.97s。
+[INFO] [1784090772.695235135] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.658m, stable_dist=0.632m, lateral=0.134m, rpy=(161.5,8.9,-1.1)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090772.770578696] [obstacle_race_supervisor]: 限高杆站起后 yaw 复对齐中: yaw_err=1.8deg, direction=ccw, target=-180.0deg(limit_bar_pre_duck_base_yaw), override=[6,-0.060,0.110], timeout_left=1.67s。
+[INFO] [1784090773.103919896] [obstacle_race_supervisor]: 限高杆站起后 yaw 复对齐保持中: yaw_err=0.6deg, stable=0.30/0.30s。
+[INFO] [1784090773.137298883] [obstacle_race_supervisor]: 限高杆站起后 yaw 复对齐完成: yaw_err=0.6deg, stable=0.33s, target=-180.0deg(limit_bar_pre_duck_base_yaw)。
+[INFO] [1784090773.137971484] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090773.138263567] [obstacle_race_supervisor]: 进入搜索模式: reason=limit_bar_done, walk=[0,0.500,0.500]。
+[INFO] [1784090773.170461538] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090773.296349143] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=10/1, raw_dist=0.657m, stable_dist=0.642m, lateral=0.168m, rpy=(156.3,5.0,-1.8)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090773.470648716] [obstacle_race_supervisor]: state=SANDPIT_BYPASS
+[INFO] [1784090773.471105447] [obstacle_race_supervisor]: 进入砂坑穿越: reason=sandpit_detected, tag_dist=0.646m <= 0.650m，entry_yaw=179.1deg，phases=22。
+[INFO] [1784090773.471479989] [obstacle_race_supervisor]: 砂坑穿越 phase 1/22: 角度对齐，target_yaw=180.0deg, yaw_err=0.9deg。
+[INFO] [1784090773.603865344] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=1/22, turn_progress=0.1/0.9deg, progress_done=True, yaw_err=2.2deg, yaw_done=False, direction=ccw_fine, override=[6,-0.080,0.200]。
+[INFO] [1784090773.895495355] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=7/1, raw_dist=0.466m, stable_dist=0.615m, lateral=0.172m, rpy=(157.6,-5.1,1.1)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090773.970597284] [obstacle_race_supervisor]: 砂坑穿越 phase 1/22 完成: turn_progress=4.7/0.9deg, yaw_err=-1.7deg, stable=0.20s
+[INFO] [1784090773.971048832] [obstacle_race_supervisor]: 砂坑穿越 phase 2/22: 沿当前机身前方直走 0.00m，mode=0, 起点=(-4.065,-6.640), yaw_ref=-178.3deg。
+[INFO] [1784090774.005084537] [obstacle_race_supervisor]: 砂坑穿越 phase 2/22 完成: walk_progress=0.000/0.000m, elapsed=0.03s>=min=0.00s
+[INFO] [1784090774.005541515] [obstacle_race_supervisor]: 砂坑穿越 phase 3/22: 稳定等待 0.30s。
+[INFO] [1784090774.037075317] [obstacle_race_supervisor]: 砂坑穿越等待中: phase=3/22, remain=0.3s, override=[0,0.000,0.000]。
+[INFO] [1784090774.337232129] [obstacle_race_supervisor]: 砂坑穿越 phase 3/22 完成: wait_done
+[INFO] [1784090774.337809833] [obstacle_race_supervisor]: 砂坑穿越 phase 4/22: 发送电控一次性命令 [4,0.000,0.000]，随后等待 0.30s。
+[INFO] [1784090774.359228667] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认起跳，停止重发 step_once。
+[INFO] [1784090774.370463100] [obstacle_race_supervisor]: 砂坑穿越等待中: phase=4/22, remain=0.3s, override=[0,0.000,0.000]。
+[INFO] [1784090774.428906465] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=10/1, raw_dist=0.490m, stable_dist=0.471m, lateral=0.205m, rpy=(160.2,6.7,-1.7)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090774.670493592] [obstacle_race_supervisor]: 砂坑穿越 phase 4/22 完成: wait_done
+[INFO] [1784090774.670964480] [obstacle_race_supervisor]: 砂坑穿越 phase 5/22: 等待电控 [jumping/finish] 回包，期间保持 [0,0,0]；若 0.3s 未收到回包，重发上一次 step_once 最多 2 次。
+[INFO] [1784090774.703998169] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=5/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090774.962168580] [obstacle_race_supervisor]: 沙坑 AprilTag TF 已接收: frame=camera_color_optical_frame->object, samples=12/1, raw_dist=0.412m, stable_dist=0.466m, lateral=0.208m, rpy=(171.2,1.9,-1.9)deg, trigger=0.650m, priority=2.200m, target_id=10。
+[INFO] [1784090775.237003825] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=5/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090776.137929296] [obstacle_race_supervisor]: 收到电控 [finish] 回包，继续执行砂坑穿越后半段。
+[INFO] [1784090776.170348567] [obstacle_race_supervisor]: 砂坑穿越 phase 5/22 完成: finish_signal_received
+[INFO] [1784090776.170669732] [obstacle_race_supervisor]: 砂坑穿越 phase 6/22: 稳定等待 0.40s。
+[INFO] [1784090776.204242591] [obstacle_race_supervisor]: 砂坑穿越等待中: phase=6/22, remain=0.4s, override=[0,0.000,0.000]。
+[INFO] [1784090776.570425561] [obstacle_race_supervisor]: 砂坑穿越 phase 6/22 完成: wait_done
+[INFO] [1784090776.570870281] [obstacle_race_supervisor]: 砂坑穿越 phase 7/22: 沿当前机身前方直走 0.35m，mode=10, 起点=(-4.026,-7.821), yaw_ref=-165.8deg。
+[INFO] [1784090776.603652672] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=7/22, progress=-0.050/0.350m, yaw_err=0.0deg, yaw_corr=0.000, override=[10,0.900,0.900], elapsed=0.03/2.00s, dist_gate=False。
+[INFO] [1784090777.104407942] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=7/22, progress=-0.083/0.350m, yaw_err=0.0deg, yaw_corr=0.000, override=[10,0.900,0.900], elapsed=0.53/2.00s, dist_gate=False。
+[INFO] [1784090777.636950491] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=7/22, progress=0.067/0.350m, yaw_err=6.3deg, yaw_corr=0.020, override=[10,0.880,0.920], elapsed=1.07/2.00s, dist_gate=False。
+[INFO] [1784090778.137235272] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=7/22, progress=0.203/0.350m, yaw_err=8.1deg, yaw_corr=0.031, override=[10,0.869,0.931], elapsed=1.57/2.00s, dist_gate=False。
+[INFO] [1784090778.670252292] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=7/22, progress=0.342/0.350m, yaw_err=10.3deg, yaw_corr=0.044, override=[10,0.856,0.944], elapsed=2.10/2.00s, dist_gate=False。
+[INFO] [1784090778.903716195] [obstacle_race_supervisor]: 砂坑穿越 phase 7/22 完成: walk_progress=0.351/0.350m, elapsed=2.33s>=min=2.00s
+[INFO] [1784090778.904052934] [obstacle_race_supervisor]: 砂坑穿越 phase 8/22: 逆时针转 40.0deg, target_yaw=-136.7deg。
+[INFO] [1784090778.937001792] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=8/22, turn_progress=0.0/40.0deg, progress_done=False, yaw_err=40.7deg, yaw_done=False, direction=ccw, override=[7,-0.700,0.800]。
+[INFO] [1784090779.470521478] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=8/22, turn_progress=6.4/40.0deg, progress_done=False, yaw_err=37.2deg, yaw_done=False, direction=ccw, override=[7,-0.700,0.800]。
+[INFO] [1784090780.003834924] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=8/22, turn_progress=16.0/40.0deg, progress_done=False, yaw_err=27.8deg, yaw_done=False, direction=ccw, override=[7,-0.700,0.800]。
+[INFO] [1784090780.504247262] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=8/22, turn_progress=19.8/40.0deg, progress_done=False, yaw_err=26.5deg, yaw_done=False, direction=ccw, override=[7,-0.700,0.800]。
+[INFO] [1784090781.037714882] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=8/22, turn_progress=25.4/40.0deg, progress_done=False, yaw_err=21.8deg, yaw_done=False, direction=ccw, override=[7,-0.700,0.800]。
+[INFO] [1784090781.437252639] [obstacle_race_supervisor]: 砂坑穿越 phase 8/22 完成: turn_timeout progress=27.9/40.0deg yaw_err=20.1deg
+[INFO] [1784090781.437816986] [obstacle_race_supervisor]: 砂坑穿越 phase 9/22: 发送电控一次性命令 [11,0.000,0.000]，随后等待 0.00s。
+[INFO] [1784090781.470289774] [obstacle_race_supervisor]: 砂坑穿越 phase 9/22 完成: wait_done
+[INFO] [1784090781.470603625] [obstacle_race_supervisor]: 砂坑穿越 phase 10/22: 等待电控 [jumping/finish] 回包，期间保持 [0,0,0]；若 3.0s 未收到回包，重发上一次 step_once 最多 1 次。
+[INFO] [1784090781.503959554] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=10/22, jumping=False, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090781.511432004] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认起跳，停止重发 step_once。
+[INFO] [1784090782.037291103] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=10/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090783.439518914] [obstacle_race_supervisor]: 收到电控 [finish] 回包，继续执行砂坑穿越后半段。
+[INFO] [1784090783.470475927] [obstacle_race_supervisor]: 砂坑穿越 phase 10/22 完成: finish_signal_received
+[INFO] [1784090783.470974680] [obstacle_race_supervisor]: 砂坑穿越 phase 11/22: 角度对齐，target_yaw=-151.7deg, yaw_err=1.7deg。
+[INFO] [1784090783.504237228] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=11/22, turn_progress=0.0/1.7deg, progress_done=True, yaw_err=2.7deg, yaw_done=False, direction=ccw_fine, override=[0,-0.080,0.200]。
+[INFO] [1784090784.037986448] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=11/22, turn_progress=3.8/1.7deg, progress_done=True, yaw_err=2.8deg, yaw_done=False, direction=ccw_fine, override=[0,-0.080,0.200]。
+[INFO] [1784090784.439034737] [obstacle_race_supervisor]: 砂坑穿越 phase 11/22 完成: turn_progress=7.0/1.7deg, yaw_err=1.7deg, stable=0.20s
+[INFO] [1784090784.439626268] [obstacle_race_supervisor]: 砂坑穿越 phase 12/22: 沿当前机身前方直走 0.20m，mode=0, 起点=(-3.846,-8.488), yaw_ref=-156.7deg。
+[INFO] [1784090784.470544012] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=12/22, progress=0.005/0.200m, yaw_err=-4.0deg, yaw_corr=0.006, override=[0,0.806,0.794]。
+[INFO] [1784090784.971010542] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=12/22, progress=0.035/0.200m, yaw_err=-15.5deg, yaw_corr=0.076, override=[0,0.876,0.724]。
+[INFO] [1784090785.470434073] [obstacle_race_supervisor]: 砂坑穿越 phase 12/22 完成: walk_timeout progress=0.093m/0.200m
+[INFO] [1784090785.470983635] [obstacle_race_supervisor]: 砂坑穿越 phase 13/22: 发送电控一次性命令 [11,0.000,0.000]，随后等待 0.00s。
+[INFO] [1784090785.476756745] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认起跳，停止重发 step_once。
+[INFO] [1784090785.504015603] [obstacle_race_supervisor]: 砂坑穿越 phase 13/22 完成: wait_done
+[INFO] [1784090785.504575348] [obstacle_race_supervisor]: 砂坑穿越 phase 14/22: 等待电控 [jumping/finish] 回包，期间保持 [0,0,0]；若 3.0s 未收到回包，重发上一次 step_once 最多 1 次。
+[INFO] [1784090785.537301863] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=14/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090787.404874747] [obstacle_race_supervisor]: 收到电控 [finish] 回包，继续执行砂坑穿越后半段。
+[INFO] [1784090787.438368198] [obstacle_race_supervisor]: 砂坑穿越 phase 14/22 完成: finish_signal_received
+[INFO] [1784090787.438996685] [obstacle_race_supervisor]: 砂坑穿越 phase 15/22: 逆时针转 90.0deg, target_yaw=-90.0deg。
+[INFO] [1784090787.470729061] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=15/22, turn_progress=0.2/48.5deg, progress_done=True, yaw_err=48.3deg, yaw_done=False, direction=ccw, override=[6,-0.600,0.600]。
+[INFO] [1784090788.003643380] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=15/22, turn_progress=16.9/48.5deg, progress_done=True, yaw_err=32.1deg, yaw_done=False, direction=ccw, override=[6,-0.600,0.600]。
+[INFO] [1784090788.503667576] [obstacle_race_supervisor]: 砂坑穿越转向中: phase=15/22, turn_progress=33.3/48.5deg, progress_done=True, yaw_err=15.8deg, yaw_done=False, direction=ccw, override=[6,-0.600,0.600]。
+[INFO] [1784090789.004171076] [obstacle_race_supervisor]: 砂坑穿越 phase 15/22 完成: turn_progress=51.4/48.5deg, yaw_err=-2.3deg, stable=0.13s
+[INFO] [1784090789.004644597] [obstacle_race_supervisor]: 砂坑穿越 phase 16/22: 沿当前机身前方直走 0.66m，mode=0, 起点=(-3.478,-8.687), yaw_ref=-90.0deg。
+[INFO] [1784090789.037247875] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.008/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090789.537344803] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.001/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090790.070685551] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.108/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090790.604272549] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.196/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090791.137163467] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.330/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090791.637241992] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.481/0.660m, yaw_err=6.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090792.137328474] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.546/0.660m, yaw_err=7.4deg, yaw_corr=0.009, override=[0,0.691,0.709]。
+[INFO] [1784090792.637135051] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.523/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090793.137214811] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.574/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090793.670470859] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.573/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090794.204830216] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.575/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090794.737269050] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.562/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090795.237690204] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=16/22, progress=0.572/0.660m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.700,0.700]。
+[INFO] [1784090795.303516886] [obstacle_race_supervisor]: 砂坑穿越 phase 16/22 完成: walk_timeout progress=0.572m/0.660m
+[INFO] [1784090795.304053440] [obstacle_race_supervisor]: 砂坑穿越 phase 17/22: 发送电控一次性命令 [9,0.000,0.000]，随后等待 0.00s。
+[INFO] [1784090795.334374008] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认起跳，停止重发 step_once。
+[INFO] [1784090795.338239334] [obstacle_race_supervisor]: 砂坑穿越 phase 17/22 完成: wait_done
+[INFO] [1784090795.338565010] [obstacle_race_supervisor]: 砂坑穿越 phase 18/22: 等待电控 [jumping/finish] 回包，期间保持 [0,0,0]；若 3.0s 未收到回包，重发上一次 step_once 最多 1 次。
+[INFO] [1784090795.370339176] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=18/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090797.150137230] [obstacle_race_supervisor]: 收到电控 [finish] 回包，继续执行砂坑穿越后半段。
+[INFO] [1784090797.170509925] [obstacle_race_supervisor]: 砂坑穿越 phase 18/22 完成: finish_signal_received
+[INFO] [1784090797.170997751] [obstacle_race_supervisor]: 砂坑穿越 phase 19/22: 沿当前机身前方直走 0.20m，mode=0, 起点=(-2.569,-8.806), yaw_ref=-90.0deg。
+[INFO] [1784090797.203997842] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=19/22, progress=-0.003/0.200m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.500,0.500]。
+[INFO] [1784090797.704013446] [obstacle_race_supervisor]: 砂坑穿越直走中: phase=19/22, progress=0.015/0.200m, yaw_err=0.0deg, yaw_corr=0.000, override=[0,0.500,0.500]。
+[INFO] [1784090798.203621531] [obstacle_race_supervisor]: 砂坑穿越 phase 19/22 完成: walk_timeout progress=0.166m/0.200m
+[INFO] [1784090798.204231276] [obstacle_race_supervisor]: 砂坑穿越 phase 20/22: 发送电控一次性命令 [9,0.000,0.000]，随后等待 0.00s。
+[INFO] [1784090798.224711077] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认起跳，停止重发 step_once。
+[INFO] [1784090798.237034544] [obstacle_race_supervisor]: 砂坑穿越 phase 20/22 完成: wait_done
+[INFO] [1784090798.237327665] [obstacle_race_supervisor]: 砂坑穿越 phase 21/22: 等待电控 [jumping/finish] 回包，期间保持 [0,0,0]；若 3.0s 未收到回包，重发上一次 step_once 最多 1 次。
+[INFO] [1784090798.270383199] [obstacle_race_supervisor]: 砂坑穿越等待回包: phase=21/22, jumping=True, finish=False, timeout_left=none, override=[0,0.000,0.000]。
+[INFO] [1784090800.040701407] [obstacle_race_supervisor]: 收到电控 [finish] 回包，继续执行砂坑穿越后半段。
+[INFO] [1784090800.070419524] [obstacle_race_supervisor]: 砂坑穿越 phase 21/22 完成: finish_signal_received
+[INFO] [1784090800.070906468] [obstacle_race_supervisor]: 砂坑穿越 phase 22/22: 角度对齐，target_yaw=-93.0deg, yaw_err=-0.2deg。
+[INFO] [1784090800.303937181] [obstacle_race_supervisor]: 砂坑穿越 phase 22/22 完成: turn_progress=0.1/0.2deg, yaw_err=-0.8deg, stable=0.20s
+[INFO] [1784090800.304344883] [obstacle_race_supervisor]: 砂坑穿越完成，返回搜索模式继续寻找后续障碍。
+[INFO] [1784090800.304672587] [obstacle_race_supervisor]: 继承沙坑阶段 ID14 锁存进入 SEARCH: latched_dist=0.815m, odom_approach=0.000m, est_dist=0.821m, age=0.04/20.00s。
+[INFO] [1784090800.304969024] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090800.305231404] [obstacle_race_supervisor]: 进入搜索模式: reason=sandpit_traverse_done, walk=[0,0.500,0.500]。
+[INFO] [1784090800.336968422] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090800.337322500] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=14, tf_topic_age=0.00s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090800.337825499] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=14, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090800.338514177] [obstacle_race_supervisor]: state=POLE_ACTIVE
+[INFO] [1784090800.338930411] [obstacle_race_supervisor]: 进入绕杆分支: reason=pole_apriltag_detected(id=14,tf=camera_color_optical_frame->role,source=fresh_tf), dist=1.000m, pole_tag_dist=0.816m, retry_failures=0/2。
+[INFO] [1784090824.538044670] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090824.538365287] [obstacle_race_supervisor]: 进入搜索模式: reason=pole_done, walk=[0,0.500,0.500]。
+[INFO] [1784090824.561278853] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.129m, tag_y=0.085m, tag_z=2.155m, rpy=(-172.8,-10.7,-2.8)deg, samples=1, target_id=31。
+[INFO] [1784090824.570460098] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090824.870348363] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.02s, last_tf_children=[camera_link->camera_color_frame,camera_color_frame->camera_color_optical_frame], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090824.870672795] [obstacle_race_supervisor]: 高墙 AprilTag 已锁定但距离未到触发线: samples=3, tag_x=0.137m, tag_z=2.148m > trigger=1.700m, center_x=-0.223m, target_id=31。
+[INFO] [1784090824.870992845] [obstacle_race_supervisor]: 高墙 AprilTag ID31 已检测，等待 TF/距离确认期间抑制斜坡抢占: ids=none, det_age=0.17s, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090825.370370618] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.01s, last_tf_children=[none], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090825.370967564] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=0.67s, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090825.427957652] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.054m, tag_y=0.121m, tag_z=1.921m, rpy=(178.8,-10.5,-1.9)deg, samples=1, target_id=31。
+[INFO] [1784090825.437013736] [obstacle_race_supervisor]: 高墙 AprilTag ID31 已检测，等待 TF/距离确认期间抑制斜坡抢占: ids=31, det_age=0.01s, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784090825.570432076] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090825.903515319] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784090825.903967657] [obstacle_race_supervisor]: 高墙 AprilTag 已锁定但距离未到触发线: samples=3, tag_x=0.054m, tag_z=1.768m > trigger=1.700m, center_x=-0.306m, target_id=31。
+[INFO] [1784090825.937142380] [obstacle_race_supervisor]: 高墙 AprilTag 保护斜坡抢占: samples=2, tag_x=0.049m, tag_z=1.738m, trigger=1.700m, guard=1.850m, center_x=-0.311m，继续搜索等待触发线，不进入斜坡 yaw 对齐。
+[INFO] [1784090826.337228740] [obstacle_race_supervisor]: 高墙 AprilTag 初始锁定: source=odom_handoff_trigger, tag_x=0.054m, tag_z=1.696m, center_x=-0.306m，后续横向补偿不再重算 tag。
+[INFO] [1784090826.337629142] [obstacle_race_supervisor]: 高墙 AprilTag 分支触发条件满足: reason=odom_handoff_after_tag_lost, latched_tag_x=0.054m, latched_tag_z=1.707m, odom_forward=0.012m, est_tag_z=1.696m, trigger_distance=1.700m, inside_by=0.004m, center_x=-0.306m, tag_to_center=-0.360m。
+[INFO] [1784090826.338081423] [obstacle_race_supervisor]: 高墙 AprilTag 对中锁存: source=initial_locked, samples=1, tag_x=0.054m, tag_z=1.696m, center_x=-0.306m, lateral_yaw_offset=10.2deg, yaw_offset=11.4deg, target_yaw=0.0deg。
+[INFO] [1784090826.338475640] [obstacle_race_supervisor]: state=HURDLE_TAG_ALIGN
+[INFO] [1784090826.338752200] [obstacle_race_supervisor]: 进入高墙 AprilTag 对中分支: reason=hurdle_detected, dist=1.696m，锁存起跳 yaw 基准=0.0deg(hurdle_tag tag_x=0.054m,tag_z=1.696m,center_x=-0.306m,center_z=1.696m,yaw_source=fixed_absolute=0.0deg,offset=11.4deg)，先按 fixed_absolute_yaw 视觉预对齐 tag，再复用限高杆横向补偿流程。
+[INFO] [1784090826.370580783] [obstacle_race_supervisor]: 高墙 AprilTag 姿态预对齐目标锁定: metric=fixed_absolute_yaw, tag_x=0.054m, tag_z=1.696m, measured=-11.3deg, target=0.0deg, raw_err=-11.3deg, control_delta=11.3deg, rpy=(0.0,0.0,0.0)deg, lock_source=hurdle_initial_lock_fixed_yaw, lock_samples=1, lock_metric=0.0deg, latest_pose_pitch=0.0deg, odom_yaw0=-11.3deg, target_yaw=0.0deg。
+[INFO] [1784090826.371026823] [obstacle_race_supervisor]: 高墙 AprilTag 姿态预对齐中: metric=fixed_absolute_yaw, measured=-11.3deg, target=0.0deg, visual_err=-11.3deg, yaw_err=11.3deg, feedback=odom, direction=ccw, hold=0.00/0.10s, override=[6,-0.040,0.080]。
+[INFO] [1784090826.830519555] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.133m, tag_y=0.072m, tag_z=1.305m, rpy=(179.0,-12.9,-2.2)deg, samples=1, target_id=31。
+[INFO] [1784090826.870620893] [obstacle_race_supervisor]: 高墙 AprilTag 姿态预对齐中: metric=fixed_absolute_yaw, measured=-8.3deg, target=0.0deg, visual_err=-8.3deg, yaw_err=8.3deg, feedback=odom, direction=ccw, hold=0.00/0.10s, override=[6,-0.033,0.067]。
+[INFO] [1784090827.364073134] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.247m, tag_y=0.116m, tag_z=1.321m, rpy=(176.6,-6.9,-1.2)deg, samples=7, target_id=31。
+[INFO] [1784090827.403841535] [obstacle_race_supervisor]: 高墙 AprilTag 姿态预对齐中: metric=fixed_absolute_yaw, measured=-4.2deg, target=0.0deg, visual_err=-4.2deg, yaw_err=4.2deg, feedback=odom, direction=ccw, hold=0.00/0.10s, override=[6,-0.020,0.040]。
+[INFO] [1784090827.803948630] [obstacle_race_supervisor]: 高墙 AprilTag 姿态预对齐完成: metric=fixed_absolute_yaw, current_measured=-2.4deg, current_raw_err=-2.4deg, forward_yaw=0.0deg, initial_ref_yaw=0.0deg, base_yaw=0.0deg, tag_x=0.315m, tag_z=1.358m, shift_source=current_aligned_tag, shift_tag_x=0.315m, shift_tag_z=1.358m, center_x=-0.045m。
+[INFO] [1784090827.804977024] [obstacle_race_supervisor]: 第二阶段 S 曲线候选计划: branch=hurdle, forward=0.858m, lateral=+0.000m, path_length=0.858m, peak_heading=+0.0deg, max_curvature=0.00/m, legacy_linear=0.858m, feasible=True(ok), control=actual_pending。
+[INFO] [1784090827.805399597] [obstacle_race_supervisor]: state=LIMIT_BAR_LATERAL_SHIFT
+[INFO] [1784090827.805818082] [obstacle_race_supervisor]: 高墙横向补偿计划锁定: center_x=-0.045m, center_z=1.358m, base_yaw=0.0deg, side_delta=+0.0deg, side_yaw=0.0deg, shift=0.000m(raw=0.000m, requested=0.000m, clipped=False), trigger_deadband=0.100m, arrival_tolerance=0.030m, skip_lateral=False, forward_component=0.000m, final_forward=0.858m, target_dist=0.500m。
+[INFO] [1784090827.806220217] [obstacle_race_supervisor]: 第二阶段 S 曲线实际控制启用: branch=hurdle, route=0.858m/+0.000m, cruise=[0.430,0.430], slow=[0.250,0.250], slowdown=0.250m；关闭 lateral_s_curve_control_enabled 可立即回退旧 90deg 流程。
+[INFO] [1784090827.837290954] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.003/0.858m, lateral=+0.009/+0.000m, cross_err=-0.009m, remaining=0.855m, target_heading=-0.8deg, yaw_err=+1.7deg, yaw_corr=0.027, override=[0,0.403,0.457]。
+[INFO] [1784090827.899623523] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.320m, tag_y=0.127m, tag_z=1.340m, rpy=(175.7,-1.8,-1.1)deg, samples=8, target_id=31。
+[INFO] [1784090828.104260582] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.011/0.858m, lateral=-0.008/+0.000m, cross_err=+0.008m, remaining=0.848m, target_heading=+0.6deg, yaw_err=+2.5deg, yaw_corr=0.039, override=[0,0.391,0.469]。
+[INFO] [1784090828.371408872] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.122/0.858m, lateral=+0.001/+0.000m, cross_err=-0.001m, remaining=0.736m, target_heading=-0.1deg, yaw_err=+0.9deg, yaw_corr=0.014, override=[0,0.416,0.444]。
+[INFO] [1784090828.499208775] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.378m, tag_y=0.087m, tag_z=1.163m, rpy=(179.6,-0.6,-2.3)deg, samples=1, target_id=31。
+[INFO] [1784090828.637426655] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.255/0.858m, lateral=-0.022/+0.000m, cross_err=+0.022m, remaining=0.604m, target_heading=+1.8deg, yaw_err=+2.7deg, yaw_corr=0.042, override=[0,0.388,0.472]。
+[INFO] [1784090828.903710048] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.349/0.858m, lateral=+0.006/+0.000m, cross_err=-0.006m, remaining=0.509m, target_heading=-0.5deg, yaw_err=-0.4deg, yaw_corr=0.006, override=[0,0.436,0.424]。
+[INFO] [1784090829.164716385] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.388m, tag_y=0.110m, tag_z=0.904m, rpy=(-179.1,3.3,-2.3)deg, samples=3, target_id=31。
+[INFO] [1784090829.170563136] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.446/0.858m, lateral=-0.016/+0.000m, cross_err=+0.016m, remaining=0.413m, target_heading=+1.4deg, yaw_err=+1.3deg, yaw_corr=0.021, override=[0,0.409,0.451]。
+[INFO] [1784090829.437484386] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=cruise, forward=0.551/0.858m, lateral=-0.005/+0.000m, cross_err=+0.005m, remaining=0.307m, target_heading=+0.4deg, yaw_err=+0.4deg, yaw_corr=0.006, override=[0,0.424,0.436]。
+[INFO] [1784090829.699226762] [obstacle_race_supervisor]: 高墙 AprilTag TF 已接收: frame=camera_color_optical_frame->hurdle_right, tag_x=0.408m, tag_y=0.122m, tag_z=0.704m, rpy=(-178.3,5.0,-2.7)deg, samples=2, target_id=31。
+[INFO] [1784090829.704387562] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=slow, forward=0.665/0.858m, lateral=+0.006/+0.000m, cross_err=-0.006m, remaining=0.194m, target_heading=-0.5deg, yaw_err=-0.5deg, yaw_corr=0.008, override=[0,0.258,0.242]。
+[INFO] [1784090829.970361225] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=slow, forward=0.750/0.858m, lateral=-0.013/+0.000m, cross_err=+0.013m, remaining=0.109m, target_heading=+1.1deg, yaw_err=+1.1deg, yaw_corr=0.017, override=[0,0.233,0.267]。
+[INFO] [1784090830.237244971] [obstacle_race_supervisor]: 高墙 S 曲线控制中: phase=slow, forward=0.776/0.858m, lateral=+0.008/+0.000m, cross_err=-0.008m, remaining=0.082m, target_heading=-0.7deg, yaw_err=-1.2deg, yaw_corr=0.019, override=[0,0.269,0.231]。
+[INFO] [1784090830.370365388] [obstacle_race_supervisor]: 高墙 S 曲线视觉近距离候选暂不采纳: visual_dist=0.526m, forward=0.824/0.858m, confirm=1/3,0.01/0.15s，继续曲线控制。
+[INFO] [1784090830.503825026] [obstacle_race_supervisor]: 高墙 S 曲线收尾中: phase=arrival_settle, forward=0.859/0.858m, lateral=+0.007/+0.000m, cross_err=-0.007m, yaw_err=-0.9deg, arrival_settle=0.13/0.30s, retreat=0.000m, lateral_drift=0.008m, recovery=False, recovery_remaining=0.000m, completion=odometry。
+[INFO] [1784090830.770435254] [obstacle_race_supervisor]: 高墙 S 曲线收尾中: phase=completion_hold, forward=0.877/0.858m, lateral=-0.008/+0.000m, cross_err=+0.008m, yaw_err=-0.2deg, arrival_settle=0.40/0.30s, retreat=0.005m, lateral_drift=0.023m, recovery=False, recovery_remaining=0.000m, completion=odometry。
+[INFO] [1784090831.037265652] [obstacle_race_supervisor]: 第二阶段 S 曲线实际结果: branch=hurdle, route=0.858m/+0.000m, actual=0.869m/+0.007m, cross_err=-0.007m, yaw_err=-0.1deg, elapsed=3.23s, completion=odometry, control=actual_s_curve。
+[INFO] [1784090831.037615201] [obstacle_race_supervisor]: 高墙 S 曲线横向补偿完成: forward=0.869m, lateral=+0.007m, cross_err=-0.007m, yaw_err=-0.1deg，进入起跳等待。
+[INFO] [1784090831.038064418] [obstacle_race_supervisor]: state=HURDLE_WAIT_JUMP
+[INFO] [1784090831.038371069] [obstacle_race_supervisor]: 进入高墙跳跃分支: reason=hurdle_detected, dist=0.645m，entry_yaw=0.1deg，持续停止等待 0.4s 后起跳。
+[INFO] [1784090831.437760448] [obstacle_race_supervisor]: state=HURDLE_WAIT_RESUME
+[INFO] [1784090831.438130780] [obstacle_race_supervisor]: 跳跃指令重复发送 5 次，等待 3.0s 后恢复搜索前行。
+[INFO] [1784090833.371435390] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.502m, tag_y=-0.156m, tag_z=1.558m, rpy=(176.6,7.2,1.5)deg, samples=1, target_id=18。
+[INFO] [1784090833.971522961] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.488m, tag_y=0.052m, tag_z=1.568m, rpy=(165.2,2.5,0.5)deg, samples=4, target_id=18。
+[INFO] [1784090834.470258065] [obstacle_race_supervisor]: state=HURDLE_POST_ALIGN
+[INFO] [1784090834.470560033] [obstacle_race_supervisor]: 进入高墙后 yaw 对齐: target=0.0deg, tolerance=2.0deg, hold=0.20s。
+[INFO] [1784090834.504049908] [obstacle_race_supervisor]: 高墙后 yaw 对齐中: yaw_err=-2.1deg, direction=cw_fine, override=[6,0.200,-0.080]。
+[INFO] [1784090834.508760133] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.495m, tag_y=0.043m, tag_z=1.571m, rpy=(167.7,5.8,-1.4)deg, samples=8, target_id=18。
+[INFO] [1784090834.870264810] [obstacle_race_supervisor]: 高墙后 yaw 对齐完成: yaw_err=0.7deg, stable=0.20s，进入搜索。
+[INFO] [1784090834.870610549] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784090834.870861520] [obstacle_race_supervisor]: 进入搜索模式: reason=hurdle_done_aligned, walk=[0,0.500,0.500]。
+[INFO] [1784090834.905717306] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784090835.042616242] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.426m, tag_y=0.070m, tag_z=1.602m, rpy=(162.7,4.1,-1.5)deg, samples=8, target_id=18。
+[INFO] [1784090835.170703589] [obstacle_race_supervisor]: 上台阶 AprilTag 分支触发条件满足: reason=tag_z_within_trigger, samples=5/1, tag_x=0.423m, tag_z=1.602m, trigger_distance=1.700m, inside_by=0.098m, center_x=0.113m, tag_to_center=-0.310m, target_id=18, expected_tf=camera_color_optical_frame->upstairs, completed=False。
+[INFO] [1784090835.171099191] [obstacle_race_supervisor]: 上台阶 AprilTag 对中锁存: samples=5, tag_x=0.423m, tag_z=1.602m, center_x=0.113m, lateral_yaw_offset=-4.0deg, yaw_offset=0.1deg, target_yaw=0.0deg, yaw_source=fixed_absolute=0.0deg。
+[INFO] [1784090835.171612474] [obstacle_race_supervisor]: state=UPSTAIRS_TAG_ALIGN
+[INFO] [1784090835.172017985] [obstacle_race_supervisor]: 进入上台阶 AprilTag 对中分支: reason=upstairs_detected, dist=1.602m，锁存上台阶 yaw 基准=0.0deg(upstairs_tag tag_x=0.423m,tag_z=1.602m,center_x=0.113m,center_z=1.602m,yaw_source=fixed_absolute=0.0deg,offset=0.1deg)，先按 odom 绝对 0.0deg 做航向预对齐，再复用限高杆/高墙横向补偿流程。
+[INFO] [1784090835.203970180] [obstacle_race_supervisor]: 上台阶 AprilTag 姿态预对齐目标锁定: metric=fixed_absolute_yaw, tag_x=0.426m, tag_z=1.602m, measured=0.3deg, target=0.0deg, raw_err=0.3deg, control_delta=-0.3deg, rpy=(162.7,4.1,-1.5)deg, lock_source=latest, lock_samples=5, lock_metric=4.1deg, latest_pose_pitch=4.1deg, odom_yaw0=0.3deg, target_yaw=0.0deg。
+[INFO] [1784090835.204428038] [obstacle_race_supervisor]: 上台阶 AprilTag 姿态预对齐中: metric=fixed_absolute_yaw, measured=0.3deg, target=0.0deg, visual_err=0.3deg, yaw_err=-0.3deg, feedback=odom, direction=cw, hold=0.00/0.10s, override=[6,0.099,-0.054]。
+[INFO] [1784090835.306355706] [obstacle_race_supervisor]: 上台阶 AprilTag 姿态预对齐完成: metric=fixed_absolute_yaw, current_measured=0.1deg, current_raw_err=0.1deg, forward_yaw=0.0deg, initial_ref_yaw=0.0deg, base_yaw=0.0deg, tag_x=0.426m, tag_z=1.602m, shift_source=current_aligned_tag, shift_tag_x=0.426m, shift_tag_z=1.602m, center_x=0.116m。
+[INFO] [1784090835.307870033] [obstacle_race_supervisor]: 第二阶段 S 曲线候选计划: branch=upstairs, forward=1.082m, lateral=+0.000m, path_length=1.082m, peak_heading=+0.0deg, max_curvature=0.00/m, legacy_linear=1.082m, feasible=True(ok), control=actual_pending。
+[INFO] [1784090835.308346603] [obstacle_race_supervisor]: state=LIMIT_BAR_LATERAL_SHIFT
+[INFO] [1784090835.308781169] [obstacle_race_supervisor]: 上台阶横向补偿计划锁定: center_x=+0.116m, center_z=1.602m, base_yaw=0.0deg, side_delta=+0.0deg, side_yaw=0.0deg, shift=0.000m(raw=0.000m, requested=0.000m, clipped=False), trigger_deadband=0.120m, arrival_tolerance=0.040m, skip_lateral=False, forward_component=0.000m, final_forward=1.082m, target_dist=0.520m。
+[INFO] [1784090835.309152795] [obstacle_race_supervisor]: 第二阶段 S 曲线实际控制启用: branch=upstairs, route=1.082m/+0.000m, cruise=[0.400,0.400], slow=[0.250,0.250], slowdown=0.250m；关闭 upstairs_lateral_s_curve_control_enabled 可立即回退旧 90deg 流程。
+[INFO] [1784090835.337143491] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.035/1.082m, lateral=+0.007/+0.000m, cross_err=-0.007m, remaining=1.048m, target_heading=-0.6deg, yaw_err=-0.5deg, yaw_corr=0.008, override=[0,0.408,0.392]。
+[INFO] [1784090835.604640152] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.082/1.082m, lateral=+0.009/+0.000m, cross_err=-0.009m, remaining=1.000m, target_heading=-0.8deg, yaw_err=+2.3deg, yaw_corr=0.036, override=[0,0.364,0.436]。
+[INFO] [1784090835.708515161] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.381m, tag_y=0.095m, tag_z=1.470m, rpy=(162.7,1.0,-0.8)deg, samples=1, target_id=18。
+[INFO] [1784090835.870508932] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.171/1.082m, lateral=-0.031/+0.000m, cross_err=+0.031m, remaining=0.911m, target_heading=+2.7deg, yaw_err=+5.6deg, yaw_corr=0.088, override=[0,0.312,0.488]。
+[INFO] [1784090836.137092329] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.265/1.082m, lateral=-0.009/+0.000m, cross_err=+0.009m, remaining=0.817m, target_heading=+0.8deg, yaw_err=+3.1deg, yaw_corr=0.048, override=[0,0.352,0.448]。
+[INFO] [1784090836.403876753] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.375/1.082m, lateral=-0.026/+0.000m, cross_err=+0.026m, remaining=0.707m, target_heading=+2.2deg, yaw_err=+3.0deg, yaw_corr=0.047, override=[0,0.353,0.447]。
+[INFO] [1784090836.508940914] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.395m, tag_y=0.049m, tag_z=1.185m, rpy=(165.8,8.2,-2.3)deg, samples=1, target_id=18。
+[INFO] [1784090836.670344934] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.465/1.082m, lateral=-0.020/+0.000m, cross_err=+0.020m, remaining=0.617m, target_heading=+1.7deg, yaw_err=+2.0deg, yaw_corr=0.032, override=[0,0.368,0.432]。
+[INFO] [1784090836.937131229] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.561/1.082m, lateral=-0.006/+0.000m, cross_err=+0.006m, remaining=0.521m, target_heading=+0.5deg, yaw_err=-0.0deg, yaw_corr=0.000, override=[0,0.400,0.400]。
+[INFO] [1784090837.111497729] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.421m, tag_y=0.048m, tag_z=0.938m, rpy=(168.7,3.7,-1.9)deg, samples=3, target_id=18。
+[INFO] [1784090837.204055569] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.660/1.082m, lateral=-0.007/+0.000m, cross_err=+0.007m, remaining=0.422m, target_heading=+0.6deg, yaw_err=-0.4deg, yaw_corr=0.007, override=[0,0.407,0.393]。
+[INFO] [1784090837.470418279] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=cruise, forward=0.756/1.082m, lateral=+0.010/+0.000m, cross_err=-0.010m, remaining=0.326m, target_heading=-0.9deg, yaw_err=-2.2deg, yaw_corr=0.035, override=[0,0.435,0.365]。
+[INFO] [1784090837.645247184] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.437m, tag_y=0.052m, tag_z=0.747m, rpy=(171.5,4.1,-2.2)deg, samples=7, target_id=18。
+[INFO] [1784090837.737363816] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=slow, forward=0.846/1.082m, lateral=-0.015/+0.000m, cross_err=+0.015m, remaining=0.236m, target_heading=+1.3deg, yaw_err=+0.5deg, yaw_corr=0.007, override=[0,0.243,0.257]。
+[INFO] [1784090838.003863798] [obstacle_race_supervisor]: 上台阶 S 曲线控制中: phase=slow, forward=0.959/1.082m, lateral=+0.028/+0.000m, cross_err=-0.028m, remaining=0.123m, target_heading=-2.4deg, yaw_err=-3.4deg, yaw_corr=0.054, override=[0,0.304,0.196]。
+[INFO] [1784090838.270472888] [obstacle_race_supervisor]: 上台阶 S 曲线收尾中: phase=arrival_settle, forward=0.987/1.082m, lateral=-0.011/+0.000m, cross_err=+0.011m, yaw_err=-0.4deg, arrival_settle=0.20/0.30s, distance=(source=visual_with_live_tag, trigger=true, dist=0.564m, threshold=0.570m, tag_z=0.750m>0.570m)。
+[INFO] [1784090838.504040531] [obstacle_race_supervisor]: 第二阶段 S 曲线实际结果: branch=upstairs, route=1.082m/+0.000m, actual=1.013m/-0.011m, cross_err=+0.011m, yaw_err=-0.6deg, elapsed=3.20s, completion=distance_confirmed, control=actual_s_curve。
+[INFO] [1784090838.504532226] [obstacle_race_supervisor]: 上台阶 S 曲线横向补偿完成: forward=1.013/1.082m, lateral=-0.011/+0.000m, cross_err=+0.011m, yaw_err=-0.6deg, distance=(source=visual_with_live_tag, trigger=true, dist=0.564m, threshold=0.570m, tag_z=0.750m>0.570m)，直接进入 step_once。
+[INFO] [1784090838.504917884] [obstacle_race_supervisor]: state=DONE
+[INFO] [1784090838.505693454] [obstacle_race_supervisor]: 进入上台阶分支: reason=upstairs_detected, latest_tag_dist=0.655m, target_dist=0.520m, planned_final_forward=1.082m, actual_final_along=1.013m(raw=1.013m), remaining=0.069m，已向电控发送一次 step_once=[5,0.000,0.000]；若 1.0s 内未收到 [jumping]，最多重发 3 次。总状态机结束。
+[INFO] [1784090838.540429919] [obstacle_race_supervisor]: 收到电控 [jumping] 回包，已确认上台阶动作，停止重发 step_once。
+[INFO] [1784090859.135011100] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.535m, tag_y=0.186m, tag_z=1.200m, rpy=(174.8,5.4,0.6)deg, samples=1, target_id=18。
+[INFO] [1784090859.801072023] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.459m, tag_y=0.082m, tag_z=1.395m, rpy=(169.7,-1.3,-1.0)deg, samples=3, target_id=18。
+[INFO] [1784090860.335989435] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.482m, tag_y=0.087m, tag_z=1.395m, rpy=(164.9,-3.7,-0.5)deg, samples=9, target_id=18。
+[INFO] [1784090860.869020529] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.531m, tag_y=0.064m, tag_z=1.399m, rpy=(169.7,0.2,-1.0)deg, samples=7, target_id=18。
+[INFO] [1784090861.402830153] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.525m, tag_y=0.060m, tag_z=1.394m, rpy=(168.7,0.4,-1.3)deg, samples=9, target_id=18。
+[INFO] [1784090861.937250984] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.528m, tag_y=0.062m, tag_z=1.402m, rpy=(168.4,1.4,-1.7)deg, samples=9, target_id=18。
+[INFO] [1784090862.328021728] [obstacle_race_supervisor]: 状态=DONE 收到电控 [start]，流程已结束，已忽略。
+[INFO] [1784090862.472963835] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.528m, tag_y=0.063m, tag_z=1.415m, rpy=(168.5,1.6,-1.3)deg, samples=9, target_id=18。
+[INFO] [1784090863.073525137] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.537m, tag_y=0.060m, tag_z=1.411m, rpy=(167.6,2.6,-1.8)deg, samples=6, target_id=18。
+[INFO] [1784090863.607451404] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.554m, tag_y=0.063m, tag_z=1.397m, rpy=(168.2,1.5,-1.7)deg, samples=7, target_id=18。
+[INFO] [1784090864.141672463] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.554m, tag_y=0.062m, tag_z=1.396m, rpy=(168.6,2.1,-1.8)deg, samples=9, target_id=18。
+[INFO] [1784090864.674220368] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.555m, tag_y=0.062m, tag_z=1.397m, rpy=(168.9,2.2,-1.8)deg, samples=10, target_id=18。
+[INFO] [1784090865.210157206] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.061m, tag_z=1.394m, rpy=(168.7,2.0,-1.7)deg, samples=9, target_id=18。
+[INFO] [1784090865.743353982] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.061m, tag_z=1.392m, rpy=(168.7,1.9,-1.7)deg, samples=9, target_id=18。
+[INFO] [1784090866.275525614] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.5,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090866.809178499] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.551m, tag_y=0.060m, tag_z=1.389m, rpy=(168.5,1.5,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090867.345925610] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.060m, tag_z=1.392m, rpy=(168.9,1.8,-1.6)deg, samples=9, target_id=18。
+[INFO] [1784090867.878278099] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.060m, tag_z=1.390m, rpy=(168.8,1.6,-1.4)deg, samples=9, target_id=18。
+[INFO] [1784090868.411920806] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.6,1.7,-1.4)deg, samples=9, target_id=18。
+[INFO] [1784090868.947830610] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.060m, tag_z=1.392m, rpy=(168.7,1.8,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090869.478708470] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.059m, tag_z=1.391m, rpy=(168.6,1.6,-1.5)deg, samples=10, target_id=18。
+[INFO] [1784090871.679827479] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.553m, tag_y=0.058m, tag_z=1.392m, rpy=(168.7,1.7,-1.7)deg, samples=1, target_id=18。
+[INFO] [1784090872.215990718] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.059m, tag_z=1.390m, rpy=(168.5,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090872.749580119] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.5,1.7,-1.5)deg, samples=10, target_id=18。
+[INFO] [1784090873.282905776] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.4,1.6,-1.5)deg, samples=10, target_id=18。
+[INFO] [1784090873.815245650] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.551m, tag_y=0.059m, tag_z=1.388m, rpy=(168.3,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090874.354453736] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.389m, rpy=(168.5,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090874.884689430] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.5,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090875.956109873] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.5,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090876.487509062] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.551m, tag_y=0.060m, tag_z=1.388m, rpy=(168.3,1.5,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090877.020175409] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.4,1.6,-1.4)deg, samples=10, target_id=18。
+[INFO] [1784090877.557027331] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.7,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090878.089615900] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.5,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090878.622833652] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.7,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090879.158219908] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.7,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090879.692170161] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.6,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090880.225838972] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.5,1.6,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090880.763984504] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.391m, rpy=(168.5,1.7,-1.5)deg, samples=9, target_id=18。
+[INFO] [1784090881.293772602] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.4,1.7,-1.5)deg, samples=10, target_id=18。
+[INFO] [1784090881.827066022] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.060m, tag_z=1.390m, rpy=(168.6,1.6,-1.6)deg, samples=9, target_id=18。
+[INFO] [1784090882.361475091] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.059m, tag_z=1.391m, rpy=(168.9,1.8,-1.7)deg, samples=10, target_id=18。
+[INFO] [1784090885.230803499] [obstacle_race_supervisor]: 上台阶 AprilTag TF 已接收: frame=camera_color_optical_frame->upstairs, tag_x=0.552m, tag_y=0.072m, tag_z=1.401m, rpy=(168.7,2.3,-1.9)deg, samples=1, target_id=18。

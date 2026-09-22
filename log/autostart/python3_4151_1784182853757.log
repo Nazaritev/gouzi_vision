@@ -1,0 +1,13 @@
+[INFO] [1784182854.155240585] [nav_executor]: NavExecutor 运行在 pose_controller 模式： goal=/goal_pose, pose=/Odometry, cmd_vel=/race_cmd_vel
+[INFO] [1784182880.611527565] [nav_executor]: [1;36m收到导航目标: x=-0.063, y=3.631, frame=camera_init, backend=pose_controller[0m
+[INFO] [1784182880.655490494] [nav_executor]: [0;94mpose_controller: dist=1.742m, pose=(0.012,1.890), active=True[0m
+[INFO] [1784182882.655540726] [nav_executor]: [0;94mpose_controller: dist=1.263m, pose=(0.010,2.370), active=True[0m
+[INFO] [1784182884.656566900] [nav_executor]: [0;94mpose_controller: dist=0.447m, pose=(-0.004,3.187), active=True[0m
+[INFO] [1784182886.656720308] [nav_executor]: [0;94mpose_controller: dist=0.356m, pose=(0.022,3.285), active=True[0m
+[INFO] [1784182888.855633127] [nav_executor]: [0;94mpose_controller: dist=0.546m, pose=(0.343,3.265), active=True[0m
+[INFO] [1784182891.056254154] [nav_executor]: [0;94mpose_controller: dist=0.753m, pose=(0.588,3.253), active=True[0m
+[INFO] [1784182893.255608052] [nav_executor]: [0;94mpose_controller: dist=1.018m, pose=(0.880,3.248), active=True[0m
+[INFO] [1784182895.256149236] [nav_executor]: [0;94mpose_controller: dist=1.051m, pose=(0.920,3.257), active=True[0m
+[INFO] [1784182897.255789142] [nav_executor]: [0;94mpose_controller: dist=1.257m, pose=(1.143,3.277), active=True[0m
+[INFO] [1784182899.257469102] [nav_executor]: [0;94mpose_controller: dist=1.507m, pose=(1.397,3.255), active=True[0m
+[INFO] [1784182901.456698117] [nav_executor]: [0;94mpose_controller: dist=1.531m, pose=(1.424,3.267), active=True[0m

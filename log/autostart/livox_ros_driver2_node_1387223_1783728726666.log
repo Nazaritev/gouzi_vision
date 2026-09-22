@@ -1,0 +1,5 @@
+[INFO] [1783728727.012620290] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.4
+[INFO] [1783728727.013049283] [livox_lidar_publisher]: Data Source is raw lidar.
+[INFO] [1783728727.013066041] [livox_lidar_publisher]: Config file : /home/gouzi/obstacle_race_src/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/../config/MID360_config.json
+[ERROR] [1783728727.015207846] [livox_lidar_publisher]: Init lds lidar fail!
+[INFO] [1783728744.447101050] [rclcpp]: signal_handler(SIGINT/SIGTERM)

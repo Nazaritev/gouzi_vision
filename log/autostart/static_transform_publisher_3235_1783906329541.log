@@ -1,0 +1,4 @@
+[INFO] [1783906329.568850253] [static_transform_publisher_tMIB6fmb2NNFaZ0d]: Spinning until stopped - publishing transform
+translation: ('0.000000', '0.000000', '0.000000')
+rotation: ('0.000000', '0.000000', '0.707107', '0.707107')
+from 'body' to 'base_link'

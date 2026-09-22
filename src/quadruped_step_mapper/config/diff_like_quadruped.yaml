@@ -1,0 +1,36 @@
+/**:
+  ros__parameters:
+    input_cmd_vel_topic: "/cmd_vel"
+    output_step_length_topic: "/step_length_cmd"
+    output_step_length_twist_topic: "/step_length_twist"
+    output_frame_id: "body"
+
+    # Fixed-step-frequency gait assumption:
+    # step_length = velocity * (1 / step_frequency_hz)
+    # Tuned for a flat-ground gait around 27 Hz.
+    step_frequency_hz: 27.0
+    publish_rate_hz: 27.0
+
+    # Differential-drive equivalent half width used for wz -> left/right step-length split:
+    # left = (vx - b*wz) * T
+    # right = (vx + b*wz) * T
+    stance_half_width_m: 0.18
+
+    # Hard command limits before per-step conversion.
+    max_linear_speed_mps: 1.0
+    max_angular_speed_rps: 1.20
+
+    # Ignore very small commands that would only jitter the gait.
+    min_effective_linear_speed_mps: 0.01
+    min_effective_angular_speed_rps: 0.05
+
+    # Per-step safety limits. If either bound is exceeded, both vx and wz are
+    # scaled together so the intended curvature is preserved.
+    # 1.0 m/s at 27 Hz -> 1.0 / 27 = 0.03704 m per step.
+    max_step_length_m: 0.03704
+    max_step_yaw_rad: 0.35
+
+    # Kept longer than the serial node so one-shot CLI tests are easier to observe.
+    cmd_vel_timeout_sec: 2.0
+    scale_to_limits: true
+    publish_zero_on_timeout: true

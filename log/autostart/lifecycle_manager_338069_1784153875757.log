@@ -1,0 +1,7 @@
+[INFO] [1784153876.161832174] [lifecycle_manager_navigation]: Creating
+[INFO] [1784153876.197724147] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [1784153878.230527069] [lifecycle_manager_navigation]: Waiting for service controller_server/get_state...
+[INFO] [1784153883.526810663] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[INFO] [1784153883.526874703] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[ERROR] [1784153883.681311167] [lifecycle_manager_navigation]: Failed to change state for node: controller_server
+[ERROR] [1784153883.681391776] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.

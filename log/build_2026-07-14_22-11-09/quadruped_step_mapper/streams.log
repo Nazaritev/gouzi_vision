@@ -1,0 +1,34 @@
+[0.028s] Invoking command in '/home/gouzi/obstacle_race_src/build/quadruped_step_mapper': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gouzi/obstacle_race_src/install/auto_nav_pkg:/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/quadruped_step_mapper -- -j8 -l8
+[0.161s] [ 50%] Built target cmd_vel_to_step_length_node
+[0.174s] [100%] Built target cmd_vel_to_serial_node
+[0.210s] Invoked command in '/home/gouzi/obstacle_race_src/build/quadruped_step_mapper' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gouzi/obstacle_race_src/install/auto_nav_pkg:/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/quadruped_step_mapper -- -j8 -l8
+[0.224s] Invoking command in '/home/gouzi/obstacle_race_src/build/quadruped_step_mapper': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gouzi/obstacle_race_src/install/auto_nav_pkg:/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/quadruped_step_mapper
+[0.233s] -- Install configuration: ""
+[0.233s] -- Execute custom install script
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/lib/quadruped_step_mapper/cmd_vel_to_step_length_node
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/lib/quadruped_step_mapper/cmd_vel_to_serial_node
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/lib/quadruped_step_mapper/serial_start_listener.py
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/lib/quadruped_step_mapper/serial_step_tester.py
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/include/quadruped_step_mapper/cmd_vel_to_serial_node.hpp
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/include/quadruped_step_mapper/cmd_vel_to_step_length_node.hpp
+[0.233s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/include/quadruped_step_mapper/step_length_mapper.hpp
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/config/cmd_vel_to_serial.yaml
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/config/diff_like_quadruped.yaml
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/launch/cmd_vel_to_serial.launch.py
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/launch/cmd_vel_to_step_length.launch.py
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/ament_index/resource_index/package_run_dependencies/quadruped_step_mapper
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/ament_index/resource_index/parent_prefix_path/quadruped_step_mapper
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/environment/ament_prefix_path.sh
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/environment/ament_prefix_path.dsv
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/environment/path.sh
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/environment/path.dsv
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/local_setup.bash
+[0.235s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/local_setup.sh
+[0.239s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/local_setup.zsh
+[0.239s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/local_setup.dsv
+[0.239s] -- Symlinking: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/package.dsv
+[0.249s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/ament_index/resource_index/packages/quadruped_step_mapper
+[0.249s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/cmake/quadruped_step_mapperConfig.cmake
+[0.249s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/cmake/quadruped_step_mapperConfig-version.cmake
+[0.249s] -- Up-to-date symlink: /home/gouzi/obstacle_race_src/install/quadruped_step_mapper/share/quadruped_step_mapper/package.xml
+[0.254s] Invoked command in '/home/gouzi/obstacle_race_src/build/quadruped_step_mapper' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gouzi/obstacle_race_src/install/auto_nav_pkg:/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/quadruped_step_mapper

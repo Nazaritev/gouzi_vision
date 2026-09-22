@@ -1,0 +1,96 @@
+# 2026-05-05
+# Purpose: standalone HSV+depth orange hurdle jump test.
+# It keeps sending walk override [0,1,1], then switches to a timed
+# stand->[4,0,0]->walk sequence after a horizontal orange bar is detected
+# within 0.30m.
+
+orange_hurdle_jump_test:
+  ros__parameters:
+    color_topic: "/camera/color/image_raw"
+    depth_topic: "/camera/aligned_depth_to_color/image_raw"
+    camera_info_topic: "/camera/color/camera_info"
+
+    nearest_topic: "/orange_hurdle_jump_test/nearest"
+    trigger_topic: "/orange_hurdle_jump_test/trigger"
+    feedback_topic: "/orange_hurdle_jump_test/feedback_log"
+    state_topic: "/orange_hurdle_jump_test/state"
+    debug_image_topic: "/orange_hurdle_jump_test/debug_image"
+
+    serial_device: "/dev/ttyUSB0"
+    baud_rate: 115200
+    output_precision: 3
+    message_prefix: "["
+    field_separator: ","
+    message_suffix: "]\n"
+
+    # 2026-06-26: 横栏实物颜色已从橙色改为接近斜坡的黄绿色/绿色。
+    # 使用覆盖黄绿到绿色的色域，但横栏仍依赖“水平条形 + 顶边高度 + 近距离”
+    # 几何条件区分，避免单靠颜色误触发。
+    # rollback: hsv_lower=[0, 50, 50], hsv_upper=[45, 255, 255]。
+    hsv_lower: [28, 40, 35]
+    hsv_upper: [95, 255, 255]
+
+    # 1 m 横栏在相机距横栏约 40 cm 时，画面里应占很宽的水平区域。
+    # 30 cm 高、相机也在 30 cm 高且平视，顶部接近图像中线，底部通常会压到画面下沿甚至超出。
+    min_area_px: 1200.0
+    min_width_px: 70
+    min_height_px: 35
+    # 2026-05-15: 0.5m 左右实拍时，横栏会占据更高的近景区域；
+    # 原 320px 上限会把近距离整块横栏直接判成“太高”。
+    # rollback: 改回 320。
+    max_height_px: 380
+    # 2026-05-15: 0.5~0.8m 区间实测常出现 2.03~2.12 的长宽比，
+    # 原 2.2 会把中近距离稳定可见的横栏判成“不够扁”。
+    # rollback: 改回 2.2。
+    min_horizontal_aspect_ratio: 1.25
+    # 2026-06-26: 颜色改成斜坡同色后，关闭大块前景兜底；否则坡面/地面大块
+    # 也可能绕过长宽比和高度上限，被当成横栏。
+    # rollback: 改回 true。
+    large_foreground_enabled: false
+    large_foreground_min_area_ratio: 0.08
+    large_foreground_min_width_ratio: 0.35
+    large_foreground_min_height_ratio: 0.18
+    large_foreground_min_bottom_y_ratio: 0.75
+    large_foreground_use_top_edge_filter: false
+    morph_kernel_px: 5
+
+    depth_units_divisor: 1000.0
+    min_depth_m: 0.15
+    max_depth_m: 2.00
+    min_valid_depth_pixels: 12
+    depth_mask_erode_px: 3
+    depth_percentile: 25.0
+    distance_bias_m: 0.0
+
+    # 2026-05-24: 0.70m 在斜坡入口会把坡面/橘色前景误触发成横栏；
+    # 保留比旧 0.53m 略早的触发，但不再让 0.69m 的斜坡前景抢分支。
+    # rollback: 改回 0.53。
+    trigger_distance_m: 0.58
+    depth_stale_timeout_sec: 0.50
+    camera_info_stale_timeout_sec: 3.0
+    publish_debug_image: true
+    log_interval_sec: 0.2
+    # 横栏顶部约与相机等高。由于底边常常不在画面内，这里只约束顶部投影高度。
+    use_top_edge_filter: true
+    expected_top_edge_vertical_m: 0.0
+    top_edge_vertical_tolerance_m: 0.20
+
+    # 正常走路阶段持续发送 [walk_mode, walk_left_norm, walk_right_norm]。
+    walk_publish_hz: 10.0
+    # 识别到横栏后，先单发一次站立指令，再等待 2 秒单发跳跃。
+    stand_to_jump_delay_sec: 2.0
+    # 单发跳跃指令后，等待 5 秒再恢复持续走路。
+    jump_to_walk_delay_sec: 5.0
+    retrigger_enabled: false
+
+    walk_mode: 0
+    walk_left_norm: 1.0
+    walk_right_norm: 1.0
+
+    stand_mode: 0
+    stand_left_norm: 0.0
+    stand_right_norm: 0.0
+
+    jump_mode: 4
+    jump_left_norm: 0.0
+    jump_right_norm: 0.0

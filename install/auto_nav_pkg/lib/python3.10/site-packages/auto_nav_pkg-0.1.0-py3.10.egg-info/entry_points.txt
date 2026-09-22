@@ -1,0 +1,16 @@
+[console_scripts]
+apriltag_align_test_node = auto_nav_pkg.apriltag_align_test:main
+limit_bar_duck_test_node = auto_nav_pkg.limit_bar_duck_test:main
+nav_agent_node = auto_nav_pkg.nav_agent:main
+nav_executor_node = auto_nav_pkg.nav_executor:main
+obstacle_manager_node = auto_nav_pkg.obstacle_manager:main
+obstacle_race_supervisor_node = auto_nav_pkg.obstacle_race_supervisor:main
+orange_hurdle_jump_test_node = auto_nav_pkg.orange_hurdle_jump_test:main
+orange_pole_detector_node = auto_nav_pkg.orange_pole_detector:main
+orange_pole_lidar_slalom_node = auto_nav_pkg.orange_pole_lidar_slalom:main
+orange_pole_relative_nav_node = auto_nav_pkg.orange_pole_relative_nav:main
+orange_pole_relative_nav_stable_node = auto_nav_pkg.orange_pole_relative_nav_stable:main
+slope_branch_detector_node = auto_nav_pkg.slope_branch_detector:main
+upstairs_detector_node = auto_nav_pkg.upstairs_detector:main
+yolo_relative_nav_node = auto_nav_pkg.yolo_relative_nav:main
+

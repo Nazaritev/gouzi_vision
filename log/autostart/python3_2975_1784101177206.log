@@ -1,0 +1,314 @@
+[INFO] [1784101177.693954225] [upstairs_detector]: state=DETECTING
+[INFO] [1784101177.695146774] [upstairs_detector]: upstairs_detector started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, target_band_from_bottom=1, trigger_distance=0.62m, hsv=[30, 40, 30]-[100, 255, 255]
+[INFO] [1784101177.775612963] [upstairs_detector]: 等待对齐深度图。
+[INFO] [1784101177.776040191] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101178.833520293] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=33787, frame=18, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101179.834420674] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=25430, frame=33, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101180.835449351] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=8412, frame=48, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101181.835282471] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3515, frame=63, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101182.840462407] [upstairs_detector]: [1;34m最近上台阶: dist=1.422m, band_from_bottom=1, lateral=0.105m, vertical=0.537m, pixel=(235.6,231.1), box=424x17, area=5444, depth_px=3957, bands=1, trigger=False[0m
+[INFO] [1784101183.836647285] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5402, frame=93, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101184.837964737] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=108, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101185.838416177] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4211, frame=123, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101186.840346230] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=950, frame=138, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101187.907601109] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4345, frame=154, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101188.909011322] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=6342, frame=169, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101189.909251662] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2554, frame=184, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101190.977004328] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2438, frame=200, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101191.976956403] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=662, frame=215, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101192.977359100] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=645, frame=230, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101193.978043436] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=532, frame=245, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101194.978484363] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1653, frame=260, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101195.986308167] [upstairs_detector]: [1;34m最近上台阶: dist=0.911m, band_from_bottom=1, lateral=-0.045m, vertical=0.337m, pixel=(198.3,228.8), box=374x22, area=7666, depth_px=6723, bands=1, trigger=False[0m
+[INFO] [1784101196.980567375] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1378, frame=290, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101197.980730208] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3432, frame=305, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101198.981305576] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5947, frame=320, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101199.983306481] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1402, frame=335, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101200.983358291] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3863, frame=350, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101201.983657592] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3419, frame=365, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101202.990606751] [upstairs_detector]: [1;34m最近上台阶: dist=1.000m, band_from_bottom=1, lateral=0.028m, vertical=0.331m, pixel=(221.8,217.2), box=424x48, area=13623, depth_px=11607, bands=1, trigger=False[0m
+[INFO] [1784101203.658299067] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101203.988655823] [upstairs_detector]: [1;34m最近上台阶: dist=1.054m, band_from_bottom=1, lateral=-0.043m, vertical=0.176m, pixel=(200.9,167.4), box=372x14, area=3566, depth_px=3371, bands=1, trigger=True[0m
+[INFO] [1784101204.187264280] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101204.991235526] [upstairs_detector]: [1;34m最近上台阶: dist=0.901m, band_from_bottom=1, lateral=0.009m, vertical=0.187m, pixel=(216.3,179.7), box=349x14, area=4369, depth_px=4358, bands=1, trigger=False[0m
+[INFO] [1784101205.992916305] [upstairs_detector]: [1;34m最近上台阶: dist=0.942m, band_from_bottom=1, lateral=0.028m, vertical=0.204m, pixel=(222.4,182.6), box=388x14, area=3655, depth_px=3602, bands=1, trigger=False[0m
+[INFO] [1784101206.988793830] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4473, frame=440, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101207.989852847] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5022, frame=455, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101208.992912156] [upstairs_detector]: [1;34m最近上台阶: dist=0.749m, band_from_bottom=1, lateral=0.036m, vertical=0.200m, pixel=(227.7,197.8), box=408x23, area=7007, depth_px=6474, bands=1, trigger=False[0m
+[INFO] [1784101209.997363992] [upstairs_detector]: [1;34m最近上台阶: dist=0.725m, band_from_bottom=1, lateral=0.027m, vertical=0.209m, pixel=(224.7,204.1), box=411x24, area=7357, depth_px=6542, bands=1, trigger=False[0m
+[INFO] [1784101210.798887046] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101210.999521741] [upstairs_detector]: [1;34m最近上台阶: dist=0.578m, band_from_bottom=1, lateral=0.006m, vertical=0.216m, pixel=(216.6,230.1), box=424x20, area=6544, depth_px=5711, bands=1, trigger=True[0m
+[INFO] [1784101211.593279793] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101212.061319084] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4192, frame=516, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101213.063025421] [upstairs_detector]: [1;34m最近上台阶: dist=0.832m, band_from_bottom=1, lateral=0.035m, vertical=0.207m, pixel=(226.1,192.1), box=354x15, area=4986, depth_px=4372, bands=1, trigger=False[0m
+[INFO] [1784101214.067667192] [upstairs_detector]: [1;34m最近上台阶: dist=0.694m, band_from_bottom=1, lateral=0.071m, vertical=0.217m, pixel=(244.4,211.5), box=415x23, area=7590, depth_px=6789, bands=1, trigger=False[0m
+[INFO] [1784101214.600323827] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101215.130902837] [upstairs_detector]: [1;34m最近上台阶: dist=0.565m, band_from_bottom=1, lateral=0.053m, vertical=0.208m, pixel=(241.7,228.2), box=424x23, area=7738, depth_px=5983, bands=1, trigger=True[0m
+[INFO] [1784101215.461295578] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101216.129937858] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3513, frame=577, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101217.129438802] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3172, frame=592, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101218.132270299] [upstairs_detector]: [1;34m最近上台阶: dist=0.786m, band_from_bottom=1, lateral=0.013m, vertical=0.214m, pixel=(218.4,199.3), box=404x16, area=5261, depth_px=4388, bands=1, trigger=False[0m
+[INFO] [1784101219.138396508] [upstairs_detector]: [1;34m最近上台阶: dist=0.702m, band_from_bottom=1, lateral=0.031m, vertical=0.217m, pixel=(226.6,210.6), box=404x21, area=6826, depth_px=5594, bands=1, trigger=False[0m
+[INFO] [1784101219.601701298] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101219.998818502] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101220.199293081] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4329, frame=638, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101221.200864874] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4388, frame=653, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101222.202618671] [upstairs_detector]: [1;34m最近上台阶: dist=0.791m, band_from_bottom=1, lateral=0.029m, vertical=0.190m, pixel=(224.3,189.8), box=399x15, area=3323, depth_px=2989, bands=1, trigger=False[0m
+[INFO] [1784101223.206015047] [upstairs_detector]: [1;34m最近上台阶: dist=0.730m, band_from_bottom=1, lateral=0.030m, vertical=0.225m, pixel=(225.6,210.2), box=424x23, area=7018, depth_px=5263, bands=1, trigger=False[0m
+[INFO] [1784101223.937155890] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101224.204962841] [upstairs_detector]: [1;34m最近上台阶: dist=0.531m, band_from_bottom=1, lateral=0.030m, vertical=0.203m, pixel=(230.4,232.9), box=404x15, area=3924, depth_px=3689, bands=1, trigger=True[0m
+[INFO] [1784101224.467954537] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101225.203803106] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3727, frame=713, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101226.205099104] [upstairs_detector]: [1;34m最近上台阶: dist=0.795m, band_from_bottom=1, lateral=0.026m, vertical=0.212m, pixel=(223.4,197.5), box=359x18, area=4842, depth_px=4324, bands=1, trigger=False[0m
+[INFO] [1784101227.207334890] [upstairs_detector]: [1;34m最近上台阶: dist=0.621m, band_from_bottom=1, lateral=0.005m, vertical=0.225m, pixel=(215.8,226.8), box=374x25, area=7654, depth_px=6725, bands=1, trigger=False[0m
+[INFO] [1784101227.272305467] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101228.142338898] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101228.204269093] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=874, frame=758, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101229.203988622] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=228, frame=773, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101230.209748839] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=604, frame=788, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101231.272675273] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=188, frame=804, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101232.274097667] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=383, frame=819, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101233.274640035] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=555, frame=834, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101234.340801253] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=137, frame=850, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101235.343885974] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1123, frame=865, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101236.343713215] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1339, frame=880, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101237.344875987] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=897, frame=895, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101238.343986840] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=452, frame=910, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101239.345596261] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=968, frame=925, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101240.345343835] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5033, frame=940, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101241.348910965] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2314, frame=955, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101242.414182472] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=515, frame=971, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101243.414324691] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=25, frame=986, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101244.416691270] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=8154, frame=1001, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101245.421941130] [upstairs_detector]: [1;34m最近上台阶: dist=0.980m, band_from_bottom=1, lateral=-0.133m, vertical=0.321m, pixel=(172.2,216.2), box=388x51, area=16334, depth_px=13049, bands=1, trigger=False[0m
+[INFO] [1784101246.423902262] [upstairs_detector]: [1;34m最近上台阶: dist=0.969m, band_from_bottom=1, lateral=-0.141m, vertical=0.325m, pixel=(169.3,218.3), box=322x44, area=10072, depth_px=9833, bands=1, trigger=False[0m
+[INFO] [1784101247.417641507] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2474, frame=1046, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101248.418166568] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3886, frame=1061, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101249.418523944] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4023, frame=1076, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101250.419801003] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3880, frame=1091, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101251.420616051] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1681, frame=1106, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101252.425831376] [upstairs_detector]: [1;34m最近上台阶: dist=0.758m, band_from_bottom=1, lateral=0.064m, vertical=0.287m, pixel=(238.8,231.4), box=408x18, area=2939, depth_px=2595, bands=1, trigger=False[0m
+[INFO] [1784101253.428907716] [upstairs_detector]: [1;34m最近上台阶: dist=1.081m, band_from_bottom=1, lateral=-0.169m, vertical=0.363m, pixel=(166.0,218.4), box=286x45, area=7455, depth_px=6462, bands=1, trigger=False[0m
+[INFO] [1784101254.428225115] [upstairs_detector]: [1;34m最近上台阶: dist=1.009m, band_from_bottom=1, lateral=-0.063m, vertical=0.349m, pixel=(194.5,221.5), box=412x38, area=6278, depth_px=4546, bands=1, trigger=False[0m
+[INFO] [1784101255.424328243] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=8492, frame=1166, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101256.430271609] [upstairs_detector]: [1;34m最近上台阶: dist=0.890m, band_from_bottom=1, lateral=-0.059m, vertical=0.340m, pixel=(193.2,232.5), box=280x16, area=3190, depth_px=3157, bands=2, trigger=False[0m
+[INFO] [1784101257.431714054] [upstairs_detector]: [1;34m最近上台阶: dist=1.070m, band_from_bottom=1, lateral=-0.082m, vertical=0.339m, pixel=(190.1,212.9), box=408x56, area=12084, depth_px=11303, bands=1, trigger=False[0m
+[INFO] [1784101258.429544176] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1875, frame=1211, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101259.427959656] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3595, frame=1226, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101260.432576913] [upstairs_detector]: [1;34m最近上台阶: dist=0.914m, band_from_bottom=1, lateral=0.309m, vertical=0.319m, pixel=(315.8,222.5), box=416x37, area=7310, depth_px=7244, bands=1, trigger=False[0m
+[INFO] [1784101261.429177557] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=9122, frame=1256, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101262.434799462] [upstairs_detector]: [1;34m最近上台阶: dist=0.832m, band_from_bottom=1, lateral=0.212m, vertical=0.286m, pixel=(290.3,221.0), box=422x44, area=10253, depth_px=10199, bands=1, trigger=False[0m
+[INFO] [1784101263.434622478] [upstairs_detector]: [1;34m最近上台阶: dist=1.009m, band_from_bottom=1, lateral=0.161m, vertical=0.338m, pixel=(261.6,218.2), box=388x47, area=14660, depth_px=13722, bands=1, trigger=False[0m
+[INFO] [1784101264.435613773] [upstairs_detector]: [1;34m最近上台阶: dist=1.067m, band_from_bottom=1, lateral=-0.122m, vertical=0.365m, pixel=(178.6,220.5), box=330x41, area=11336, depth_px=10982, bands=1, trigger=False[0m
+[INFO] [1784101265.437321688] [upstairs_detector]: [1;34m最近上台阶: dist=0.931m, band_from_bottom=1, lateral=0.058m, vertical=0.315m, pixel=(232.1,219.2), box=360x43, area=9822, depth_px=8302, bands=1, trigger=False[0m
+[INFO] [1784101266.436744042] [upstairs_detector]: [1;34m最近上台阶: dist=1.081m, band_from_bottom=1, lateral=-0.175m, vertical=0.370m, pixel=(164.3,220.5), box=316x40, area=9040, depth_px=6759, bands=1, trigger=False[0m
+[INFO] [1784101267.435771886] [upstairs_detector]: [1;34m最近上台阶: dist=0.942m, band_from_bottom=1, lateral=-0.244m, vertical=0.341m, pixel=(135.0,226.4), box=236x27, area=5262, depth_px=4099, bands=1, trigger=False[0m
+[INFO] [1784101268.433458462] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=830, frame=1361, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101269.435430191] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=1376, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101270.434408870] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=570, frame=1391, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101271.443889636] [upstairs_detector]: [1;34m最近上台阶: dist=0.677m, band_from_bottom=1, lateral=0.086m, vertical=0.210m, pixel=(251.9,210.7), box=424x63, area=20756, depth_px=12093, bands=2, trigger=False[0m
+[INFO] [1784101272.438286212] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5288, frame=1421, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101273.436266747] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5334, frame=1436, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101274.437922621] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2648, frame=1451, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101275.440553627] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7012, frame=1466, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101276.439614642] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4836, frame=1481, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101277.448066661] [upstairs_detector]: [1;34m最近上台阶: dist=0.661m, band_from_bottom=1, lateral=0.213m, vertical=0.219m, pixel=(311.0,217.4), box=424x39, area=5463, depth_px=5226, bands=1, trigger=False[0m
+[INFO] [1784101278.444839134] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=8407, frame=1511, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101279.442840323] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4585, frame=1526, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101280.442132362] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1276, frame=1541, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101281.443298183] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1980, frame=1556, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101282.443490382] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3999, frame=1571, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101283.443798757] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=145, frame=1586, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101284.447219235] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3261, frame=1601, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101285.447158943] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3733, frame=1616, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101286.445422321] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1960, frame=1631, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101287.446883526] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1655, frame=1646, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101288.448663372] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=745, frame=1661, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101289.447911575] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=643, frame=1676, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101290.450326115] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4759, frame=1691, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101291.451520489] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=881, frame=1706, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101292.517445912] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1251, frame=1722, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101293.521880182] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3142, frame=1737, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101294.524989546] [upstairs_detector]: [1;34m最近上台阶: dist=1.084m, band_from_bottom=1, lateral=-0.258m, vertical=0.224m, pixel=(141.4,179.4), box=424x41, area=8552, depth_px=8552, bands=1, trigger=False[0m
+[INFO] [1784101295.525608696] [upstairs_detector]: [1;34m最近上台阶: dist=1.175m, band_from_bottom=1, lateral=-0.063m, vertical=0.249m, pixel=(197.0,181.1), box=424x43, area=9950, depth_px=9215, bands=1, trigger=False[0m
+[INFO] [1784101296.529618458] [upstairs_detector]: [1;34m最近上台阶: dist=1.031m, band_from_bottom=1, lateral=0.018m, vertical=0.270m, pixel=(218.5,196.2), box=424x68, area=17213, depth_px=16191, bands=1, trigger=False[0m
+[INFO] [1784101297.529143022] [upstairs_detector]: [1;34m最近上台阶: dist=0.716m, band_from_bottom=1, lateral=-0.014m, vertical=0.231m, pixel=(207.3,214.4), box=424x51, area=15993, depth_px=15986, bands=1, trigger=False[0m
+[INFO] [1784101297.862713410] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101298.525875621] [upstairs_detector]: [1;34m最近上台阶: dist=0.462m, band_from_bottom=1, lateral=-0.021m, vertical=0.171m, pixel=(199.3,228.9), box=424x22, area=5658, depth_px=5598, bands=1, trigger=True[0m
+[INFO] [1784101299.530975798] [upstairs_detector]: [1;34m最近上台阶: dist=0.385m, band_from_bottom=1, lateral=-0.035m, vertical=0.125m, pixel=(185.6,215.4), box=424x49, area=11250, depth_px=11216, bands=1, trigger=True[0m
+[INFO] [1784101299.922903944] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101300.523802370] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=220, frame=1842, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101301.524821761] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5348, frame=1857, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101302.528655420] [upstairs_detector]: [1;34m最近上台阶: dist=0.960m, band_from_bottom=1, lateral=0.094m, vertical=0.318m, pixel=(242.8,217.3), box=421x29, area=8318, depth_px=7845, bands=1, trigger=False[0m
+[INFO] [1784101303.529125886] [upstairs_detector]: [1;34m最近上台阶: dist=0.830m, band_from_bottom=1, lateral=0.071m, vertical=0.282m, pixel=(239.3,219.9), box=408x23, area=6724, depth_px=6432, bands=1, trigger=False[0m
+[INFO] [1784101304.528816476] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7068, frame=1902, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101305.532336191] [upstairs_detector]: [1;34m最近上台阶: dist=1.292m, band_from_bottom=1, lateral=-0.106m, vertical=0.335m, pixel=(188.5,195.4), box=373x16, area=3322, depth_px=2575, bands=1, trigger=False[0m
+[INFO] [1784101306.530423734] [upstairs_detector]: [1;34m最近上台阶: dist=1.109m, band_from_bottom=1, lateral=-0.237m, vertical=0.331m, pixel=(148.6,207.2), box=424x22, area=3875, depth_px=3212, bands=1, trigger=False[0m
+[INFO] [1784101307.529401729] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7274, frame=1947, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101308.531304931] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5019, frame=1962, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101309.529905095] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=217, frame=1977, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101310.529905366] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1185, frame=1992, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101311.068062581] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101311.536194859] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101311.537823079] [upstairs_detector]: [1;34m最近上台阶: dist=0.657m, band_from_bottom=1, lateral=0.026m, vertical=0.241m, pixel=(225.1,228.2), box=404x21, area=7214, depth_px=6851, bands=2, trigger=False[0m
+[INFO] [1784101312.007360293] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101312.269376760] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101312.531858345] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1891, frame=2022, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101313.532690762] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=554, frame=2037, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101314.532772048] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1655, frame=2052, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101315.533574705] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1090, frame=2067, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101316.536837946] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1056, frame=2082, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101317.534823272] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1276, frame=2097, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101318.535669822] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1520, frame=2112, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101319.536251852] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2636, frame=2127, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101320.537554560] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3441, frame=2142, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101321.075113185] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101321.544878540] [upstairs_detector]: [1;34m最近上台阶: dist=0.508m, band_from_bottom=1, lateral=0.055m, vertical=0.171m, pixel=(246.2,219.1), box=424x40, area=7851, depth_px=7851, bands=1, trigger=True[0m
+[INFO] [1784101321.808272705] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101322.010533949] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101322.209479722] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101322.605969776] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2581, frame=2173, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101323.607747196] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=470, frame=2188, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101324.611963137] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=195, frame=2203, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101325.674710022] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=50, frame=2219, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101326.675540413] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=399, frame=2234, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101327.676200767] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=2249, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101328.676714637] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=62, frame=2264, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101329.679593982] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=106, frame=2279, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101330.677872562] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=36, frame=2294, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101331.678811735] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=497, frame=2309, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101332.680066613] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=141, frame=2324, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101333.681131116] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=58, frame=2339, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101334.748753076] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=254, frame=2355, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101335.750093014] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1906, frame=2370, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101336.751852457] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=117, frame=2385, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101337.823358267] [upstairs_detector]: [1;34m最近上台阶: dist=1.060m, band_from_bottom=1, lateral=0.076m, vertical=0.326m, pixel=(234.9,210.1), box=424x50, area=10106, depth_px=9862, bands=1, trigger=False[0m
+[INFO] [1784101338.817290191] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1728, frame=2416, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101339.819268968] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=594, frame=2431, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101340.887839889] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=817, frame=2447, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101341.953609301] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=992, frame=2463, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101342.954134803] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2510, frame=2478, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101343.954464696] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2839, frame=2493, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101344.955630918] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=422, frame=2508, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101345.959138638] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=45, frame=2523, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101346.963041538] [upstairs_detector]: [1;34m最近上台阶: dist=0.929m, band_from_bottom=1, lateral=0.097m, vertical=0.316m, pixel=(244.9,219.8), box=424x41, area=6476, depth_px=6359, bands=1, trigger=False[0m
+[INFO] [1784101347.965802036] [upstairs_detector]: [1;34m最近上台阶: dist=1.191m, band_from_bottom=1, lateral=0.064m, vertical=0.370m, pixel=(229.6,211.0), box=424x31, area=7261, depth_px=6654, bands=1, trigger=False[0m
+[INFO] [1784101349.030475934] [upstairs_detector]: [1;34m最近上台阶: dist=0.853m, band_from_bottom=1, lateral=0.060m, vertical=0.296m, pixel=(234.6,222.1), box=420x30, area=4918, depth_px=4907, bands=1, trigger=False[0m
+[INFO] [1784101350.093450011] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3427, frame=2585, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101351.102277484] [upstairs_detector]: [1;34m最近上台阶: dist=0.916m, band_from_bottom=1, lateral=-0.118m, vertical=0.301m, pixel=(174.3,216.3), box=424x27, area=6603, depth_px=6602, bands=1, trigger=False[0m
+[INFO] [1784101352.097857242] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5818, frame=2615, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101353.096551195] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7273, frame=2630, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101354.102179902] [upstairs_detector]: [1;34m最近上台阶: dist=1.191m, band_from_bottom=1, lateral=-0.077m, vertical=0.264m, pixel=(193.6,184.0), box=424x48, area=10283, depth_px=10201, bands=1, trigger=False[0m
+[INFO] [1784101355.107907902] [upstairs_detector]: [1;34m最近上台阶: dist=0.812m, band_from_bottom=1, lateral=-0.024m, vertical=0.222m, pixel=(204.4,199.8), box=405x80, area=25228, depth_px=25123, bands=1, trigger=False[0m
+[INFO] [1784101355.709626002] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101356.108267417] [upstairs_detector]: [1;34m最近上台阶: dist=0.512m, band_from_bottom=1, lateral=-0.010m, vertical=0.137m, pixel=(207.7,198.1), box=406x80, area=26093, depth_px=26012, bands=1, trigger=True[0m
+[INFO] [1784101357.108473592] [upstairs_detector]: [1;34m最近上台阶: dist=0.549m, band_from_bottom=1, lateral=-0.055m, vertical=0.153m, pixel=(183.1,201.5), box=342x71, area=20831, depth_px=20831, bands=1, trigger=True[0m
+[INFO] [1784101358.108802046] [upstairs_detector]: [1;34m最近上台阶: dist=0.474m, band_from_bottom=1, lateral=-0.035m, vertical=0.131m, pixel=(190.9,200.4), box=424x80, area=27347, depth_px=26594, bands=1, trigger=True[0m
+[INFO] [1784101359.110858344] [upstairs_detector]: [1;34m最近上台阶: dist=0.386m, band_from_bottom=1, lateral=-0.011m, vertical=0.102m, pixel=(204.8,196.8), box=420x77, area=27674, depth_px=27476, bands=1, trigger=True[0m
+[INFO] [1784101359.432249421] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101360.101407409] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=2735, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101361.168987637] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7864, frame=2751, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101362.175582058] [upstairs_detector]: [1;34m最近上台阶: dist=1.187m, band_from_bottom=1, lateral=0.073m, vertical=0.293m, pixel=(231.8,191.6), box=424x66, area=16158, depth_px=15267, bands=1, trigger=False[0m
+[INFO] [1784101363.176364031] [upstairs_detector]: [1;34m最近上台阶: dist=1.041m, band_from_bottom=1, lateral=0.030m, vertical=0.262m, pixel=(222.0,193.1), box=424x66, area=20320, depth_px=18906, bands=1, trigger=False[0m
+[INFO] [1784101364.182181268] [upstairs_detector]: [1;34m最近上台阶: dist=0.746m, band_from_bottom=1, lateral=-0.022m, vertical=0.211m, pixel=(204.2,202.6), box=424x80, area=25587, depth_px=25337, bands=1, trigger=False[0m
+[INFO] [1784101364.313204217] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101364.708963191] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101365.177732685] [upstairs_detector]: [1;34m最近上台阶: dist=0.658m, band_from_bottom=1, lateral=-0.022m, vertical=0.171m, pixel=(203.2,195.7), box=401x44, area=14743, depth_px=14240, bands=1, trigger=False[0m
+[INFO] [1784101365.376514686] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101366.178122494] [upstairs_detector]: [1;34m最近上台阶: dist=0.522m, band_from_bottom=1, lateral=0.010m, vertical=0.151m, pixel=(219.1,204.4), box=424x58, area=21938, depth_px=21439, bands=1, trigger=True[0m
+[INFO] [1784101366.971220234] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101367.172188469] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=883, frame=2841, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101367.448783506] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101368.180960627] [upstairs_detector]: [1;34m最近上台阶: dist=0.441m, band_from_bottom=1, lateral=0.017m, vertical=0.129m, pixel=(225.0,205.3), box=422x72, area=27624, depth_px=27624, bands=1, trigger=True[0m
+[INFO] [1784101368.973463357] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101369.182017193] [upstairs_detector]: [1;34m最近上台阶: dist=0.814m, band_from_bottom=1, lateral=0.157m, vertical=0.261m, pixel=(271.8,213.8), box=424x61, area=13169, depth_px=11589, bands=1, trigger=False[0m
+[INFO] [1784101369.245719837] [upstairs_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784101370.183627902] [upstairs_detector]: [1;34m最近上台阶: dist=0.569m, band_from_bottom=1, lateral=0.028m, vertical=0.173m, pixel=(228.4,209.1), box=424x66, area=19131, depth_px=16899, bands=1, trigger=True[0m
+[INFO] [1784101371.174143083] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784101371.175488418] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=18425, frame=2901, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101372.178069522] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=16161, frame=2916, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101373.176493112] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=14420, frame=2931, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101374.178034267] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=12692, frame=2946, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101375.179462758] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7062, frame=2961, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101376.179238200] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=14276, frame=2976, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101377.179773266] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=2991, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101378.179994664] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1041, frame=3006, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101379.180982630] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=6714, frame=3021, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101380.181684478] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=8054, frame=3036, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101381.182212205] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7642, frame=3051, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101382.183119043] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2727, frame=3066, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101383.184393409] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=479, frame=3081, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101384.184106751] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1522, frame=3096, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101385.185650987] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1491, frame=3111, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101386.189800184] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=23470, frame=3126, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101387.187580808] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5170, frame=3141, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101388.187914769] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=396, frame=3156, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101389.188210673] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=150, frame=3171, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101390.188731899] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2226, frame=3186, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101391.190014070] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2431, frame=3201, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101392.190653166] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1257, frame=3216, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101393.191257280] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1581, frame=3231, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101394.192277871] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=864, frame=3246, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101395.193268998] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=985, frame=3261, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101396.193548955] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1782, frame=3276, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101397.195311676] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4278, frame=3291, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101398.194928517] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5133, frame=3306, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101399.196103276] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5271, frame=3321, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101400.197144557] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5083, frame=3336, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101401.198846265] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4981, frame=3351, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101402.198115643] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5108, frame=3366, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101403.199040751] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5041, frame=3381, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101404.201419363] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5143, frame=3396, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101405.200333852] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3962, frame=3411, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101406.201914065] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4355, frame=3426, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101407.201901857] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4755, frame=3441, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101408.203968820] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4602, frame=3456, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101409.203811619] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4332, frame=3471, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101410.272632967] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=13069, frame=3487, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101411.271440005] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=724, frame=3502, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101412.272447057] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=9837, frame=3517, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101413.272796499] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1520, frame=3532, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101414.281647468] [upstairs_detector]: [1;34m最近上台阶: dist=1.135m, band_from_bottom=1, lateral=0.215m, vertical=0.360m, pixel=(270.7,212.9), box=408x52, area=13719, depth_px=7451, bands=1, trigger=False[0m
+[INFO] [1784101415.275680125] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=12077, frame=3562, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101416.275006978] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=6927, frame=3577, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101417.276457139] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=369, frame=3592, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101418.276374051] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=887, frame=3607, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101419.277271075] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=508, frame=3622, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101420.278102158] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3007, frame=3637, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101421.278196833] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=474, frame=3652, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101422.278781728] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=573, frame=3667, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101423.279732031] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=754, frame=3682, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101424.281360943] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5038, frame=3697, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101425.282367309] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=6694, frame=3712, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101426.283282603] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=10377, frame=3727, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101427.285153849] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7619, frame=3742, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101428.284844226] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=4665, frame=3757, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101429.285161197] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=568, frame=3772, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101430.286056260] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=7849, frame=3787, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101431.285365391] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=3802, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101432.286026610] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1679, frame=3817, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101433.287848468] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2641, frame=3832, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101434.289196873] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=5234, frame=3847, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101435.289605273] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1052, frame=3862, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101436.289626582] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1157, frame=3877, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101437.290711711] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=3336, frame=3892, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101438.292259852] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2078, frame=3907, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101439.358689345] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1182, frame=3923, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101440.360180263] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=399, frame=3938, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101441.360137144] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=180, frame=3953, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101442.360725092] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=250, frame=3968, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101443.361757685] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=384, frame=3983, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101444.364655942] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=301, frame=3998, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101445.362814817] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=0, frame=4013, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101446.364143887] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=124, frame=4028, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101447.364332735] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=213, frame=4043, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101448.366388321] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1242, frame=4058, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101449.366840822] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=269, frame=4073, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101450.432860180] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=263, frame=4089, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101451.434223700] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=346, frame=4104, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101452.435051761] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=837, frame=4119, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101453.435989662] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1009, frame=4134, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101454.436075029] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=1124, frame=4149, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101455.436921158] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2485, frame=4164, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1784101456.436965220] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2879, frame=4179, hsv=[30, 40, 30]-[100, 255, 255][0m
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

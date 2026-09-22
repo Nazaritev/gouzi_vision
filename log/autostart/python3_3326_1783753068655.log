@@ -1,0 +1,106 @@
+[INFO] [1783753069.100588967] [limit_bar_duck_test]: state=DETECTOR_ONLY
+[INFO] [1783753069.101201667] [limit_bar_duck_test]: limit_bar_duck_test started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, pose=/Odometry, detector_only=True, serial=/dev/ttyUSB0@115200, trigger_distance=0.80m, travel_distance=1.00m, walk=[0,0.500,0.500], duck_prepare=[2,0.000,0.000], duck_walk=[2,1.000,1.000]
+[INFO] [1783753069.118638380] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753069.121392161] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=1, reason=orange_foreground_suppressed, orange=area=81522,box=424x240,bottom=1.00,ratios=(0.80,1.00,1.00), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753070.143478346] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=18, reason=orange_foreground_suppressed, orange=area=80418,box=424x240,bottom=1.00,ratios=(0.79,1.00,1.00), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753071.147672036] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=33, reason=orange_foreground_suppressed, orange=area=72140,box=424x240,bottom=1.00,ratios=(0.71,1.00,1.00), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753072.145960954] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=48, reason=orange_foreground_suppressed, orange=area=35520,box=424x117,bottom=1.00,ratios=(0.35,1.00,0.49), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753073.150303908] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753073.151782274] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.196m, lateral=0.002m, vertical=0.018m, pixel=(217.0,144.0), size=413x64, source=component, line_len=413.0px, angle=0.0deg, depth_px=125, blue_px=4379, white_px=11275, blue_ratio=0.28, candidates=1, trigger=True[0m
+[INFO] [1783753073.213826673] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753073.345904764] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753073.413497186] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753073.481614206] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753073.547055153] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753073.614808319] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753073.679392718] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753073.748527076] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753073.881851904] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753073.948717497] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753074.216934798] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753074.218662356] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.196m, lateral=0.002m, vertical=0.018m, pixel=(217.0,144.0), size=413x63, source=component, line_len=413.0px, angle=0.0deg, depth_px=114, blue_px=4724, white_px=10835, blue_ratio=0.30, candidates=1, trigger=False[0m
+[INFO] [1783753074.414368602] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753074.481523067] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753075.282198351] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.018m, pixel=(216.5,144.0), size=414x63, source=component, line_len=414.0px, angle=0.0deg, depth_px=99, blue_px=4976, white_px=10664, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753075.681773405] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753075.757629683] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753075.884707595] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753075.989870756] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753076.015636622] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753076.084590002] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753076.288094774] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=110, reason=no_candidate, mask_px=blue:3413,white:28249,combined:32079, component=roi_y=120:240,search_blue_px=2784,contours=8,largest=area:1844,box:140x23,aspect:6.09,roi_blue:1842,roi_white:3299,reject:width, line=blue_only(mask_px=3375,lines=0,reject=no_hough_line); combined(mask_px=32079,lines=0,reject=no_hough_line), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753076.885134849] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753077.283396367] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.605m, lateral=0.038m, vertical=0.054m, pixel=(232.5,144.0), size=382x62, source=component, line_len=382.0px, angle=0.0deg, depth_px=584, blue_px=4077, white_px=9872, blue_ratio=0.29, candidates=1, trigger=True[0m
+[INFO] [1783753077.482450355] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753077.550379695] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753077.884227762] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753077.971740451] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753078.215868362] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753078.286140150] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.017m, pixel=(216.5,144.0), size=414x63, source=component, line_len=414.0px, angle=0.0deg, depth_px=119, blue_px=5357, white_px=10571, blue_ratio=0.34, candidates=1, trigger=False[0m
+[INFO] [1783753078.421400654] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753078.619890165] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753078.883476103] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753079.017724083] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753079.217711668] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753079.284308996] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.014m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=122, blue_px=5602, white_px=11345, blue_ratio=0.33, candidates=1, trigger=True[0m
+[INFO] [1783753079.354122467] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753079.684173509] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753079.753743672] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753080.085911664] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753080.151798473] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753080.285552929] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.014m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=113, blue_px=5602, white_px=11314, blue_ratio=0.33, candidates=1, trigger=False[0m
+[INFO] [1783753081.285817194] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.196m, lateral=0.002m, vertical=0.018m, pixel=(216.5,144.0), size=414x63, source=component, line_len=414.0px, angle=0.0deg, depth_px=107, blue_px=4825, white_px=10820, blue_ratio=0.31, candidates=1, trigger=False[0m
+[INFO] [1783753082.287429742] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.018m, pixel=(217.0,145.0), size=413x62, source=component, line_len=413.0px, angle=0.0deg, depth_px=113, blue_px=4492, white_px=10971, blue_ratio=0.29, candidates=1, trigger=False[0m
+[INFO] [1783753082.353133317] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753082.487836775] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753082.556599262] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753082.619897460] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753083.287472123] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.017m, pixel=(216.5,144.0), size=414x63, source=component, line_len=414.0px, angle=0.0deg, depth_px=113, blue_px=4560, white_px=11026, blue_ratio=0.29, candidates=1, trigger=False[0m
+[INFO] [1783753084.020874174] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753084.090182821] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753084.309074007] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.018m, pixel=(216.5,145.0), size=414x62, source=component, line_len=414.0px, angle=0.0deg, depth_px=114, blue_px=4646, white_px=10742, blue_ratio=0.30, candidates=1, trigger=False[0m
+[INFO] [1783753085.337461849] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.018m, pixel=(217.0,144.0), size=413x63, source=component, line_len=413.0px, angle=0.0deg, depth_px=113, blue_px=4601, white_px=10939, blue_ratio=0.30, candidates=1, trigger=False[0m
+[INFO] [1783753086.340493994] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.018m, pixel=(217.0,145.0), size=413x61, source=component, line_len=413.0px, angle=0.0deg, depth_px=115, blue_px=4590, white_px=10727, blue_ratio=0.30, candidates=1, trigger=False[0m
+[INFO] [1783753086.738363878] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753086.939745145] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753087.006459132] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753087.205344814] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753087.341211570] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.824m, lateral=0.116m, vertical=0.079m, pixel=(256.0,146.0), size=335x88, source=component, line_len=335.0px, angle=0.0deg, depth_px=1856, blue_px=2815, white_px=8585, blue_ratio=0.25, candidates=1, trigger=False[0m
+[INFO] [1783753088.342731031] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.333m, lateral=0.014m, vertical=0.097m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=1328, blue_px=4288, white_px=11106, blue_ratio=0.28, candidates=1, trigger=False[0m
+[INFO] [1783753088.739261126] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753088.806141868] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753088.873521108] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753088.942273775] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753089.006950193] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753089.339805164] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753089.410320590] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=-0.001m, vertical=0.014m, pixel=(211.5,139.0), size=424x74, source=component, line_len=424.0px, angle=0.0deg, depth_px=108, blue_px=5920, white_px=10100, blue_ratio=0.37, candidates=1, trigger=False[0m
+[INFO] [1783753089.873764787] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753089.939534934] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753090.479492717] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.530m, lateral=0.223m, vertical=0.031m, pixel=(340.5,134.5), size=174x28, source=line, line_len=157.0px, angle=-1.1deg, depth_px=28, blue_px=1268, white_px=598, blue_ratio=0.68, candidates=1, trigger=False[0m
+[INFO] [1783753090.609090106] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753090.740583007] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753090.941405711] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753091.007885639] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753091.475688009] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.200m, lateral=0.013m, vertical=0.088m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=101, blue_px=5020, white_px=10566, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753092.141331627] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753092.208987568] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753092.476513434] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.014m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=98, blue_px=4626, white_px=10523, blue_ratio=0.31, candidates=1, trigger=False[0m
+[INFO] [1783753093.477652897] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.200m, lateral=0.013m, vertical=0.088m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=94, blue_px=4708, white_px=10771, blue_ratio=0.30, candidates=1, trigger=False[0m
+[INFO] [1783753094.477549761] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.208m, lateral=0.013m, vertical=0.088m, pixel=(216.5,139.0), size=414x74, source=component, line_len=414.0px, angle=0.0deg, depth_px=83, blue_px=4990, white_px=10658, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753095.478616873] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.014m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=98, blue_px=4785, white_px=10807, blue_ratio=0.31, candidates=1, trigger=False[0m
+[INFO] [1783753096.411861377] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753096.482095782] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.194m, lateral=0.002m, vertical=0.012m, pixel=(216.5,136.0), size=414x69, source=component, line_len=414.0px, angle=0.0deg, depth_px=126, blue_px=5219, white_px=10109, blue_ratio=0.34, candidates=1, trigger=True[0m
+[INFO] [1783753096.545825897] [limit_bar_duck_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753097.480141024] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.226m, lateral=0.013m, vertical=0.085m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=101, blue_px=5519, white_px=11147, blue_ratio=0.33, candidates=1, trigger=False[0m
+[INFO] [1783753098.480638795] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.200m, lateral=0.002m, vertical=0.014m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=100, blue_px=5402, white_px=11149, blue_ratio=0.33, candidates=1, trigger=False[0m
+[INFO] [1783753099.481172562] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.014m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=102, blue_px=5265, white_px=11269, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753100.481965626] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.217m, lateral=0.013m, vertical=0.085m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=94, blue_px=5148, white_px=11375, blue_ratio=0.31, candidates=1, trigger=False[0m
+[INFO] [1783753101.484166042] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.197m, lateral=0.002m, vertical=0.014m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=102, blue_px=5216, white_px=11317, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753102.484024260] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.195m, lateral=0.002m, vertical=0.014m, pixel=(216.5,138.0), size=414x73, source=component, line_len=414.0px, angle=0.0deg, depth_px=103, blue_px=5146, white_px=11191, blue_ratio=0.31, candidates=1, trigger=False[0m
+[INFO] [1783753103.484539830] [limit_bar_duck_test]: [1;34m最近限高杆: dist=0.194m, lateral=0.003m, vertical=0.015m, pixel=(217.5,141.0), size=412x78, source=component, line_len=412.0px, angle=0.0deg, depth_px=84, blue_px=5219, white_px=11237, blue_ratio=0.32, candidates=1, trigger=False[0m
+[INFO] [1783753104.485237599] [limit_bar_duck_test]: [1;34m最近限高杆: dist=1.095m, lateral=0.019m, vertical=0.087m, pixel=(218.5,141.0), size=410x78, source=component, line_len=410.0px, angle=0.0deg, depth_px=105, blue_px=5651, white_px=11052, blue_ratio=0.34, candidates=1, trigger=False[0m
+[INFO] [1783753105.491277572] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=556, reason=no_candidate, mask_px=blue:9001,white:36515,combined:47625, component=roi_y=120:240,search_blue_px=7652,contours=8,largest=area:8783,box:169x109,aspect:1.55,roi_blue:7073,roi_white:15641,reject:width+aspect, line=blue_only(mask_px=9098,lines=0,reject=no_hough_line); combined(mask_px=47625,lines=0,reject=no_hough_line), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753106.500774547] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=571, reason=no_candidate, mask_px=blue:13295,white:41375,combined:56717, component=roi_y=120:240,search_blue_px=8040,contours=5,largest=area:11585,box:248x120,aspect:2.07,roi_blue:8948,roi_white:23407,reject:aspect, line=blue_only(mask_px=14780,lines=1,best=len:189,angle:40.9,band:168x138,blue:6227,white:11125,reject:angle); combined(mask_px=56717,lines=1,best=len:182,angle:11.1,band:194x60,blue:652,white:6601,reject:depth_invalid(valid_px=0,min_px=12)), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753107.560518600] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=587, reason=no_candidate, mask_px=blue:7673,white:51273,combined:60615, component=roi_y=120:240,search_blue_px=4565,contours=2,largest=area:5107,box:172x62,aspect:2.77,roi_blue:5561,roi_white:15128,reject:width+aspect, line=blue_only(mask_px=8537,lines=2,best=len:185,angle:18.9,band:200x85,blue:5266,white:8896,reject:angle); combined(mask_px=60615,lines=0,reject=no_hough_line), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753108.561646212] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=602, reason=no_candidate, mask_px=blue:7578,white:47421,combined:57021, component=roi_y=120:240,search_blue_px=5365,contours=2,largest=area:7250,box:262x81,aspect:3.23,roi_blue:5863,roi_white:25053,reject:aspect, line=blue_only(mask_px=8510,lines=2,best=len:205,angle:21.8,band:205x101,blue:5508,white:11187,reject:angle); combined(mask_px=57021,lines=1,best=len:219,angle:-1.0,band:235x29,blue:798,white:1064,reject:depth_invalid(valid_px=0,min_px=12)), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0, 0, 120]-[180, 90, 255][0m
+[INFO] [1783753109.560451822] [limit_bar_duck_test]: [0;33m未检测到有效限高杆: candidates=0, frame=617, reason=no_candidate, mask_px=blue:7193,white:31989,combined:40694, component=roi_y=120:240,search_blue_px=5271,contours=4,largest=area:7168,box:222x80,aspect:2.77,roi_blue:5666,roi_white:15757,reject:aspect, line=blue_only(mask_px=8221,lines=1,best=len:206,angle:21.1,band:205x99,blue:5412,white:10304,reject:angle); combined(mask_px=40694,lines=0,reject=no_hough_line), blue_hsv=[95, 100, 60]-[125, 255, 255], white_hsv=[0,

@@ -1,0 +1,90 @@
+[INFO] [1783910569.926636000] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783910569.929248607] [planner_server]: Creating
+[INFO] [1783910569.938024791] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783910569.939478313] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1783910570.110630431] [planner_server]: Configuring
+[INFO] [1783910570.110660826] [global_costmap.global_costmap]: Configuring
+[INFO] [1783910570.114168634] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[INFO] [1783910570.116738851] [global_costmap.global_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1783910570.119015170] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1783910570.119044502] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1783910570.119412901] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1783910570.131233921] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlanner2D
+[INFO] [1783910570.131277203] [planner_server]: Configuring GridBased of type SmacPlanner2D
+[INFO] [1783910570.133066976] [planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.15, maximum iterations 1000000, max on approach iterations 1000, and allowing unknown traversal.
+[INFO] [1783910570.133105347] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1783910572.040338650] [planner_server]: Activating
+[INFO] [1783910572.040378227] [global_costmap.global_costmap]: Activating
+[INFO] [1783910572.040386230] [global_costmap.global_costmap]: Checking transform
+[INFO] [1783910572.040454890] [global_costmap.global_costmap]: start
+[INFO] [1783910572.591054754] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[INFO] [1783910572.617291709] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[WARN] [1783910607.181565118] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910607.181631952] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910607.181644412] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910607.267551502] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910607.620172137] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910607.620237072] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910607.620253057] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910607.718679778] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910705.684036745] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910705.684105972] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910705.684120045] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910705.767713268] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910706.125109671] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910706.125181298] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910706.125193098] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1783910721.537981154] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910721.538053879] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910721.538068381] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910721.617562747] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910722.123802281] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910722.123867289] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910722.123883158] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1783910723.891633703] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910723.891713834] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910723.891735845] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910723.967531437] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910724.123375075] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910724.123448187] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910724.123467278] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910724.217707887] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910724.623870222] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910724.623929736] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910724.623943379] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910724.717526703] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910725.123865819] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910725.123951850] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910725.123971384] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1783910740.538779190] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910740.538855423] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910740.538872762] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910740.617546271] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910741.125103489] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910741.125168921] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.10, 3.94)
+[WARN] [1783910741.125183013] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1783910785.817147938] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[WARN] [1783910785.817216180] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.24, -5.71)
+[WARN] [1783910785.817230314] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910785.916844761] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910800.967513229] [planner_server]: GridBased: failed to create plan, invalid use: Starting point in lethal space! Cannot create feasible plan..
+[WARN] [1783910800.967556878] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.24, -5.71)
+[WARN] [1783910800.967565310] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910801.066869752] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910801.557469513] [planner_server]: Planner loop missed its desired rate of 3.0000 Hz. Current loop rate is 2.0399 Hz
+[INFO] [1783910831.717091588] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910832.052518213] [planner_server]: Planner loop missed its desired rate of 3.0000 Hz. Current loop rate is 2.9855 Hz
+[WARN] [1783910852.734622238] [planner_server]: GridBased: failed to create plan, no valid path found.
+[WARN] [1783910852.734677962] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (0.24, -5.71)
+[WARN] [1783910852.734688908] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1783910852.816877110] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[INFO] [1783910906.217051366] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910906.553893807] [planner_server]: Planner loop missed its desired rate of 3.0000 Hz. Current loop rate is 2.9715 Hz
+[INFO] [1783910980.717080266] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1783910981.053652595] [planner_server]: Planner loop missed its desired rate of 3.0000 Hz. Current loop rate is 2.9739 Hz

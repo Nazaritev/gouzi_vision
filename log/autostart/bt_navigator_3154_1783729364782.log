@@ -1,0 +1,26 @@
+[INFO] [1783729364.835518751] [bt_navigator]: 
+	bt_navigator lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783729364.835712825] [bt_navigator]: Creating
+[INFO] [1783729364.982749146] [bt_navigator]: Configuring
+[INFO] [1783729368.179621802] [bt_navigator]: Activating
+[INFO] [1783729368.632270954] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[INFO] [1783729407.411927747] [bt_navigator]: Begin navigating from current location (0.04, 1.78) to (0.07, 3.51)
+[WARN] [1783729426.613887361] [BehaviorTreeEngine]: Behavior Tree tick rate 20.00 was exceeded!
+[WARN] [1783729514.564979845] [BehaviorTreeEngine]: Behavior Tree tick rate 20.00 was exceeded!
+[WARN] [1783729517.063960988] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1783729517.064066578] [bt_navigator]: Goal failed
+[INFO] [1783729539.351328504] [bt_navigator]: Begin navigating from current location (-1.69, -8.73) to (-1.13, -8.32)
+[INFO] [1783729542.451478396] [bt_navigator]: Received goal preemption request
+[INFO] [1783729542.451599097] [bt_navigator]: Begin navigating from current location (-0.77, -8.45) to (-0.51, -9.40)
+[INFO] [1783729546.052056286] [bt_navigator]: Received goal preemption request
+[INFO] [1783729546.052217757] [bt_navigator]: Begin navigating from current location (0.10, -9.36) to (0.46, -8.78)
+[INFO] [1783729549.351457224] [bt_navigator]: Received goal preemption request
+[INFO] [1783729549.351584400] [bt_navigator]: Begin navigating from current location (0.43, -8.55) to (-0.65, -7.94)
+[INFO] [1783729553.651491967] [bt_navigator]: Received goal preemption request
+[INFO] [1783729553.651609107] [bt_navigator]: Begin navigating from current location (-0.53, -7.35) to (0.26, -6.89)
+[INFO] [1783729555.551545490] [bt_navigator]: Goal succeeded
+[INFO] [1783729557.751429134] [bt_navigator]: Begin navigating from current location (0.29, -6.47) to (-0.26, -6.53)
+[WARN] [1783729845.351597260] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1783729845.351766004] [bt_navigator]: Goal failed

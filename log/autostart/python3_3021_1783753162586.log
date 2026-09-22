@@ -1,0 +1,217 @@
+[INFO] [1783753162.816910595] [orange_hurdle_jump_test]: state=DETECTOR_ONLY
+[INFO] [1783753162.817519134] [orange_hurdle_jump_test]: orange_hurdle_jump_test started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, detector_only=True, serial=/dev/ttyUSB0@115200, trigger_distance=0.58m, walk=[0,1.000,1.000], stand=[0,0.000,0.000], jump=[4,0.000,0.000]
+[INFO] [1783753163.056263923] [orange_hurdle_jump_test]: 等待对齐深度图。
+[INFO] [1783753163.056869340] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753163.309413357] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=6, mask_px=81639, contours=3, largest=area:83275,box:424x240,aspect:1.77,reject:top_edge:-0.497m(err=-0.497), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753163.508467557] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=9, mask_px=81291, contours=2, largest=area:83016,box:424x240,aspect:1.77,reject:top_edge:-0.451m(err=-0.451), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753163.718415045] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=12, mask_px=80060, contours=3, largest=area:80466,box:424x240,aspect:1.77,reject:top_edge:-0.449m(err=-0.449), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753163.976126626] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=16, mask_px=73676, contours=4, largest=area:74250,box:424x240,aspect:1.77,reject:top_edge:-0.443m(err=-0.443), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753164.174885697] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753164.176385838] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.509m, lateral=-0.271m, vertical=-0.146m, pixel=(52.1,30.1), box=110x76, depth_px=645, candidates=1, trigger=True[0m
+[INFO] [1783753164.240419207] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753164.307549028] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753164.374476715] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753164.376564217] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=22, mask_px=59802, contours=18, largest=area:55570,box:424x240,aspect:1.77,reject:top_edge:-0.340m(err=-0.340), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753164.643714299] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=26, mask_px=57296, contours=15, largest=area:51963,box:424x230,aspect:1.84,reject:top_edge:-0.317m(err=-0.317), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753164.909557914] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=1.098m, lateral=0.115m, vertical=0.228m, pixel=(244.9,179.8), box=424x164, depth_px=18196, candidates=1, trigger=False[0m
+[INFO] [1783753165.175930542] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.871m, lateral=0.069m, vertical=0.168m, pixel=(237.2,175.2), box=424x169, depth_px=28561, candidates=1, trigger=False[0m
+[INFO] [1783753165.376129081] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.869m, lateral=0.082m, vertical=0.174m, pixel=(241.9,177.4), box=424x165, depth_px=26503, candidates=1, trigger=False[0m
+[INFO] [1783753165.577311593] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.897m, lateral=0.077m, vertical=0.189m, pixel=(239.2,180.6), box=424x160, depth_px=24663, candidates=1, trigger=False[0m
+[INFO] [1783753165.777343995] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.892m, lateral=0.065m, vertical=0.203m, pixel=(235.5,185.7), box=424x134, depth_px=24155, candidates=1, trigger=False[0m
+[INFO] [1783753165.979009255] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.921m, lateral=0.164m, vertical=0.210m, pixel=(267.2,185.9), box=336x128, depth_px=19383, candidates=1, trigger=False[0m
+[INFO] [1783753166.180440092] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.911m, lateral=0.148m, vertical=0.213m, pixel=(262.5,187.9), box=336x121, depth_px=17853, candidates=1, trigger=False[0m
+[INFO] [1783753166.380809401] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.914m, lateral=0.146m, vertical=0.218m, pixel=(261.5,189.3), box=336x120, depth_px=17421, candidates=1, trigger=False[0m
+[INFO] [1783753166.643798401] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.894m, lateral=0.135m, vertical=0.217m, pixel=(259.0,190.5), box=340x123, depth_px=17074, candidates=1, trigger=False[0m
+[INFO] [1783753166.844609628] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.916m, lateral=0.113m, vertical=0.237m, pixel=(250.8,195.2), box=354x121, depth_px=12860, candidates=1, trigger=False[0m
+[INFO] [1783753167.115859874] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.862m, lateral=0.349m, vertical=0.282m, pixel=(336.0,215.8), box=184x53, depth_px=6917, candidates=2, trigger=False[0m
+[INFO] [1783753167.315892438] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=1.244m, lateral=0.430m, vertical=0.276m, pixel=(318.0,184.2), box=140x45, depth_px=1722, candidates=1, trigger=False[0m
+[INFO] [1783753167.577807943] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.864m, lateral=0.347m, vertical=0.269m, pixel=(335.0,211.2), box=186x74, depth_px=6073, candidates=1, trigger=False[0m
+[INFO] [1783753167.777985292] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=1.009m, lateral=0.425m, vertical=0.318m, pixel=(340.8,212.3), box=154x64, depth_px=2763, candidates=1, trigger=False[0m
+[INFO] [1783753168.046247821] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.950m, lateral=0.436m, vertical=0.307m, pixel=(352.2,214.7), box=166x62, depth_px=3605, candidates=1, trigger=False[0m
+[INFO] [1783753168.313667028] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=81, mask_px=12512, contours=14, largest=area:4572,box:166x43,aspect:3.86,reject:top_edge:0.249m(err=0.249), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753168.512060688] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=84, mask_px=11247, contours=12, largest=area:4996,box:162x46,aspect:3.52,reject:top_edge:0.235m(err=0.235), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753168.712884883] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=87, mask_px=9976, contours=11, largest=area:4310,box:156x39,aspect:4.00,reject:top_edge:0.241m(err=0.241), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753168.914704329] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=90, mask_px=7706, contours=13, largest=area:1794,box:122x40,aspect:3.05,reject:top_edge:0.232m(err=0.232), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753169.180114182] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.914m, lateral=-0.480m, vertical=0.296m, pixel=(54.5,214.8), box=152x75, depth_px=2569, candidates=1, trigger=False[0m
+[INFO] [1783753169.378793512] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.955m, lateral=-0.497m, vertical=0.304m, pixel=(55.6,213.2), box=156x74, depth_px=3462, candidates=1, trigger=False[0m
+[INFO] [1783753169.579265095] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.989m, lateral=-0.502m, vertical=0.309m, pixel=(59.8,211.3), box=155x73, depth_px=3408, candidates=1, trigger=False[0m
+[INFO] [1783753169.781168410] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.936m, lateral=-0.480m, vertical=0.297m, pixel=(58.1,213.0), box=156x73, depth_px=3993, candidates=1, trigger=False[0m
+[INFO] [1783753169.980632385] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=106, mask_px=7090, contours=12, largest=area:1906,box:96x31,aspect:3.10,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753170.248142922] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=110, mask_px=4649, contours=11, largest=area:1658,box:66x37,aspect:1.78,reject:width, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753170.512406318] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=114, mask_px=3808, contours=15, largest=area:1548,box:60x48,aspect:1.25,reject:width, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753170.713726231] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=117, mask_px=2218, contours=8, largest=area:1390,box:84x47,aspect:1.79,reject:top_edge:0.206m(err=0.206), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753170.979792790] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.828m, lateral=0.489m, vertical=0.259m, pixel=(392.1,211.5), box=88x55, depth_px=2830, candidates=1, trigger=False[0m
+[INFO] [1783753171.182004349] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.695m, lateral=0.393m, vertical=0.213m, pixel=(384.3,209.5), box=94x59, depth_px=4010, candidates=1, trigger=False[0m
+[INFO] [1783753171.446152429] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753171.448104269] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.579m, lateral=0.311m, vertical=0.175m, pixel=(375.7,208.5), box=118x60, depth_px=4887, candidates=1, trigger=True[0m
+[INFO] [1783753171.713380847] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.501m, lateral=0.257m, vertical=0.154m, pixel=(368.6,209.9), box=124x60, depth_px=5960, candidates=1, trigger=True[0m
+[INFO] [1783753171.938813997] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.480m, lateral=0.247m, vertical=0.156m, pixel=(369.0,215.3), box=126x51, depth_px=4429, candidates=1, trigger=True[0m
+[INFO] [1783753172.181113580] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.456m, lateral=0.224m, vertical=0.149m, pixel=(362.0,215.8), box=136x51, depth_px=4212, candidates=1, trigger=True[0m
+[INFO] [1783753172.448032405] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.468m, lateral=0.240m, vertical=0.149m, pixel=(368.2,213.0), box=116x58, depth_px=5070, candidates=1, trigger=True[0m
+[INFO] [1783753172.646745675] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753172.649186893] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=146, mask_px=3037, contours=7, largest=area:2346,box:68x44,aspect:1.55,reject:width, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753172.916647916] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=150, mask_px=807, contours=6, largest=area:458,box:32x34,aspect:0.94,reject:area+width+height+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753173.115508316] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=153, mask_px=501, contours=5, largest=area:134,box:10x25,aspect:0.40,reject:area+width+height+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753173.381054282] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=157, mask_px=916, contours=3, largest=area:708,box:20x67,aspect:0.30,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753173.581726155] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=160, mask_px=502, contours=3, largest=area:292,box:18x35,aspect:0.51,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753173.849699366] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=164, mask_px=764, contours=4, largest=area:580,box:24x40,aspect:0.60,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753174.116876751] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=168, mask_px=1633, contours=4, largest=area:1224,box:67x31,aspect:2.16,reject:width+height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753174.317430940] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=171, mask_px=3539, contours=6, largest=area:1812,box:98x31,aspect:3.16,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753174.585358566] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=175, mask_px=5493, contours=7, largest=area:2038,box:100x31,aspect:3.23,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753174.849412534] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=179, mask_px=6244, contours=7, largest=area:1820,box:100x31,aspect:3.23,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753175.120091484] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=183, mask_px=5017, contours=9, largest=area:1561,box:85x27,aspect:3.15,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753175.382150714] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=187, mask_px=4314, contours=7, largest=area:1465,box:82x25,aspect:3.28,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753175.586155382] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=190, mask_px=4982, contours=12, largest=area:1523,box:84x26,aspect:3.23,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753175.849988204] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=194, mask_px=6299, contours=10, largest=area:1529,box:86x26,aspect:3.31,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753176.065929475] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=197, mask_px=8158, contours=15, largest=area:2092,box:132x37,aspect:3.57,reject:top_edge:0.268m(err=0.268), hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753176.318701942] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=201, mask_px=9474, contours=11, largest=area:3380,box:102x107,aspect:0.95,reject:aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753176.517378047] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=204, mask_px=12612, contours=12, largest=area:3872,box:112x126,aspect:0.89,reject:aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753176.718467272] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=207, mask_px=9977, contours=13, largest=area:3566,box:84x115,aspect:0.73,reject:aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753176.983966442] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=211, mask_px=8982, contours=9, largest=area:3760,box:108x126,aspect:0.86,reject:aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753177.251264842] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=215, mask_px=8033, contours=9, largest=area:2370,box:54x102,aspect:0.53,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753177.517434455] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=219, mask_px=9532, contours=16, largest=area:2215,box:62x77,aspect:0.81,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753177.719344572] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.759m, lateral=0.370m, vertical=0.250m, pixel=(361.0,216.6), box=150x49, depth_px=3247, candidates=1, trigger=False[0m
+[INFO] [1783753177.985317487] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.858m, lateral=0.406m, vertical=0.268m, pixel=(356.4,211.5), box=162x60, depth_px=6275, candidates=2, trigger=False[0m
+[INFO] [1783753178.252405738] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.878m, lateral=0.384m, vertical=0.262m, pixel=(345.8,207.2), box=184x79, depth_px=7109, candidates=2, trigger=False[0m
+[INFO] [1783753178.452781257] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.916m, lateral=0.370m, vertical=0.272m, pixel=(335.6,206.9), box=124x71, depth_px=4541, candidates=2, trigger=False[0m
+[INFO] [1783753178.724453891] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.909m, lateral=-0.511m, vertical=0.287m, pixel=(43.3,212.5), box=96x73, depth_px=2914, candidates=1, trigger=False[0m
+[INFO] [1783753178.985023726] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=241, mask_px=7309, contours=14, largest=area:1624,box:116x31,aspect:3.74,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[WARN] [1783753179.659766541] [orange_hurdle_jump_test]: [1;33m深度图超时: age=0.54s[0m
+[WARN] [1783753180.593311107] [orange_hurdle_jump_test]: [1;33m深度图超时: age=0.51s[0m
+[INFO] [1783753180.862370675] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=262, mask_px=5400, contours=8, largest=area:1883,box:119x37,aspect:3.22,reject:depth_px:0, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753181.129531444] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=266, mask_px=4104, contours=10, largest=area:1361,box:78x23,aspect:3.39,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753181.329658709] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=269, mask_px=2877, contours=7, largest=area:1022,box:56x24,aspect:2.33,reject:area+width+height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753181.529190223] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=272, mask_px=2707, contours=7, largest=area:818,box:32x37,aspect:0.86,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753181.731091877] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=275, mask_px=3220, contours=7, largest=area:1146,box:30x73,aspect:0.41,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753181.995238062] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=279, mask_px=3326, contours=10, largest=area:1026,box:33x64,aspect:0.52,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753182.196116086] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=282, mask_px=2810, contours=7, largest=area:872,box:38x36,aspect:1.06,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753182.397084621] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=285, mask_px=2969, contours=6, largest=area:880,box:36x37,aspect:0.97,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753182.596639220] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=288, mask_px=2933, contours=6, largest=area:988,box:22x72,aspect:0.31,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753182.797678284] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=291, mask_px=3042, contours=6, largest=area:1048,box:24x66,aspect:0.36,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753183.065533849] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=295, mask_px=3098, contours=7, largest=area:986,box:18x82,aspect:0.22,reject:area+width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753183.129915497] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753183.196257329] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753183.264221625] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=298, mask_px=4710, contours=9, largest=area:1732,box:90x39,aspect:2.31,reject:depth_px:0, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753183.529887783] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=302, mask_px=4503, contours=6, largest=area:1414,box:110x28,aspect:3.93,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753183.730386527] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=305, mask_px=4679, contours=6, largest=area:1440,box:112x26,aspect:4.31,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753183.930371811] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=308, mask_px=5175, contours=8, largest=area:1476,box:110x29,aspect:3.79,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753184.198042624] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=312, mask_px=6733, contours=10, largest=area:1624,box:112x30,aspect:3.73,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753184.464183973] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=316, mask_px=7449, contours=13, largest=area:1610,box:111x29,aspect:3.83,reject:height, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753184.668210415] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.830m, lateral=0.495m, vertical=0.276m, pixel=(393.8,217.7), box=70x51, depth_px=1493, candidates=1, trigger=False[0m
+[INFO] [1783753184.865746212] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.816m, lateral=0.415m, vertical=0.261m, pixel=(367.2,213.7), box=132x51, depth_px=3445, candidates=1, trigger=False[0m
+[INFO] [1783753185.132992809] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.818m, lateral=0.414m, vertical=0.249m, pixel=(366.6,209.1), box=138x65, depth_px=5056, candidates=2, trigger=False[0m
+[INFO] [1783753185.331854518] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.845m, lateral=0.406m, vertical=0.256m, pixel=(358.9,208.8), box=160x64, depth_px=5712, candidates=2, trigger=False[0m
+[INFO] [1783753185.532319658] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.926m, lateral=-0.503m, vertical=0.276m, pixel=(48.7,207.1), box=104x70, depth_px=3826, candidates=2, trigger=False[0m
+[INFO] [1783753185.732414992] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.916m, lateral=0.423m, vertical=0.282m, pixel=(353.2,210.1), box=158x64, depth_px=6561, candidates=2, trigger=False[0m
+[INFO] [1783753185.933383078] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.858m, lateral=0.412m, vertical=0.252m, pixel=(358.6,205.7), box=148x71, depth_px=6901, candidates=1, trigger=False[0m
+[INFO] [1783753186.132249267] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.797m, lateral=0.380m, vertical=0.229m, pixel=(357.8,204.1), box=156x79, depth_px=7386, candidates=1, trigger=False[0m
+[INFO] [1783753186.333088083] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.801m, lateral=-0.435m, vertical=0.229m, pixel=(49.0,203.6), box=108x81, depth_px=4691, candidates=2, trigger=False[0m
+[INFO] [1783753186.533339077] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.849m, lateral=-0.430m, vertical=0.250m, pixel=(60.0,205.9), box=146x75, depth_px=4855, candidates=2, trigger=False[0m
+[INFO] [1783753186.800797993] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.834m, lateral=-0.404m, vertical=0.240m, pixel=(66.8,203.9), box=148x77, depth_px=6059, candidates=2, trigger=False[0m
+[INFO] [1783753187.066655284] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.871m, lateral=0.400m, vertical=0.262m, pixel=(352.2,208.0), box=168x72, depth_px=7391, candidates=2, trigger=False[0m
+[INFO] [1783753187.272800921] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.873m, lateral=0.396m, vertical=0.269m, pixel=(350.6,210.3), box=186x65, depth_px=6641, candidates=2, trigger=False[0m
+[INFO] [1783753187.468206715] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.911m, lateral=0.411m, vertical=0.272m, pixel=(349.7,207.4), box=176x77, depth_px=7132, candidates=2, trigger=False[0m
+[INFO] [1783753187.735514200] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.914m, lateral=0.415m, vertical=0.272m, pixel=(350.8,207.0), box=172x73, depth_px=7115, candidates=2, trigger=False[0m
+[INFO] [1783753188.000921206] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.904m, lateral=0.405m, vertical=0.273m, pixel=(349.0,208.4), box=170x72, depth_px=7634, candidates=2, trigger=False[0m
+[INFO] [1783753188.201928116] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.897m, lateral=0.403m, vertical=0.271m, pixel=(349.3,208.2), box=162x69, depth_px=7132, candidates=2, trigger=False[0m
+[INFO] [1783753188.402058181] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.899m, lateral=0.400m, vertical=0.265m, pixel=(347.8,206.3), box=172x69, depth_px=7453, candidates=2, trigger=False[0m
+[INFO] [1783753188.468513057] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753188.533537843] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753188.668679174] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.665m, lateral=-0.370m, vertical=0.197m, pixel=(44.9,206.8), box=112x82, depth_px=3457, candidates=2, trigger=False[0m
+[INFO] [1783753188.869962145] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.681m, lateral=0.358m, vertical=0.194m, pixel=(372.6,203.2), box=118x74, depth_px=6038, candidates=1, trigger=False[0m
+[INFO] [1783753189.075381228] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.666m, lateral=0.339m, vertical=0.201m, pixel=(367.6,208.3), box=128x66, depth_px=5505, candidates=1, trigger=False[0m
+[INFO] [1783753189.135955802] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753189.204926588] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753189.334748291] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753189.336676565] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.340m, lateral=0.132m, vertical=0.040m, pixel=(330.8,152.6), box=119x36, depth_px=1878, candidates=1, trigger=True[0m
+[INFO] [1783753189.466701300] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753189.602270118] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=393, mask_px=8376, contours=6, largest=area:5153,box:114x56,aspect:2.04,reject:depth_px:0, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753189.801281241] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=396, mask_px=3256, contours=5, largest=area:2498,box:46x61,aspect:0.75,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753190.003726061] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=399, mask_px=1424, contours=2, largest=area:1310,box:24x66,aspect:0.36,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753190.204695109] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=402, mask_px=2243, contours=2, largest=area:2042,box:38x68,aspect:0.56,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753190.468394095] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=406, mask_px=3010, contours=1, largest=area:3306,box:54x67,aspect:0.81,reject:width+aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753190.668739916] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=409, mask_px=5361, contours=5, largest=area:5031,box:80x70,aspect:1.14,reject:aspect, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753190.870301909] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=412, mask_px=7524, contours=7, largest=area:6466,box:108x70,aspect:1.54,reject:depth_px:0, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753191.069281191] [orange_hurdle_jump_test]: [0;33m未检测到有效橘色横栏: candidates=0, frame=415, mask_px=14049, contours=14, largest=area:8003,box:134x70,aspect:1.91,reject:depth_px:0, hsv_lower=[28, 40, 35], hsv_upper=[95, 255, 255][0m
+[INFO] [1783753191.270853280] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.748m, lateral=-0.301m, vertical=0.241m, pixel=(91.4,214.4), box=186x93, depth_px=7353, candidates=1, trigger=False[0m
+[INFO] [1783753191.538159612] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.697m, lateral=0.337m, vertical=0.166m, pixel=(359.6,188.9), box=158x118, depth_px=10201, candidates=2, trigger=False[0m
+[INFO] [1783753191.737534961] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.695m, lateral=0.335m, vertical=0.166m, pixel=(359.1,189.2), box=154x119, depth_px=10311, candidates=3, trigger=False[0m
+[INFO] [1783753191.940388825] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.701m, lateral=0.241m, vertical=-0.083m, pixel=(317.2,81.2), box=134x72, depth_px=12, candidates=3, trigger=False[0m
+[INFO] [1783753192.205198020] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.739m, lateral=0.262m, vertical=-0.089m, pixel=(320.7,80.3), box=132x67, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753192.472266847] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.733m, lateral=0.259m, vertical=-0.090m, pixel=(320.2,79.7), box=132x68, depth_px=16, candidates=2, trigger=False[0m
+[INFO] [1783753192.738652185] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.699m, lateral=0.051m, vertical=0.175m, pixel=(235.3,192.6), box=424x120, depth_px=26343, candidates=2, trigger=False[0m
+[INFO] [1783753192.939899724] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.720m, lateral=0.032m, vertical=0.178m, pixel=(226.9,191.9), box=424x120, depth_px=29615, candidates=2, trigger=False[0m
+[INFO] [1783753193.138042057] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.725m, lateral=0.030m, vertical=0.175m, pixel=(225.8,190.0), box=424x121, depth_px=29003, candidates=2, trigger=False[0m
+[INFO] [1783753193.274230953] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783753193.409447462] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.204m, lateral=0.075m, vertical=-0.026m, pixel=(325.2,78.8), box=132x66, depth_px=420, candidates=2, trigger=True[0m
+[INFO] [1783753193.471098706] [orange_hurdle_jump_test]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783753193.674050553] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.810m, lateral=-0.206m, vertical=0.156m, pixel=(136.2,175.1), box=152x72, depth_px=8362, candidates=1, trigger=False[0m
+[INFO] [1783753193.873556121] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.801m, lateral=0.382m, vertical=0.126m, pixel=(357.8,164.4), box=140x88, depth_px=8468, candidates=2, trigger=False[0m
+[INFO] [1783753194.075401603] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.808m, lateral=0.374m, vertical=0.132m, pixel=(353.4,166.5), box=148x83, depth_px=8483, candidates=3, trigger=False[0m
+[INFO] [1783753194.339608667] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.753m, lateral=-0.302m, vertical=0.167m, pixel=(92.1,183.9), box=184x84, depth_px=11172, candidates=2, trigger=False[0m
+[INFO] [1783753194.539089935] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.734m, lateral=0.275m, vertical=-0.079m, pixel=(326.5,84.5), box=131x65, depth_px=36, candidates=3, trigger=False[0m
+[INFO] [1783753194.739773083] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.749m, lateral=0.350m, vertical=0.142m, pixel=(354.9,174.2), box=144x95, depth_px=9614, candidates=2, trigger=False[0m
+[INFO] [1783753195.008668308] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.748m, lateral=0.350m, vertical=0.141m, pixel=(354.9,173.9), box=144x92, depth_px=9443, candidates=2, trigger=False[0m
+[INFO] [1783753195.208477321] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.749m, lateral=0.350m, vertical=0.141m, pixel=(354.7,174.0), box=146x95, depth_px=9629, candidates=3, trigger=False[0m
+[INFO] [1783753195.473587691] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.748m, lateral=0.349m, vertical=0.141m, pixel=(354.7,174.2), box=144x95, depth_px=9645, candidates=2, trigger=False[0m
+[INFO] [1783753195.740148108] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.749m, lateral=0.350m, vertical=0.141m, pixel=(354.6,173.8), box=146x96, depth_px=9694, candidates=2, trigger=False[0m
+[INFO] [1783753195.941677858] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.751m, lateral=0.261m, vertical=-0.082m, pixel=(318.4,84.0), box=130x65, depth_px=27, candidates=3, trigger=False[0m
+[INFO] [1783753196.207972480] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.758m, lateral=0.270m, vertical=-0.085m, pixel=(321.3,82.9), box=129x64, depth_px=18, candidates=3, trigger=False[0m
+[INFO] [1783753196.474633631] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.759m, lateral=0.266m, vertical=-0.084m, pixel=(319.3,83.3), box=129x65, depth_px=18, candidates=3, trigger=False[0m
+[INFO] [1783753196.740941928] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.768m, lateral=0.351m, vertical=0.134m, pixel=(351.7,169.7), box=152x103, depth_px=9759, candidates=2, trigger=False[0m
+[INFO] [1783753196.941641228] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.771m, lateral=-0.279m, vertical=0.163m, pixel=(103.8,180.9), box=164x71, depth_px=9678, candidates=2, trigger=False[0m
+[INFO] [1783753197.208450978] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.773m, lateral=0.350m, vertical=0.133m, pixel=(350.2,168.8), box=154x86, depth_px=9501, candidates=2, trigger=False[0m
+[INFO] [1783753197.475223032] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.767m, lateral=0.261m, vertical=-0.088m, pixel=(316.3,82.2), box=129x65, depth_px=24, candidates=3, trigger=False[0m
+[INFO] [1783753197.675196691] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=0.260m, vertical=-0.088m, pixel=(316.1,82.1), box=129x65, depth_px=25, candidates=3, trigger=False[0m
+[INFO] [1783753197.943623737] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.773m, lateral=-0.285m, vertical=0.161m, pixel=(101.5,180.0), box=164x72, depth_px=9605, candidates=2, trigger=False[0m
+[INFO] [1783753198.141855515] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.260m, vertical=-0.089m, pixel=(316.2,81.7), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753198.344391037] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.782m, lateral=-0.286m, vertical=0.160m, pixel=(102.5,178.9), box=164x71, depth_px=9528, candidates=2, trigger=False[0m
+[INFO] [1783753198.610013686] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.782m, lateral=-0.287m, vertical=0.160m, pixel=(102.2,178.9), box=163x70, depth_px=9555, candidates=2, trigger=False[0m
+[INFO] [1783753198.811245628] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.258m, vertical=-0.089m, pixel=(315.6,81.5), box=130x64, depth_px=12, candidates=3, trigger=False[0m
+[INFO] [1783753199.077120258] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.260m, vertical=-0.088m, pixel=(316.2,82.0), box=130x64, depth_px=13, candidates=3, trigger=False[0m
+[INFO] [1783753199.277256771] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.260m, vertical=-0.088m, pixel=(316.1,81.9), box=130x64, depth_px=17, candidates=3, trigger=False[0m
+[INFO] [1783753199.545183589] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.089m, pixel=(316.0,81.9), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753199.749997415] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.260m, vertical=-0.089m, pixel=(316.2,81.8), box=129x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753200.011066788] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.088m, pixel=(316.1,82.0), box=130x64, depth_px=16, candidates=3, trigger=False[0m
+[INFO] [1783753200.278286299] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=0.259m, vertical=-0.089m, pixel=(315.7,81.9), box=129x64, depth_px=16, candidates=3, trigger=False[0m
+[INFO] [1783753200.477820346] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.088m, pixel=(315.8,81.9), box=129x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753200.746161897] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.088m, pixel=(315.9,82.0), box=126x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753200.944621200] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.089m, pixel=(315.9,81.9), box=130x64, depth_px=16, candidates=3, trigger=False[0m
+[INFO] [1783753201.210026332] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=0.260m, vertical=-0.089m, pixel=(315.9,81.7), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753201.410639734] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.089m, pixel=(316.0,81.8), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753201.678514228] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.260m, vertical=-0.088m, pixel=(316.1,81.9), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753201.947209978] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=0.259m, vertical=-0.089m, pixel=(316.0,81.7), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753202.154070973] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=0.260m, vertical=-0.089m, pixel=(315.9,81.7), box=130x64, depth_px=15, candidates=3, trigger=False[0m
+[INFO] [1783753202.413816306] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=0.253m, vertical=-0.085m, pixel=(313.1,83.3), box=128x65, depth_px=18, candidates=3, trigger=False[0m
+[INFO] [1783753202.679262567] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.790m, lateral=-0.313m, vertical=0.227m, pixel=(93.3,204.1), box=186x80, depth_px=10512, candidates=2, trigger=False[0m
+[INFO] [1783753202.879808494] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.790m, lateral=-0.312m, vertical=0.228m, pixel=(93.7,204.2), box=186x79, depth_px=10475, candidates=2, trigger=False[0m
+[INFO] [1783753203.145543181] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.788m, lateral=0.252m, vertical=-0.073m, pixel=(310.0,89.0), box=128x64, depth_px=16, candidates=3, trigger=False[0m
+[INFO] [1783753203.348334140] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.325m, vertical=0.229m, pixel=(89.1,204.5), box=186x95, depth_px=10387, candidates=2, trigger=False[0m
+[INFO] [1783753203.612708030] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.314m, vertical=0.234m, pixel=(93.1,206.5), box=185x84, depth_px=10270, candidates=2, trigger=False[0m
+[INFO] [1783753203.813649818] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.311m, vertical=0.235m, pixel=(94.3,206.9), box=185x83, depth_px=10127, candidates=2, trigger=False[0m
+[INFO] [1783753204.080418291] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.790m, lateral=0.363m, vertical=0.198m, pixel=(352.3,192.6), box=154x105, depth_px=9869, candidates=2, trigger=False[0m
+[INFO] [1783753204.279750986] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.790m, lateral=0.363m, vertical=0.197m, pixel=(352.2,192.4), box=154x105, depth_px=9963, candidates=2, trigger=False[0m
+[INFO] [1783753204.480176992] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.305m, vertical=0.236m, pixel=(96.8,207.4), box=186x76, depth_px=9900, candidates=2, trigger=False[0m
+[INFO] [1783753204.679924162] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.790m, lateral=0.364m, vertical=0.197m, pixel=(352.9,192.4), box=154x105, depth_px=9915, candidates=2, trigger=False[0m
+[INFO] [1783753204.881985813] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.312m, vertical=0.236m, pixel=(94.0,207.1), box=186x83, depth_px=10220, candidates=2, trigger=False[0m
+[INFO] [1783753205.146344102] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.308m, vertical=0.237m, pixel=(95.6,207.6), box=184x75, depth_px=10006, candidates=2, trigger=False[0m
+[INFO] [1783753205.349675457] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.793m, lateral=-0.313m, vertical=0.238m, pixel=(93.6,207.6), box=184x76, depth_px=10305, candidates=2, trigger=False[0m
+[INFO] [1783753205.547096733] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.791m, lateral=-0.308m, vertical=0.236m, pixel=(95.5,207.4), box=186x83, depth_px=10080, candidates=2, trigger=False[0m
+[INFO] [1783753205.814009121] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.793m, lateral=-0.317m, vertical=0.237m, pixel=(92.2,207.2), box=186x80, depth_px=10420, candidates=2, trigger=False[0m
+[INFO] [1783753206.017972057] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.784m, lateral=-0.317m, vertical=0.234m, pixel=(91.1,207.1), box=185x94, depth_px=10013, candidates=2, trigger=False[0m
+[INFO] [1783753206.286509128] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.777m, lateral=-0.310m, vertical=0.233m, pixel=(92.6,207.7), box=186x80, depth_px=10074, candidates=2, trigger=False[0m
+[INFO] [1783753206.548089495] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.775m, lateral=-0.309m, vertical=0.237m, pixel=(92.8,209.3), box=186x71, depth_px=9976, candidates=3, trigger=False[0m
+[INFO] [1783753206.752980602] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.773m, lateral=-0.314m, vertical=0.234m, pixel=(90.4,208.4), box=182x76, depth_px=10400, candidates=2, trigger=False[0m
+[INFO] [1783753207.016051977] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.768m, lateral=-0.308m, vertical=0.234m, pixel=(92.0,209.1), box=182x71, depth_px=9843, candidates=2, trigger=False[0m
+[INFO] [1783753207.218271342] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.770m, lateral=-0.311m, vertical=0.230m, pixel=(90.9,207.2), box=186x90, depth_px=9921, candidates=2, trigger=False[0m
+[INFO] [1783753207.483142397] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.768m, lateral=-0.312m, vertical=0.228m, pixel=(90.4,206.6), box=184x96, depth_px=10104, candidates=2, trigger=False[0m
+[INFO] [1783753207.681564389] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=-0.309m, vertical=0.234m, pixel=(90.9,209.5), box=184x81, depth_px=9784, candidates=2, trigger=False[0m
+[INFO] [1783753207.883040354] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=-0.308m, vertical=0.234m, pixel=(91.4,209.8), box=184x77, depth_px=9639, candidates=2, trigger=False[0m
+[INFO] [1783753208.148589906] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=-0.321m, vertical=0.224m, pixel=(86.3,205.7), box=185x103, depth_px=9834, candidates=2, trigger=False[0m
+[INFO] [1783753208.348949958] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=-0.307m, vertical=0.229m, pixel=(91.6,207.6), box=182x73, depth_px=10751, candidates=2, trigger=False[0m
+[INFO] [1783753208.616097141] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.766m, lateral=-0.305m, vertical=0.232m, pixel=(92.7,208.6), box=183x72, depth_px=9993, candidates=2, trigger=False[0m
+[INFO] [1783753208.882728614] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.764m, lateral=-0.313m, vertical=0.224m, pixel=(89.3,205.7), box=184x108, depth_px=9990, candidates=2, trigger=False[0m
+[INFO] [1783753209.149816031] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.763m, lateral=-0.308m, vertical=0.234m, pixel=(91.3,209.6), box=184x70, depth_px=9741, candidates=3, trigger=False[0m
+[INFO] [1783753209.416203828] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.761m, lateral=-0.306m, vertical=0.233m, pixel=(91.7,209.7), box=184x72, depth_px=9699, candidates=3, trigger=False[0m
+[INFO] [1783753209.683094462] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.759m, lateral=-0.314m, vertical=0.224m, pixel=(88.2,206.1), box=184x108, depth_px=9726, candidates=3, trigger=False[0m
+[INFO] [1783753209.885595673] [orange_hurdle_jump_test]: [1;34m最近横栏: dist=0.761m, lateral=-0.319m, vertical=0.216m, pixel=(86.4,203.0), box=188x108, depth_px=10374, candidates=2, trigger=False[0m

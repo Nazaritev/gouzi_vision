@@ -1,0 +1,149 @@
+[0.000000] (-) TimerEvent: {}
+[0.000168] (-) JobUnselected: {'identifier': 'apriltag_msgs'}
+[0.000187] (-) JobUnselected: {'identifier': 'apriltag_ros'}
+[0.000199] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000209] (-) JobUnselected: {'identifier': 'point_lio'}
+[0.000218] (-) JobUnselected: {'identifier': 'quadruped_step_mapper'}
+[0.000228] (-) JobUnselected: {'identifier': 'realsense2_camera'}
+[0.000237] (-) JobUnselected: {'identifier': 'realsense2_camera_msgs'}
+[0.000247] (-) JobUnselected: {'identifier': 'realsense2_description'}
+[0.000258] (auto_nav_pkg) JobQueued: {'identifier': 'auto_nav_pkg', 'dependencies': OrderedDict([('apriltag_msgs', '/home/gouzi/obstacle_race_src/install/apriltag_msgs'), ('realsense2_camera_msgs', '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs'), ('apriltag_ros', '/home/gouzi/obstacle_race_src/install/apriltag_ros'), ('realsense2_camera', '/home/gouzi/obstacle_race_src/install/realsense2_camera')])}
+[0.000450] (auto_nav_pkg) JobStarted: {'identifier': 'auto_nav_pkg'}
+[0.099844] (-) TimerEvent: {}
+[0.200986] (-) TimerEvent: {}
+[0.301198] (-) TimerEvent: {}
+[0.401356] (-) TimerEvent: {}
+[0.501542] (-) TimerEvent: {}
+[0.513916] (auto_nav_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/auto_nav_pkg', 'build', '--build-base', '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/build', 'install', '--record', '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gouzi/obstacle_race_src/src/auto_nav_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/gouzi', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'LANGUAGE': 'zh_CN:zh', 'USER': 'gouzi', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/tcf.json","messagesFile":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/e7fb5e96c0730b9deb70b33781f98e2f35975036/nls.messages.json","corruptMarkerFile":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"95a1d175239d220149ee2b7c238e7810.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/tcf.json","_cacheRoot":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn","_resolvedLanguagePackCoreLocation":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/e7fb5e96c0730b9deb70b33781f98e2f35975036","_corruptedFile":"/home/gouzi/.config/Code/clp/95a1d175239d220149ee2b7c238e7810.zh-cn/corrupted.info"}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'wayland', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/gouzi', 'CHROME_DESKTOP': 'code.desktop', 'DESKTOP_SESSION': 'ubuntu', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-65b267da-1.11-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '869', 'SYSTEMD_EXEC_PID': '1006', 'IM_CONFIG_CHECK_ENV': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4532', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':danger-full-access', 'ROS_DISTRO': 'humble', 'LOGNAME': 'gouzi', 'JOURNAL_STREAM': '8:8026', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'USERNAME': 'gouzi', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/gouzi/.local/bin:/home/gouzi/.codex/tmp/arg0/codex-arg033vCeL:/home/gouzi/.local/bin:/opt/ros/humble/bin:/home/gouzi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gouzi/.vscode/extensions/openai.chatgpt-26.707.31428-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/shijue:@/tmp/.ICE-unix/972,unix/shijue:/tmp/.ICE-unix/972', 'INVOCATION_ID': 'b0aa0d68ca924510b677792af4c2355a', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FH0QS3', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f496f-e3d5-7e41-9b62-62646bcfe43f', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gouzi/obstacle_race_src/build/auto_nav_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/gouzi/.config/Code/CachedData/e7fb5e96c0730b9deb70b33781f98e2f35975036', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/home/gouzi/obstacle_race_src/install/apriltag_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VSCODE_PID': '4532', 'CMAKE_PREFIX_PATH': '/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs'}, 'shell': False}
+[0.601628] (-) TimerEvent: {}
+[0.701784] (-) TimerEvent: {}
+[0.714200] (auto_nav_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.714742] (auto_nav_pkg) StdoutLine: {'line': b'creating ../../build/auto_nav_pkg/auto_nav_pkg.egg-info\n'}
+[0.715422] (auto_nav_pkg) StdoutLine: {'line': b'writing ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/PKG-INFO\n'}
+[0.715564] (auto_nav_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/dependency_links.txt\n'}
+[0.715607] (auto_nav_pkg) StdoutLine: {'line': b'writing entry points to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/entry_points.txt\n'}
+[0.715648] (auto_nav_pkg) StdoutLine: {'line': b'writing requirements to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/requires.txt\n'}
+[0.715688] (auto_nav_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/top_level.txt\n'}
+[0.715790] (auto_nav_pkg) StdoutLine: {'line': b"writing manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'\n"}
+[0.717401] (auto_nav_pkg) StdoutLine: {'line': b"reading manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'\n"}
+[0.718198] (auto_nav_pkg) StdoutLine: {'line': b"writing manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'\n"}
+[0.718262] (auto_nav_pkg) StdoutLine: {'line': b'running build\n'}
+[0.718299] (auto_nav_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.718577] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build\n'}
+[0.718636] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib\n'}
+[0.718698] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.718807] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/nav_agent.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.718863] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/orange_pole_relative_nav.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719009] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/limit_bar_duck_test.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719140] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/slope_branch_detector.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719244] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/orange_pole_detector.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719363] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/log_style.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719465] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/nav_executor.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.719563] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/obstacle_race_supervisor.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720069] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/upstairs_detector.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720175] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/orange_hurdle_jump_test.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720269] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/obstacle_manager.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720520] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/yolo_relative_nav.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720626] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/apriltag_align_test.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720807] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/orange_pole_relative_nav_stable.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.720907] (auto_nav_pkg) StdoutLine: {'line': b'copying auto_nav_pkg/__init__.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg\n'}
+[0.722363] (auto_nav_pkg) StdoutLine: {'line': b'running install\n'}
+[0.722731] (auto_nav_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.723673] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.723772] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/nav_agent.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.723857] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_relative_nav.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724103] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/limit_bar_duck_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724231] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/slope_branch_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724391] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724532] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/log_style.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724572] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/nav_executor.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.724671] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/obstacle_race_supervisor.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725155] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/upstairs_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725275] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_hurdle_jump_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725383] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/obstacle_manager.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725587] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/yolo_relative_nav.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725681] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/apriltag_align_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725852] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_relative_nav_stable.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.725942] (auto_nav_pkg) StdoutLine: {'line': b'copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/__init__.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg\n'}
+[0.726619] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/nav_agent.py to nav_agent.cpython-310.pyc\n'}
+[0.729417] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_relative_nav.py to orange_pole_relative_nav.cpython-310.pyc\n'}
+[0.755280] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/limit_bar_duck_test.py to limit_bar_duck_test.cpython-310.pyc\n'}
+[0.761978] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/slope_branch_detector.py to slope_branch_detector.cpython-310.pyc\n'}
+[0.765765] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_detector.py to orange_pole_detector.cpython-310.pyc\n'}
+[0.768903] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/log_style.py to log_style.cpython-310.pyc\n'}
+[0.769409] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/nav_executor.py to nav_executor.cpython-310.pyc\n'}
+[0.773696] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/obstacle_race_supervisor.py to obstacle_race_supervisor.cpython-310.pyc\n'}
+[0.801894] (-) TimerEvent: {}
+[0.829775] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/upstairs_detector.py to upstairs_detector.cpython-310.pyc\n'}
+[0.833535] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_hurdle_jump_test.py to orange_hurdle_jump_test.cpython-310.pyc\n'}
+[0.837906] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/obstacle_manager.py to obstacle_manager.cpython-310.pyc\n'}
+[0.861233] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/yolo_relative_nav.py to yolo_relative_nav.cpython-310.pyc\n'}
+[0.865204] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/apriltag_align_test.py to apriltag_align_test.cpython-310.pyc\n'}
+[0.877701] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_relative_nav_stable.py to orange_pole_relative_nav_stable.cpython-310.pyc\n'}
+[0.880044] (auto_nav_pkg) StdoutLine: {'line': b'byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[0.880258] (auto_nav_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.880317] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/ament_index\n'}
+[0.880432] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/ament_index/resource_index\n'}
+[0.880496] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/ament_index/resource_index/packages\n'}
+[0.880552] (auto_nav_pkg) StdoutLine: {'line': b'copying resource/auto_nav_pkg -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/ament_index/resource_index/packages\n'}
+[0.880610] (auto_nav_pkg) StdoutLine: {'line': b'copying package.xml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg\n'}
+[0.880845] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881153] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/limit_bar_duck_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881228] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/apriltag_align_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881297] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/apriltag_bridge_lateral_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881384] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/orange_pole_relative_nav_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881457] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/orange_pole_body_relative_nav_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881525] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/orange_pole_body_relative_nav_stable_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881592] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/obstacle_race_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881667] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/apriltag_limit_bar_align_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881883] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/orange_pole_detector_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.881966] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/obstacle_race_limit_bar_tag_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.882006] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/orange_hurdle_jump_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.882042] (auto_nav_pkg) StdoutLine: {'line': b'copying launch/obstacle_race_visual_supervisor.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch\n'}
+[0.882091] (auto_nav_pkg) StdoutLine: {'line': b'creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.882146] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_v4.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.890205] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_race_supervisor_limit_bar_tag_test_overlay.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.890539] (auto_nav_pkg) StdoutLine: {'line': b'copying config/apriltag_align_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.890615] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_waypoints.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.890882] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_waypoints_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891029] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_start_b.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891220] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_stable_trigger.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891316] (auto_nav_pkg) StdoutLine: {'line': b'copying config/pole_race_lidar_waypoints.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891576] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_v1.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891710] (auto_nav_pkg) StdoutLine: {'line': b'copying config/limit_bar_duck_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891837] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_race_supervisor_overlay.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.891971] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892178] (auto_nav_pkg) StdoutLine: {'line': b'copying config/upstairs_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892403] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892502] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_hurdle_jump_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892563] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_race_supervisor.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892619] (auto_nav_pkg) StdoutLine: {'line': b'copying config/nav2_pointlio_navigation.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892676] (auto_nav_pkg) StdoutLine: {'line': b'copying config/apriltag_bridge_lateral_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892854] (auto_nav_pkg) StdoutLine: {'line': b'copying config/obstacle_race_system.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.892945] (auto_nav_pkg) StdoutLine: {'line': b'copying config/slope_branch_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893122] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_v3.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893190] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_reverse_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893256] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_reverse.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893421] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_v2.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893574] (auto_nav_pkg) StdoutLine: {'line': b'copying config/orange_pole_body_relative_test_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config\n'}
+[0.893678] (auto_nav_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.896059] (auto_nav_pkg) StdoutLine: {'line': b'Copying ../../build/auto_nav_pkg/auto_nav_pkg.egg-info to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg-0.1.0-py3.10.egg-info\n'}
+[0.896860] (auto_nav_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.901996] (-) TimerEvent: {}
+[0.913622] (auto_nav_pkg) StdoutLine: {'line': b'Installing apriltag_align_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914133] (auto_nav_pkg) StdoutLine: {'line': b'Installing limit_bar_duck_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914212] (auto_nav_pkg) StdoutLine: {'line': b'Installing nav_agent_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914268] (auto_nav_pkg) StdoutLine: {'line': b'Installing nav_executor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914412] (auto_nav_pkg) StdoutLine: {'line': b'Installing obstacle_manager_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914465] (auto_nav_pkg) StdoutLine: {'line': b'Installing obstacle_race_supervisor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914509] (auto_nav_pkg) StdoutLine: {'line': b'Installing orange_hurdle_jump_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914564] (auto_nav_pkg) StdoutLine: {'line': b'Installing orange_pole_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914604] (auto_nav_pkg) StdoutLine: {'line': b'Installing orange_pole_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914641] (auto_nav_pkg) StdoutLine: {'line': b'Installing orange_pole_relative_nav_stable_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914684] (auto_nav_pkg) StdoutLine: {'line': b'Installing slope_branch_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914723] (auto_nav_pkg) StdoutLine: {'line': b'Installing upstairs_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914764] (auto_nav_pkg) StdoutLine: {'line': b'Installing yolo_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg\n'}
+[0.914886] (auto_nav_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log'\n"}
+[0.938263] (auto_nav_pkg) CommandEnded: {'returncode': 0}
+[0.946112] (auto_nav_pkg) JobEnded: {'identifier': 'auto_nav_pkg', 'rc': 0}
+[0.946578] (-) EventReactorShutdown: {}

@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/src/auto_nav_pkg/launch/obstacle_race_bringup.launch.py

@@ -1,0 +1,107 @@
+orange_pole_relative_nav:
+  ros__parameters:
+    # 2026-05-05:
+    # Second start-position template for the HSV body-relative route.
+    # This file is intentionally cloned from orange_pole_body_relative_test.yaml
+    # so the operator can retune a separate parameter set for the other legal
+    # start position in the rules without disturbing the current "start A"
+    # tuning.
+    #
+    # Tuning intent:
+    # - waypoints 1/14 and 2/14 still use the base HSV absolute route from
+    #   obstacle_race_system.yaml
+    # - waypoints 3/14~13/14 use body-relative offsets from the current pose
+    # - turn waypoints use body-relative yaw deltas
+    # - waypoint 14/14 remains the final absolute must-hit point
+    goal_yaw_mode: "waypoint"
+    first_forward_goal_yaw_mode: "current"
+
+    # Gait routing:
+    # - waypoint 1/14 keeps normal walking in mode 0
+    # - every later forward segment and every turn use mode 6
+    first_forward_route_mode: 0
+    forward_route_mode: 6
+    turn_route_mode: 6
+
+    # Turn yaw mode:
+    # - "body_relative_delta": turn by delta relative to current body yaw
+    # - switch back to "global_waypoint" if this second-start route needs the
+    #   old absolute-yaw behavior
+    turn_waypoint_yaw_mode: "body_relative_delta"
+
+    # Keep the copied absolute waypoint yaw table for compatibility. Forward
+    # points still reference these because goal_yaw_mode is "waypoint".
+    waypoint_yaws_deg: [4.6, -50.2, -48.4, 61.9, 62.4, -37.5, -37.9, -157.4, -156.5, -41.0, -36.6, -149.4, -153.2, -82.7]
+
+    # Turn points in this hybrid route:
+    #   2/14, 4/14, 6/14, 8/14, 10/14, 12/14, 14/14
+    # Positive = CCW, negative = CW.
+    body_relative_turn_waypoint_indices: [2, 4, 6, 8, 10, 12, 14]
+    body_relative_turn_deltas_deg: [-45.0, 100.0, -110.0, -99.0, 128.0, -105.0, 50.0]
+
+    # Forward points ignore yaw; turn points require yaw completion.
+    waypoint_use_yaw_tolerance: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+    waypoint_use_direct_step_override: [false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+
+    # 1/14 and 2/14 are intentionally looser. Body-relative points after that
+    # use tighter tolerances.
+    waypoint_arrival_tolerances: [0.32, 0.32, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12, 0.12]
+
+    # Waypoint 2 currently uses the normal turn flow directly; depth gating is
+    # disabled because nearest-depth stability was not good enough in tests.
+    turn_waypoint_pole_distance_gate_indices: []
+    turn_waypoint_pole_distance_gate_thresholds_m: []
+
+    turn_waypoint_simple_in_place_enabled: true
+    forward_waypoint_pass_through_enabled: false
+
+    # Body-relative points include waypoint 1 so the route starts by moving
+    # straight along the current body heading instead of rotating to yaw=4.6deg.
+    body_relative_waypoint_indices: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+    # Pairs are [forward_m, left_m] for the waypoint indices above.
+    # Keep turn points at [0.0, 0.0] unless you explicitly want a body-relative
+    # translation before/after that turn.
+    #
+    # Route meaning:
+    #   1/14 绝对起始前进点
+    #   2/14 绝对必达转向点
+    #   3/14 相对机身前进段
+    #   4/14 相对机身转向点
+    #   5/14 相对机身前进段
+    #   6/14 相对机身转向点
+    #   7/14 相对机身前进段
+    #   8/14 相对机身转向点
+    #   9/14 相对机身前进段
+    #   10/14 相对机身转向点
+    #   11/14 相对机身前进段
+    #   12/14 相对机身转向点
+    #   13/14 相对机身前进段
+    #   14/14 绝对最终必达点
+    body_relative_waypoint_offsets_fl:
+      [
+        # 1/14: 总流程触发绕杆后，先沿当前机身正前方走
+        1.08, 0.0,
+        # 3/14: 第二个必达转向点完成后，沿当前机身朝向走的位移
+        0.90, 0.0,
+        # 4/14: 转向点；通常保持 [0.0, 0.0]，只做原地转角
+        0.0, 0.0,
+        # 5/14: 第四点转完后，沿当前机身朝向走的位移
+        1.53, 0.0,
+        # 6/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 7/14: 第六点转完后，沿当前机身朝向走的位移
+        1.00, 0.0,
+        # 8/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 9/14: 第八点转完后，沿当前机身朝向走的位移
+        1.48, 0.0,
+        # 10/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 11/14: 第十点转完后，沿当前机身朝向走的位移
+        1.72, 0.0,
+        # 12/14: 转向点；通常保持 [0.0, 0.0]
+        0.0, 0.0,
+        # 13/14: 第十二点转完后，沿当前机身朝向走的位移
+        1.30, 0.0
+      ]

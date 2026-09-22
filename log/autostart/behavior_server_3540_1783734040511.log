@@ -1,0 +1,48 @@
+[INFO] [1783734040.892790736] [behavior_server]: 
+	behavior_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783734040.995609801] [behavior_server]: Configuring
+[INFO] [1783734041.000377086] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[INFO] [1783734041.001591974] [behavior_server]: Configuring spin
+[INFO] [1783734041.004609898] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[INFO] [1783734041.005618238] [behavior_server]: Configuring backup
+[INFO] [1783734041.007723635] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[INFO] [1783734041.008783919] [behavior_server]: Configuring drive_on_heading
+[INFO] [1783734041.011087111] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[INFO] [1783734041.012126257] [behavior_server]: Configuring wait
+[INFO] [1783734043.562473576] [behavior_server]: Activating
+[INFO] [1783734043.562521004] [behavior_server]: Activating spin
+[INFO] [1783734043.562535116] [behavior_server]: Activating backup
+[INFO] [1783734043.562544880] [behavior_server]: Activating drive_on_heading
+[INFO] [1783734043.562553971] [behavior_server]: Activating wait
+[INFO] [1783734043.562567051] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1783734149.746401363] [behavior_server]: Running spin
+[INFO] [1783734149.746585435] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783734149.846873556] [behavior_server]: Collision Ahead - Exiting Spin
+[WARN] [1783734149.846912840] [behavior_server]: spin failed
+[WARN] [1783734149.846926607] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783734149.995773233] [behavior_server]: Running wait
+[INFO] [1783734154.995944172] [behavior_server]: wait completed successfully
+[INFO] [1783734169.725822314] [behavior_server]: Running backup
+[INFO] [1783734169.725973359] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[ERROR] [1783734169.726052818] [behavior_server]: Pose Goes Off Grid.
+[WARN] [1783734169.726097590] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1783734169.726103368] [behavior_server]: backup failed
+[WARN] [1783734169.726110420] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1783734170.525800325] [behavior_server]: Running spin
+[INFO] [1783734170.525882606] [behavior_server]: Turning 1.57 for spin behavior.
+[ERROR] [1783734170.626057940] [behavior_server]: Pose Goes Off Grid.
+[WARN] [1783734170.626135225] [behavior_server]: Collision Ahead - Exiting Spin
+[WARN] [1783734170.626144020] [behavior_server]: spin failed
+[WARN] [1783734170.626154953] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783734170.775991073] [behavior_server]: Running wait
+[INFO] [1783734175.776249570] [behavior_server]: wait completed successfully
+[INFO] [1783734176.425751867] [behavior_server]: Running backup
+[ERROR] [1783734176.425904154] [behavior_server]: Pose Goes Off Grid.
+[WARN] [1783734176.425956995] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1783734176.425963707] [behavior_server]: backup failed
+[WARN] [1783734176.425969137] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1783734177.375702216] [behavior_server]: Running spin
+[INFO] [1783734177.375790585] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1783734182.775907469] [behavior_server]: spin completed successfully

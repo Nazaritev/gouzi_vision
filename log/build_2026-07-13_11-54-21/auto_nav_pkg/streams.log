@@ -1,0 +1,33 @@
+[0.488s] Invoking command in '/home/gouzi/obstacle_race_src/src/auto_nav_pkg': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/auto_nav_pkg build --build-base /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build install --record /home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log --single-version-externally-managed install_data
+[0.676s] running egg_info
+[0.677s] writing ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/PKG-INFO
+[0.677s] writing dependency_links to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/dependency_links.txt
+[0.677s] writing entry points to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/entry_points.txt
+[0.677s] writing requirements to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/requires.txt
+[0.677s] writing top-level names to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/top_level.txt
+[0.679s] reading manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'
+[0.681s] writing manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'
+[0.681s] running build
+[0.681s] running build_py
+[0.682s] running install
+[0.682s] running install_lib
+[0.684s] running install_data
+[0.684s] running install_egg_info
+[0.686s] removing '/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg-0.1.0-py3.10.egg-info' (and everything under it)
+[0.686s] Copying ../../build/auto_nav_pkg/auto_nav_pkg.egg-info to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg-0.1.0-py3.10.egg-info
+[0.687s] running install_scripts
+[0.708s] Installing apriltag_align_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.708s] Installing limit_bar_duck_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.708s] Installing nav_agent_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing nav_executor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing obstacle_manager_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing obstacle_race_supervisor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing orange_hurdle_jump_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing orange_pole_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing orange_pole_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing orange_pole_relative_nav_stable_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing slope_branch_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing upstairs_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.709s] Installing yolo_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[0.710s] writing list of installed files to '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log'
+[0.746s] Invoked command in '/home/gouzi/obstacle_race_src/src/auto_nav_pkg' returned '0': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/auto_nav_pkg build --build-base /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build install --record /home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log --single-version-externally-managed install_data

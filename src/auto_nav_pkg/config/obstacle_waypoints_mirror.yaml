@@ -1,0 +1,1573 @@
+# ====================== 这里是你后续主要要改的文件 ======================
+# 每一个 waypoint 表示：
+# 1) 先导航到目标点。推荐使用 target_type: body_relative：
+#    - body_forward_m：按狗子当前朝向向前走的距离，单位 m
+#    - body_left_m：按狗子当前朝向向左偏移的距离，单位 m
+#    - body_yaw_delta_deg：目标 yaw = 当前 yaw + 该角度
+#    - body_yaw_mode：
+#      delta=当前 yaw + body_yaw_delta_deg；absolute=使用 yaw_deg；
+#      previous_target_delta=上一个 waypoint 的目标 yaw + body_yaw_delta_deg；
+#      previous_target=直接继承上一个 waypoint 的目标 yaw；
+#      waypoint_arrival=使用 body_yaw_waypoint 指定 waypoint 到点时的实际 yaw。
+#    - body_reference_yaw_source：
+#      current=body_forward/body_left 按当前 yaw 投影；target_yaw=按本 waypoint 目标 yaw 投影；
+#      previous_target=按上一个 waypoint 的目标 yaw 投影。
+#    - body_position_anchor：
+#      current=从当前实时 pose 叠加 body_forward/body_left；
+#      previous_target=从上一个 waypoint 的锁定目标点叠加，适合把同一分支标签落成稳定模板点。
+#    - 以上两个 previous_target* 配置都要求“上一个 waypoint 已经解析过目标”；
+#      如果单独从中间 waypoint 启动调试，需要先跑前一个点，或临时改回 current/delta/absolute。
+#      2026-05-14: 若 obstacle_manager 从中间 waypoint 启动，且配置了
+#      inherit_previous_waypoint_segment_state=true，则 previous_target 在首个活动点会回退到当前 pose，
+#      避免 slope_manager 这类从第 2 个点启动时因为上一点未解析而原地卡死。
+#    obstacle_manager 会在“发送该 waypoint 的瞬间”锁定当前 pose，把相对量换算成固定 goal；
+#    到点判定不会反复重算，所以目标不会跟着狗子移动。重试同一 waypoint 时复用同一个固定 goal。
+#    如需旧的雷达启动原点绝对坐标，可设置 target_type: absolute 并填写 x/y/yaw_deg。
+# 2) 到达该目标点后，切换到 mode_on_arrival
+# 3) 默认该模式会持续锁存到下一个 waypoint 到达后，再切换成下一个 waypoint 的 mode_on_arrival
+# 4) `mode_hold_sec` 现在用作“到点后暂停多久再发下一个点”，重点仍然是“段模式锁存”
+# 5) `uphill_step_floor_on_arrival` 也采用段锁存：到达该 waypoint 后开启/关闭上坡步长滤波，
+#    并保持到下一个 waypoint 到达后再按下一个点的配置切换。
+# 6) `path_correction_profile_on_arrival` 也采用段锁存：
+#    0=关闭串口侧 path lateral/yaw 修正，1=普通修正，2=上坡强修正，3=强修正符号验证。
+# 7) `require_pose_stable_before_next` 只建议用于跳跃/自旋后的局部门控：
+#    到点动作完成后先等待定位稳定且落在安全范围内，再发送下一个 waypoint。
+# 8) `pose_recovery_mode` 只建议和第 7 点配套用于跳跃/自旋后的局部恢复：
+#    none=只等待稳定不恢复；
+#    stable_offset=定位连续稳定但整体漂移时，把后续目标映射到漂移后的 Point-LIO 坐标系；
+#    force_offset=稳定门控超时后强制用当前 pose 做恢复锚点；
+#    stable_then_force=先尝试 stable_offset，超时后再 force_offset。
+#    `pose_recovery_apply_yaw_offset` 默认 false，当前赛道建议只恢复平移，不恢复 yaw，避免目标朝向被漂移 yaw 带偏。
+#
+# 模式字典：
+#   0: 正常行走
+#   1: 下坡
+#   2: 趴下
+#   3: 小跳
+#   4: 大跳
+#   5: 上坡
+#   6: 自定义模式6（当前串口桥默认映射为固定步长）
+#
+# 建议做法：
+# - 平地转场段用 mode_on_arrival: 0
+# - 到坡入口点后，如果下一段需要上坡/下坡，就在该点写 5 或 1
+# - 到限高杆入口点后，如果下一段要趴下通过，就在该点写 2
+# - 到高墙/跳跃起跳点后，如果下一段要跳，就在该点写 3 或 4
+#
+# 注意：
+# - 相对点的 frame_id 会优先跟随实时 pose 的 frame；不写 frame_id 时使用 obstacle_manager/default_frame_id
+# - 正数 body_forward_m 表示狗子前方，正数 body_left_m 表示狗子左方
+# - body_yaw_delta_deg 正数/负数方向沿用当前 Odometry yaw 的数学方向
+# ======================================================================
+sandpit_bypass:
+  enabled: true
+  behavior: traverse
+  complete_once: true
+  search_rearm_delay_sec: 0.8
+  progress_log_interval_sec: 0.5
+  apriltag:
+    # tags_36h11.yaml: id=10 -> child_frame_id=object.
+    target_tag_id: 10
+    frame_id: camera_color_optical_frame
+    child_frame_id: object
+    distance_axis: z
+    min_samples: 1
+    max_sample_age_sec: 0.80
+    trigger_distance_m: 0.65
+# 只要沙坑 AprilTag 已经新鲜出现在视野内且距离不超过该值，
+    # 搜索仲裁就优先进入沙坑分支，避免沙坑颜色/面积被高墙 HSV 误判抢占。
+    priority_guard_enabled: true
+    priority_distance_m: 2.20
+    # ID10 在 priority_distance_m 内出现后，持续屏蔽高墙误触发一段时间；
+    # 避免沙坑 AprilTag/TF 中间断帧一拍时被高墙 detector 抢进分支。
+    priority_guard_hold_sec: 2.50
+    # 检测列表里看到沙坑 ID10 后，给 /tf 距离样本一点到达时间；
+    # 期间禁止高墙 HSV 误触发抢先进入高墙分支。
+    detection_guard_sec: 0.80
+    stale_timeout_sec: 0.80
+    min_duration_sec: 0.0
+  pre_align:
+    # SEARCH/限高杆趴走中 ID10 稳定 2 帧且距离进到约 1.6m 后，进入沙坑前预修正；
+    # 限高杆趴走中只叠加横偏修正，不抢占原本的站起/复对齐流程。
+    # 到 handoff_distance_m 后仍切回下面现有 traverse 沙坑流程。
+    enabled: true
+    start_distance_m: 1.60
+    handoff_distance_m: 0.65
+    # 预修正只做小幅横偏叠加，允许比正式沙坑触发更早锁定，避免等到 1m 内才开始修。
+    min_samples: 2
+    target_tag_x_m: 0.0
+    # ID10 沙坑码横向偏差在 0.20m 内不做横向/折线修正，只继续低速接近。
+    lateral_skip_below_m: 0.20
+    deadband_m: 0.03
+    mode: 0
+    left_norm: 0.35
+    right_norm: 0.35
+    hold_mode: 0
+    hold_left_norm: 0.0
+    hold_right_norm: 0.0
+    # 独立 SANDPIT_PRE_ALIGN 中使用“90 度折线”快速修正：
+    # 距离不足先短退，再横移一段、转回原 yaw；折线锁定后走完整段，避免反复追码耗时。
+    yaw_center_enabled: true
+    # ID10 沙坑码角度偏差在 2deg 内不做 yaw 对码修正。
+    yaw_tolerance_deg: 2.0
+    yaw_max_angle_deg: 35.0
+    yaw_turn_mode: 6
+    yaw_cw_left_norm: 0.60
+    yaw_cw_right_norm: -0.30
+    yaw_ccw_left_norm: -0.35
+    yaw_ccw_right_norm: 0.60
+    polyline_enabled: true
+    polyline_angle_deg: 90.0
+    polyline_large_angle_deg: 90.0
+    polyline_large_angle_error_m: 0.16
+    polyline_large_angle_center_deg: 10.0
+    polyline_distance_scale: 0.90
+    polyline_min_distance_m: 0.02
+    polyline_max_distance_m: 0.25
+    polyline_turn_tolerance_deg: 3.0
+    polyline_turn_timeout_sec: 3.8
+    # 90 度转向末端按剩余角度缩小步长，避免一次大步越过目标角后再反打。
+    polyline_turn_fine_threshold_deg: 25.0
+    polyline_turn_min_scale: 0.35
+    # 小步长横移速度更慢，超时也要同步放宽，避免没走满就转回并重新锁第二轮折线。
+    polyline_walk_timeout_sec_per_m: 10.0
+    polyline_walk_timeout_extra_sec: 1.5
+    # 折线横移使用独立小步长，避免 90 度侧向移动时一次走太猛造成过冲；
+    # 横移中 yaw 漂大时先原地补角，再继续横移。
+    polyline_walk_left_norm: 0.22
+    polyline_walk_right_norm: 0.22
+    # 横移阶段不再插入 mode=6 原地补角，避免左右反复转角；只靠小差速慢慢稳住 yaw。
+    polyline_shift_yaw_guard_deg: 0.0
+    polyline_yaw_correction_enabled: true
+    polyline_yaw_gain_per_rad: 0.35
+    polyline_yaw_max_delta_norm: 0.16
+    # 如果已经太靠近 ID10 但仍未对准，先短距离后退腾出修正空间。
+    # 后退只在独立 SANDPIT_PRE_ALIGN 中触发；横偏较大时优先用大折线角直接修，避免无意义后退。
+    backup_enabled: true
+    backup_trigger_distance_m: 0.75
+    backup_release_distance_m: 0.88
+    backup_max_distance_m: 0.08
+    backup_force_distance_m: 0.62
+    backup_skip_lateral_error_m: 0.16
+    backup_skip_center_angle_deg: 10.0
+    backup_min_polyline_clearance_m: 0.15
+    backup_mode: 0
+    backup_left_norm: -0.28
+    backup_right_norm: -0.28
+    # 现场观察 tag_x 为正时机身相对 ID10 偏左，应向右修：提高左侧、降低右侧。
+    # 比最初配置增大修正力度，避免限高杆趴走自身纠偏抵消沙坑预修正。
+    lateral_gain_norm_per_m: 1.05
+    lateral_max_delta_norm: 0.22
+    lateral_sign: -1.0
+    log_interval_sec: 0.50
+  sequence:
+    # 普通场地：顺时针90 -> 直走1m -> 逆时针90 -> 直走2m -> 顺时针90。
+    # Odometry yaw 正方向为逆时针，所以顺时针为负角度。
+    # 2026-07-01: latest sandpit log finished phase 5 by timeout at
+    # progress=91.2/77.0deg, about 14deg over the intended exit heading.
+    # Reduce only the final turn so the post-sandpit search points closer to
+    # the pole AprilTag. Rollback: [77.0, -77.0, 77.0].
+    turn_sequence_deg: [77.0, -77.0, 77.0]
+    # 沙坑图示为 L 形，参考尺寸 1000mm / 2000mm；这里只作可调初值。
+    straight_distances_m: [1.56, 1.63]
+  turn:
+    mode: 6
+    cw_left_norm: 0.60
+    cw_right_norm: -0.30
+    ccw_left_norm: -0.35
+    ccw_right_norm: 0.60
+    hold_mode: 0
+    hold_left_norm: 0.0
+    hold_right_norm: 0.0
+    yaw_tolerance_deg: 3.0
+    progress_tolerance_deg: 3.0
+    exit_hold_sec: 0.10
+    timeout_sec: 2.5
+  walk:
+    mode: 0
+    left_norm: 0.70
+    right_norm: 0.70
+    timeout_sec_per_m: 8.0
+    timeout_extra_sec: 3.0
+    yaw_correction_enabled: true
+    yaw_tolerance_deg: 3.0
+    yaw_gain_per_rad: 0.35
+    yaw_max_delta_norm: 0.20
+
+    #######过
+    
+  traverse:
+    # 砂坑改为直接穿越：触发 tag 后先对齐，再按电控动作/finish 回包推进。
+    # 若需要回退旧绕行，改 behavior: bypass 即可继续使用上面的 sequence/turn/walk。
+    phases:
+    #先对齐
+      - kind: align
+        # 沙坑触发后先拉回上一个障碍完成后进入 SEARCH 时锁住的 yaw。
+        target_yaw_source: search_reference
+        target_yaw_delta_deg: 0.0
+        mode: 6
+        ccw_left_norm: -0.12
+        ccw_right_norm: 0.28
+        cw_left_norm: 0.28
+        cw_right_norm: -0.12
+        fine_threshold_deg: 6.0
+        fine_ccw_left_norm: -0.08
+        fine_ccw_right_norm: 0.20
+        fine_cw_left_norm: 0.20
+        fine_cw_right_norm: -0.08
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 2.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.20
+        timeout_sec: 3.0
+        timeout_action: advance
+
+      #先走第一段
+      - kind: walk
+        distance_m: 0.00
+        mode: 0
+        left_norm: 0.30
+        right_norm: 0.30
+        timeout_sec_per_m: 8.0
+        timeout_extra_sec: 3.0
+        yaw_correction_enabled: true
+        yaw_tolerance_deg: 3.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20
+
+      # 跳入沙坑前先发 [0,0,0] 稳一下，避免上一段刚完成就立刻发 [4,0,0]。
+      - kind: wait
+        hold_sec: 0.30
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+
+      - kind: step_once
+      #开始跳进去
+        mode: 4
+        left_norm: 0.0
+        right_norm: 0.0
+        hold_sec: 0.30
+        clear_finish_signal: true
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+
+      - kind: wait_finish
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        timeout_sec: 0.0
+        timeout_action: fail
+        require_jumping_before_finish: true
+        resend_after_sec: 0.3
+        resend_max_count: 2
+
+      # 收到 [finish] 后先等落地/定位稳定，再锁后续直走起点；
+      # 否则跳跃落地后的 pose 修正会被算进 0.45m walk_progress，导致秒到。
+      - kind: wait
+        hold_sec: 0.40
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+
+      #等3秒走一段
+      - kind: walk
+        distance_m: 0.35
+        mode: 10
+        left_norm: 0.90
+        right_norm: 0.90
+        # 防止落地后 pose 单帧跳变直接满足 distance_m；至少直驱一小段时间后才允许完成。
+        min_elapsed_sec: 2.00
+        timeout_sec_per_m: 8.0
+        timeout_extra_sec: 6.0
+        yaw_correction_enabled: true
+        yaw_tolerance_deg: 3.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20
+      #自旋
+      - kind: turn
+        target_yaw_source: current
+        yaw_delta_deg: -40.0
+        mode: 7
+        ccw_left_norm: -0.70
+        ccw_right_norm: 0.80
+        cw_left_norm: 0.80
+        cw_right_norm: -0.70
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 3.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.10
+        timeout_sec: 2.5
+        timeout_action: advance
+        #第一次小跳
+      - kind: step_once
+        mode: 11
+        left_norm: 0.0
+        right_norm: 0.0
+        hold_sec: 0.0
+        clear_finish_signal: true
+        # 等第一次小跳 finish 后，再锁定后续对齐/0.30m 直走起点。
+      - kind: wait_finish
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        timeout_sec: 0.0
+        timeout_action: fail
+       #小跳完对齐
+      - kind: align
+        # 小跳后拉回发送上一次 step_once 前锁存的 yaw。
+        target_yaw_source: last_step_once
+        target_yaw_delta_deg: -5.0
+        mode: 0
+        ccw_left_norm: -0.12
+        ccw_right_norm: 0.28
+        cw_left_norm: 0.28
+        cw_right_norm: -0.12
+        fine_threshold_deg: 6.0
+        fine_ccw_left_norm: -0.08
+        fine_ccw_right_norm: 0.20
+        fine_cw_left_norm: 0.20
+        fine_cw_right_norm: -0.08
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 2.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.20
+        timeout_sec: 3.0
+        timeout_action: advance
+        #对齐后直驱一小段
+      - kind: walk
+        distance_m: 0.30
+        target_yaw_source: last_step_once
+        target_yaw_delta_deg: 0.0
+        mode: 0
+        left_norm: 0.80
+        right_norm: 0.80
+        timeout_sec_per_m: 0.0
+        timeout_extra_sec: 1.0
+        yaw_correction_enabled: true
+        yaw_tolerance_deg: 3.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20
+        #第二次小跳
+      - kind: step_once
+        mode: 11
+        left_norm: 0.0
+        right_norm: 0.0
+        hold_sec: 0.0
+        clear_finish_signal: true
+      - kind: wait_finish
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        timeout_sec: 0.0
+        timeout_action: fail
+        #在自旋
+      - kind: turn
+        target_yaw_source: absolute
+        target_yaw_deg: 180.0
+        yaw_delta_deg: -90.0
+        mode: 6
+        ccw_left_norm: -0.60
+        ccw_right_norm: 0.60
+        cw_left_norm: 0.60
+        cw_right_norm: -0.60
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 3.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.10
+        timeout_sec: 2.5
+        timeout_action: advance
+        #在走一小段
+      - kind: walk
+        distance_m: 0.66
+        target_yaw_source: absolute
+        target_yaw_deg: 180.0
+        target_yaw_delta_deg: -90.0
+        mode: 0
+        left_norm: 0.70
+        right_norm: 0.70
+        timeout_sec_per_m: 8.0
+        timeout_extra_sec: 1.0
+        yaw_correction_enabled: true
+        yaw_tolerance_deg: 6.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20
+        yaw_guard_enabled: true
+        yaw_guard_enter_deg: 10.0
+        yaw_guard_exit_deg: 6.0
+        yaw_guard_mode: 6
+        fine_threshold_deg: 8.0
+        ccw_left_norm: -0.12
+        ccw_right_norm: 0.28
+        cw_left_norm: 0.28
+        cw_right_norm: -0.12
+        fine_ccw_left_norm: -0.08
+        fine_ccw_right_norm: 0.20
+        fine_cw_left_norm: 0.20
+        fine_cw_right_norm: -0.08
+        #在跳出去，第一次小跳
+      - kind: step_once
+        mode: 9
+        left_norm: 0.0
+        right_norm: 0.0
+        hold_sec: 0.0
+        clear_finish_signal: true
+      - kind: wait_finish
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        timeout_sec: 0.0
+        timeout_action: fail
+        # 第一次跳出去收到 finish 后，先短直驱 0.10m 再触发第二次小跳。
+      - kind: walk
+        distance_m: 0.10
+        target_yaw_source: absolute
+        target_yaw_deg: 180.0
+        target_yaw_delta_deg: -90.0
+        mode: 0
+        left_norm: 0.50
+        right_norm: 0.50
+        timeout_sec_per_m: 0.0
+        timeout_extra_sec: 0.50
+        yaw_correction_enabled: true
+        yaw_tolerance_deg: 3.0
+        yaw_gain_per_rad: 0.35
+        yaw_max_delta_norm: 0.20
+        #收到回包后再跳一次
+      - kind: step_once
+        mode: 9
+        left_norm: 0.0
+        right_norm: 0.0
+        hold_sec: 0.0
+        clear_finish_signal: true
+      - kind: wait_finish
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        timeout_sec: 0.0
+        timeout_action: fail
+        #出沙坑后角度对齐：固定全局 yaw=180deg 后继续叠加原配置增量。
+      - kind: align
+        target_yaw_source: absolute
+        target_yaw_deg: 180.0
+        target_yaw_delta_deg: -87.0
+        mode: 6
+        ccw_left_norm: -0.12
+        ccw_right_norm: 0.28
+        cw_left_norm: 0.28
+        cw_right_norm: -0.12
+        fine_threshold_deg: 6.0
+        fine_ccw_left_norm: -0.08
+        fine_ccw_right_norm: 0.20
+        fine_cw_left_norm: 0.20
+        fine_cw_right_norm: -0.08
+        hold_mode: 0
+        hold_left_norm: 0.0
+        hold_right_norm: 0.0
+        yaw_tolerance_deg: 2.0
+        progress_tolerance_deg: 3.0
+        exit_hold_sec: 0.20
+        timeout_sec: 3.0
+        timeout_action: advance
+
+waypoints:
+  # - name: start_align
+  #   x: 0.30
+  #   y: 0.00
+  #   yaw_deg: 0.0
+  #   frame_id: camera_init
+  #   mode_on_arrival: 1
+  #   mode_hold_sec: 0.0
+  #   note: "起点前方的第一个对齐点，可按你的 T 字台阶起点修改。"
+
+  - name: small_ramp_entry
+    target_type: body_relative
+    # 2026-06-26: field log showed small_ramp_entry target only 0.20m
+    # (dist ~=0.205m), so restore the previous stair-descend distance.
+    # Rollback: body_forward_m: 0.20
+    body_forward_m: 1.58
+    body_left_m: 0.00
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    # 2026-05-01: 到达下坡结束点后，下一段 small_ramp_entry -> platform_center 是上坡/平台接近段，
+    # 只在这个 waypoint 区间允许 roll 触发 0.75 上坡步长滤波，避免跳跃落地侧倾误触发。
+    uphill_step_floor_on_arrival: true
+    # 2026-05-01 rollback point: 曾临时降为 profile=1 排查 Nav2 抖动。
+    # path_correction_profile_on_arrival: 1
+    # 2026-05-24: 上坡后段日志显示 profile=1 的普通 path 修正也会在
+    # line_lateral=-0.3m 后叠加到 path_corr/path_yaw_corr=0.3~0.6，
+    # 输出 [0,0.850,1.000] 甚至 [0,-0.644,1.000]，把平台入口姿态打散。
+    # 这一段先只保留 uphill_step_floor，上坡横向交给目标点/NavExecutor。
+    # rollback: 改回 1 或 2。
+    path_correction_profile_on_arrival: 0
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    direct_step_override_mode: 1
+    direct_step_override_left_norm: 0.8
+    direct_step_override_right_norm: 0.8
+    mode_hold_sec: 0.0
+    note: "下坡结束点：这一段固定发送 mode=1,left=0.8,right=0.8 下楼梯；到点后立即切回正常行走，不再额外停顿。"
+
+  # - name: platform_pre_align
+  #   x: 2.55
+  #   y: -0.10
+  #   yaw_deg: 0.0
+  #   frame_id: camera_init
+  #   mode_on_arrival: 0
+  #   post_arrival_pause_sec: 0.30
+  #   arrival_tolerance: 0.22
+  #   allow_goal_pass_through: false
+  #   note: "第二段拆分后的中间对齐点，先把平地上的横向误差收回来，再去平台中心。四足在这段允许 22cm 到点，避免 Nav2 已停而上层还在等。"
+
+  - name: platform_center
+    target_type: body_relative
+    body_forward_m: 1.74
+    # 2026-07-08: 同步普通路线的斜坡 roll/yaw 对齐耗时补偿。
+    # 上斜坡前 mode=6 对齐耗时较长时，补一点 platform_center 前进距离，抵消原地修姿态造成的后退/漂移。
+    # mirror 保留原基础距离 1.70m，只同步补偿阈值和补偿量。
+    body_forward_m_slope_align_duration_bonus_enabled: true
+    body_forward_m_slope_align_duration_threshold_sec: 1.0
+    body_forward_m_slope_align_duration_bonus_m: 0.04
+    body_forward_m_slope_align_duration_second_threshold_sec: 2.5
+    body_forward_m_slope_align_duration_second_bonus_m: 0.06
+    body_left_m: -0.03
+    # 2026-05-14: 斜坡分支仍按当前 pose_x 判断 right/near_left 等标签，
+    # 但目标点从 small_ramp_entry 的锁定目标点起算，避免同样判断为 right 时，
+    # 因发送瞬间实时 pose 有几厘米差异导致 platform_center 目标整体漂移。
+    # 注意：从本点单独启动调试时，需要先让 small_ramp_entry 已解析；否则临时删掉这一项。
+    # rollback: 删除 body_position_anchor，即恢复“当前实时 pose + body offset”的旧行为。
+    body_position_anchor: previous_target
+    # 斜坡入口按当前 Odometry x 选择横向偏移，并把分支结果给 wall_jump_prep 复用。
+    # 2026-05-24: 日志显示 pose_x=0.060 被判 far_right 后 left=-0.20，
+    # 目标点被算到 x=0.397，等于已在右侧仍继续往右打，导致上坡视觉右偏。
+    # 右侧分档保留 +0.10；实测 near_left/middle/left 分支上坡仍会往左漂，
+    # 左侧分档继续减小 left，等价于把 platform_center 目标往右收。
+    # rollback: far_right=-0.20, near_right=-0.18, right=-0.10。
+    body_left_m_by_pose_x_enabled: true
+    body_left_m_by_pose_x_ranges:
+      - label: far_right
+        min_exclusive: 0.05
+        body_left_m: 0.10
+      - label: near_right
+        min_inclusive: 0.00
+        max_inclusive: 0.05
+        body_left_m: 0.08
+      - label: right
+        min_exclusive: -0.05
+        max_exclusive: 0.00
+        body_left_m: 0.05
+      - label: near_left
+        min_inclusive: -0.10
+        max_inclusive: -0.05
+        body_left_m: 0.02
+      - label: middle
+        min_inclusive: -0.15
+        max_exclusive: -0.10
+        body_left_m: 0.00
+      - label: left
+        max_exclusive: -0.15
+        body_left_m: -0.03
+    # platform_center 固定使用 camera_init 全局绝对 0deg，位置偏移也按该目标 yaw 投影，
+    # 避免上坡过程中实时 yaw 漂移影响平台目标和后续镜像自旋基准。
+    body_yaw_mode: absolute
+    yaw_deg: 0.0
+    body_reference_yaw_source: target_yaw
+    body_yaw_delta_deg: 0.0
+    # 上坡入口是 body_relative 点，解析瞬间如果 Point-LIO yaw 跳变，
+    # 目标会被算到错误方向。这里要求 source yaw 仍接近启动/赛道正向；
+    # 不合理时原地停步等待下一帧合理 yaw，而不是继续把目标点算飞。
+    body_source_yaw_guard_enabled: true
+    body_source_yaw_reference_deg: 0.0
+    body_source_yaw_max_error_deg: 30.0
+    body_source_yaw_guard_hold_mode: 0
+    body_source_yaw_guard_hold_left_norm: 0.0
+    body_source_yaw_guard_hold_right_norm: 0.0
+    frame_id: camera_init  
+    # Mirror test: 下一个 platform_center_spin 会用 direct_step_override 主动发送反向 mode=6。
+    # 这里不要先锁存 mode=6，否则 0.3s 暂停期间会触发串口桥默认 mode=6 固定步长并按原方向自旋。
+    mode_on_arrival: 0
+    uphill_step_floor_on_arrival: false
+    # 平台自旋段使用 direct_step_override，关闭串口侧路径修正，避免 override
+    # 短暂超时时 profile=2 继续按上坡线修正。
+    # rollback: 改回 2。
+    path_correction_profile_on_arrival: 0
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.30
+    require_pose_stable_before_next: false
+    # 2026-05-24: 实机在坡顶 93%~96% 进度处 dist 已到 0.36m 左右，
+    # 继续追 0.25m 会遇到 roll/定位跳变并反复打满角速度。放宽到点半径，
+    # 到平台边缘先进入停稳/自旋段，避免在坡顶持续追点。
+    # rollback: 改回 0.25。
+    arrival_tolerance: 0.38
+    allow_goal_pass_through: true
+    pass_through_lateral_tolerance: 0.45
+    smooth_transition: false
+    note: "平台中心接近点：这一段先只管到位置，到点后额外停 0.3 秒稳住机身，再由下一个同点位转向点完成 90 度自旋。"
+
+  - name: platform_center_spin
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    # Mirror test: 按当前起点朝向作为局部 0 度，从这里开始走原路线镜像。
+    # 目标 yaw 使用 platform_center 的稳定目标 yaw - 87°。
+    # 注意：从本点单独启动调试时，需要先让 platform_center 已解析；否则临时改回 delta/absolute。
+    # rollback: 删除 body_yaw_mode 或改回 delta，即恢复“当前实际 yaw + 80°”。
+    body_yaw_mode: previous_target_delta
+    body_yaw_delta_deg: -83.0  #-85
+    frame_id: camera_init
+    mode_on_arrival: 2
+    uphill_step_floor_on_arrival: false
+    # 2026-05-08: wall_jump_prep 是趴下直驱 [2,1,1]。
+    # 实测 profile=2 会把本来直的趴下步态修歪，所以这一段先关闭 path 修正，
+    # 横向线路通过 wall_jump_prep 的 body_left_m/body_forward_m 调。
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.0
+    post_arrival_mode_sequence:
+      - mode: 2
+        hold_sec: 1.00
+        use_direct_step_override: true
+        direct_step_override_mode: 2
+        direct_step_override_left_norm: 0.0
+        direct_step_override_right_norm: 0.0
+        note: "平台自旋到点后先用低速 [2,0.2,0.2] 进入趴下，避免残留 /cmd_vel yaw 在切到 wall_jump_prep 前继续转动。"
+    arrival_tolerance: 0.25
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 3.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.50
+    direct_step_override_right_norm: -0.40
+    note: "镜像平台中心原地转向点：位置基本不变，反方向转到 -87 度附近后再继续；mode=6 实机对对称反向步敏感，使用非对称模板避免反向/抽搐。"
+
+  - name: crouch_yaw_settle
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    # 2026-05-23: platform_center_spin 到点后仍可能因为惯性/残留姿态偏 8~12deg。
+    # 先进入一个低速趴下对准点，用 direct_step_yaw_correction 生成近似
+    # [-0.25,0.65] / [0.65,-0.25] 的差速，yaw 收进 3deg 后再高速趴下前进。
+    # 2026-05-26: 实测按 previous_target=-84deg 收到 yaw≈-86.9deg 后趴走基准线仍偏；
+    # 本轮固定趴下前标准姿态为 -89deg，wall_jump_prep 继续继承本点目标 yaw。
+    # rollback: 删除 yaw_deg，并把 body_yaw_mode 改回 previous_target。
+    body_yaw_mode: absolute
+    yaw_deg: -90.0
+    body_reference_yaw_source: target_yaw
+    frame_id: camera_init
+    mode_on_arrival: 2
+    uphill_step_floor_on_arrival: false
+    path_correction_profile_on_arrival: 0
+    # 2026-05-25: 实机日志显示到点前最后一拍仍在发 mode=2 差速转向
+    # [2,-0.200,0.650]，会一边回 yaw 一边带来少量位移；如果立刻解析
+    # wall_jump_prep，下一段的 reference anchor 会落在运动残留中。到点后
+    # 先趴下零步长停稳，再解析趴走长直线。
+    # rollback: post_arrival_pause_sec=0.0，并删除下面 pose_stable_* 门控。
+    post_arrival_pause_sec: 0.30
+    arrival_tolerance: 0.35
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 3.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 2
+    direct_step_override_left_norm: 0.20
+    direct_step_override_right_norm: 0.20
+    direct_step_yaw_correction_enabled: true
+    direct_step_yaw_correction_tolerance_deg: 2.0
+    # 2026-06-07: 不放宽 3deg 到点阈值，只把小角度残差的趴下差速调猛；
+    # 实测 3.3~3.6deg 附近原 gain=5 会长时间慢磨。
+    # rollback: 改回 5.00。
+    direct_step_yaw_correction_gain_per_rad: 8.00
+    direct_step_yaw_correction_max_delta_norm: 0.45
+    require_pose_stable_before_next: true
+    pose_stable_hold_mode: 2
+    pose_stable_use_direct_step_override: true
+    pose_stable_direct_step_override_mode: 2
+    pose_stable_direct_step_override_left_norm: 0.0
+    pose_stable_direct_step_override_right_norm: 0.0
+    pose_stable_expected_pose_source: current
+    pose_stable_duration_sec: 0.25
+    pose_stable_sample_tolerance_m: 0.03
+    pose_stable_sample_yaw_tolerance_deg: 2.0
+    pose_stable_max_position_error_m: 0.30
+    pose_stable_timeout_sec: 1.20
+    pose_stable_timeout_action: advance
+    note: "趴下前先低速强回正；10deg 左右 yaw_err 会把 [2,0.20,0.20] 修成约 [2,-0.25,0.65] 或反向，收准后再进入 wall_jump_prep。"
+
+  # - name: low_bar_trigger
+  #   x: 4.20
+  #   y: 0.35
+  #   yaw_deg: 90.0
+  #   frame_id: camera_init
+  #   mode_on_arrival: 2
+  #   mode_hold_sec: 1.00
+  #   note: "示例：限高杆前的趴下触发点。"
+
+  - name: wall_jump_prep
+    target_type: body_relative
+    body_forward_m: 4.13
+    # 复用 platform_center 的 pose_x 分支结果，不在 wall_jump_prep 发送瞬间重新判断 x：
+    # 本轮统一加长到 4.10m，避免在 AprilTag z 未到阈值前被 0.10m 距离兜底抢先到点。
+    body_forward_m_from_previous_pose_x_switch_enabled: true
+    body_forward_previous_pose_x_switch_source: platform_center
+    body_forward_m_by_previous_pose_x_switch:
+      far_right: 4.13  #
+      near_right: 4.13  #
+      right: 4.13  #
+      near_left: 4.13   #
+      middle: 4.13  #
+      left: 4.13  #
+    # 2026-05-08: 趴下段改为直驱固定步长，同时向串口桥发布独立参考线做 path/crouch 修正；
+    # body_left 只作为直线参考终点和到点判定，不再发给 Nav2。
+    body_left_m: 0.00
+    # 2026-05-23: 最新整段日志中 left 分支 tag_x 已基本居中，但 odom 参考线仍显示
+    # line_lateral 约 0.10~0.15m，说明目标线比实际 AprilTag 中心线偏高。
+    # 复用 platform_center 的分支结果，只在偏左起步时把参考线向下平移一点。
+    body_left_m_from_previous_pose_x_switch_enabled: true
+    body_left_previous_pose_x_switch_source: platform_center
+    body_left_m_by_previous_pose_x_switch:
+      far_right: 0.00
+      near_right: 0.00
+      right: 0.00
+      near_left: 0.00
+      middle: 0.00
+      left: 0.00
+    # 2026-05-30: 趴下行走基准角度直接固定为 -90deg，不再继承上一点目标 yaw。
+    # 这样目标 yaw、forward/left 投影参考线、direct_step yaw recovery 都以 -90deg 为基准。
+    # rollback: 改回 body_yaw_mode: previous_target，并删除 yaw_deg。
+    body_yaw_mode: absolute
+    yaw_deg: -90.0
+    body_reference_yaw_source: target_yaw
+    # 趴下段按 platform_center_spin 到点瞬间的实际 odom 起算终点；
+    # body_left_m=0 时基准线就是自旋完成位置沿目标朝向直走。
+    # rollback: 改回 current，即恢复发送 wall_jump_prep 瞬间的 odom 作为起点。
+    body_position_anchor: previous_arrival
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    # mode_on_arrival: 0
+    mode_on_arrival: 2
+    uphill_step_floor_on_arrival: false
+    # 2026-05-22: 实机日志显示 wall_jump_prep 发布了 path_reference，但 profile=0
+    # 导致串口侧 path lateral/yaw 修正整段不生效，机身只剩 waypoint 侧的
+    # direct_step_yaw_correction 在持续掰高低腿，最终出现“yaw 对了、line_lateral 越修越歪”。
+    # 这里改为 profile=1，只启用普通 path_lateral 回线；mode=2 仍不启用 path_yaw。
+    # rollback: 改回 0，即恢复只靠 waypoint 侧 override + yaw trim。
+    # 2026-05-24: 完整日志显示 profile=1 串口侧 path_lateral 与 waypoint 侧 yaw trim
+    # 方向打架：line_lateral 0.125->0.289m 时，串口输出从 [2,0.935,0.865]
+    # 顶到 [2,1.000,0.700]，持续把趴下段往错误方向拧。这里关闭串口侧
+    # path lateral/yaw，保留 waypoint 侧低增益 yaw trim 和 AprilTag z 到点。
+    # rollback: 改回 1，即恢复普通横向回线。
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.0
+    # wall_jump_prep 主要靠 AprilTag z 到点；普通 Odometry 距离只保留极小兜底，
+    # 避免在 tag_z 仍未满足前被 distance_tolerance 抢先站起。
+    # 2026-05-23: 最新日志显示 0.08m 仍会在 AprilTag 未出现时由 distance_tolerance
+    # 抢先站立。wall_jump_prep 改为不使用普通距离半径到点，只保留 AprilTag
+    # 和越过目标线后的 pass_through 兜底。
+    # 2026-05-24: 实机日志出现末段 AprilTag TF 丢失，最后只能靠 pass_through 到点；
+    # 加一个很近的距离兜底，避免 tag 丢失时趴下继续顶到越线才站立。
+    # rollback: distance_arrival_enabled=false, arrival_tolerance=0.03。
+    distance_arrival_enabled: false
+    arrival_tolerance: 0.05
+    use_yaw_tolerance: false
+    # 这一段趴下横向偏差可能变大；只要已经沿起点->目标方向通过目标线，
+    # 允许更大的 y/lateral 偏差触发到点，先执行跳跃动作，避免趴下继续顶墙。
+    # 2026-05-17: 这一段现在由 AprilTag z 距离作为主要停止条件。
+    # 2026-05-23: restore pass-through as a last fallback for tag dropout.
+    # It only fires after crossing the target line, so it is later than normal
+    # distance tolerance and prevents timeout at the wall.
+    allow_goal_pass_through: true
+    # 2026-05-24: 趴走偏到 line_lateral≈0.55m 时不应靠 pass_through 站立。
+    # 保留越线兜底，但要求横向仍在可恢复范围内。
+    # rollback: 改回 0.55。
+    pass_through_lateral_tolerance: 0.30
+    # 2026-05-17: 趴下接近高墙时用 AprilTag 相机 z 距离提前结束直驱。
+    # 当 /tf 中 camera_color_optical_frame -> base 的 translation.z <= 0.45m，
+    # 立即按本 waypoint 到点处理，执行下面的趴下停稳/站立动作，避免反复调 body_forward_m。
+    # rollback: 设为 false，即恢复只靠 Odometry 目标/越线到点。
+    apriltag_arrival_enabled: true
+    apriltag_arrival_frame_id: camera_color_optical_frame
+    apriltag_arrival_child_frame_id: base
+    # 2026-05-23: 0.58m 会在 dist≈0.13m 时偏早站起，影响后续过桥；
+    # 先调到 0.52m，让趴下段稍微多走一点，但仍早于 pass_through 兜底。
+    # rollback: 改回 0.58。
+    apriltag_arrival_z_threshold_m: 0.70
+    # 2026-05-22
+    # 修改目的: wall_jump_prep 实测 tag_z 已过阈值，但 detection 间断导致
+    # age≈0.61s 时被 stale_timeout=0.30 直接丢弃，无法从趴下切站立。
+    # 关键行为变化: 放宽到 0.80s，允许短时丢帧时仍使用最近一小段时间内
+    # 的可信 AprilTag z 样本参与 4-of-5 过滤。
+    # rollback: 改回 0.30。
+    apriltag_arrival_stale_timeout_sec: 0.80
+    # 2026-05-23: AprilTag 同步稀疏时窗口经常只有 1 个新鲜样本；
+    # 先允许单帧低于阈值立即触发，后续再靠同步稳定性收紧。
+    apriltag_arrival_hold_sec: 0.0
+    apriltag_arrival_filter_window: 3
+    apriltag_arrival_required_count: 1
+    apriltag_arrival_min_samples: 1
+    # 2026-05-24: 只靠 tag_z 会在 line_lateral≈0.55m、yaw_err≈17deg 时直接站立。
+    # 到点前必须仍在可接受姿态窗口内，否则继续趴着修正，避免歪姿态站起。
+    # rollback: 删除下面两项。
+    apriltag_arrival_max_line_lateral_m: 0.24
+    apriltag_arrival_max_yaw_error_deg: 7.0
+    # 2026-07-08: 同步普通路线的站立前后退保护。
+    # 若到点准备站起时 base tag_z 过近，先保持趴下后退，避免顶墙/卡腿状态下直接站起。
+    apriltag_pre_stand_backoff_enabled: true
+    apriltag_pre_stand_backoff_trigger_z_m: 0.70
+    apriltag_pre_stand_backoff_target_z_m: 0.70
+    apriltag_pre_stand_backoff_stale_timeout_sec: 0.80
+    apriltag_pre_stand_backoff_timeout_sec: 2.0
+    apriltag_pre_stand_backoff_check_period_sec: 0.08
+    apriltag_pre_stand_backoff_mode: 2
+    apriltag_pre_stand_backoff_left_norm: -0.20
+    apriltag_pre_stand_backoff_right_norm: -0.20
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    # 参考线起点使用 body_position_anchor，也就是 platform_center_spin 到点瞬间的 odom。
+    path_reference_start_source: anchor
+    direct_step_override_mode: 2
+    # 2026-05-24: 降低趴走基准速度，给 yaw/line 修正留时间；0.85 时误差会在
+    # 前半段快速积累到 0.25m 以上，后半段小修正追不回来。
+    # rollback: 两侧改回 0.85。
+    direct_step_override_left_norm: 1.00
+    direct_step_override_right_norm: 1.00
+    # 2026-05-24: 防止 yaw_corr 与 line_corr 叠加出 [2,0.67,0.89] 这类大差速，
+    # 中段趴走会被拧成拖拽/卡腿，前进进度停在 47% 左右。
+    # 2026-05-24: 后续实测显示 0.12 的左右差速上限太小，偏到一侧或卡腿后
+    # 回线抢不回来，接近 tag 时仍保持斜姿态。放宽到 0.20，但仍禁止极端单侧饱和。
+    # 修改日志 2026-05-25 19:35:00 CST +0800:
+    # 原因: 实测 wall_jump_prep 在 lat≈0.18m 后 line_corr 已打到 -0.110，
+    #       但 lr_delta_clamp=0.220->0.200 后仍无法把 line_lateral 拉回，偏差继续扩大。
+    # 目的: 本轮专项验证“修正力度是否不足”，临时放开左右差速上限，排除 clamp 限幅影响。
+    # 实现效果: 允许 waypoint 侧 line_lateral 修正输出更大的左右步长差，观察 lat 是否反向收敛。
+    # 错误旧配置保留用于回退:
+    # direct_step_max_lr_delta_norm: 0.20
+    # rollback: 恢复上面的 0.20。
+    direct_step_max_lr_delta_norm: 1.00
+    # 2026-05-23: 最新 wall_jump_prep 日志显示末段 tag_x 会从约 -0.03m 跳到
+    # -0.15m，tag_corr 叠加 yaw/path_lateral 后把 override 拉到 [2,0.70,1.00]，
+    # 随后串口侧 path_lateral 又反向补偿成过冲。先关闭 tag 横向步长修正，
+    # AprilTag 仍只用于 z 到点。rollback: 改回 true，并用下面较弱参数逐步验证。
+    direct_step_apriltag_lateral_correction_enabled: false
+    direct_step_apriltag_lateral_axis: x
+    direct_step_apriltag_lateral_target_m: 0.0
+    direct_step_apriltag_lateral_deadband_m: 0.08
+    direct_step_apriltag_lateral_gain_norm_per_m: 0.55
+    direct_step_apriltag_lateral_max_delta_norm: 0.06
+    direct_step_apriltag_lateral_sign: -1.0
+    direct_step_apriltag_lateral_stale_timeout_sec: 0.90
+    # 修改日志 2026-05-25 17:07:28 CST +0800:
+    # 原因: 实机日志中 wall_jump_prep 的 lat>0 时持续输出 left>right=[2,0.880,0.680]，
+    #       line_lateral 仍从约 0.02m 扩大到 0.35m；yaw_corr 又与 line_corr 叠加并打满 lr_delta。
+    # 目的: 趴下行进段只保留 waypoint 侧基准线 lateral 修正；姿态只在前置 crouch_yaw_settle 收敛。
+    # 效果: 串口 profile=0、tag 横向关闭、yaw trim 关闭；lat>0 时改为 right>left 拉回基准线。
+    # 错误旧配置保留用于回退:
+    # direct_step_yaw_correction_enabled: true
+    # direct_step_line_lateral_sign: 1.0
+    # rollback: 恢复上面两项旧值；若要恢复 yaw 微调，同时保留 gain=0.18,max_delta=0.02。
+    direct_step_yaw_correction_enabled: false
+    direct_step_yaw_correction_tolerance_deg: 2.0
+    direct_step_yaw_correction_gain_per_rad: 0.18
+    direct_step_yaw_correction_max_delta_norm: 0.02
+    # 2026-06-15: yaw correction 符号是底盘/串口方向约定，不随镜像路线翻转。
+    # rollback: 改回 -1.0。
+    direct_step_yaw_correction_sign: 1.0
+    # 修改日志 2026-05-25 21:08:56 CST +0800:
+    # 原因: 最新实测中 wall_jump_prep 在 progress≈0.61~0.69 时 yaw_err 已到 5~7deg，
+    #       但 line_lateral 仍接近 0；继续前进后 yaw 先失控，再把 lat 拉到 0.14m。
+    # 目的: 不恢复连续 yaw_corr 叠加；改为分时保护：yaw 明显跑偏时暂停前进/基准线修正，
+    #       用趴下低速原地差速先回正，收进阈值后继续沿原 anchor->target 基准线前进。
+    # 实现效果: yaw recovery 不再按 progress 截断，全程只保留 |lat|<=0.08m 姿态窗口；
+    #       enter=2deg 保持 0.20s，exit=1deg 保持 0.10s，避免单帧噪声触发。
+    # progress 回退: min=0.55, max=0.88。
+    # 错误旧行为保留用于回退:
+    # direct_step_yaw_recovery_enabled: false
+    # rollback: 删除下面 direct_step_yaw_recovery_* 配置或改 enabled=false。
+    direct_step_yaw_recovery_enabled: true
+    direct_step_yaw_recovery_enter_yaw_error_deg: 2.0
+    direct_step_yaw_recovery_exit_yaw_error_deg: 1.0
+    direct_step_yaw_recovery_enter_hold_sec: 0.20
+    # 2026-07-09: 不再在 yaw recovery 末端用 [2,0,0] 等待退出保持；
+    # yaw_err 收进 exit 阈值后立即恢复普通 [2,1,1] 趴走。
+    # rollback: 改回 0.03。
+    direct_step_yaw_recovery_exit_hold_sec: 0.00
+    direct_step_yaw_recovery_min_progress_ratio: 0.00
+    direct_step_yaw_recovery_max_progress_ratio: 1.00
+    direct_step_yaw_recovery_max_line_lateral_m: 0.11
+    direct_step_yaw_recovery_base_left_norm: 0.0
+    direct_step_yaw_recovery_base_right_norm: 0.0
+    direct_step_yaw_recovery_gain_per_rad: 3.00
+    direct_step_yaw_recovery_max_delta_norm: 0.24
+    direct_step_yaw_recovery_sign: 1.0
+    direct_step_yaw_recovery_timeout_sec: 2.00
+    direct_step_yaw_recovery_cooldown_sec: 0.35
+    direct_step_line_lateral_correction_enabled: true
+    direct_step_line_lateral_deadband_m: 0.02
+    # 修改日志 2026-05-25 19:35:00 CST +0800:
+    # 原因: 上一轮 lat>0 时输出方向已是 right>left，证明符号基本正确；
+    #       但 max_delta=0.11 时修正不足，lat 从约 0.18m 增至 0.39m。
+    # 目的: 提高 waypoint 侧横向修正增益和最大修正量，验证趴下步态是否有足够回线能力。
+    # 实现效果: lat 超出 deadband 后更快增加 right-left 差速，最大 line_corr 从 0.11 提到 0.30。
+    # 错误旧配置保留用于回退:
+    # direct_step_line_lateral_gain_norm_per_m: 0.75
+    # direct_step_line_lateral_max_delta_norm: 0.11
+    # rollback: 恢复上面两个旧值。
+    direct_step_line_lateral_gain_norm_per_m: 1.20
+    direct_step_line_lateral_max_delta_norm: 0.30
+    direct_step_line_lateral_sign: -1.0
+    direct_step_line_lateral_min_progress_ratio: 0.06
+    direct_step_line_lateral_max_progress_ratio: 1.00
+    # 2026-05-11: 临时绕过小跳。第4点到点后只趴下停稳、站立停稳，然后直接进入第5点自旋。
+    # rollback: 恢复下面 post_arrival_mode_sequence 里的 mode=3 小跳和跳后 mode=0 落地保持。
+    # 站立后直接进入 wall_post_stand_yaw_align，由独立绝对角点完成姿态收敛。
+    require_pose_stable_before_next: false
+    pose_stable_hold_mode: 0
+    pose_stable_use_direct_step_override: true
+    pose_stable_direct_step_override_mode: 0
+    pose_stable_direct_step_override_left_norm: 0.0
+    pose_stable_direct_step_override_right_norm: 0.0
+    pose_stable_expected_pose_source: next
+    # 站立动作后只做短稳定确认，避免长时间站住不动。
+    # rollback: 若恢复小跳，此处仍可作为跳后短稳定确认使用。
+    pose_stable_duration_sec: 0.30
+    pose_stable_sample_tolerance_m: 0.08
+    pose_stable_sample_yaw_tolerance_deg: 6.0
+    pose_stable_max_position_error_m: 0.40
+    pose_stable_timeout_sec: 2.0
+    pose_stable_timeout_action: hold
+    # 2026-05-02 rollback point: stable_offset 会把后续过桥点整体平移，实测会把第7点吸到当前位置。
+    # pose_recovery_mode: stable_offset
+    # 定位已恢复稳定后，只保留局部门控，不再改写后续目标点。
+    pose_recovery_mode: none
+    pose_recovery_max_offset_m: 4.0
+    pose_recovery_apply_yaw_offset: false
+    post_arrival_mode_sequence:
+      - mode: 2
+        hold_sec: 1.00
+        use_direct_step_override: true
+        direct_step_override_mode: 2
+        direct_step_override_left_norm: 0.0
+        direct_step_override_right_norm: 0.0
+        note: "趴下通过到点后先保持趴下停止 0.6 秒，固定发送 mode=2,left=0,right=0，避免直接站立导致机身晃动。"
+      - mode: 0
+        # hold_sec: 0.35
+        hold_sec: 1.50
+        use_direct_step_override: true
+        direct_step_override_mode: 0
+        direct_step_override_left_norm: 0.0
+        direct_step_override_right_norm: 0.0
+        note: "趴下停稳后原地站立 1.跳5 秒，固定发送 mode=0,left=0,right=0；本版本不跳，随后直接进入第5点自旋。"
+      # rollback 2026-05-11: 如需恢复旧版小跳流程，取消下面两段注释。
+      # - mode: 3
+      #   hold_sec: 0.35
+      #   publish_mode: false
+      #   use_direct_step_override: true
+      #   direct_step_override_mode: 3
+      #   direct_step_override_left_norm: 0.0
+      #   direct_step_override_right_norm: 0.0
+      #   hold_sec: 0.70
+      #   use_direct_step_override: true
+      #   direct_step_override_mode: 0
+      #   direct_step_override_left_norm: 0.0
+      #   direct_step_override_right_norm: 0.0
+      #   note: "小跳单发后保持站立停止 0.7 秒，给落地和姿态恢复留时间。"
+    note: "第4点：这一段不走 Nav2，直接固定发送 mode=2,left=1,right=1 趴下前进，并给串口桥参考线做横向/yaw 修正。到点后先趴下停止，再站立停止；本版本不执行 mode=3 小跳，站稳后先进入 wall_post_stand_yaw_align，再推进到后续自旋点。rollback: 恢复 post_arrival_mode_sequence 中注释的小跳两段。"
+
+  - name: wall_post_stand_yaw_align
+    # 趴走结束并站立后，在当前位置先恢复到 mirror 趴走基准绝对 -86deg，
+    # 再由 turn_180_spin 继承该目标 yaw 执行后续反向自旋。
+    enabled: true
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: absolute
+    yaw_deg: -90.0
+    body_reference_yaw_source: target_yaw
+    body_position_anchor: current
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    uphill_step_floor_on_arrival: false
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.20
+    post_arrival_zero_step_hold: true
+    post_arrival_zero_step_mode: 0
+    require_pose_stable_before_next: false
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 1.5
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.0
+    direct_step_override_right_norm: 0.0
+    direct_step_yaw_direction_override_enabled: true
+    direct_step_yaw_direction_tolerance_deg: 1.0
+    direct_step_yaw_direction_cw_left_norm: 0.20
+    direct_step_yaw_direction_cw_right_norm: -0.15
+    direct_step_yaw_direction_ccw_left_norm: -0.15
+    direct_step_yaw_direction_ccw_right_norm: 0.20
+    note: "镜像高墙前趴走结束并站立后，在原地对齐 camera_init 全局绝对 yaw=-86deg，再进入后续反向自旋。"
+
+  - name: turn_180_spin
+    # 2026-05-02: 雷达实测自旋完成锚点，四元数换算 yaw=-179.165deg。
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    # 2026-05-22: 镜像线路第5点不能继续用默认 delta（当前 pose yaw + delta）。
+    # wall_post_stand_yaw_align 到点前的实际 yaw 仍可能有小残差，导致 turn_180_spin 目标 yaw
+    # 被算偏，出现 dist 已到但 yaw_err 仍在 130deg 左右、一直不推进的现象。
+    # 这里沿用 wall_post_stand_yaw_align 的绝对 -86deg 目标 yaw，再额外转 -81deg。
+    # rollback: 删除 body_yaw_mode，即恢复默认 delta 语义。
+    body_yaw_mode: previous_target_delta
+    body_yaw_delta_deg: -81.0
+    frame_id: camera_init
+    # 2026-04-30: 旧值 mode_on_arrival=6 会在自旋到点后继续把 mode=6 锁存到下一个 waypoint，
+    # 导致串口桥固定 mode=6 自旋覆盖一直生效，看起来像跳跃后一直原地自旋。
+    # mode_on_arrival: 6
+    mode_on_arrival: 0
+    uphill_step_floor_on_arrival: false
+    # 2026-05-02: 自旋后到桥前需要强 path lateral/yaw 修正，
+    # 否则仅靠 Nav2 cmd_vel 时横向误差会累积到桥入口。
+    path_correction_profile_on_arrival: 2
+    # 2026-05-01: 旧值 0.0 会在自旋刚结束、Point-LIO/机身姿态仍未稳定时立刻发第6点。
+    # 2026-05-08: 自旋覆盖已不再被 path 修正污染，等待缩短到 0.45s，减少自旋后直线段起步停顿。
+    # post_arrival_pause_sec: 0.0
+    post_arrival_pause_sec: 0.45
+    # 2026-05-08: mode=6 自旋本身会带少量平移；后续桥入口也是 body_relative，
+    # 应该从自旋后的真实当前位置重新解析，不再拿自旋前原点做位置稳定门控。
+    require_pose_stable_before_next: false
+    pose_stable_hold_mode: 0
+    pose_stable_use_direct_step_override: true
+    pose_stable_direct_step_override_mode: 0
+    pose_stable_direct_step_override_left_norm: 0.0
+    pose_stable_direct_step_override_right_norm: 0.0
+    # 相对坐标模式下，自旋点在发送瞬间锁定为当前位置；自旋后只检查该锁定点附近是否稳定。
+    pose_stable_expected_pose_source: current
+    pose_stable_duration_sec: 0.80
+    pose_stable_sample_tolerance_m: 0.08
+    pose_stable_sample_yaw_tolerance_deg: 6.0
+    pose_stable_max_position_error_m: 0.35
+    pose_stable_timeout_sec: 6.0
+    pose_stable_timeout_action: hold
+    # 2026-05-02 rollback point: stable_then_force 会在 expected=next 错误时把过桥点整体平移到当前位置附近。
+    # pose_recovery_mode: stable_then_force
+    # 定位已稳定时只做门控，不再强制恢复/改写后续目标。
+    pose_recovery_mode: none
+    pose_recovery_max_offset_m: 4.0
+    pose_recovery_apply_yaw_offset: false
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 3.0
+    allow_goal_pass_through: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.6
+    direct_step_override_right_norm: -0.35
+    note: "镜像第5点：跳完后不再走 Nav2 接近，直接在当前点执行反向固定自旋覆盖（mode=6,left=0.6,right=-0.35）完成转向。转完后进入 turn_180_yaw_settle，若姿态未收准则原地补正。"
+
+  - name: turn_180_yaw_settle
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    # 正常流程使用 route 0deg + 180deg；桥区重试时优先采用重试瞬间锁存的桥方向，
+    # 让 bridge_entry/bridge_exit 继承当前可通过方向，避免重新强拉到固定 -180deg。
+    body_yaw_mode: bridge_reference_delta
+    route_yaw_fallback_mode: absolute
+    yaw_deg: 180.0
+    body_reference_yaw_source: target_yaw
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    uphill_step_floor_on_arrival: false
+    path_correction_profile_on_arrival: 2
+    post_arrival_pause_sec: 0.1
+    post_arrival_zero_step_hold: true
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 1.5
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.00
+    direct_step_override_right_norm: 0.00
+    direct_step_yaw_correction_enabled: false
+    direct_step_yaw_correction_tolerance_deg: 1.0
+    direct_step_yaw_correction_gain_per_rad: 5.00
+    direct_step_yaw_correction_max_delta_norm: 0.20
+    direct_step_yaw_correction_sign: -1.0
+    direct_step_yaw_direction_override_enabled: true
+    direct_step_yaw_direction_tolerance_deg: 1.0
+    direct_step_yaw_direction_cw_left_norm: 0.20
+    direct_step_yaw_direction_cw_right_norm: -0.15
+    direct_step_yaw_direction_ccw_left_norm: -0.15
+    direct_step_yaw_direction_ccw_right_norm: 0.20
+    note: "镜像转身后姿态补正点：普通流程对齐赛道 180deg；桥区重试时沿用锁存的当前桥方向，再进入 bridge_entry。"
+
+  - name: bridge_apriltag_lateral_precheck
+    enabled: false
+    target_type: body_relative
+    body_forward_m: 0.35
+    body_left_m: 0.00
+    body_position_anchor: waypoint_target
+    body_position_anchor_waypoint: turn_180_yaw_settle
+    body_yaw_mode: previous_target
+    body_reference_yaw_source: previous_target
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    # 2026-07-03: 桥前 AprilTag 横向校准点，mirror 路线启用，tag 在木桥右侧。
+    # rollback: 将 enabled 改为 false，即跳过本点并回到原 turn_180_yaw_settle -> bridge_entry 流程。
+    # tag36h11 id=15 child_frame_id=bridge；mirror 用 tag_x=+0.433m 作为桥中心线基准。
+    apriltag_arrival_enabled: true
+    apriltag_arrival_frame_id: camera_color_optical_frame
+    apriltag_arrival_child_frame_id: bridge
+    # 本点只借用 apriltag_arrival_enabled 让 manager 缓存 bridge tag TF；
+    # 实际到点仍靠 body_relative 目标/直驱，不用 tag_z 提前结束。
+    apriltag_arrival_z_threshold_m: -10.0
+    apriltag_arrival_stale_timeout_sec: 0.90
+    apriltag_arrival_hold_sec: 0.0
+    apriltag_arrival_filter_window: 1
+    apriltag_arrival_required_count: 1
+    apriltag_arrival_min_samples: 1
+    path_correction_profile_on_arrival: 0
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    path_reference_start_source: anchor
+    direct_step_override_mode: 0
+    direct_step_override_left_norm: 0.12
+    direct_step_override_right_norm: 0.12
+    direct_step_max_lr_delta_norm: 0.20
+    direct_step_apriltag_lateral_correction_enabled: true
+    direct_step_apriltag_lateral_axis: x
+    direct_step_apriltag_lateral_target_m: 0.433
+    direct_step_apriltag_lateral_deadband_m: 0.03
+    direct_step_apriltag_lateral_gain_norm_per_m: 0.55
+    direct_step_apriltag_lateral_max_delta_norm: 0.06
+    direct_step_apriltag_lateral_sign: -1.0
+    direct_step_apriltag_lateral_stale_timeout_sec: 0.90
+    post_arrival_zero_step_hold: true
+    post_arrival_zero_step_mode: 0
+    post_arrival_pause_sec: 0.10
+    distance_arrival_enabled: true
+    arrival_tolerance: 0.08
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 4.0
+    allow_goal_pass_through: true
+    pass_through_lateral_tolerance: 0.18
+    note: "镜像桥前 AprilTag 横向校准试运行点：从 turn_180_yaw_settle 锚点低速前进 0.35m，同时按 bridge tag_x=+0.433 做小差速修正；enabled=false 可一键回退。"
+
+  # - name: wall_jump_trigger
+  #   x: -4.10  #-3.70
+  #   y: 3.85  #0.26
+  #   yaw_deg: 180.0
+  #   frame_id: camera_init
+  #   mode_on_arrival: 0
+  #   # 2026-05-01: 第6->7段是本日志中抽搐的主要区间，保持 Nav2 单独控制，不再叠加串口侧 path 修正。
+  #   path_correction_profile_on_arrival: 0
+  #   mode_hold_sec: 0.0
+  #   mode_wait_for_done: true
+  #   mode_done_timeout_sec: 1.50
+  #   note: "第六点：自旋90度之后切换自动行走模式 /dog_mode_done"
+
+  - name: bridge_entry
+    # 2026-05-01 old:
+    # x: -4.15
+    # y: 2.85
+    # yaw_deg: 180.0
+    # 2026-05-02: 雷达实测桥前点，四元数换算 yaw=-178.598deg。
+    target_type: body_relative
+    # 2026-05-28: 桥前点不再原地修姿态；姿态已在 turn_180_yaw_settle 提前收准。
+    # 保持这一段为固定直驱到桥入口，随后直接进入 bridge_exit。
+    # rollback: body_forward_m=2.15, arrival_tolerance=0.55。
+    body_forward_m: 1.23                         
+    body_left_m: 0.00
+    # 2026-07-03: 前面可选插入 bridge_apriltag_lateral_precheck 后，
+    # bridge_entry 仍应落在原来以 turn_180_yaw_settle 为起点的桥入口位置。
+    # rollback: 若删除桥前校准点，也可以删除下面两项恢复默认 current_pose 锚点。
+    body_position_anchor: waypoint_target
+    body_position_anchor_waypoint: turn_180_yaw_settle
+    # 2026-05-28: 继承 turn_180_yaw_settle 的目标 yaw，不跟随当前实际小残差。
+    # rollback: 删除下面两项，恢复按当前 yaw 解析 bridge_entry。
+    body_yaw_mode: previous_target
+    body_reference_yaw_source: target_yaw
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    # 2026-05-02: 过桥段使用强 path lateral/yaw 修正，减少踩空风险。
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    # 2026-05-16: 过桥要求尽量直，避免 NavExecutor 小幅 wz 来回修正造成 S 型。
+    # 这一段改为固定直驱前进，同时发布参考线给串口侧做小幅路径修正和到点判定。
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    direct_step_override_mode: 0
+    direct_step_override_left_norm: 0.90
+    direct_step_override_right_norm: 0.90
+    # 2026-07-09: bridge_apriltag_lateral_precheck 已关闭，bridge_entry 直接接
+    # turn_180_yaw_settle；同步关闭入桥 ramp，避免没有低速校准段时仍从 0.25
+    # 慢慢爬升到 0.90，影响后续上桥节奏。
+    # rollback: 若重新启用 bridge_apriltag_lateral_precheck，可改回 true。
+    direct_step_ramp_enabled: false
+    direct_step_ramp_duration_sec: 0.90
+    direct_step_ramp_start_left_norm: 0.25
+    direct_step_ramp_start_right_norm: 0.25
+    # 2026-05-31: 过桥阶段姿态优先。正常走桥时仍由 profile=2 沿参考线修正；
+    # yaw_err 超过 2deg 时暂停前进做原地回正，收进 1deg 后恢复直驱；
+    # 若 3s 内仍未收进，先恢复前进，避免小角度抖动长期卡桥。
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 5.0
+    direct_step_yaw_recovery_enabled: true
+    direct_step_yaw_recovery_enter_yaw_error_deg: 3.0
+    direct_step_yaw_recovery_exit_yaw_error_deg: 1.0
+    direct_step_yaw_recovery_enter_hold_sec: 0.10
+    direct_step_yaw_recovery_exit_hold_sec: 0.10
+    direct_step_yaw_recovery_min_progress_ratio: 0.05
+    direct_step_yaw_recovery_max_progress_ratio: 0.95
+    direct_step_yaw_recovery_base_left_norm: 0.025
+    direct_step_yaw_recovery_base_right_norm: 0.025
+    direct_step_yaw_recovery_gain_per_rad: 3.0
+    direct_step_yaw_recovery_max_delta_norm: 0.175
+    direct_step_yaw_recovery_sign: 1.0
+    direct_step_yaw_recovery_timeout_sec: 3.0
+    direct_step_yaw_recovery_cooldown_sec: 0.20
+    # 2026-05-28: 桥前不再自旋修姿态，本点到点后直接进入 bridge_exit。
+    arrival_tolerance: 0.25
+    allow_goal_pass_through: true
+    pass_through_lateral_tolerance: 0.25
+    note: "过桥前点：沿 turn_180_yaw_settle 的目标 yaw 固定直驱到桥入口；本点不再同点位自旋修姿态，到点后直接进入 bridge_exit。"
+
+  - name: bridge_exit
+    # 2026-05-01 old:
+    # x: -3.27
+    # y: 1.85
+    # yaw_deg: 180.0
+    # 2026-05-01: 雷达实测第八点，四元数换算 yaw=175.827deg。
+    target_type: body_relative
+    body_forward_m: 2.30
+    # 桥区重试从 turn_180_yaw_settle 重跑时，bridge_exit 固定只前进 1.20m，
+    # 并跳过下面的 AprilTag z 补偿；正常流程仍使用上面的 2.30m。
+    body_forward_m_bridge_retry_override_enabled: true
+    body_forward_m_bridge_retry_override_m: 1.18
+    # 2026-07-08: 同步普通路线的 bridge AprilTag(id=15, child_frame_id=bridge)
+    # tag_z 距离补偿到出桥点：z=1.24m 不补偿，z=1.50m 多走 0.05m，
+    # z=1.10m 少走 0.06m，中间线性插值；关掉即完全恢复 body_forward_m 原值。
+    body_forward_m_apriltag_z_compensation_enabled: true
+    body_forward_m_apriltag_z_compensation_frame_id: camera_color_optical_frame
+    body_forward_m_apriltag_z_compensation_child_frame_id: bridge
+    body_forward_m_apriltag_z_compensation_stale_timeout_sec: 1.20
+    body_forward_m_apriltag_z_compensation_neutral_z_m: 1.24
+    body_forward_m_apriltag_z_compensation_near_z_m: 1.10
+    body_forward_m_apriltag_z_compensation_near_delta_m: -0.06
+    body_forward_m_apriltag_z_compensation_far_z_m: 1.50
+    body_forward_m_apriltag_z_compensation_far_delta_m: 0.05
+    body_left_m: 0.00
+    # 过桥段必须沿 bridge_entry/turn_180_yaw_settle 的目标 yaw 走，不跟随实时小残差。
+    # rollback: 删除下面两项，恢复 bridge_exit 按当前 yaw 解析。
+    body_yaw_mode: previous_target
+    body_reference_yaw_source: target_yaw
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    # 2026-05-25: bridge_exit 是实际过桥段；发送该直驱目标时会同步发布本 waypoint 的
+    # path profile。保持 profile=2，让过桥段沿 bridge_entry 的目标线做强横向/yaw 修正。
+    # rollback: 改回 0。
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.10
+    smooth_transition: false
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    # 2026-05-16: 过桥后半段同样固定直驱前进，减少导航小角速度导致的左右摆。
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    direct_step_override_mode: 0
+    direct_step_override_left_norm: 0.80
+    direct_step_override_right_norm: 0.80
+    # 过桥后半段保留 yaw recovery，但到点不再要求 yaw 同时落入容差，
+    # 避免已越过出桥目标线后因 yaw 残差继续直走。
+    use_yaw_tolerance: false
+    yaw_tolerance_deg: 5.0
+    direct_step_yaw_recovery_enabled: true
+    direct_step_yaw_recovery_enter_yaw_error_deg: 3.0
+    direct_step_yaw_recovery_exit_yaw_error_deg: 1.0
+    direct_step_yaw_recovery_enter_hold_sec: 0.10
+    direct_step_yaw_recovery_exit_hold_sec: 0.10
+    direct_step_yaw_recovery_min_progress_ratio: 0.05
+    direct_step_yaw_recovery_max_progress_ratio: 0.95
+    direct_step_yaw_recovery_base_left_norm: 0.025
+    direct_step_yaw_recovery_base_right_norm: 0.025
+    direct_step_yaw_recovery_gain_per_rad: 3.0
+    direct_step_yaw_recovery_max_delta_norm: 0.175
+    direct_step_yaw_recovery_sign: 1.0
+    direct_step_yaw_recovery_timeout_sec: 3.0
+    direct_step_yaw_recovery_cooldown_sec: 0.20
+    arrival_tolerance: 0.20
+    allow_goal_pass_through: true
+    pass_through_lateral_tolerance: 0.50
+    note: "过桥后点：固定直驱前进过完桥后先停稳 0.1 秒，再进入同点位 45 度原地转向，避免直接边走边大角度调头导致下斜坡卡位。"
+
+  - name: bridge_exit_cw_45_spin_mirror
+    # Mirror test: 平台中心自旋后的路线整体镜像，过桥后改为原地顺时针约 45 度。
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: bridge_reference_delta
+    route_yaw_fallback_mode: absolute_delta
+    yaw_deg: 180.0
+    body_yaw_delta_deg: -52.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.22
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 5.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.85
+    direct_step_override_right_norm: -0.4
+    note: "镜像第3个自旋点：过桥后同点位原地顺时针约45度，让 base_link 朝向镜像侧下斜坡目标方向，再开始走最终下坡段。"
+
+  - name: final_descent_approach
+    # 2026-05-01: 新增雷达实测第九点，四元数换算 yaw=179.656deg。
+    target_type: body_relative
+    body_forward_m: 1.03
+    body_left_m: 0.00
+    # 这一点只管走到最终位置；到点后再由 final_heading_align 单独调整最终朝向。
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    # 2026-05-22: 终段改为“固定前进 + 参考线强修正 + 越线兜底”。
+    # 原先交给 pose_controller 追点时，一旦桥后下坡段 lateral drift 放大，
+    # 目标会快速跑到机身后方，进而退化成原地大角度自旋并卡死在第9点。
+    # 这里复用桥段的 serial-side 强路径修正，但仍把最终朝向留给下一个自旋点。
+    # Rollback: 恢复 path_correction_profile_on_arrival=0，删掉下面 direct_step_override
+    # 与 pass-through 扩展字段，即回到普通 /goal_pose 跟踪。
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.35
+    allow_goal_pass_through: true
+    # 2026-05-28: 终段下坡实测会在越过目标线时横向偏到 0.9~1.1m，
+    # 先放宽越线兜底，避免卡在 final_descent_approach；后续再修基准线/修正方向。
+    # rollback: 改回 0.60。
+    pass_through_lateral_tolerance: 1.10
+    # 2026-05-31: 终段下坡若姿态/定位跳变导致 lateral 已经失真，越线 5% 后强制进入最终朝向点。
+    # rollback: 删除该项，即恢复只按 lateral_tolerance 越线到点。
+    pass_through_force_progress_ratio: 1.05
+    smooth_transition: false
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    path_reference_start_source: anchor
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 0.80
+    direct_step_override_right_norm: 0.80
+    note: "镜像最终位置第一段接近点：mode=7 固定直驱前进，下一个点增加 mode=7 自旋，再进入第二段直驱。"
+
+  - name: final_descent_mid_spin_mirror
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: bridge_reference_delta
+    route_yaw_fallback_mode: absolute_delta
+    yaw_deg: 180.0
+    body_yaw_delta_deg: 0.00
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.22
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 5.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: -0.60
+    direct_step_override_right_norm: 0.70
+    note: "镜像最终段新增自旋点：mode=7，left=0.40,right=0.50，相对当前姿态自旋约100度。"
+
+  - name: final_descent_second_approach
+    target_type: body_relative
+    body_forward_m: 1.00
+    body_left_m: 0.00
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.30
+    distance_arrival_enabled: false
+    travel_distance_arrival_enabled: true
+    allow_goal_pass_through: false
+    pass_through_lateral_tolerance: 1.20
+    pass_through_force_progress_ratio: 1.05
+    smooth_transition: false
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    path_reference_start_source: anchor
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 0.60
+    direct_step_override_right_norm: 1.00
+    note: "镜像最终位置第二段接近点：mode=7 固定直驱前进；本点只按起点到当前 pose 的净位移达到 body_forward_m 判定到点，随后进入顺时针自旋点。"
+
+  - name: final_descent_second_spin_mirror
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: bridge_reference_delta
+    route_yaw_fallback_mode: absolute_delta
+    yaw_deg: 180.0
+    body_yaw_delta_deg: 90.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.22
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 5.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 0.00
+    direct_step_override_right_norm: 1.00
+    note: "镜像最终段第二个自旋点：mode=7，顺时针自旋；按目标 yaw 容差到点，沿用旧的 0.20/0.65 步长量级。"
+
+  - name: final_descent_second_spin_extra_approach
+    target_type: body_relative
+    body_forward_m: 0.33
+    body_left_m: 0.00
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.05
+    distance_arrival_enabled: false
+    travel_distance_arrival_enabled: true
+    allow_goal_pass_through: false
+    pass_through_lateral_tolerance: 1.20
+    pass_through_force_progress_ratio: 1.05
+    smooth_transition: false
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    path_reference_start_source: anchor
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 0.80
+    direct_step_override_right_norm: 0.80
+    note: "镜像最终段第二个自旋后新增直驱点：mode=7，left=0.70,right=0.70，固定直驱前进0.10m。"
+
+  - name: final_descent_second_spin_extra_spin
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: bridge_reference_delta
+    route_yaw_fallback_mode: absolute_delta
+    yaw_deg: 180.0
+    body_yaw_delta_deg: 2.00
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.22
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 5.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 0.70
+    direct_step_override_right_norm: -0.60
+    note: "镜像最终段第二个自旋后新增自旋点：mode=7，镜像反向自旋约100度。"
+
+  - name: final_descent_third_approach
+    target_type: body_relative
+    body_forward_m: 1.78
+    body_left_m: 0.00
+    body_yaw_delta_deg: 0.0
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 2
+    mode_hold_sec: 0.0
+    post_arrival_pause_sec: 0.10
+    arrival_tolerance: 0.30
+    distance_arrival_enabled: false
+    travel_distance_arrival_enabled: true
+    allow_goal_pass_through: false
+    pass_through_lateral_tolerance: 1.20
+    pass_through_force_progress_ratio: 1.05
+    smooth_transition: false
+    mode_wait_for_done: true
+    mode_done_timeout_sec: 1.50
+    use_direct_step_override: true
+    publish_path_reference_for_direct_step_override: true
+    publish_path_reference_start_for_direct_step_override: true
+    path_reference_start_source: anchor
+    direct_step_override_mode: 7
+    direct_step_override_left_norm: 1.00
+    direct_step_override_right_norm: 0.80
+    note: "镜像最终位置第三段接近点：mode=7，left=0.60,right=0.40，固定直驱前进；本点只按起点到当前 pose 的净位移达到 body_forward_m 判定到点，随后进入最终朝向点。"
+
+  - name: final_heading_align
+    target_type: body_relative
+    body_forward_m: 0.00
+    body_left_m: 0.00
+    body_yaw_mode: waypoint_arrival
+    body_yaw_waypoint: bridge_entry
+    body_reference_yaw_source: target_yaw
+    frame_id: camera_init
+    mode_on_arrival: 0
+    path_correction_profile_on_arrival: 0
+    post_arrival_pause_sec: 0.0
+    arrival_tolerance: 0.24
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 3.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.0
+    direct_step_override_right_norm: 0.0
+    direct_step_yaw_direction_override_enabled: true
+    direct_step_yaw_direction_tolerance_deg: 1.5
+    # 2026-07-09: 实测 yaw_err>0 时原 [0.20,-0.40] 产生负 step_yaw，
+    # yaw_err 从 15deg 扩大到 180deg，说明最终朝向修正方向反了。
+    # 这里对调 cw/ccw 步长：yaw_err>0 用 [-0.40,0.20]，yaw_err<0 用 [0.20,-0.40]。
+    # rollback: cw=[-0.40,0.20], ccw=[0.20,-0.40]。
+    direct_step_yaw_direction_cw_left_norm: 0.20
+    direct_step_yaw_direction_cw_right_norm: -0.40
+    direct_step_yaw_direction_ccw_left_norm: -0.40
+    direct_step_yaw_direction_ccw_right_norm: 0.20
+    note: "镜像最终朝向调整点：不再写死角度，引用 bridge_entry 到点时的实际 yaw；按最新实机日志修正方向，yaw_err>0 用 [-0.40,0.20]，yaw_err<0 用 [0.20,-0.40]。"

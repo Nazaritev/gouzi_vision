@@ -1,0 +1,2 @@
+Invoking command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer': /usr/bin/cmake /home/gouzi/obstacle_race_src/src/pcd_map_viewer -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/pcd_map_viewer
+Invoked command in '/home/gouzi/obstacle_race_src/build/pcd_map_viewer' returned '1': /usr/bin/cmake /home/gouzi/obstacle_race_src/src/pcd_map_viewer -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/pcd_map_viewer

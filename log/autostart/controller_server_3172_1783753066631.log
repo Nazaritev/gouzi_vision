@@ -1,0 +1,49 @@
+[INFO] [1783753066.675892140] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783753066.682935542] [controller_server]: Creating controller server
+[INFO] [1783753066.698314958] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783753066.698677432] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1783753066.821360776] [controller_server]: Configuring controller interface
+[INFO] [1783753066.821509911] [controller_server]: getting goal checker plugins..
+[INFO] [1783753066.821559274] [controller_server]: Controller frequency set to 10.0000Hz
+[INFO] [1783753066.821585594] [local_costmap.local_costmap]: Configuring
+[INFO] [1783753066.826157235] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1783753066.830655347] [local_costmap.local_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1783753066.832810966] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1783753066.832840646] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1783753066.833308941] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1783753066.840751180] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1783753066.841457127] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1783753066.841612123] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[INFO] [1783753066.843661780] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[INFO] [1783753066.844951551] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[INFO] [1783753066.846761543] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[INFO] [1783753066.846792045] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[INFO] [1783753066.847349937] [controller_server]: ObstaclesCritic instantiated with 1 power and 8.000000 / 1.200000 weights. Critic will collision check based on footprint cost.
+[INFO] [1783753066.847373287] [controller_server]: Critic loaded : mppi::critics::ObstaclesCritic
+[INFO] [1783753066.847568351] [controller_server]: GoalCritic instantiated with 1 power and 8.000000 weight.
+[INFO] [1783753066.847582379] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[INFO] [1783753066.847768047] [controller_server]: GoalAngleCritic instantiated with 1 power, 5.000000 weight, and 0.100000 angular threshold.
+[INFO] [1783753066.847783195] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[INFO] [1783753066.848364307] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 4.000000 weight
+[INFO] [1783753066.848381324] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[INFO] [1783753066.848608023] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[INFO] [1783753066.848889135] [controller_server]: PreferForwardCritic instantiated with 1 power and 0.300000 weight.
+[INFO] [1783753066.848905540] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[INFO] [1783753066.850076862] [controller_server]: Optimizer reset
+[INFO] [1783753066.852536076] [MPPIController]: Configured MPPI Controller: FollowPath
+[INFO] [1783753066.852564953] [controller_server]: Controller Server has FollowPath  controllers available.
+[INFO] [1783753066.979984969] [controller_server]: Activating
+[INFO] [1783753066.980020678] [local_costmap.local_costmap]: Activating
+[INFO] [1783753066.980031784] [local_costmap.local_costmap]: Checking transform
+[INFO] [1783753066.980049668] [local_costmap.local_costmap]: Timed out waiting for transform from base_link to camera_init to become available, tf error: Invalid frame ID "camera_init" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1783753067.480143697] [local_costmap.local_costmap]: start
+[WARN] [1783753067.581484192] [controller_server]: Parameter controller_server.verbose not found
+[INFO] [1783753067.585921255] [controller_server]: Optimizer reset
+[INFO] [1783753067.586224184] [MPPIController]: Activated MPPI Controller: FollowPath
+[INFO] [1783753067.586256877] [controller_server]: Creating bond (controller_server) to lifecycle manager.

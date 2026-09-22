@@ -1,0 +1,111 @@
+[0.511s] Invoking command in '/home/gouzi/obstacle_race_src/build/auto_nav_pkg': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build
+[0.706s] running develop
+[0.826s] Removing /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto-nav-pkg.egg-link (link to .)
+[0.853s] Invoked command in '/home/gouzi/obstacle_race_src/build/auto_nav_pkg' returned '0': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build
+[0.854s] Invoking command in '/home/gouzi/obstacle_race_src/src/auto_nav_pkg': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/auto_nav_pkg build --build-base /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build install --record /home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log --single-version-externally-managed install_data --force
+[1.048s] running egg_info
+[1.049s] writing ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/PKG-INFO
+[1.049s] writing dependency_links to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/dependency_links.txt
+[1.049s] writing entry points to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/entry_points.txt
+[1.049s] writing requirements to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/requires.txt
+[1.049s] writing top-level names to ../../build/auto_nav_pkg/auto_nav_pkg.egg-info/top_level.txt
+[1.051s] reading manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'
+[1.053s] writing manifest file '../../build/auto_nav_pkg/auto_nav_pkg.egg-info/SOURCES.txt'
+[1.053s] running build
+[1.053s] running build_py
+[1.054s] copying auto_nav_pkg/obstacle_race_supervisor.py -> /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg
+[1.055s] running install
+[1.056s] running install_lib
+[1.056s] creating /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/nav_agent.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_relative_nav.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/lateral_s_curve.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/limit_bar_duck_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/slope_branch_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/log_style.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/nav_executor.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.057s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/obstacle_race_supervisor.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.058s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/upstairs_detector.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.058s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_hurdle_jump_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.058s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/obstacle_manager.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/yolo_relative_nav.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/apriltag_align_test.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/orange_pole_relative_nav_stable.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/yaw_rate_estimator.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] copying /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build/lib/auto_nav_pkg/__init__.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg
+[1.059s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/nav_agent.py to nav_agent.cpython-310.pyc
+[1.061s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_relative_nav.py to orange_pole_relative_nav.cpython-310.pyc
+[1.091s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/lateral_s_curve.py to lateral_s_curve.cpython-310.pyc
+[1.092s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/limit_bar_duck_test.py to limit_bar_duck_test.cpython-310.pyc
+[1.098s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/slope_branch_detector.py to slope_branch_detector.cpython-310.pyc
+[1.101s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_detector.py to orange_pole_detector.cpython-310.pyc
+[1.104s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/log_style.py to log_style.cpython-310.pyc
+[1.105s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/nav_executor.py to nav_executor.cpython-310.pyc
+[1.111s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/obstacle_race_supervisor.py to obstacle_race_supervisor.cpython-310.pyc
+[1.185s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/upstairs_detector.py to upstairs_detector.cpython-310.pyc
+[1.188s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_hurdle_jump_test.py to orange_hurdle_jump_test.cpython-310.pyc
+[1.192s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/obstacle_manager.py to obstacle_manager.cpython-310.pyc
+[1.219s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/yolo_relative_nav.py to yolo_relative_nav.cpython-310.pyc
+[1.222s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/apriltag_align_test.py to apriltag_align_test.cpython-310.pyc
+[1.234s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/orange_pole_relative_nav_stable.py to orange_pole_relative_nav_stable.cpython-310.pyc
+[1.236s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/yaw_rate_estimator.py to yaw_rate_estimator.cpython-310.pyc
+[1.237s] byte-compiling /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg/__init__.py to __init__.cpython-310.pyc
+[1.237s] running install_data
+[1.237s] copying resource/auto_nav_pkg -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/ament_index/resource_index/packages
+[1.237s] copying package.xml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg
+[1.237s] copying launch/limit_bar_duck_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/apriltag_align_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/apriltag_bridge_lateral_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/orange_pole_relative_nav_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/orange_pole_body_relative_nav_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/orange_pole_body_relative_nav_stable_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/obstacle_race_bringup.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/apriltag_limit_bar_align_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/orange_pole_detector_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/obstacle_race_limit_bar_tag_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.238s] copying launch/orange_hurdle_jump_test.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.239s] copying launch/obstacle_race_visual_supervisor.launch.py -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/launch
+[1.239s] copying config/orange_pole_body_relative_test_v4.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/obstacle_race_supervisor_limit_bar_tag_test_overlay.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/apriltag_align_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/obstacle_waypoints.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/obstacle_waypoints_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/orange_pole_body_relative_test_start_b.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.239s] copying config/orange_pole_stable_trigger.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/pole_race_lidar_waypoints.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/orange_pole_body_relative_test_v1.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/limit_bar_duck_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/obstacle_race_supervisor_overlay.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/orange_pole_body_relative_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/upstairs_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/orange_pole_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/orange_hurdle_jump_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.240s] copying config/obstacle_race_supervisor.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/nav2_pointlio_navigation.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/apriltag_bridge_lateral_test.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/obstacle_race_system.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/slope_branch_detector.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/orange_pole_body_relative_test_v3.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/orange_pole_body_relative_test_reverse_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/orange_pole_body_relative_test_reverse.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/orange_pole_body_relative_test_v2.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] copying config/orange_pole_body_relative_test_mirror.yaml -> /home/gouzi/obstacle_race_src/install/auto_nav_pkg/share/auto_nav_pkg/config
+[1.241s] running install_egg_info
+[1.243s] Copying ../../build/auto_nav_pkg/auto_nav_pkg.egg-info to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages/auto_nav_pkg-0.1.0-py3.10.egg-info
+[1.251s] running install_scripts
+[1.271s] Installing apriltag_align_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing limit_bar_duck_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing nav_agent_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing nav_executor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing obstacle_manager_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing obstacle_race_supervisor_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing orange_hurdle_jump_test_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing orange_pole_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.271s] Installing orange_pole_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.272s] Installing orange_pole_relative_nav_stable_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.272s] Installing slope_branch_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.272s] Installing upstairs_detector_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.272s] Installing yolo_relative_nav_node script to /home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/auto_nav_pkg
+[1.272s] writing list of installed files to '/home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log'
+[1.300s] Invoked command in '/home/gouzi/obstacle_race_src/src/auto_nav_pkg' returned '0': CMAKE_PREFIX_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera:/home/gouzi/obstacle_race_src/install/apriltag_ros:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs:/home/gouzi/obstacle_race_src/install/apriltag_msgs:/home/gouzi/obstacle_race_src/install/realsense2_description:/home/gouzi/obstacle_race_src/install/quadruped_step_mapper:/home/gouzi/obstacle_race_src/install/point_lio:/home/gouzi/obstacle_race_src/install/livox_ros_driver2 LD_LIBRARY_PATH=/home/gouzi/obstacle_race_src/install/realsense2_camera/lib:/home/gouzi/obstacle_race_src/install/apriltag_ros/lib:/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib:/home/gouzi/obstacle_race_src/install/apriltag_msgs/lib:/home/gouzi/obstacle_race_src/install/livox_ros_driver2/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gouzi/obstacle_race_src/build/auto_nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gouzi/obstacle_race_src/install/auto_nav_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/auto_nav_pkg build --build-base /home/gouzi/obstacle_race_src/build/auto_nav_pkg/build install --record /home/gouzi/obstacle_race_src/build/auto_nav_pkg/install.log --single-version-externally-managed install_data --force

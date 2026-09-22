@@ -1,0 +1,56 @@
+slope_branch_detector:
+  ros__parameters:
+    color_topic: "/camera/color/image_raw"
+    depth_topic: "/camera/aligned_depth_to_color/image_raw"
+    camera_info_topic: "/camera/color/camera_info"
+
+    nearest_topic: "/slope_branch_detector/nearest"
+    trigger_topic: "/slope_branch_detector/trigger"
+    feedback_topic: "/slope_branch_detector/feedback_log"
+    state_topic: "/slope_branch_detector/state"
+    debug_image_topic: "/slope_branch_detector/debug_image"
+
+    # 2026-05-14: 限高杆前地面在暖光下会被旧阈值误分成“黄绿斜坡”。
+    # 收紧到更像真绿坡的色域，避免在没有坡面时被地面抢分支。
+    # rollback: 改回 [28, 32, 35] / [100, 255, 255]。
+    hsv_lower: [35, 55, 45]
+    hsv_upper: [95, 255, 255]
+    morph_kernel_px: 7
+    morph_open_kernel_px: 5
+    morph_close_kernel_px: 17
+    morph_close_iterations: 2
+    # 424x240 相机下，旧 y_min=175 只剩 65px 高 ROI，却要求 min_height=80；
+    # 当前入口日志里真斜坡常为 162~208px 宽、52~64px 高，过硬会短脉冲后丢失。
+    # rollback: 恢复 search_y_min_px=175, min_area_px=12000, min_width_px=220, min_height_px=80。
+    search_y_min_px: 115
+    search_y_max_px: 239
+    min_area_px: 4200.0
+    min_width_px: 130
+    min_height_px: 40
+    min_aspect_ratio: 1.20
+    # 2026-05-14: 恢复更保守的最小填充率，并新增最大填充率上限。
+    # 真斜坡实测 fill 多在 0.55~0.76；限高杆前误检地面块接近 0.95。
+    # rollback: min_fill_ratio 改回 0.28，删掉 max_fill_ratio。
+    min_fill_ratio: 0.35
+    max_fill_ratio: 0.88
+    max_bottom_gap_px: 130
+    max_abs_lateral_m: 1.20
+
+    depth_mask_erode_px: 3
+    depth_fallback_enabled: true
+    depth_fallback_y_min_ratio: 0.45
+    depth_fallback_y_max_ratio: 0.95
+    depth_fallback_x_margin_ratio: 0.12
+    min_valid_depth_pixels: 8
+    depth_units_divisor: 1000.0
+    min_depth_m: 0.20
+    max_depth_m: 3.50
+    depth_percentile: 20.0
+    distance_bias_m: 0.0
+    trigger_distance_m: 1.40
+    trigger_hold_sec: 0.35
+    depth_stale_timeout_sec: 0.50
+    camera_info_stale_timeout_sec: 5.0
+
+    publish_debug_image: true
+    log_interval_sec: 1.0

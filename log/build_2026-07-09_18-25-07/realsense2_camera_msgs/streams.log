@@ -1,0 +1,337 @@
+[0.017s] Invoking command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs
+[0.105s] -- The C compiler identification is GNU 11.4.0
+[0.197s] -- The CXX compiler identification is GNU 11.4.0
+[0.205s] -- Detecting C compiler ABI info
+[0.315s] -- Detecting C compiler ABI info - done
+[0.324s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.324s] -- Detecting C compile features
+[0.324s] -- Detecting C compile features - done
+[0.331s] -- Detecting CXX compiler ABI info
+[0.428s] -- Detecting CXX compiler ABI info - done
+[0.435s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.435s] -- Detecting CXX compile features
+[0.436s] -- Detecting CXX compile features - done
+[0.439s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.623s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.751s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.756s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.762s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.810s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.852s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.867s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[1.302s] -- Found ament_cmake_cppcheck: 0.12.15 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)
+[1.305s] -- Found ament_cmake_cpplint: 0.12.15 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)
+[1.309s] -- Found ament_cmake_uncrustify: 0.12.15 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)
+[1.313s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.643s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.517s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.572s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.574s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.626s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.626s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.626s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.626s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.653s] -- Found PythonExtra: .so  
+[2.752s] -- Found ament_cmake_flake8: 0.12.15 (/opt/ros/humble/share/ament_cmake_flake8/cmake)
+[2.756s] -- Found ament_cmake_pep257: 0.12.15 (/opt/ros/humble/share/ament_cmake_pep257/cmake)
+[2.779s] -- Configuring done
+[2.868s] -- Generating done
+[2.890s] -- Build files have been written to: /home/gouzi/obstacle_race_src/build/realsense2_camera_msgs
+[2.911s] Invoked command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gouzi/obstacle_race_src/src/realsense-ros/realsense2_camera_msgs -DCMAKE_INSTALL_PREFIX=/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs
+[2.916s] Invoking command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/realsense2_camera_msgs -- -j8 -l8
+[3.008s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.016s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.028s] [  3%] Built target ament_cmake_python_copy_realsense2_camera_msgs
+[3.793s] running egg_info
+[3.794s] creating realsense2_camera_msgs.egg-info
+[3.795s] writing realsense2_camera_msgs.egg-info/PKG-INFO
+[3.795s] writing dependency_links to realsense2_camera_msgs.egg-info/dependency_links.txt
+[3.795s] writing top-level names to realsense2_camera_msgs.egg-info/top_level.txt
+[3.796s] writing manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'
+[3.799s] reading manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'
+[3.800s] writing manifest file 'realsense2_camera_msgs.egg-info/SOURCES.txt'
+[3.842s] [  3%] Built target ament_cmake_python_build_realsense2_camera_msgs_egg
+[4.277s] [  5%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/imu_info__functions.c.o[0m
+[4.277s] [  7%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/metadata__functions.c.o[0m
+[4.285s] [  9%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/msg/detail/extrinsics__functions.c.o[0m
+[4.302s] [ 10%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/realsense2_camera_msgs/srv/detail/device_info__functions.c.o[0m
+[4.520s] [ 12%] [32m[1mLinking C shared library librealsense2_camera_msgs__rosidl_generator_c.so[0m
+[4.663s] [ 12%] Built target realsense2_camera_msgs__rosidl_generator_c
+[4.696s] [ 12%] Built target realsense2_camera_msgs__cpp
+[4.696s] [ 14%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.698s] [ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.731s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.731s] [ 20%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.739s] [ 21%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.751s] [ 23%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.087s] [ 25%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/imu_info__type_support_c.cpp.o[0m
+[6.092s] [ 27%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/metadata__type_support_c.cpp.o[0m
+[6.118s] [ 29%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support_c.cpp.o[0m
+[6.820s] [ 30%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o[0m
+[6.948s] [ 32%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/imu_info__type_support.cpp.o[0m
+[7.060s] [ 34%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o[0m
+[7.181s] [ 36%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/msg/metadata__type_support.cpp.o[0m
+[7.353s] [ 38%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/imu_info__type_support.c.o[0m
+[7.402s] [ 40%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/realsense2_camera_msgs/srv/device_info__type_support.cpp.o[0m
+[7.449s] [ 41%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/extrinsics__type_support.c.o[0m
+[7.499s] [ 43%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/realsense2_camera_msgs/srv/detail/device_info__type_support_c.cpp.o[0m
+[7.575s] [ 45%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_c.so[0m
+[7.673s] [ 47%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/msg/detail/metadata__type_support.c.o[0m
+[7.693s] [ 47%] Built target realsense2_camera_msgs__rosidl_typesupport_c
+[7.731s] [ 49%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/realsense2_camera_msgs/srv/detail/device_info__type_support.c.o[0m
+[7.776s] [ 50%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/extrinsics__type_support.cpp.o[0m
+[7.777s] [ 52%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/imu_info__type_support.cpp.o[0m
+[7.804s] [ 54%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/msg/metadata__type_support.cpp.o[0m
+[7.848s] [ 56%] [32m[1mLinking C shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so[0m
+[7.985s] [ 56%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c
+[8.016s] [ 58%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/realsense2_camera_msgs/srv/device_info__type_support.cpp.o[0m
+[8.058s] [ 60%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/extrinsics__type_support.cpp.o[0m
+[8.449s] [ 61%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/imu_info__type_support.cpp.o[0m
+[8.645s] [ 63%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/msg/detail/metadata__type_support.cpp.o[0m
+[8.907s] [ 65%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/extrinsics__type_support.cpp.o[0m
+[8.932s] [ 67%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/msg/detail/dds_fastrtps/metadata__type_support.cpp.o[0m
+[9.002s] [ 69%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/realsense2_camera_msgs/srv/detail/dds_fastrtps/device_info__type_support.cpp.o[0m
+[9.338s] [ 70%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_cpp.so[0m
+[9.386s] [ 72%] [32mBuilding CXX object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/realsense2_camera_msgs/srv/detail/device_info__type_support.cpp.o[0m
+[9.433s] [ 72%] Built target realsense2_camera_msgs__rosidl_typesupport_cpp
+[9.439s] [ 74%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[9.881s] [ 74%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c
+[10.139s] [ 76%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[10.430s] [ 78%] [32m[1mLinking CXX shared library librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[10.465s] [ 78%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_cpp
+[10.732s] [ 78%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp
+[10.782s] [ 78%] Built target realsense2_camera_msgs
+[10.832s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.703s] [ 80%] Built target realsense2_camera_msgs__py
+[13.767s] [ 81%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_imu_info_s.c.o[0m
+[13.769s] [ 85%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_metadata_s.c.o[0m
+[13.770s] [ 83%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/msg/_extrinsics_s.c.o[0m
+[14.133s] [ 87%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/realsense2_camera_msgs/srv/_device_info_s.c.o[0m
+[14.524s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/librealsense2_camera_msgs__rosidl_generator_py.so[0m
+[14.665s] [ 89%] Built target realsense2_camera_msgs__rosidl_generator_py
+[14.720s] [ 90%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.739s] [ 92%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[14.763s] [ 94%] [32mBuilding C object CMakeFiles/realsense2_camera_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[15.104s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.241s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.248s] [ 98%] Built target realsense2_camera_msgs__rosidl_typesupport_introspection_c__pyext
+[15.259s] [100%] [32m[1mLinking C shared library rosidl_generator_py/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.346s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_c__pyext
+[15.352s] [100%] Built target realsense2_camera_msgs__rosidl_typesupport_fastrtps_c__pyext
+[15.401s] Invoked command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gouzi/obstacle_race_src/build/realsense2_camera_msgs -- -j8 -l8
+[15.402s] Invoking command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/realsense2_camera_msgs
+[15.430s] -- Install configuration: ""
+[15.430s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/realsense2_camera_msgs
+[15.431s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.431s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.431s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.h
+[15.432s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.432s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.h
+[15.432s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__functions.h
+[15.432s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__functions.c
+[15.433s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__functions.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.h
+[15.437s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__functions.h
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__functions.c
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__functions.c
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__functions.c
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.h
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__functions.h
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.h
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.h
+[15.438s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_generator_c__visibility_control.h
+[15.442s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.h
+[15.442s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.h
+[15.442s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.sh
+[15.443s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/library_path.dsv
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so
+[15.451s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_c.so" to ""
+[15.451s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.451s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.451s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_c.h
+[15.451s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.451s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_c.h
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.451s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so
+[15.458s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[15.458s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.458s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.458s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.458s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_c.h
+[15.459s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.c
+[15.459s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.459s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[15.459s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.459s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.c
+[15.459s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.c
+[15.459s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.c
+[15.460s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_c.h
+[15.460s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h
+[15.460s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h
+[15.460s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so
+[15.462s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_c.so" to ""
+[15.465s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so
+[15.465s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_c.so" to ""
+[15.465s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.466s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.466s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.466s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__builder.hpp
+[15.467s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__struct.hpp
+[15.467s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.hpp
+[15.467s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__traits.hpp
+[15.467s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/device_info.hpp
+[15.467s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.468s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/metadata.hpp
+[15.468s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.468s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__builder.hpp
+[15.469s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__traits.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__traits.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__builder.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__traits.hpp
+[15.470s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__struct.hpp
+[15.471s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__builder.hpp
+[15.471s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__struct.hpp
+[15.471s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__struct.hpp
+[15.471s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/imu_info.hpp
+[15.476s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/extrinsics.hpp
+[15.476s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[15.476s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.476s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.476s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/dds_fastrtps
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[15.477s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.477s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/dds_fastrtps
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_fastrtps_cpp.hpp
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so
+[15.477s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.477s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs
+[15.477s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv
+[15.477s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail
+[15.477s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__type_support.cpp
+[15.478s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/srv/detail/device_info__rosidl_typesupport_introspection_cpp.hpp
+[15.478s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg
+[15.478s] -- Up-to-date: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail
+[15.478s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp
+[15.482s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp
+[15.482s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__type_support.cpp
+[15.483s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/metadata__type_support.cpp
+[15.483s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/extrinsics__type_support.cpp
+[15.483s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/include/realsense2_camera_msgs/realsense2_camera_msgs/msg/detail/imu_info__rosidl_typesupport_introspection_cpp.hpp
+[15.483s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so
+[15.483s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[15.483s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so
+[15.485s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_typesupport_cpp.so" to ""
+[15.485s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.sh
+[15.490s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/pythonpath.dsv
+[15.490s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.51.1-py3.10.egg-info
+[15.492s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.51.1-py3.10.egg-info/SOURCES.txt
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.51.1-py3.10.egg-info/PKG-INFO
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.51.1-py3.10.egg-info/top_level.txt
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs-4.51.1-py3.10.egg-info/dependency_links.txt
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info.py
+[15.497s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info_s.c
+[15.498s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/__init__.py
+[15.500s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[15.501s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_c.c
+[15.502s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.502s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/librealsense2_camera_msgs__rosidl_generator_py.so
+[15.502s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/_realsense2_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[15.502s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/__init__.py
+[15.503s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg
+[15.503s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata_s.c
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info_s.c
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics_s.c
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata.py
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info.py
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics.py
+[15.506s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/__init__.py
+[15.669s] Listing '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs'...
+[15.669s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/__init__.py'...
+[15.669s] Listing '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg'...
+[15.669s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/__init__.py'...
+[15.670s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_extrinsics.py'...
+[15.670s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_imu_info.py'...
+[15.670s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/msg/_metadata.py'...
+[15.670s] Listing '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv'...
+[15.670s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/__init__.py'...
+[15.670s] Compiling '/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/srv/_device_info.py'...
+[15.693s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.700s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.700s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.700s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.700s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.700s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages/realsense2_camera_msgs/realsense2_camera_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.700s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_py.so
+[15.703s] -- Set runtime path of "/home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/lib/librealsense2_camera_msgs__rosidl_generator_py.so" to ""
+[15.703s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.idl
+[15.704s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.idl
+[15.713s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.idl
+[15.713s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.idl
+[15.713s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/IMUInfo.msg
+[15.713s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Extrinsics.msg
+[15.713s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/msg/Metadata.msg
+[15.714s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo.srv
+[15.714s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Request.msg
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/srv/DeviceInfo_Response.msg
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/ament_index/resource_index/package_run_dependencies/realsense2_camera_msgs
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/ament_index/resource_index/parent_prefix_path/realsense2_camera_msgs
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.sh
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/ament_prefix_path.dsv
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.sh
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/environment/path.dsv
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.bash
+[15.719s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.sh
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.zsh
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/local_setup.dsv
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/ament_index/resource_index/packages/realsense2_camera_msgs
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport.cmake
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport-noconfig.cmake
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[15.720s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport.cmake
+[15.723s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[15.723s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport.cmake
+[15.723s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[15.723s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cppExport.cmake
+[15.724s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[15.724s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[15.724s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[15.727s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[15.727s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport.cmake
+[15.727s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[15.728s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport.cmake
+[15.728s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_pyExport-noconfig.cmake
+[15.728s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake-extras.cmake
+[15.728s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig-version.cmake
+[15.734s] -- Installing: /home/gouzi/obstacle_race_src/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.xml
+[15.746s] Invoked command in '/home/gouzi/obstacle_race_src/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gouzi/obstacle_race_src/build/realsense2_camera_msgs

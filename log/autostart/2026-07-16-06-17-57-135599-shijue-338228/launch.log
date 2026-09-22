@@ -1,0 +1,14 @@
+1784153877.1370399 [INFO] [launch]: All log files can be found below /home/gouzi/obstacle_race_src/log/autostart/2026-07-16-06-17-57-135599-shijue-338228
+1784153877.1374145 [INFO] [launch]: Default logging verbosity is set to INFO
+1784153877.5806816 [INFO] [realsense2_camera_node-1]: process started with pid [338278]
+1784153877.6226642 [INFO] [apriltag_node-2]: process started with pid [338281]
+1784153877.6228843 [INFO] [orange_pole_detector_node-3]: process started with pid [338284]
+1784153877.6229830 [INFO] [limit_bar_duck_test_node-4]: process started with pid [338286]
+1784153877.6230590 [INFO] [orange_hurdle_jump_test_node-5]: process started with pid [338291]
+1784153877.6231322 [INFO] [upstairs_detector_node-6]: process started with pid [338293]
+1784153877.6232023 [INFO] [orange_pole_relative_nav_stable_node-7]: process started with pid [338305]
+1784153877.6232741 [INFO] [obstacle_manager_node-8]: process started with pid [338314]
+1784153877.6233425 [INFO] [obstacle_manager_node-9]: process started with pid [338321]
+1784153877.6234112 [INFO] [nav_executor_node-10]: process started with pid [338339]
+1784153877.6234791 [INFO] [cmd_vel_to_serial_node-11]: process started with pid [338342]
+1784153877.6235464 [INFO] [obstacle_race_supervisor_node-12]: process started with pid [338346]

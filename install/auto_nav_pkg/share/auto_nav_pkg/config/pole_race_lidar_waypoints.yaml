@@ -1,0 +1,267 @@
+# 2026-05-03 12:13 CST
+# Purpose: lidar/Point-LIO-only pole route from the current measured Odometry
+# poses in src/点位.txt. This file is for camera-free obstacle_manager tests.
+# Rollback: use obstacle_waypoints.yaml or restore the previous pole route YAML.
+#
+# Notes:
+# - Point 1 in src/点位.txt is the route start point.
+# - Points 1-15 are all required arrival points.
+# - The measured path is very close to the obstacles, so pass-through arrival is
+#   disabled on every point. Keep tolerances conservative and retest clearance
+#   before increasing speed.
+# - Turn points use mode=6 direct step override:
+#   left=-0.2/right=0.65 turns CCW, left=0.65/right=-0.2 turns CW.
+
+waypoints:
+  - name: pole_start
+    x: 0.0229
+    y: -0.0257
+    yaw_deg: 0.1
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点1：启动点，到点后切 mode=6 开始绕杆。"
+
+  - name: pole_01_entry
+    x: -0.0082
+    y: 0.8732
+    yaw_deg: 4.6
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点2：第一段直行贴近点，必须到点，不允许越线提前判定。"
+
+  - name: pole_01_turn_cw
+    x: 0.0463
+    y: 1.0477
+    yaw_deg: -50.2
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.65
+    direct_step_override_right_norm: -0.2
+    post_arrival_pause_sec: 0.05
+    note: "实测点3：短距离顺时针转向点。"
+
+  - name: pole_02_entry
+    x: 0.6699
+    y: 1.5944
+    yaw_deg: -48.4
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点4：第二段贴近点。"
+
+  - name: pole_02_turn_ccw
+    x: 0.6742
+    y: 1.7619
+    yaw_deg: 61.9
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: -0.2
+    direct_step_override_right_norm: 0.65
+    post_arrival_pause_sec: 0.05
+    note: "实测点5：短距离逆时针转向点。"
+
+  - name: pole_03_entry
+    x: -0.6808
+    y: 2.3989
+    yaw_deg: 62.4
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点6：第三段贴近点。"
+
+  - name: pole_03_turn_cw
+    x: -0.6021
+    y: 2.5905
+    yaw_deg: -37.5
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.65
+    direct_step_override_right_norm: -0.2
+    post_arrival_pause_sec: 0.05
+    note: "实测点7：短距离顺时针转向点。"
+
+  - name: pole_04_entry
+    x: -0.1087
+    y: 3.2423
+    yaw_deg: -37.9
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点8：第四段贴近点。"
+
+  - name: pole_04_turn_cw
+    x: 0.1197
+    y: 3.0917
+    yaw_deg: -157.4
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.65
+    direct_step_override_right_norm: -0.2
+    post_arrival_pause_sec: 0.05
+    note: "实测点9：短距离顺时针转向点。"
+
+  - name: pole_05_entry
+    x: 0.6858
+    y: 1.7982
+    yaw_deg: -156.5
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点10：第五段贴近点。"
+
+  - name: pole_05_turn_ccw
+    x: 0.9002
+    y: 1.8589
+    yaw_deg: -41.0
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: -0.2
+    direct_step_override_right_norm: 0.65
+    post_arrival_pause_sec: 0.05
+    note: "实测点11：短距离逆时针转向点。"
+
+  - name: pole_06_entry
+    x: 1.9386
+    y: 3.2121
+    yaw_deg: -36.6
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点12：第六段贴近点。"
+
+  - name: pole_06_turn_cw
+    x: 2.1809
+    y: 3.0906
+    yaw_deg: -149.4
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: 0.65
+    direct_step_override_right_norm: -0.2
+    post_arrival_pause_sec: 0.05
+    note: "实测点13：短距离顺时针转向点。"
+
+  - name: pole_exit_approach
+    x: 2.5477
+    y: 2.4665
+    yaw_deg: -153.2
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.20
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    post_arrival_pause_sec: 0.05
+    note: "实测点14：出口接近点。"
+
+  - name: pole_exit_turn_ccw
+    x: 2.6876
+    y: 2.5055
+    yaw_deg: -82.7
+    frame_id: camera_init
+    mode_on_arrival: 6
+    path_correction_profile_on_arrival: 1
+    arrival_tolerance: 0.18
+    use_yaw_tolerance: true
+    yaw_tolerance_deg: 6.0
+    allow_goal_pass_through: false
+    smooth_transition: false
+    use_direct_step_override: true
+    direct_step_override_mode: 6
+    direct_step_override_left_norm: -0.2
+    direct_step_override_right_norm: 0.65
+    post_arrival_pause_sec: 0.10
+    note: "实测点15：绕杆出口最终转向点。流程结束后 obstacle_manager 会恢复 finish_mode。"

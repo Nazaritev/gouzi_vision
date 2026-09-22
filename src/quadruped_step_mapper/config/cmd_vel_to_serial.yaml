@@ -1,0 +1,315 @@
+/**:
+  ros__parameters:
+    # input_cmd_vel_topic: "/cmd_vel"
+    input_cmd_vel_topic: "/race_cmd_vel"
+
+    step_frequency_hz: 27.0
+    stance_half_width_m: 0.18
+    max_linear_speed_mps: 1.0
+    max_angular_speed_rps: 1.20
+    min_effective_linear_speed_mps: 0.01
+    min_effective_angular_speed_rps: 0.05
+    # 1.0 m/s at 27 Hz -> 1.0 / 27 = 0.03704 m per step.
+    max_step_length_m: 0.03704
+    max_step_yaw_rad: 0.35
+    scale_to_limits: true
+
+    serial_device: "/dev/ttyUSB0"
+    baud_rate: 115200
+    reconnect_interval_sec: 1.0
+    transmit_rate_hz: 27.0
+    cmd_vel_timeout_sec: 0.50
+    mode: 0
+    fixed_step_override_enabled: true
+    # 单模式旧参数仍兼容；若同时提供下面三组数组，则优先按数组做多模式映射。
+    fixed_step_override_mode: 1
+    fixed_step_override_left_norm: 1.0
+    fixed_step_override_right_norm: 1.0
+    fixed_step_override_modes: [1, 6]
+    fixed_step_override_left_norms: [1.0, -0.35]
+    fixed_step_override_right_norms: [1.0, 0.60]
+    goal_topic: "/goal_pose"
+    path_reference_start_topic: "/serial_path_reference_start"
+    path_reference_topic: "/serial_path_reference"
+    path_reference_start_timeout_sec: 0.50
+    odom_topic: "/Odometry"
+    # 2026-05-01: serial-side yaw corrections must use the same controller yaw
+    # convention as NavExecutor after the lidar/body 90-degree rotation.
+    pose_yaw_offset_deg: 90.0
+    # odom_y_correction_enabled: true
+    odom_y_correction_enabled: false
+    odom_y_correction_use_goal_y: true
+    odom_y_correction_modes: [0, 1]
+    odom_y_correction_deadband_m: 0.05
+    odom_y_correction_gain_norm_per_m: 6.0
+    odom_y_correction_max_norm: 0.40
+    odom_y_correction_positive_only: false
+    odom_y_correction_stale_timeout_sec: 0.50
+    odom_y_correction_goal_distance_min_m: 0.25
+    odom_y_correction_max_abs_wz_rps: 0.35
+    # 2026-05-08: obstacle wall_jump_prep uses mode=2 crouch walking. Keep the
+    # dog on the active goal segment line while crouching so it does not arc
+    # sideways before the jump point.
+    path_lateral_correction_enabled: true
+    # path_lateral_correction_modes: [0]
+    # mode=1 is direct down-stair walking; keep the base stride, but allow
+    # small left/right trims to prevent drifting into stair edges.
+    path_lateral_correction_modes: [0, 2, 5]
+    # 2026-05-22: wall_jump_prep 实测 profile 打开后，mode=2 若直接切到
+    # [1.0,0.1]/[0.1,1.0] 会和上层直驱 override 叠加成过猛扭头，line_lateral 反而放大。
+    # 改为让 mode=2 走比例修正，不再使用这一组硬切高低腿模板。
+    # ROS 2 参数对空整型数组在部分环境下会报 “No parameter value set”，
+    # 这里放一个永不匹配的占位 mode，效果等价于关闭 direct override 模板。
+    path_lateral_direct_override_modes: [-999]
+    path_lateral_direct_high_norm: 1.0
+    path_lateral_direct_low_norm: 0.1
+    path_lateral_correction_deadband_m: 0.05  #小于这个值不修
+    # 2026-05-24: profile=1 在上坡日志中把 -0.35m 误差放大成 0.30+
+    # 步长差，并和 NavExecutor yaw 叠加到单侧 1.0。普通 profile 只保留
+    # 小幅回线，大修正必须显式使用 profile=2。
+    # rollback: gain=1.0, max_norm=0.60, max_abs_wz=0.90。
+    path_lateral_correction_gain_norm_per_m: 0.8 #偏离一米时给多大左右步长差
+    path_lateral_correction_max_norm: 0.18  #最大修正幅度
+    # 2026-05-23: wall_jump_prep 实机日志中 path_lat_err<0 时左步长被压低、右步长拉满，
+    # line_lateral 反而继续增大；翻转普通 profile 的横向修正方向。
+    path_lateral_correction_sign: -1.0
+    path_lateral_correction_stale_timeout_sec: 0.50
+    path_lateral_correction_goal_distance_min_m: 0.10 #李目标点距离停止
+    # Crouch/down-stair recovery often carries moderate Nav2 yaw command;
+    # allow correction under those commands instead of disabling it too early.
+    path_lateral_correction_max_abs_wz_rps: 0.45
+    path_lateral_correction_min_segment_length_m: 0.30
+    # 2026-05-01: 上坡区间复用 uphill_step_floor 段锁存，单独加强路径横向纠偏。
+    # 非上坡区间仍使用上面的保守参数，避免跳跃/自旋后误修。
+    uphill_path_lateral_correction_enabled: true
+    # profile=2 is used both for uphill and the narrow bridge: react before
+    # lateral drift becomes visible in the gait.
+    # 2026-05-23: strong profile=3 correction made wall_jump_prep visibly twist
+    # under mode=2. Use a moderate loop; if the sign is wrong, fix sign/profile
+    # instead of increasing gain.
+    uphill_path_lateral_correction_deadband_m: 0.03
+    uphill_path_lateral_correction_gain_norm_per_m: 1.2
+    uphill_path_lateral_correction_max_norm: 0.24
+    # 2026-05-24: 实测 profile=2 强修正方向与普通 profile 相反；
+    # 给 body_left_m 负偏置后仍往右侧修。强修正符号跟随普通 profile，
+    # 避免切到 profile=2 后横向回线反向。
+    # rollback: 改回 1.0。
+    uphill_path_lateral_correction_sign: -1.0
+    uphill_path_lateral_correction_goal_distance_min_m: 0.12
+    uphill_path_lateral_correction_max_abs_wz_rps: 1.20
+    # 2026-05-01: mode=0 normal walking can drift after jumps/turns.
+    # This correction uses the active goal segment heading, not the YAML final yaw,
+    # so it helps recover straight-line posture without fighting deliberate Nav2 turns.
+    path_yaw_correction_enabled: true
+    # 2026-05-23: mode=2 crouch gait is sensitive to sustained left/right
+    # yaw differentials. Keep crouch on path_lateral only; mode=0 still uses
+    # path yaw for normal uphill/bridge walking.
+    # rollback: set back to [0, 2] if crouch needs heading-based correction.
+    path_yaw_correction_modes: [0]
+    path_yaw_direct_high_norm: 1.0
+    path_yaw_direct_low_norm: 0.1
+    path_yaw_correction_deadband_deg: 5.0
+    # 2026-05-24: 普通 yaw 修正在定位抖动后曾达到 0.60 饱和，
+    # 直接造成左右腿饱和/反向。普通 profile 降为微调，强回正走 profile=2。
+    # rollback: gain=1.40, max_norm=0.60, max_abs_wz=0.90。
+    path_yaw_correction_gain_norm_per_rad: 1.00
+    path_yaw_correction_max_norm: 0.20
+    path_yaw_correction_stale_timeout_sec: 0.50
+    path_yaw_correction_goal_distance_min_m: 0.10
+    path_yaw_correction_max_abs_wz_rps: 0.45
+    path_yaw_correction_min_segment_length_m: 0.50
+    # 2026-05-01: 串口侧路径修正改为 waypoint 区间锁存，避免跳跃后第6->7点与 Nav2 急转叠加抽搐。
+    # 旧行为等价于 default_path_correction_profile=1：所有 mode 匹配区间都使用普通路径修正。
+    # profile: 0=关闭 path lateral/yaw 修正, 1=普通修正, 2=上坡强修正。
+    path_correction_profile_topic: "/race_manager/path_correction_profile"
+    default_path_correction_profile: 0
+    path_correction_new_goal_delay_sec: 0.10
+    # 2026-05-22
+    # 修改目的: 上坡段横向误差往往滞后于机身偏航，先让串口侧按目标线方向
+    # 做小角度 yaw 回正，避免还没累计到 5cm 横向误差就已经从坡边掉出。
+    # 2026-05-24: 上坡日志显示 line_lateral 只有几厘米，但 yaw 修正会持续把
+    # 右步长顶到 1.0，导致视觉上右偏。把专用 yaw 降成大偏航兜底，小角度交给
+    # NavExecutor 和 lateral 修正。
+    # 回退方式: 设回 false，即恢复仅依赖普通 path_yaw/path_lateral 或上层 nav_executor。
+    uphill_path_yaw_correction_enabled: true
+    # 上坡强 yaw 只给 mode=0 使用。mode=2 趴下直驱对左右高低腿很敏感，
+    # 继续用普通 path_yaw 小修正，避免像 wall_jump_prep 那样越修越横漂。
+    uphill_path_yaw_correction_modes: [0]
+    uphill_path_yaw_correction_deadband_deg: 3.0
+    uphill_path_yaw_correction_gain_norm_per_rad: 1.5
+    uphill_path_yaw_correction_max_norm: 0.30
+    uphill_path_yaw_correction_goal_distance_min_m: 0.08
+    uphill_path_yaw_correction_max_abs_wz_rps: 1.20
+    # 2026-04-30: 平台自旋后趴下行走会出现姿态慢慢歪的问题。
+    # 这里新增 mode=2 专用 yaw 姿态闭环：用 goal yaw - odom yaw 直接做左右步长差修正，
+    # 让趴下阶段即使开始歪了，也能在行走中修回目标姿态。
+    # 2026-05-23: path_yaw 已从 mode=2 移除；实机日志显示横向误差常在 1~2cm
+    # 死区内，但 yaw_err 会先涨到 5~9deg，导致趴下段斜着走。这里只打开低增益
+    # goal-yaw 姿态闭环，不恢复 path_yaw 的大幅路径航向修正。
+    # rollback: 设回 false，即恢复纯 path_lateral 的趴下直驱。
+    crouch_yaw_correction_enabled: false
+    crouch_yaw_correction_modes: [2]
+    # 2026-05-23: wall_jump_prep 日志显示 path_lateral 和 crouch_yaw 在 10cm+
+    # 横向误差时经常相互抵消；把 yaw 项降为微调，让参考线/AprilTag 横向纠偏优先。
+    crouch_yaw_correction_deadband_deg: 2.0
+    crouch_yaw_correction_gain_norm_per_rad: 1.20
+    crouch_yaw_correction_max_norm: 0.08
+    # 2026-05-23: platform_center_spin 到点后仍可能带入 6~14deg 初始 yaw 误差；
+    # 前段短时放大 mode=2 yaw 回正，进入参考线后自动回到 0.08 微调。
+    crouch_yaw_initial_boost_enabled: true
+    crouch_yaw_initial_boost_duration_sec: 1.20
+    crouch_yaw_initial_boost_progress_m: 0.90
+    crouch_yaw_initial_boost_min_error_deg: 4.0
+    crouch_yaw_initial_boost_max_norm: 0.18
+    crouch_yaw_lateral_priority_enabled: false
+    crouch_yaw_lateral_priority_error_threshold_m: 0.07
+    crouch_yaw_lateral_priority_max_norm: 0.025
+    crouch_yaw_correction_stale_timeout_sec: 1.50
+    crouch_yaw_correction_goal_distance_min_m: 0.10
+    crouch_yaw_correction_max_abs_wz_rps: 1.20
+    # 2026-05-07: 趴下导航前进段在实机上偏慢，这里单独给 mode=2 的前进输出加一个公共偏置。
+    # 只在“前进且非原地转”的情况下生效：
+    # 1) vx 必须为正
+    # 2) wz 不能太大
+    # 3) 左右步长都不能已经是反向步
+    # 4) forward_step 至少达到 min_forward_step_norm
+    # 因此不会影响 [2,0,0] 停止，也不会去干扰 mode=2 原地转。
+    crouch_forward_bias_enabled: true
+    crouch_forward_bias_modes: [2]
+    crouch_forward_bias_norm: 0.40
+    crouch_forward_bias_min_forward_step_norm: 0.05
+    crouch_forward_bias_max_abs_wz_rps: 0.35
+    # 2026-05-14: 桥入口接近点时 NavExecutor 会在前进中给到较大 wz，
+    # 右侧步长可能被压成负数，看起来像走到一半原地拧住。打开后只在
+    # vx>0 且 mode 匹配时给左右同时加正向偏置，mode=6 原地自旋不受影响。
+    same_direction_turn_enabled: true
+    # same_direction_turn_modes: [0]
+    same_direction_turn_modes: [0, 2, 5]
+    same_direction_turn_min_wz_rps: 0.15
+    same_direction_turn_min_norm: 0.04
+    # 2026-05-04: mode=6 实机对“左右一正一负且幅值接近”的输出很敏感，
+    # 例如 [-0.2,0.2]、[-0.6,0.6] 都会抽搐。对指定 mode 的反向步长统一重排成
+    # 非对称模板：ccw -> [-small,+large], cw -> [+large,-small]。
+    # 2026-05-07: mode=2 趴下接近点位时也会因为姿态修正/到点逼近偶发发出
+    # [-0.42,+0.42] 这种危险对称反向步长，同样纳入整形。
+    # 回退点：设 opposite_sign_turn_shape_enabled=false，或把对应 mode 从 modes 里去掉。
+    opposite_sign_turn_shape_enabled: true
+    # mode=6 现在用 fixed_step_override / waypoint direct_step_override 精确给自旋步长；
+    # 不再经过这里重排，否则 [-0.4,0.85] 会被改回 [-0.2,0.65]。
+    opposite_sign_turn_shape_modes: [2]
+    opposite_sign_turn_shape_small_norm: 0.20
+    opposite_sign_turn_shape_large_norm: 0.65
+    # 2026-06-16: bridge_entry/bridge_exit 的 yaw recovery 会通过 mode=0 的
+    # step_override 发出很小的反向差速；如果再被最小步长地板抬成 [-0.20,+0.20]，
+    # 实机会出现明显抽动。这里仅对这类“小反向直驱覆盖”做非对称整形，
+    # 并统一保证“负侧幅值更小”：
+    # ccw -> [-0.20,+0.25], cw -> [+0.25,-0.20]。
+    # 回退点：设 enabled=false。
+    step_override_small_opposite_sign_shape_enabled: true
+    step_override_small_opposite_sign_shape_modes: [0]
+    step_override_small_opposite_sign_shape_small_norm: 0.15
+    step_override_small_opposite_sign_shape_large_norm: 0.20
+    # AprilTag 入口近距离对齐走 /race_cmd_vel，小角速度会被 mode=0 最小步长
+    # 地板抬成 [-0.20,+0.20]。这里只整形非 step_override 的小幅反向步长，
+    # 负侧偏小，避免入口对齐原地转得太硬。
+    # 回退点：设 enabled=false。
+    cmd_vel_small_opposite_sign_shape_enabled: true
+    cmd_vel_small_opposite_sign_shape_modes: [0]
+    cmd_vel_small_opposite_sign_shape_small_norm: 0.18
+    cmd_vel_small_opposite_sign_shape_large_norm: 0.20
+    # 趴下/低姿态行走接近目标时，Nav2 会主动降速；低于 0.4 的归一化步长在实机上容易变成几乎不动。
+    # 这里只抬高非零输出，超时/到点停止 [mode,0,0] 和直接步长覆盖不会被强行改成前进。
+    min_output_step_norm_enabled: true
+    # min_output_step_norm_modes: [2, 5]
+    # 2026-04-30 reverted: mode=5 已被下位机绑定，不能再作为上坡速度滤波触发条件。
+    # 2026-04-30 old: 上坡 mode=5 也复用同一套非零步长滤波；具体阈值由下面 override 覆盖为 0.75。
+    # min_output_step_norm_modes: [2, 5]
+    # min_output_step_norm_modes: [2]
+    min_output_step_norm_modes: [2]
+    min_output_step_norm: 0.10
+    # 2026-04-30 reverted: mode=5 下位机绑定，撤销 mode=5 的单独最小步长覆盖。
+    # min_output_step_norm_override_modes: [5]
+    # min_output_step_norm_override_norms: [0.75]
+    # ROS2 参数 YAML 不能可靠解析空数组类型；注释掉后使用节点代码里的默认空 vector。
+    # mode=0 Nav2 bridge approach can output tiny nonzero steps near costmap
+    # oscillations. Floor only nonzero commands; [0,0] stop still remains stop.
+    # 2026-05-03 11:28 CST: HSV pole route uses mode=6 through NavExecutor.
+    # Field logs showed near-goal mode=6 outputs around 0.08-0.12 norm, which
+    # can stall the robot until it is pushed by hand. Keep zero-stop unchanged,
+    # but lift nonzero mode=6 steps to 0.18. Rollback: remove mode 6 from these
+    # two arrays if close-range HSV walking starts overshooting.
+    min_output_step_norm_override_modes: [0, 6]
+    min_output_step_norm_override_norms: [0.20, 0.18]
+    # 2026-05-23: 上坡实测偶发在 roll 还不够大时就已经被 Nav2 压成很小步长，
+    # 机身前倾但腿不够大，容易原地打滑。新增一个“只在上坡段锁存开启时”的
+    # 中等步长地板，先保证有足够前进量；真正检测到坡面滚转后，下面更强的
+    # uphill_pitch_step_floor 仍会接管到更高的 0.85。
+    uphill_segment_step_floor_enabled: true
+    uphill_segment_step_floor_modes: [0, 7]
+    uphill_segment_step_floor_forward_only: true
+    uphill_segment_step_floor_min_norm: 0.80
+    uphill_segment_step_floor_goal_distance_min_m: 0.60
+    uphill_segment_step_floor_stale_timeout_sec: 0.50
+    uphill_segment_step_floor_max_abs_wz_rps: 1.20
+    # 2026-04-30: 上坡实际仍使用 mode=0，因此改为 mode=0 + odom 姿态触发速度滤波。
+    # 2026-05-01: 雷达/body 旋转 90 度后，上坡倾角主要落在 roll；代码内部已改为用 odom roll 判定。
+    # 触发后这是“正向速度下限”：前进时左右步长低于 +0.85 的都会直接抬到 +0.85。
+    # 参数名保留 pitch 是为了兼容旧配置；实际含义现在是 roll 阈值。
+    uphill_pitch_step_floor_enabled: true
+    uphill_pitch_step_floor_require_segment_enable: true
+    uphill_pitch_step_floor_modes: [0, 7]
+    uphill_pitch_step_floor_min_pitch_deg: 2.0
+    uphill_pitch_step_floor_use_abs_pitch: true
+    uphill_pitch_step_floor_forward_only: true
+    uphill_pitch_step_floor_min_norm: 0.70
+    uphill_pitch_step_floor_stale_timeout_sec: 0.50
+    # 2026-05-01 rollback point: 曾临时收紧到 0.35，只允许基本直行时触发。
+    # uphill_pitch_step_floor_max_abs_wz_rps: 0.35
+    # 2026-05-23: 现场上坡修正时 wz 常超过 0.4rad/s，强步长地板被过早关闭。
+    # 放宽到 1.20，让上坡纠偏时也保持足够腿长；极端原地急转仍会被上层 mode/goal 控制接管。
+    uphill_pitch_step_floor_max_abs_wz_rps: 1.20
+    step_override_topic: "/serial_step_override"
+    uphill_step_floor_state_topic: "/race_manager/uphill_step_floor_enabled"
+    fixed_step_override_state_topic: "/motion_bridge/fixed_step_override_enabled"
+    # obstacle_manager 以 0.10s 周期刷新 direct step override。
+    # 放宽到 1.0s，避免调度/日志抖动时 wall_jump_prep 短暂回退到 /race_cmd_vel 导致趴下段转向。
+    step_override_timeout_sec: 1.00
+
+    mode_topic: "/dog_mode_current"
+    mode_echo_topic: "/dog_mode_feedback/current"
+    serial_connected_topic: "/motion_bridge/serial_connected"
+    start_signal_rx_enabled: true
+    start_signal_topic: "/motion_bridge/start_signal"
+    start_signal_token: "start"
+    action_ack_topic: "/motion_bridge/action_ack"
+    jumping_signal_token: "jumping"
+    start_signal_case_sensitive: false
+    log_serial_rx_frames: false
+    serial_rx_max_frame_len: 128
+    output_precision: 3
+    send_zero_on_timeout: true
+
+    # 日志策略：
+    # 1) serial tx 只在内容变化时立即打印，若长时间不变则按最小间隔补打一条。
+    # 2) step_debug 只在 mode / 步长 / cmd_vel 变化明显时打印，若长时间稳定则按固定间隔补打一条。
+    log_serial_messages: true
+    log_step_debug: true
+    # 2026-05-18: mode=2 趴下修正需要最终能到 [1.0,0.1]，但不能瞬间跳变。
+    # 这里限制每个串口周期左右步长最多变化 0.12；27Hz 下从 0.9 到 0.1
+    # 约 0.25s 爬完。调大更猛，调小更顺。
+    output_step_slew_limit_enabled: true
+    output_step_slew_limit_modes: [-999]
+    output_step_slew_limit_max_delta_norm: 0.12
+    serial_log_min_interval_sec: 2.0
+    step_debug_log_interval_sec: 3.0
+    serial_log_change_threshold: 0.08
+    step_log_change_threshold: 0.35
+
+    # Default string format:
+    #   [mode,left_step,right_step]
+    # Example:
+    #   [0,-0.638,1.000]
+    # Step values are normalized signed ratios in the closed interval [-1.0, 1.0].
+    message_prefix: "["
+    field_separator: ","
+    message_suffix: "]\n"

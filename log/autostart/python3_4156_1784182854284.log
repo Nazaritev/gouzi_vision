@@ -1,0 +1,43 @@
+[INFO] [1784182855.441383860] [obstacle_race_supervisor]: state=WAIT_START
+[INFO] [1784182855.441770175] [obstacle_race_supervisor]: 初始化完成，等待电控串口 [start] 信号后开始下楼梯流程。
+[INFO] [1784182868.714756789] [obstacle_race_supervisor]: state=STAIRS_ACTIVE
+[INFO] [1784182868.715094445] [obstacle_race_supervisor]: 收到电控串口 [start]，开始固定下楼梯分支。
+[INFO] [1784182876.910383652] [obstacle_race_supervisor]: state=SLOPE_ALIGN
+[INFO] [1784182876.910839625] [obstacle_race_supervisor]: 进入斜坡前 yaw 对齐: reason=stairs_finished, target=0.0deg, tolerance=1.5deg, hold=0.50s。
+[INFO] [1784182876.942674442] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.02s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182876.943143350] [obstacle_race_supervisor]: 斜坡前 yaw 对齐保持中: yaw_err=-0.3deg, stable=0.00/0.50s。
+[INFO] [1784182877.442931116] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.02s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182877.443645797] [obstacle_race_supervisor]: 斜坡前 yaw 对齐中: yaw_err=1.5deg, direction=ccw_fine, override=[6,-0.050,0.100]。
+[INFO] [1784182877.976156240] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182877.976803471] [obstacle_race_supervisor]: 斜坡前 yaw 对齐保持中: yaw_err=-0.2deg, stable=0.13/0.50s。
+[INFO] [1784182878.376568039] [obstacle_race_supervisor]: 斜坡前 yaw 对齐完成: yaw_err=0.3deg, stable=0.53s。
+[INFO] [1784182878.377339862] [obstacle_race_supervisor]: 锁存斜坡对齐参考: target_yaw=0.0deg, pose_yaw=-0.3deg, pose=(0.029,1.438), align_duration=1.47s, frame=camera_init。
+[INFO] [1784182878.378401531] [obstacle_race_supervisor]: 发布斜坡路线 0deg 基准: yaw=0.0deg, pose=(0.029,1.438), frame=camera_init。
+[INFO] [1784182878.378792497] [obstacle_race_supervisor]: state=POST_STAIRS_SLOPE_APPROACH
+[INFO] [1784182878.380157132] [obstacle_race_supervisor]: 进入固定斜坡入口前进: distance=0.00m, override=[0,0.500,0.500], yaw_target=0.0deg, yaw_correction=True。
+[INFO] [1784182878.409587910] [obstacle_race_supervisor]: 固定斜坡入口前进起点=(0.031,1.439)。
+[INFO] [1784182878.410071549] [obstacle_race_supervisor]: 固定斜坡入口前进完成: travel=0.000m >= 0.000m, yaw_err=0.4deg, target=0.0deg。
+[INFO] [1784182878.410570100] [obstacle_race_supervisor]: state=SEARCH
+[INFO] [1784182878.410972040] [obstacle_race_supervisor]: 进入搜索模式: reason=post_stairs_entry_done, walk=[0,0.500,0.500]。
+[INFO] [1784182878.443037538] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784182878.443475655] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784182878.443879121] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784182878.476160013] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.00s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182878.977362987] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784182878.977920424] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784182879.443155927] [obstacle_race_supervisor]: 搜索中 yaw_err=0.0deg, override=[0,0.500,0.500]。
+[INFO] [1784182879.443702981] [obstacle_race_supervisor]: 斜坡 roll 候选(首帧已锁存): current_roll=8.2deg, hold=0.00/0.50s。
+[INFO] [1784182879.519988338] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.03s, last_tf_children=[camera_link->camera_color_frame,camera_color_frame->camera_color_optical_frame], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182879.520452505] [obstacle_race_supervisor]: 限高杆 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->limit_bar_right。
+[INFO] [1784182879.525916404] [obstacle_race_supervisor]: 高墙 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, expected_tf=camera_color_optical_frame->hurdle_right。
+[INFO] [1784182879.709922437] [obstacle_race_supervisor]: 斜坡 roll 候选(首帧已锁存): current_roll=9.4deg, hold=0.27/0.50s。
+[INFO] [1784182879.978468116] [obstacle_race_supervisor]: 斜坡 roll 触发: first_sample>=8.0deg, current_roll=13.9deg, hold=0.54s。
+[INFO] [1784182879.979340792] [obstacle_race_supervisor]: state=SLOPE_ALIGN
+[INFO] [1784182879.979748859] [obstacle_race_supervisor]: 进入斜坡前 yaw 对齐: reason=slope_roll_detected, target=0.0deg, tolerance=1.5deg, hold=0.50s。
+[INFO] [1784182880.009483524] [obstacle_race_supervisor]: 斜坡前 yaw 对齐保持中: yaw_err=-1.0deg, stable=0.00/0.50s。
+[INFO] [1784182880.043582266] [obstacle_race_supervisor]: 上台阶 AprilTag 已检测但暂未进入分支: tf_samples=0/1, latest_tf_age=none, det_age=none, ids=none, tf_topic_age=0.02s, last_tf_children=[camera_init->body], expected_tf=camera_color_optical_frame->upstairs。
+[INFO] [1784182880.510559954] [obstacle_race_supervisor]: 斜坡前 yaw 对齐完成: yaw_err=-0.5deg, stable=0.50s。
+[INFO] [1784182880.511297749] [obstacle_race_supervisor]: 锁存斜坡对齐参考: target_yaw=0.0deg, pose_yaw=0.5deg, pose=(0.023,1.915), align_duration=0.53s, frame=camera_init。
+[INFO] [1784182880.512106921] [obstacle_race_supervisor]: 发布斜坡路线 0deg 基准: yaw=0.0deg, pose=(0.023,1.915), frame=camera_init。
+[INFO] [1784182880.512557455] [obstacle_race_supervisor]: state=SLOPE_ACTIVE
+[INFO] [1784182880.513019233] [obstacle_race_supervisor]: 按 Odometry roll 进入斜坡木桥分支: roll=13.9deg, threshold=8.0deg。

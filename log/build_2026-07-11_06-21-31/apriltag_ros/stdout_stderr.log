@@ -1,0 +1,61 @@
+-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_components: 16.0.18 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found apriltag_msgs: 2.0.1 (/home/gouzi/obstacle_race_src/install/apriltag_msgs/share/apriltag_msgs/cmake)
+-- Found tf2_ros: 0.25.19 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gouzi/obstacle_race_src/build/apriltag_ros
+Consolidate compiler generated dependencies of target tags
+Consolidate compiler generated dependencies of target conversion
+Consolidate compiler generated dependencies of target apriltag_node
+[ 20%] Built target tags
+[ 40%] Built target conversion
+[ 50%] Linking CXX executable apriltag_node
+Consolidate compiler generated dependencies of target pose_estimation
+[ 70%] Built target pose_estimation
+Consolidate compiler generated dependencies of target AprilTagNode
+[ 80%] Building CXX object CMakeFiles/AprilTagNode.dir/src/AprilTagNode.cpp.o
+[ 90%] Built target apriltag_node
+[100%] Linking CXX shared library libAprilTagNode.so
+[100%] Built target AprilTagNode
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/lib/apriltag_ros/apriltag_node
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/library_path.sh
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/library_path.dsv
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/lib/libAprilTagNode.so
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/cfg/tags_36h11.yaml
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/cfg/tags_36h11_limit_bar_right_test.yaml
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/launch/camera_36h11.launch.yml
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/ament_index/resource_index/package_run_dependencies/apriltag_ros
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/ament_index/resource_index/parent_prefix_path/apriltag_ros
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/ament_prefix_path.sh
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/ament_prefix_path.dsv
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/path.sh
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/environment/path.dsv
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/local_setup.bash
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/local_setup.sh
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/local_setup.zsh
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/local_setup.dsv
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/package.dsv
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/ament_index/resource_index/packages/apriltag_ros
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/ament_index/resource_index/rclcpp_components/apriltag_ros
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/cmake/apriltag_rosConfig.cmake
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/cmake/apriltag_rosConfig-version.cmake
+-- Symlinking: /home/gouzi/obstacle_race_src/install/apriltag_ros/share/apriltag_ros/package.xml

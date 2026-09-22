@@ -1,0 +1,27 @@
+[INFO] [1784186464.793569437] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1784186464.797748322] [planner_server]: Creating
+[INFO] [1784186464.815784638] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1784186464.816262454] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1784186464.866320420] [planner_server]: Configuring
+[INFO] [1784186464.866352831] [global_costmap.global_costmap]: Configuring
+[INFO] [1784186464.870340207] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[INFO] [1784186464.873444885] [global_costmap.global_costmap]: Subscribed to Topics: livox_cloud
+[INFO] [1784186464.875681980] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1784186464.875718650] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1784186464.876120831] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1784186464.891324675] [planner_server]: Created global planner plugin GridBased of type nav2_smac_planner/SmacPlanner2D
+[INFO] [1784186464.891377839] [planner_server]: Configuring GridBased of type SmacPlanner2D
+[INFO] [1784186464.893711865] [planner_server]: Configured plugin GridBased of type SmacPlanner2D with tolerance 0.15, maximum iterations 1000000, max on approach iterations 1000, and allowing unknown traversal.
+[INFO] [1784186464.893762612] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1784186467.311257736] [planner_server]: Activating
+[INFO] [1784186467.311302611] [global_costmap.global_costmap]: Activating
+[INFO] [1784186467.311316366] [global_costmap.global_costmap]: Checking transform
+[INFO] [1784186467.311407704] [global_costmap.global_costmap]: start
+[INFO] [1784186467.821694342] [planner_server]: Activating plugin GridBased of type SmacPlanner2D
+[INFO] [1784186467.823900947] [planner_server]: Creating bond (planner_server) to lifecycle manager.

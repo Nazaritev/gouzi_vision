@@ -1,0 +1,17 @@
+[INFO] [1783921747.383038214] [upstairs_detector]: state=DETECTING
+[INFO] [1783921747.383418720] [upstairs_detector]: upstairs_detector started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, target_band_from_bottom=1, trigger_distance=0.62m, hsv=[30, 40, 30]-[100, 255, 255]
+[INFO] [1783921748.441863607] [upstairs_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921748.443365129] [upstairs_detector]: [1;34m最近上台阶: dist=1.292m, band_from_bottom=1, lateral=-0.008m, vertical=0.333m, pixel=(211.5,195.0), box=424x25, area=10600, depth_px=3341, bands=1, trigger=False[0m
+[INFO] [1783921749.514656419] [upstairs_detector]: [1;34m最近上台阶: dist=1.009m, band_from_bottom=1, lateral=0.014m, vertical=0.312m, pixel=(217.4,210.6), box=424x59, area=24160, depth_px=22371, bands=1, trigger=False[0m
+[INFO] [1783921750.569799388] [upstairs_detector]: [1;34m最近上台阶: dist=0.997m, band_from_bottom=1, lateral=0.016m, vertical=0.309m, pixel=(218.2,210.9), box=424x60, area=23182, depth_px=21500, bands=1, trigger=False[0m
+[INFO] [1783921751.566608071] [upstairs_detector]: [1;34m最近上台阶: dist=0.843m, band_from_bottom=1, lateral=0.151m, vertical=0.311m, pixel=(267.5,228.6), box=424x22, area=4271, depth_px=4264, bands=1, trigger=False[0m
+[INFO] [1783921752.572746557] [upstairs_detector]: [1;34m最近上台阶: dist=0.926m, band_from_bottom=1, lateral=0.075m, vertical=0.314m, pixel=(237.9,219.6), box=424x40, area=7536, depth_px=7323, bands=1, trigger=False[0m
+[INFO] [1783921753.569108358] [upstairs_detector]: [1;34m最近上台阶: dist=0.899m, band_from_bottom=1, lateral=0.009m, vertical=0.311m, pixel=(216.3,221.8), box=400x27, area=5253, depth_px=4592, bands=1, trigger=False[0m
+[INFO] [1783921754.565006001] [upstairs_detector]: [0;33m未检测到有效上台阶: bands=0, target_band_from_bottom=1, mask_px=2666, frame=92, hsv=[30, 40, 30]-[100, 255, 255][0m
+[INFO] [1783921755.571200862] [upstairs_detector]: [1;34m最近上台阶: dist=0.977m, band_from_bottom=1, lateral=0.144m, vertical=0.311m, pixel=(258.0,213.4), box=424x28, area=5320, depth_px=5021, bands=1, trigger=False[0m
+[INFO] [1783921756.572528621] [upstairs_detector]: [1;34m最近上台阶: dist=1.000m, band_from_bottom=1, lateral=0.057m, vertical=0.315m, pixel=(230.6,212.2), box=424x28, area=6014, depth_px=5680, bands=1, trigger=False[0m
+[INFO] [1783921757.574877755] [upstairs_detector]: [1;34m最近上台阶: dist=0.963m, band_from_bottom=1, lateral=0.082m, vertical=0.310m, pixel=(239.2,214.3), box=424x29, area=6080, depth_px=5824, bands=1, trigger=False[0m
+[INFO] [1783921758.640796943] [upstairs_detector]: [1;34m最近上台阶: dist=0.966m, band_from_bottom=1, lateral=0.079m, vertical=0.304m, pixel=(238.0,212.2), box=424x30, area=5987, depth_px=5701, bands=1, trigger=False[0m
+[INFO] [1783921759.643643845] [upstairs_detector]: [1;34m最近上台阶: dist=0.944m, band_from_bottom=1, lateral=0.102m, vertical=0.313m, pixel=(246.2,217.1), box=424x34, area=6658, depth_px=6395, bands=1, trigger=False[0m
+[INFO] [1783921760.710977120] [upstairs_detector]: [1;34m最近上台阶: dist=0.969m, band_from_bottom=1, lateral=0.043m, vertical=0.327m, pixel=(226.7,219.0), box=424x37, area=10715, depth_px=10579, bands=2, trigger=False[0m
+[INFO] [1783921761.707123602] [upstairs_detector]: [1;34m最近上台阶: dist=1.025m, band_from_bottom=1, lateral=0.092m, vertical=0.321m, pixel=(240.6,211.7), box=420x23, area=3833, depth_px=3673, bands=1, trigger=False[0m

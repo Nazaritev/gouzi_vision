@@ -1,0 +1,79 @@
+obstacle_race_supervisor:
+  ros__parameters:
+    # 正式启用限高杆右侧 AprilTag 中心线流程；旧蓝白杆流程保留为可回滚配置。
+    limit_bar_visual_trigger_enabled: false
+    limit_bar_tag_trigger_enabled: true
+    limit_bar_tag_target_tag_id: 12
+    # 实际场地首次可见距离约 1.0-1.1m；1.40m 只是允许首帧立即接管的上限，
+    # 横移路线仍使用实时 tag_z，并在趴下前保留下面配置的 0.50m。
+    limit_bar_tag_trigger_distance_m: 1.40
+    limit_bar_tag_odom_handoff_enabled: true
+    limit_bar_tag_odom_handoff_timeout_sec: 2.0
+    limit_bar_tag_odom_handoff_max_start_distance_m: 1.85
+    limit_bar_tag_min_samples: 1
+    limit_bar_tag_geometry_lock_enabled: true
+    limit_bar_tag_geometry_lock_sample_count: 3
+    limit_bar_tag_slope_guard_enabled: true
+    limit_bar_tag_slope_guard_distance_m: 1.85
+    limit_bar_tag_align_enabled: true
+    limit_bar_tag_yaw_reference_mode: "fixed_absolute"
+    limit_bar_tag_fixed_reference_yaw_deg: 180.0
+    limit_bar_tag_to_center_x_m: -0.460
+    limit_bar_tag_align_ccw_left_norm: -0.12
+    limit_bar_tag_align_ccw_right_norm: 0.22
+    limit_bar_tag_align_cw_left_norm: 0.22
+    limit_bar_tag_align_cw_right_norm: -0.12
+    limit_bar_tag_align_turn_scale_enabled: true
+    limit_bar_tag_align_turn_min_scale: 0.45
+    limit_bar_tag_align_yaw_gain_per_rad: 0.90
+    limit_bar_tag_align_min_abs_angular_z: 0.05
+    limit_bar_tag_align_max_abs_angular_z: 0.25
+    limit_bar_lateral_turn_timeout_settle_grace_sec: 0.60
+    limit_bar_lateral_pre_align_enabled: true
+    limit_bar_lateral_pre_align_mode: "fixed_absolute_yaw"
+    limit_bar_lateral_pre_align_use_visual_feedback: false
+    limit_bar_lateral_pre_align_stop_during_hold_enabled: true
+    limit_bar_lateral_s_curve_max_heading_deg: 42.0
+    limit_bar_lateral_shift_enabled: true
+    limit_bar_lateral_shift_yaw_deg: 90.0
+    limit_bar_lateral_shift_walk_yaw_correction_enabled: true
+    limit_bar_lateral_shift_target_distance_m: 0.42
+    limit_bar_lateral_shift_walk_yaw_deadband_deg: 1.5
+    limit_bar_lateral_shift_walk_yaw_gain_norm_per_rad: 0.90
+    limit_bar_lateral_shift_walk_yaw_max_delta_norm: 0.18
+    limit_bar_lateral_shift_duck_align_ccw_left_norm: -0.060
+    limit_bar_lateral_shift_duck_align_ccw_right_norm: 0.110
+    limit_bar_lateral_shift_duck_align_cw_left_norm: 0.110
+    limit_bar_lateral_shift_duck_align_cw_right_norm: -0.060
+    limit_bar_pre_duck_global_yaw_align_enabled: true
+    limit_bar_pre_duck_yaw_reference_mode: "base_yaw"
+    limit_bar_pre_duck_global_yaw_deg: 180.0
+    # 现场在 180deg 附近约有 +/-5deg 摆动；6deg 内停止修正并锁定。
+    limit_bar_pre_duck_global_yaw_tolerance_deg: 6.0
+    limit_bar_pre_duck_global_yaw_exit_tolerance_deg: 8.0
+    limit_bar_pre_duck_global_yaw_hold_sec: 0.10
+    limit_bar_pre_duck_global_yaw_timeout_sec: 4.0
+    # 4s 后仍因角速度抖动无法稳定时，停止转向并继续趴下流程。
+    # rollback: false，恢复超时进入 FAILED。
+    limit_bar_pre_duck_global_yaw_fail_open_enabled: true
+    limit_bar_pre_duck_stationary_turn_enabled: true
+    limit_bar_pre_duck_stationary_turn_norm: 0.08
+    duck_prepare_stop_buffer_sec: 0.0
+    # 趴下前沿用横移 base_yaw 对齐；关闭原趴下后重复 yaw settle。
+    limit_bar_duck_prepare_yaw_settle_enabled: false
+    # 本文件在 supervisor_config 之后加载，会覆盖主配置同名参数。
+    duck_travel_distance_m: 1.12
+    duck_travel_projection_enabled: true
+    duck_travel_delta_y_m: 0.75
+    limit_bar_post_resume_yaw_align_enabled: true
+    limit_bar_post_resume_yaw_tolerance_deg: 1.0
+    limit_bar_post_resume_yaw_hold_sec: 0.30
+    limit_bar_post_resume_yaw_timeout_sec: 2.0
+    duck_yaw_correction_enabled: true
+    duck_yaw_correction_tolerance_deg: 0.5
+    duck_yaw_correction_gain_per_rad: 1.20
+    duck_yaw_correction_max_delta_norm: 0.25
+    duck_yaw_correction_force_max_delta: false
+    duck_yaw_correction_sign: 1.0
+    duck_centerline_correction_enabled: false
+    duck_centerline_odom_forward_axis: "y"

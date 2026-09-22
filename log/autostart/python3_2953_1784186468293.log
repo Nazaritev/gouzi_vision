@@ -1,0 +1,69 @@
+[INFO] [1784186468.787642100] [orange_pole_detector]: orange_pole_detector started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, camera_info=/camera/color/camera_info, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255], trigger_distance=1.45m, camera_height=0.23m, depth_percentile=25.0, distance_bias=0.000m
+[INFO] [1784186468.974902254] [orange_pole_detector]: 等待对齐深度图: wait=0.29s, depth_topic=/camera/aligned_depth_to_color/image_raw
+[INFO] [1784186468.975530016] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186469.025096118] [orange_pole_detector]: 已收到第一帧对齐深度图: topic=/camera/aligned_depth_to_color/image_raw, frame=camera_color_optical_frame, shape=(240, 424)
+[INFO] [1784186470.026267802] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=17, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186470.358961837] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186470.425610903] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186470.492714584] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186470.559071126] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186471.026558455] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=32, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186471.160321601] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186471.426394473] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186471.626697534] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186471.762087315] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186472.027024062] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186472.028403991] [orange_pole_detector]: [1;34m最近杆: dist=1.405m, lateral=-0.546m, vertical=-0.151m, pixel=(95.6,84.5), box=27x115, height3d=0.161m, depth_px=117, candidates=1, trigger=True[0m
+[INFO] [1784186472.094093823] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186472.494912867] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186472.561053858] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186473.027868062] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186473.031198254] [orange_pole_detector]: [1;34m最近杆: dist=0.431m, lateral=0.002m, vertical=-0.015m, pixel=(214.9,106.2), box=44x105, height3d=0.202m, depth_px=39, candidates=1, trigger=True[0m
+[INFO] [1784186473.095118007] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186473.228330297] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186473.361727411] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186473.432287730] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186474.030002986] [orange_pole_detector]: [1;34m最近杆: dist=0.395m, lateral=0.002m, vertical=-0.014m, pixel=(214.7,106.0), box=46x102, height3d=0.148m, depth_px=463, candidates=1, trigger=True[0m
+[INFO] [1784186475.030598794] [orange_pole_detector]: [1;34m最近杆: dist=0.396m, lateral=0.001m, vertical=-0.014m, pixel=(214.1,106.0), box=46x107, height3d=0.156m, depth_px=589, candidates=1, trigger=True[0m
+[INFO] [1784186476.030520274] [orange_pole_detector]: [1;34m最近杆: dist=0.394m, lateral=-0.002m, vertical=-0.011m, pixel=(211.5,108.5), box=46x106, height3d=0.152m, depth_px=399, candidates=1, trigger=True[0m
+[INFO] [1784186476.698570658] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186476.763779870] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186476.897671757] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186476.963914125] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186477.032942732] [orange_pole_detector]: [1;34m最近杆: dist=0.439m, lateral=-0.005m, vertical=-0.012m, pixel=(210.1,108.6), box=48x104, height3d=0.157m, depth_px=520, candidates=1, trigger=True[0m
+[INFO] [1784186477.299516086] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186477.365127130] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186477.832877766] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186478.098654028] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=138, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186478.232502907] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186478.299555682] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186478.432028315] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186478.898572241] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186478.967526397] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186479.098596040] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186479.099709032] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=149, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186479.366311869] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186479.432499197] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186479.565862082] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186479.632821492] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186480.033203738] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186480.099941872] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186480.101841341] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=164, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186480.300402480] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186480.366484550] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186480.432951015] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186480.499608011] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186481.100702811] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=179, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186481.367626469] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186481.433605407] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186482.100799003] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=194, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186483.101938514] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=209, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186484.102635604] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=224, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186485.103529248] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=239, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186485.370855386] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186485.503486251] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186486.104302297] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=254, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186486.371997966] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1784186486.438326424] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1784186487.107175292] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=269, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1784186488.105811737] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=284, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m

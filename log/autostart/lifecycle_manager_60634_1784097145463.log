@@ -1,0 +1,21 @@
+[INFO] [1784097145.501519642] [lifecycle_manager_navigation]: Creating
+[INFO] [1784097145.505764856] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [1784097145.585810747] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[INFO] [1784097145.585851261] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[INFO] [1784097145.621379001] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[INFO] [1784097145.630660025] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[INFO] [1784097145.662225354] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[INFO] [1784097145.687974922] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[INFO] [1784097145.734949769] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[INFO] [1784097145.745200682] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[INFO] [1784097145.748228738] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[INFO] [1784097146.456625187] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[INFO] [1784097146.456671535] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[INFO] [1784097146.559491457] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[INFO] [1784097146.559540375] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[INFO] [1784097147.248004757] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[INFO] [1784097147.248067624] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[INFO] [1784097147.366143718] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[INFO] [1784097147.366213984] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[INFO] [1784097147.584714640] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1784097147.584778759] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)

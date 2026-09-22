@@ -1,0 +1,649 @@
+[INFO] [1783921809.998371772] [orange_pole_detector]: orange_pole_detector started: color=/camera/color/image_raw, depth=/camera/aligned_depth_to_color/image_raw, camera_info=/camera/color/camera_info, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255], trigger_distance=1.45m, camera_height=0.23m, depth_percentile=25.0, distance_bias=0.000m
+[INFO] [1783921810.041713458] [orange_pole_detector]: 已收到第一帧对齐深度图: topic=/camera/aligned_depth_to_color/image_raw, frame=camera_color_optical_frame, shape=(240, 424)
+[INFO] [1783921810.063257675] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921810.064928704] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921811.111772220] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=17, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921812.113690487] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=32, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921812.445183946] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921812.511374708] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921813.113207751] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=47, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921813.178350356] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921813.244693475] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921813.978759922] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921814.044752350] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921814.112409487] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=62, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921815.181191783] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=78, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921816.248009226] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=94, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921817.316283260] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=110, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921818.382167118] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=126, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921819.382373096] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=141, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921820.384938488] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=156, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921821.454921224] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=172, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921822.454680802] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=187, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921823.527565183] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=203, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921824.586538143] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=219, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921825.656623411] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=235, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921826.721670593] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=251, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921827.724547263] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=266, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921828.732639683] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=281, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921829.729158645] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=296, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921830.732660563] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=311, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921831.735119424] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=326, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921832.737669042] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=341, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921833.741574328] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=356, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921834.742003375] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=371, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921835.745858428] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=386, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921836.747296782] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=401, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921837.749736786] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=416, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921838.752329337] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=431, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921839.754449645] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=446, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921840.755454672] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=461, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921841.756764783] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=476, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921842.759041788] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=491, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921843.760260258] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=506, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921844.762132870] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=521, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921845.764938099] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=536, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921846.765257366] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=551, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921847.767620419] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=566, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921848.767105238] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=581, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921849.768762904] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=596, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921850.769770221] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=611, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921851.771346397] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=626, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921852.775604532] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=641, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921853.840157354] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=657, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921854.841523929] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=672, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921855.842157384] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=687, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921856.844584899] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=702, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921857.845620285] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=717, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921858.846720201] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=732, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921859.849137511] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=747, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921860.915207427] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=763, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921861.916454697] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=778, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921862.916667468] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=793, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921863.917461863] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=808, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921864.919651196] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=823, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921865.919718325] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=838, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921866.920674752] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=853, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921867.922670836] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=868, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921868.925456375] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=883, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921869.990293900] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=899, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921870.991305140] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=914, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921871.991925494] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=929, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921872.993374886] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=944, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921873.993779047] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=959, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921874.994665795] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=974, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921875.195858927] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921875.997834410] [orange_pole_detector]: [1;34m最近杆: dist=1.139m, lateral=0.251m, vertical=-0.034m, pixel=(280.0,107.9), box=66x162, height3d=0.504m, depth_px=2058, candidates=1, trigger=True[0m
+[INFO] [1783921876.597442988] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921876.730040352] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921876.862690640] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921876.930168641] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921876.998077812] [orange_pole_detector]: [1;34m最近杆: dist=0.974m, lateral=-0.280m, vertical=0.012m, pixel=(126.3,120.6), box=80x188, height3d=0.506m, depth_px=2942, candidates=1, trigger=True[0m
+[INFO] [1783921877.063657668] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921877.197430136] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921877.267224452] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921877.330421722] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921877.530038615] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921877.931149387] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921877.997351675] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921877.999083322] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1019, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921878.532746596] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921878.600916051] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921878.998717281] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1034, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921879.533257396] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921879.665814691] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921880.001067138] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921880.003713096] [orange_pole_detector]: [1;34m最近杆: dist=0.818m, lateral=0.059m, vertical=0.008m, pixel=(235.0,119.8), box=107x227, height3d=0.572m, depth_px=3087, candidates=1, trigger=True[0m
+[INFO] [1783921880.064948137] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921880.533759804] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921880.865800409] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921880.934966354] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921881.002124955] [orange_pole_detector]: [1;34m最近杆: dist=0.756m, lateral=0.074m, vertical=0.031m, pixel=(243.1,129.2), box=108x240, height3d=0.510m, depth_px=4388, candidates=1, trigger=True[0m
+[INFO] [1783921881.065491449] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921882.000826537] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1079, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921883.002200822] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1094, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921884.002654784] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1109, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921885.002683066] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1124, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921886.003226681] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1139, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921886.071834191] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921886.136720729] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921887.004476330] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1154, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921888.005572775] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1169, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921888.139676625] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921888.207045487] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921888.341341163] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921888.405978276] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921889.007588138] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1184, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921890.075095188] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1200, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921891.142447072] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1216, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921892.207514229] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1232, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921892.674035937] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921892.740410391] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921893.209345722] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1247, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921894.274781664] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1263, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921895.341061903] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1279, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921896.408011961] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1295, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921897.477964537] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1311, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921898.540839252] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1327, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921898.608548214] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921898.675892912] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921898.742966553] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921898.874312808] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921898.942459160] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921899.009326840] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921899.076037595] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921899.544563088] [orange_pole_detector]: [1;34m最近杆: dist=0.871m, lateral=0.119m, vertical=0.066m, pixel=(254.8,139.9), box=70x183, height3d=0.291m, depth_px=982, candidates=1, trigger=True[0m
+[INFO] [1783921899.609102413] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921900.608835389] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1358, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921901.609509610] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1373, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921902.608821909] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1388, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921903.676360834] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1404, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921904.675495271] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1419, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921904.943369590] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921905.075018742] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921905.676044955] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1434, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921906.677875771] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1449, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921907.742594338] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1465, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921908.743618151] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1480, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921909.811565069] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1496, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921910.344567364] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921910.476066601] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921910.611239025] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921910.811190480] [orange_pole_detector]: [1;34m最近杆: dist=0.257m, lateral=0.032m, vertical=0.001m, pixel=(250.6,117.7), box=113x227, height3d=0.160m, depth_px=62, candidates=1, trigger=True[0m
+[INFO] [1783921910.876667978] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921911.210926724] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921911.676991650] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921911.811236815] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783921911.812591585] [orange_pole_detector]: [1;34m最近杆: dist=0.251m, lateral=0.044m, vertical=-0.051m, pixel=(265.8,55.3), box=84x165, height3d=0.263m, depth_px=509, candidates=1, trigger=True[0m
+[INFO] [1783921911.877597037] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783921912.812857720] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1541, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921913.878206347] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1557, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921914.945301822] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1573, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921915.945289692] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1588, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921916.946306121] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1603, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921917.946818173] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1618, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921918.949734096] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1633, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921920.013297623] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1649, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921921.079895747] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1665, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921922.080442091] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1680, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921923.080879758] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1695, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921924.081663305] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1710, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921925.081372987] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1725, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921926.082555352] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1740, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921927.082500283] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1755, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921928.082839960] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1770, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921929.083114560] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1785, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921930.083700085] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1800, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921931.084409391] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1815, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921932.084706396] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1830, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921933.085242324] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1845, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921934.085516262] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1860, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921935.086721211] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1875, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921936.087203219] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1890, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921937.087017987] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1905, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921938.088526653] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1920, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921939.088607001] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1935, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921940.088813532] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1950, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921941.090868568] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1965, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921942.159564939] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1981, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921943.158517115] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=1996, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921944.161281987] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2011, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921945.159616775] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2026, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921946.226012604] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2042, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921947.225787704] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2057, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921948.227428046] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2072, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921949.227940443] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2087, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921950.295001552] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2103, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921951.361907871] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2119, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921952.362272573] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2134, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921953.362520005] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2149, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921954.364058571] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2164, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921955.363499324] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2179, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921956.364452731] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2194, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921957.364427923] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2209, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921958.365177717] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2224, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921959.366807118] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2239, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921960.433462650] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2255, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921961.433859786] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2270, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921962.436737185] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2285, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921963.501815079] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2301, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921964.502587861] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2316, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921965.502602729] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2331, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921966.503482320] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2346, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921967.506058722] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2361, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921968.505903643] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2376, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921969.507356077] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2391, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921970.508104138] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2406, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921971.506233100] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2421, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921972.506341664] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2436, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921973.510019847] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2451, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921974.575146400] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2467, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921975.575774109] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2482, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921976.578963148] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2497, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921977.576251985] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2512, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921978.577212557] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2527, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921979.577904822] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2542, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921980.578500193] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2557, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921981.579008411] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2572, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921982.580108836] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2587, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921983.583102792] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2602, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921984.580814187] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2617, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921985.583339240] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2632, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921986.582731199] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2647, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921987.582901477] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2662, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921988.583575023] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2677, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921989.585794166] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2692, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921990.586013614] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2707, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921991.652512023] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2723, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921992.653932429] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2738, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921993.654940405] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2753, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921994.722531523] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2769, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921995.721655079] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2784, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921996.721764375] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2799, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921997.723614549] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2814, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921998.724628369] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2829, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783921999.790579236] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2845, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922000.791317344] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2860, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922001.791642406] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2875, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922002.793523700] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2890, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922003.793738254] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2905, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922004.798648002] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2920, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922005.795636958] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2935, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922006.795660229] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2950, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922007.798496316] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2965, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922008.796991917] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2980, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922009.797449378] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=2995, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922010.865066855] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3011, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922011.864383852] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3026, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922012.865844951] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3041, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922013.866250596] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3056, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922014.867020338] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3071, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922015.867304324] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3086, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922016.867621893] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3101, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922017.868703372] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3116, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922018.869288070] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3131, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922019.869825979] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3146, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922020.872006008] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3161, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922021.872376750] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3176, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922022.874071395] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3191, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922023.874796858] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3206, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922024.876658492] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3221, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922025.877236052] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3236, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922026.878502011] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3251, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922027.879310313] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3266, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922028.880677744] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3281, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922029.882060919] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3296, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922030.884178507] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3311, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922031.884304673] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3326, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922032.885390969] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3341, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922033.888047131] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3356, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922034.887816011] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3371, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922035.889195353] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3386, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922036.891198375] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3401, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922037.891563628] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3416, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922038.892529999] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3431, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922039.893376092] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3446, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922040.895841309] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3461, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922041.896285144] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3476, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922042.898464419] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3491, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922043.899287061] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3506, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922044.898980428] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3521, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922045.901645019] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3536, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922046.902510155] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3551, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922047.903029331] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3566, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922048.904999380] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3581, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922049.904694803] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3596, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922050.905836287] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3611, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922051.909922188] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3626, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922052.908128750] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3641, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922053.911429588] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3656, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922054.976808171] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3672, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922055.978001080] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3687, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922056.979086081] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3702, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922057.980361189] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3717, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922058.983298726] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3732, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922059.582012159] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922059.649198162] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922059.782607110] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922059.981545755] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922059.982732064] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3747, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922060.983645344] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922060.984760300] [orange_pole_detector]: [1;34m最近杆: dist=1.200m, lateral=-0.772m, vertical=0.242m, pixel=(18.5,178.1), box=48x107, height3d=0.430m, depth_px=545, candidates=1, trigger=True[0m
+[INFO] [1783922061.182477321] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922061.985218217] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3777, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922062.052084104] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922062.116917945] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922062.985388147] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3792, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922063.986479516] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3807, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922064.987625390] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3822, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922065.988218971] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3837, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922066.989667953] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3852, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922067.991391340] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3867, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922069.058696239] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3883, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922070.059086875] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3898, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922071.062449384] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3913, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922072.061289861] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3928, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922073.061762801] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3943, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922074.062495260] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3958, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922075.063507778] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3973, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922076.064315733] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=3988, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922076.598318663] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922076.665316193] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922076.732786402] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922076.798230110] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922077.001173873] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922077.065191125] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922077.066349506] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4003, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922077.200815668] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922077.732935828] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922078.067660852] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4018, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922078.133499106] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922078.534028391] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922079.068262700] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922079.070720847] [orange_pole_detector]: [1;34m最近杆: dist=1.322m, lateral=-0.732m, vertical=-0.076m, pixel=(45.7,99.6), box=70x181, height3d=0.615m, depth_px=1233, candidates=1, trigger=True[0m
+[INFO] [1783922079.467143015] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922079.535681356] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922080.069891140] [orange_pole_detector]: [1;34m最近杆: dist=0.843m, lateral=-0.470m, vertical=0.113m, pixel=(44.4,157.3), box=57x240, height3d=0.644m, depth_px=2594, candidates=1, trigger=True[0m
+[INFO] [1783922080.268338484] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922080.334968085] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922080.536417779] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922081.069570517] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4063, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922082.070395290] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4078, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922083.070928470] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4093, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922084.072241458] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4108, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922084.873526520] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922085.074732375] [orange_pole_detector]: [1;34m最近杆: dist=0.862m, lateral=-0.195m, vertical=0.113m, pixel=(144.9,156.5), box=74x225, height3d=0.511m, depth_px=3319, candidates=1, trigger=True[0m
+[INFO] [1783922086.076343235] [orange_pole_detector]: [1;34m最近杆: dist=0.617m, lateral=0.009m, vertical=0.101m, pixel=(217.7,166.5), box=102x240, height3d=0.396m, depth_px=5601, candidates=1, trigger=True[0m
+[INFO] [1783922086.540283097] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922087.074310063] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4153, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922088.075402369] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4168, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922089.079521461] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4183, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922090.077470941] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4198, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922091.078673118] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922091.082240617] [orange_pole_detector]: [1;34m最近杆: dist=1.302m, lateral=0.774m, vertical=-0.064m, pixel=(393.1,102.0), box=60x195, height3d=0.715m, depth_px=1312, candidates=1, trigger=True[0m
+[INFO] [1783922092.081161714] [orange_pole_detector]: [1;34m最近杆: dist=1.312m, lateral=0.778m, vertical=-0.000m, pixel=(392.7,116.9), box=60x193, height3d=0.712m, depth_px=1307, candidates=1, trigger=True[0m
+[INFO] [1783922093.081739480] [orange_pole_detector]: [1;34m最近杆: dist=1.208m, lateral=0.736m, vertical=0.015m, pixel=(397.7,120.7), box=93x214, height3d=0.741m, depth_px=1071, candidates=1, trigger=True[0m
+[INFO] [1783922093.747079885] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922093.951104364] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922094.014538015] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922094.080509186] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4258, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922095.083079519] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922095.084454051] [orange_pole_detector]: [1;34m最近杆: dist=0.377m, lateral=0.202m, vertical=-0.004m, pixel=(375.5,113.8), box=128x240, height3d=0.244m, depth_px=4851, candidates=1, trigger=True[0m
+[INFO] [1783922095.215276185] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922096.081726302] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4288, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922097.083803702] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4303, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922098.084893796] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4318, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922099.085745746] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4333, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922100.088010147] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4348, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922100.554315012] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922100.820233304] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922101.087369320] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4363, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922102.087809416] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4378, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922102.690221005] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922102.755510471] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922103.089605485] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4393, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922103.891217505] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922103.956959239] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922104.090070906] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4408, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922105.024862538] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922105.092820091] [orange_pole_detector]: [1;34m最近杆: dist=0.561m, lateral=0.342m, vertical=0.012m, pixel=(398.0,123.6), box=76x240, height3d=0.350m, depth_px=4081, candidates=1, trigger=True[0m
+[INFO] [1783922105.224015877] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922106.091620402] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4438, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922107.092745032] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4453, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922108.094143431] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4468, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922108.427432702] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922108.560141803] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922109.094632160] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4483, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922110.095415047] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4498, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922111.096699713] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4513, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922112.096724123] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4528, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922113.098158576] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4543, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922114.101932466] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4558, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922115.166551702] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4574, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922116.166846878] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4589, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922117.167776301] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4604, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922118.168356617] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4619, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922119.170146996] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4634, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922120.171662239] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4649, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922121.170809033] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4664, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922122.171894814] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4679, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922123.172431710] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4694, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922124.173620827] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4709, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922125.174641510] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4724, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922126.176052381] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4739, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922127.176530733] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4754, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922128.177430913] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4769, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922129.177345012] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4784, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922130.178685839] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4799, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922131.179284107] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4814, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922132.180273495] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4829, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922133.180742602] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4844, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922134.181387450] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4859, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922135.182488676] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4874, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922136.183986351] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4889, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922137.253107793] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4905, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922138.318212641] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4921, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922139.319581458] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4936, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922140.320282163] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4951, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922141.320561877] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4966, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922142.321073010] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4981, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922143.323201989] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=4996, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922144.323572408] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5011, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922145.323319897] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5026, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922146.325094566] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5041, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922147.325496341] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5056, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922148.326526927] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5071, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922149.326753907] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5086, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922150.330111756] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5101, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922151.328483328] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5116, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922152.329449298] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5131, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922153.330200492] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5146, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922154.331134179] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5161, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922155.332453827] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5176, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922156.332880217] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5191, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922157.334117141] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5206, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922158.334084963] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5221, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922159.335389427] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5236, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922160.006492004] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922160.069962932] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922160.204164091] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922160.338507181] [orange_pole_detector]: [1;34m最近杆: dist=1.120m, lateral=0.599m, vertical=-0.045m, pixel=(375.2,104.9), box=46x100, height3d=0.267m, depth_px=3196, candidates=2, trigger=True[0m
+[INFO] [1783922160.535836178] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922160.604220822] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922161.336720598] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922161.338063282] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5266, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922161.605289142] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922161.870333906] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922162.206216201] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922162.339444571] [orange_pole_detector]: [1;34m最近杆: dist=0.493m, lateral=-0.277m, vertical=-0.031m, pixel=(43.0,98.1), box=84x206, height3d=0.260m, depth_px=11576, candidates=1, trigger=True[0m
+[INFO] [1783922163.272395053] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922163.340732385] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5296, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922164.344178430] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5311, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922165.406879094] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5327, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922166.407815548] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5342, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922167.408276591] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5357, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922168.409417788] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5372, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922169.409797944] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5387, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922170.410335007] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5402, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922171.411459822] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5417, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922172.414505132] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5432, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922173.415237297] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5447, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922174.413418459] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5462, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922175.416683100] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5477, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922176.417338556] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5492, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922177.482069065] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5508, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922178.482800787] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5523, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922179.484847513] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5538, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922180.484593147] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5553, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922181.485285550] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5568, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922182.485718205] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5583, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922183.488240090] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5598, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922184.487614573] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5613, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922185.489252393] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5628, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922186.489843257] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5643, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922187.490270297] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5658, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922188.491083862] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5673, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922189.491919906] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5688, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922190.494582271] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5703, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922191.561944543] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5719, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922192.560642820] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5734, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922193.562951156] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5749, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922194.562287801] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5764, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922195.363439048] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922195.565387832] [orange_pole_detector]: [1;34m最近杆: dist=1.009m, lateral=0.636m, vertical=-0.025m, pixel=(403.9,109.5), box=44x104, height3d=0.281m, depth_px=1640, candidates=1, trigger=True[0m
+[INFO] [1783922195.762738117] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922196.564030468] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5794, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922197.565290795] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5809, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922198.564355046] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5824, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922199.566174497] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5839, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922200.566844935] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5854, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922201.567761874] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5869, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922202.568383384] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5884, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922203.568792431] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5899, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922204.570168953] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5914, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922205.571787574] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5929, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922206.571554905] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5944, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922207.573487240] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5959, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922208.572145104] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5974, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922209.575075469] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=5989, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922210.641397471] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6005, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922211.643823848] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6020, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922212.643588113] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6035, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922213.644125055] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6050, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922214.644096902] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6065, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922215.645185081] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6080, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922216.647537756] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6095, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922217.645745847] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6110, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922218.647854884] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6125, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922219.648933132] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6140, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922220.715246537] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6156, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922221.715506998] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6171, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922222.716839979] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6186, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922223.717356147] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6201, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922224.718476684] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6216, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922225.719550095] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6231, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922226.719914966] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6246, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922227.722232684] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6261, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922228.723106288] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6276, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922229.722190182] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6291, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922230.724941405] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6306, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922231.190613175] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922231.256684931] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922231.723984235] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6321, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922232.725403943] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6336, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922233.792296784] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6352, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922233.859653261] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922233.924964490] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922234.792627946] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6367, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922235.792778899] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6382, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922236.793776069] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6397, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922237.794689171] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6412, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922238.797949461] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6427, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922239.799326878] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6442, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922240.799486915] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6457, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922241.865679061] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6473, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922242.865531454] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6488, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922243.932346237] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6504, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922244.936125354] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6519, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922245.135347922] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922245.201978554] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922245.334387762] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922245.467129592] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922246.001435148] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6535, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922247.067718258] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6551, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922248.068161110] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6566, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922249.069444283] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6581, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922249.136543363] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922249.269378230] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922250.004275531] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922250.070075303] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922250.071161831] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6596, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922251.071169327] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6611, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922252.071644056] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6626, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922253.072264413] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6641, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922254.073128775] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6656, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922255.074740186] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6671, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922256.074553615] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6686, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922257.075077564] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6701, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922258.076225788] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6716, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922259.076249717] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6731, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922260.077844355] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6746, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922261.079313609] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6761, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922262.079625122] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6776, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922263.081267733] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6791, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922264.080507596] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6806, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922265.081586642] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6821, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922266.082613005] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6836, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922267.082900116] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6851, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922268.083124116] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6866, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922269.083506842] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6881, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922270.085600863] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6896, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922271.153192649] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6912, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922272.153283367] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6927, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922273.154195880] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6942, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922274.223180679] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6958, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922275.221778364] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6973, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922276.223181200] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=6988, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922277.224282888] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7003, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922278.224323941] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7018, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922279.226170928] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7033, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922280.227878580] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7048, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922281.227448316] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7063, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922282.227803581] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7078, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922283.227727195] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7093, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922284.230599824] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7108, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922285.228582787] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7123, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922286.229556969] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7138, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922287.231897802] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7153, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922288.231385686] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7168, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922289.231310125] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7183, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922290.232708193] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7198, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922291.233391523] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7213, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922292.234746296] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7228, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922293.234935246] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7243, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922294.235806508] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7258, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922295.236430915] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7273, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922296.236862118] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7288, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922297.238524558] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7303, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922298.238138152] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7318, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922299.240437582] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7333, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922300.241541719] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7348, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922301.240364138] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7363, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922302.242982930] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7378, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922303.309409841] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7394, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922304.310535011] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7409, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922305.312306234] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7424, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922306.378788032] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7440, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922307.379601567] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7455, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922308.382085327] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7470, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922309.447658810] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7486, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922310.449732727] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7501, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922311.382647693] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922311.516279767] [orange_pole_detector]: [1;34m最近杆: dist=0.432m, lateral=-0.231m, vertical=-0.028m, pixel=(51.5,97.2), box=29x140, height3d=0.149m, depth_px=1252, candidates=1, trigger=True[0m
+[INFO] [1783922311.714788825] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922312.515449958] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7532, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922313.518160437] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7547, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922314.517077861] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7562, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922315.518042546] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7577, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922316.519508800] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7592, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922317.585238503] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7608, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922318.586666723] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7623, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922319.586909664] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7638, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922320.588442870] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7653, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922321.590814765] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7668, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922322.590474821] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7683, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922323.591014892] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7698, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922324.058369641] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922324.124832027] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922324.392340364] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922324.457699106] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922324.592542228] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7713, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922325.058781524] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922325.125542685] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922325.591959174] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7728, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922325.659105763] [orange_pole_detector]: [1;95m触发状态更新: trigger=True[0m
+[INFO] [1783922325.724561377] [orange_pole_detector]: [1;95m触发状态更新: trigger=False[0m
+[INFO] [1783922326.594435210] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7743, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922327.595594471] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7758, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922328.593678685] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7773, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m
+[INFO] [1783922329.595132130] [orange_pole_detector]: [0;33m未检测到有效橘色竖杆: candidates=0, frame=7788, hsv_lower=[5, 70, 70], hsv_upper=[30, 255, 255][0m

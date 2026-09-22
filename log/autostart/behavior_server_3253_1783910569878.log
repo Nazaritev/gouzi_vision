@@ -1,0 +1,67 @@
+[INFO] [1783910569.913136280] [behavior_server]: 
+	behavior_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1783910570.138169500] [behavior_server]: Configuring
+[INFO] [1783910570.144247017] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[INFO] [1783910570.145432986] [behavior_server]: Configuring spin
+[INFO] [1783910570.148831170] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[INFO] [1783910570.149901109] [behavior_server]: Configuring backup
+[INFO] [1783910570.152783327] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[INFO] [1783910570.153829111] [behavior_server]: Configuring drive_on_heading
+[INFO] [1783910570.156432275] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[INFO] [1783910570.157658192] [behavior_server]: Configuring wait
+[INFO] [1783910572.758943885] [behavior_server]: Activating
+[INFO] [1783910572.758983962] [behavior_server]: Activating spin
+[INFO] [1783910572.758998674] [behavior_server]: Activating backup
+[INFO] [1783910572.759010019] [behavior_server]: Activating drive_on_heading
+[INFO] [1783910572.759019272] [behavior_server]: Activating wait
+[INFO] [1783910572.759031747] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1783910706.218746525] [behavior_server]: Running spin
+[INFO] [1783910706.218873737] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783910716.218963691] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1783910716.219005424] [behavior_server]: spin failed
+[WARN] [1783910716.219018890] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783910716.317778180] [behavior_server]: Running wait
+[INFO] [1783910721.317954461] [behavior_server]: wait completed successfully
+[INFO] [1783910722.217770767] [behavior_server]: Running backup
+[INFO] [1783910722.217890032] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[INFO] [1783910723.718040726] [behavior_server]: backup completed successfully
+[INFO] [1783910725.217717122] [behavior_server]: Running spin
+[INFO] [1783910725.217794859] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783910735.217881663] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1783910735.217924828] [behavior_server]: spin failed
+[WARN] [1783910735.217935209] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783910735.317680002] [behavior_server]: Running wait
+[INFO] [1783910740.317862233] [behavior_server]: wait completed successfully
+[INFO] [1783910741.217668989] [behavior_server]: Running backup
+[INFO] [1783910743.617865921] [behavior_server]: backup completed successfully
+[INFO] [1783910856.416979254] [behavior_server]: Running spin
+[INFO] [1783910856.417051033] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783910866.417132217] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1783910866.417169555] [behavior_server]: spin failed
+[WARN] [1783910866.417177386] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783910866.516986233] [behavior_server]: Running wait
+[INFO] [1783910871.517133020] [behavior_server]: wait completed successfully
+[INFO] [1783910896.117139674] [behavior_server]: Running backup
+[WARN] [1783910906.117283995] [behavior_server]: Exceeded time allowance before reaching the DriveOnHeading goal - Exiting DriveOnHeading
+[WARN] [1783910906.117326871] [behavior_server]: backup failed
+[WARN] [1783910906.117334931] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1783910930.967069302] [behavior_server]: Running spin
+[INFO] [1783910930.967153504] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783910940.967232767] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1783910940.967266119] [behavior_server]: spin failed
+[WARN] [1783910940.967273181] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783910941.067183073] [behavior_server]: Running wait
+[INFO] [1783910946.067360811] [behavior_server]: wait completed successfully
+[INFO] [1783910970.666980624] [behavior_server]: Running backup
+[WARN] [1783910980.667167508] [behavior_server]: Exceeded time allowance before reaching the DriveOnHeading goal - Exiting DriveOnHeading
+[WARN] [1783910980.667229131] [behavior_server]: backup failed
+[WARN] [1783910980.667240162] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1783911005.467195528] [behavior_server]: Running spin
+[INFO] [1783911005.467300337] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1783911015.467412966] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1783911015.467448691] [behavior_server]: spin failed
+[WARN] [1783911015.467455862] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1783911015.567018868] [behavior_server]: Running wait
+[INFO] [1783911020.567193655] [behavior_server]: wait completed successfully

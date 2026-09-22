@@ -1,0 +1,1 @@
+/home/gouzi/obstacle_race_src/build/apriltag_msgs/ament_cmake_python/apriltag_msgs/apriltag_msgs.egg-info/SOURCES.txt

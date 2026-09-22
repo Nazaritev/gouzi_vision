@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/.pytest_cache
+rootdir: /home/gouzi/obstacle_race_src/src/auto_nav_pkg
+plugins: ament-copyright-0.12.15, ament-pep257-0.12.15, launch-testing-ros-0.19.13, ament-xmllint-0.12.15, launch-testing-1.0.14, ament-flake8-0.12.15, ament-lint-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 27 items
+
+test/test_obstacle_manager_apriltag_compensation.py ..                   [  7%]
+test/test_obstacle_race_supervisor_hurdle.py .......                     [ 33%]
+test/test_obstacle_race_supervisor_limit_bar.py ...............          [ 88%]
+test/test_orange_pole_pre_align_stability.py ...                         [100%]
+
+- generated xml file: /home/gouzi/obstacle_race_src/build/auto_nav_pkg/pytest.xml -
+============================== 27 passed in 1.02s ==============================

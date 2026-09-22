@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1505853e4441b1da5b6a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "quadruped_step_mapper",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cmd_vel_to_serial_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cmd_vel_to_serial_node-e77cd84f2deeb949222e.json",
+					"name" : "cmd_vel_to_serial_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cmd_vel_to_step_length_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cmd_vel_to_step_length_node-7ba745567ae743405803.json",
+					"name" : "cmd_vel_to_step_length_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "quadruped_step_mapper_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quadruped_step_mapper_uninstall-5b895f6845a2918281d7.json",
+					"name" : "quadruped_step_mapper_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-05a4314ad17dcaa118fd.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gouzi/obstacle_race_src/build/quadruped_step_mapper",
+		"source" : "/home/gouzi/obstacle_race_src/src/quadruped_step_mapper"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
