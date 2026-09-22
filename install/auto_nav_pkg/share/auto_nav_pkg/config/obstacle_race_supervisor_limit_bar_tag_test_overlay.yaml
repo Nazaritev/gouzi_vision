@@ -1,4 +1,0 @@
-obstacle_race_supervisor:
-  ros__parameters:
-    limit_bar_tag_align_enabled: true
-    duck_centerline_correction_enabled: true

@@ -1,1 +1,0 @@
-[INFO] [1784153885.579310947] [nav_executor]: NavExecutor 运行在 pose_controller 模式： goal=/goal_pose, pose=/Odometry, cmd_vel=/race_cmd_vel

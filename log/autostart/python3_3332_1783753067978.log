@@ -1,3 +1,0 @@
-[INFO] [1783753068.601860659] [orange_pole_relative_nav]: state=INACTIVE
-[INFO] [1783753068.602449744] [orange_pole_relative_nav]: orange_pole_relative_nav inactive on startup.
-[INFO] [1783753068.622333337] [orange_pole_relative_nav]: 稳定触发版已启用: samples>=3, window=5, max_age=0.45s, dist_spread<=0.080m, lat_spread<=0.080m, timeout=0.35s, hold_override=True [0,0.180,0.180], drift_comp=True

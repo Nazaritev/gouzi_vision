@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/src/quadruped_step_mapper/include/quadruped_step_mapper/cmd_vel_to_serial_node.hpp

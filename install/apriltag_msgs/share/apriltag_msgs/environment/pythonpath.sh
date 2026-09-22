@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/build/apriltag_msgs/ament_cmake_environment_hooks/pythonpath.sh

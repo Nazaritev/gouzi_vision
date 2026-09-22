@@ -1,4 +1,0 @@
-[INFO] [1784187059.768526698] [orange_pole_relative_nav]: state=INACTIVE
-[INFO] [1784187059.769022082] [orange_pole_relative_nav]: orange_pole_relative_nav inactive on startup.
-[INFO] [1784187059.774060064] [orange_pole_relative_nav]: 稳定触发版已启用: samples>=3, window=5, max_age=0.45s, dist_spread<=0.080m, lat_spread<=0.080m, timeout=0.35s, hold_override=True [0,0.180,0.180], drift_comp=True
-[INFO] [1784187059.794099985] [orange_pole_relative_nav]: LiDAR 连续绕杆已启用: topic=/livox/lidar, window=7, P4_lock=3 samples/1.50s, cruise=0.42, lookahead=0.20m, footprint=0.66x0.46m, runtime_geometry_stop=off, runtime_cloud_stale_stop=off, body_clearance_limit=0.04m, final_exit=curve_to_abs_+0deg

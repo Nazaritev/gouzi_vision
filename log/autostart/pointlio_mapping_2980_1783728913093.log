@@ -1,8 +1,0 @@
-[WARN] [1783728914.171497960] [laserMapping]: Long Livox scan detected (30.1 ms span). Enabling adaptive 20 ms subframe splitting.
-[INFO] [1783728914.171971223] [laserMapping]: IMU Initializing: 1.0 %
-[WARN] [1783728914.171988809] [laserMapping]: Reset ImuProcess
-[INFO] [1783728914.172328599] [laserMapping]: IMU Initializing: 8.0 %
-[INFO] [1783728914.222853249] [laserMapping]: IMU Initializing: 21.0 %
-[INFO] [1783728914.271459374] [laserMapping]: IMU Initializing: 40.0 %
-[INFO] [1783728914.321640044] [laserMapping]: IMU Initializing: 69.0 %
-[INFO] [1783728914.321683762] [laserMapping]: IMU Initializing: 100.0 %

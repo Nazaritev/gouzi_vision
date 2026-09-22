@@ -1,8 +1,0 @@
-[INFO] [1784182976.519823810] [bt_navigator]: 
-	bt_navigator lifecycle node launched. 
-	Waiting on external lifecycle transitions to activate
-	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[INFO] [1784182976.519977107] [bt_navigator]: Creating
-[INFO] [1784182976.628758769] [bt_navigator]: Configuring
-[INFO] [1784182978.255504682] [bt_navigator]: Activating
-[INFO] [1784182978.958538688] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.

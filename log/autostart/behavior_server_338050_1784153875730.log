@@ -1,4 +1,0 @@
-[INFO] [1784153876.389864049] [behavior_server]: 
-	behavior_server lifecycle node launched. 
-	Waiting on external lifecycle transitions to activate
-	See https://design.ros2.org/articles/node_lifecycle.html for more information.

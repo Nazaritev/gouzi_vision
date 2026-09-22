@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/src/quadruped_step_mapper/include/quadruped_step_mapper/step_length_mapper.hpp

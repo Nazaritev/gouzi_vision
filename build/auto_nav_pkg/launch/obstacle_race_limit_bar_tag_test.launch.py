@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/src/auto_nav_pkg/launch/obstacle_race_limit_bar_tag_test.launch.py

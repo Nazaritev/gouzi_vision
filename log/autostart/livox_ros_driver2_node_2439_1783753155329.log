@@ -1,6 +1,0 @@
-[INFO] [1783753155.346708084] [livox_lidar_publisher]: Livox Ros Driver2 Version: 1.2.4
-[INFO] [1783753155.347030832] [livox_lidar_publisher]: Data Source is raw lidar.
-[INFO] [1783753155.347045101] [livox_lidar_publisher]: Config file : /home/gouzi/obstacle_race_src/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/../config/MID360_config.json
-[INFO] [1783753155.349032363] [livox_lidar_publisher]: Init lds lidar success!
-[INFO] [1783753158.349263140] [livox_lidar_publisher]: livox/imu publish use imu format
-[INFO] [1783753158.350219709] [livox_lidar_publisher]: livox/lidar publish use PointCloud2 format

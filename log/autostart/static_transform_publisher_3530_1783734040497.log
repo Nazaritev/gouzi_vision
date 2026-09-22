@@ -1,5 +1,0 @@
-[INFO] [1783734040.862976416] [static_transform_publisher_WbrSMnEMt1PsOAdv]: Spinning until stopped - publishing transform
-translation: ('0.000000', '0.000000', '0.000000')
-rotation: ('0.000000', '0.000000', '0.707107', '0.707107')
-from 'body' to 'base_link'
-[INFO] [1783734203.708122163] [rclcpp]: signal_handler(SIGINT/SIGTERM)

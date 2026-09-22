@@ -1,1 +1,0 @@
-[WARN] [1784187059.405116803] [apriltag.apriltag]: camera_diag: img_age=0.089619s, ci_age=0.089619s, img_ci_skew=0.000000s, detect_ms=152.679395, raw_det=0, kept_det=0, tf=0, tf_children=[none], img_frame=camera_color_optical_frame, ci_frame=camera_color_optical_frame

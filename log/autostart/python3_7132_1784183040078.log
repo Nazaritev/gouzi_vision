@@ -1,2 +1,0 @@
-[INFO] [1784183041.068193404] [obstacle_race_supervisor]: state=WAIT_START
-[INFO] [1784183041.068525590] [obstacle_race_supervisor]: 初始化完成，等待电控串口 [start] 信号后开始下楼梯流程。

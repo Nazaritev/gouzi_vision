@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/src/quadruped_step_mapper/scripts/serial_step_tester.py

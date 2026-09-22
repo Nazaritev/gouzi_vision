@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/build/quadruped_step_mapper/ament_cmake_core/quadruped_step_mapperConfig-version.cmake

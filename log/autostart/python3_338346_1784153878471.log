@@ -1,7 +1,0 @@
-[INFO] [1784153882.556313686] [obstacle_race_supervisor]: state=WAIT_START
-[INFO] [1784153882.556861392] [obstacle_race_supervisor]: 初始化完成，等待电控串口 [start] 信号后开始下楼梯流程。
-[INFO] [1784153884.334309144] [obstacle_race_supervisor]: state=STAIRS_ACTIVE
-[INFO] [1784153884.391942059] [obstacle_race_supervisor]: 收到电控串口 [start]，开始固定下楼梯分支。
-[INFO] [1784153884.545712042] [obstacle_race_supervisor]: 首次启动保护窗口内收到电控 [start]，已忽略；剩余保护时间=4.76s。
-[INFO] [1784153932.291500168] [obstacle_race_supervisor]: state=FAILED
-[INFO] [1784153932.291948163] [obstacle_race_supervisor]: 固定下楼梯分支失败。

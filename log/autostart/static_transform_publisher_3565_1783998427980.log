@@ -1,4 +1,0 @@
-[INFO] [1783998428.015859311] [static_transform_publisher_Qf0613EcJCLB1RsH]: Spinning until stopped - publishing transform
-translation: ('0.000000', '0.000000', '0.000000')
-rotation: ('0.000000', '0.000000', '0.707107', '0.707107')
-from 'body' to 'base_link'

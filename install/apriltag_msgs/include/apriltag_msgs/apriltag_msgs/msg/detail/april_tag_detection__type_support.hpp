@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/build/apriltag_msgs/rosidl_generator_cpp/apriltag_msgs/msg/detail/april_tag_detection__type_support.hpp

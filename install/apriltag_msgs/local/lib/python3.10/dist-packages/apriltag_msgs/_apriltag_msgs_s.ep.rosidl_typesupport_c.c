@@ -1,1 +1,0 @@
-/home/gouzi/obstacle_race_src/build/apriltag_msgs/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_c.c
